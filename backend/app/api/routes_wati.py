@@ -1,9 +1,11 @@
 import logging
+from dotenv import load_dotenv
 from flask import Blueprint, request, jsonify
-
 from app.services.wati_webhook import handle_wati_webhook
 
 wati_bp = Blueprint("wati", __name__)
+
+load_dotenv()
 
 @wati_bp.route("/wati_webhook", methods=["POST"])
 def wati_webhook():

@@ -4,8 +4,8 @@ import tempfile
 from flask import Blueprint, request, jsonify
 # from app.services.wati_service import send_whatsapp_message , get_whatsapp_messages
 from app.services.wati_api_service import send_whatsapp_message_v2, get_whatsapp_messages_v2, send_whatsapp_image_v2
-# from app.services.vectordb_retrive import query_pinecone_index
-# from app.services.genai_response import handle_user_query
+from app.services.vectordb_retrive import query_pinecone_index
+from app.services.genai_response import handle_user_query
 
 # Configure logging
 logging.basicConfig(
@@ -83,10 +83,10 @@ def receive_message():
             logger.warning("No last user message found for sender_number: %s", sender_number)
 
         if last_user_message:
-            # query_response = query_pinecone_index(last_user_message)
+            query_response = query_pinecone_index(last_user_message)
             logger.info("Pinecone Querying complete with last user message")
 
-            # genai_response = handle_user_query(retrieved_context=query_response, query=last_user_message)
+            genai_response = handle_user_query(retrieved_context=query_response, query=last_user_message)
             logger.info("Generating GenAI response complete based on Pinecone query %s",genai_response)
 
             app_result = send_whatsapp_message_v2(

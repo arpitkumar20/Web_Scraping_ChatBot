@@ -1,43 +1,55 @@
 import json
-from pathlib import Path
-from urllib.parse import urlparse
+import logging
 from app.web_scraping.web_scraper import WebsiteProcessor
 
- 
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s',
+    handlers=[logging.StreamHandler()]
+)
+
 def web_scraping(url):
     # Website to scrape
-    WEBSITE_URL = url
 
-    print("="*60)
-    print("RAG DATA PREPARATION PIPELINE")
-    print("="*60)
+    logging.info("=" * 60)
+    logging.info("RAG DATA PREPARATION PIPELINE")
+    logging.info("=" * 60)
 
-    print("\n📦 Initializing processor...")
-    processor = WebsiteProcessor(WEBSITE_URL)
+    logging.info("📦 Initializing processor...")
+    processor = WebsiteProcessor(url)
 
-    print("\n🌐 Scraping website...")
+    logging.info("🌐 Scraping website...")
     documents = processor.scrape_website()
-    print(f"   ✅ Scraped {len(documents)} pages")
+    logging.info(f"✅ Scraped {len(documents)} pages")
 
-    print("\n🧹 Cleaning documents...")
+    logging.info("🧹 Cleaning documents...")
     cleaned_docs = processor.clean_documents()
-    print(f"   ✅ Cleaned {len(cleaned_docs)} documents")
+    logging.info(f"✅ Cleaned {len(cleaned_docs)} documents")
 
-    print("\n📄 Creating chunks...")
+    logging.info("📄 Creating chunks...")
     chunks = processor.create_chunks(chunk_size=1000, chunk_overlap=200)
-    print(f"   ✅ Created {len(chunks)} chunks")
+    logging.info(f"✅ Created {len(chunks)} chunks")
 
-    print("\n" + "="*60)
-    print("PROCESSING COMPLETE!")
-    print("="*60)
+    logging.info("=" * 60)
+    logging.info("PROCESSING COMPLETE!")
+    logging.info("=" * 60)
+
+    web_info = processor.get_website_info()
+    logging.info("✅ Website informations fetched sucessfully")
 
     embedding_path = processor.website_folder / "chunks" / "embedding_ready.json"
     if embedding_path.exists():
         with open(embedding_path, 'r', encoding='utf-8') as f:
             embedding_data = json.load(f)
-        print(f"\n📊 Statistics:")
-        print(f"   • Total chunks ready for embedding: {embedding_data['total_chunks']}")
-        print(f"   • Average chunk size: ~1000 characters")
-        print(f"   • Ready for vector database: YES ✅")
+
+        logging.info("📊 Statistics:")
+        logging.info(f"   • Total chunks ready for embedding: {embedding_data['total_chunks']}")
+        logging.info(f"   • Average chunk size: ~1000 characters")
+        logging.info(f"   • Ready for vector database: YES ✅")
+        logging.info(f"Embedding path of that folder is: {embedding_path}")
+        logging.info("✅ Web scraping process completed successfully. Returning embedding path.")
+        return web_info, embedding_path
     else:
-        print("Embedding data not found.")
+        logging.warning("⚠️ Embedding data not found. Returning None.")
+        return None

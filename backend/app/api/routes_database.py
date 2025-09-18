@@ -2,7 +2,7 @@ import logging
 from flask import Blueprint, request, jsonify
 from app.models.mysql_db import MySQL
 from app.models.postgresql_db import PostgreSQL
-from app.services.store_vectordb_embeddings import process_and_store_data
+# from app.services.store_vectordb_embeddings import process_and_store_data
 
 
 database_bp = Blueprint("database", __name__)
@@ -139,55 +139,55 @@ def scan_rows():
         return jsonify({"error": str(e)}), 500
 
 
-@database_bp.route("/store-embeddings", methods=["POST"])
-def store_embeddings():
-    try:
-        data = request.json
-        connector_type = data.get('connector_type')  # Required: 'mysql' or 'postgresql'
-        schema_name = data.get('schema_name')
-        table_and_columns = data.get('table_and_columns')  # List of dicts: [{'table_name': 'users', 'columns': ['id', 'name']}]
-        query = data.get('query')
-        primary_column = data.get('primary_column')
-        offset = data.get('offset', 0)
-        limit = data.get('limit', 100)
+# @database_bp.route("/store-embeddings", methods=["POST"])
+# def store_embeddings():
+#     try:
+#         data = request.json
+#         connector_type = data.get('connector_type')  # Required: 'mysql' or 'postgresql'
+#         schema_name = data.get('schema_name')
+#         table_and_columns = data.get('table_and_columns')  # List of dicts: [{'table_name': 'users', 'columns': ['id', 'name']}]
+#         query = data.get('query')
+#         primary_column = data.get('primary_column')
+#         offset = data.get('offset', 0)
+#         limit = data.get('limit', 100)
 
-        if not connector_type:
-            return jsonify({"error": "connector_type is required"}), 400
+#         if not connector_type:
+#             return jsonify({"error": "connector_type is required"}), 400
 
-        if not (schema_name and table_and_columns) and not query:
-            return jsonify({"error": "Either (schema_name and table_and_columns) or query is required"}), 400
+#         if not (schema_name and table_and_columns) and not query:
+#             return jsonify({"error": "Either (schema_name and table_and_columns) or query is required"}), 400
 
-        # Initialize DB instance dynamically
-        if connector_type == 'mysql':
-            db_instance = MySQL()
-        elif connector_type == 'postgresql':
-            db_instance = PostgreSQL()
-        else:
-            return jsonify({"error": f"Unsupported connector_type '{connector_type}'"}), 400
+#         # Initialize DB instance dynamically
+#         if connector_type == 'mysql':
+#             db_instance = MySQL()
+#         elif connector_type == 'postgresql':
+#             db_instance = PostgreSQL()
+#         else:
+#             return jsonify({"error": f"Unsupported connector_type '{connector_type}'"}), 400
 
-        # Execute scan row operation
-        result = db_instance.scan_row(
-            schema_name=schema_name,
-            table_and_columns=table_and_columns,
-            query=query,
-            primary_column=primary_column,
-            offset=offset,
-            limit=limit
-        )
+#         # Execute scan row operation
+#         result = db_instance.scan_row(
+#             schema_name=schema_name,
+#             table_and_columns=table_and_columns,
+#             query=query,
+#             primary_column=primary_column,
+#             offset=offset,
+#             limit=limit
+#         )
 
-        store_embedding_response = process_and_store_data(result_list=result)
-        print("Record sucessfully stored into vectorDb ",store_embedding_response)
+#         store_embedding_response = process_and_store_data(result_list=result)
+#         print("Record sucessfully stored into vectorDb ",store_embedding_response)
 
-        return jsonify({
-            "operation": "scan_rows",
-            "schema_name": schema_name,
-            "table_and_columns": table_and_columns,
-            "primary_column": primary_column,
-            "offset": offset,
-            "limit": limit,
-            "result": result
-        }), 200
+#         return jsonify({
+#             "operation": "scan_rows",
+#             "schema_name": schema_name,
+#             "table_and_columns": table_and_columns,
+#             "primary_column": primary_column,
+#             "offset": offset,
+#             "limit": limit,
+#             "result": result
+#         }), 200
 
-    except Exception as e:
-        logging.error(f"Error scanning rows: {e}")
-        return jsonify({"error": str(e)}), 500
+#     except Exception as e:
+#         logging.error(f"Error scanning rows: {e}")
+#         return jsonify({"error": str(e)}), 500

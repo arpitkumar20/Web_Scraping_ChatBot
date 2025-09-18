@@ -30,8 +30,8 @@ def async_store_embeddings(result_path, web_info, job_id):
         web_info_with_ns["namespace"] = namespace_value
 
         # Save JSON via COMMON helper
-        save_data = COMMON.save_json_data(web_info_with_ns)
-        logging.info(f"Website record saved successfully: {save_data}")
+        COMMON.save_json_data(web_info_with_ns)
+        logging.info("Website record saved successfully")
 
         with lock:
             job_status[job_id]["results"].append({

@@ -13,6 +13,7 @@ pinecone
 langchain
 langchain-community
 langchain-core
+langchain-pinecone
 langchain-text-splitters
 mysql-connector-python
 beautifulsoup4

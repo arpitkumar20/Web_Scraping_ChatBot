@@ -1,32 +1,41 @@
-name: Deploy with Docker Compose
+name: Deploy Docker Compose
 
 on:
   push:
-    branches: [ main, development ]
+    branches:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
-      - name: Deploy on EC2 with Docker Compose
-        uses: appleboy/ssh-action@v1.2.0
+      - name: Setup SSH key
+        uses: webfactory/ssh-agent@v0.7.0
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            if [ ! -d ~/deployments/web_scraping_chatbot ]; then
-              mkdir -p ~/deployments/web_scraping_chatbot
-              git clone https://github.com/${{ github.repository }} ~/deployments/web_scraping_chatbot
+          ssh-private-key: ${{ secrets.SERVER_SSH_KEY }}
+
+      - name: Deploy on EC2
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+            mkdir -p ~/deployments/web_scraping_chatbot
+            cd ~/deployments/web_scraping_chatbot
+            if [ ! -d ".git" ]; then
+              git clone https://github.com/arpitkumar20/Web_Scraping_ChatBot.git .
+            else
+              git fetch origin
+              git reset --hard origin/main
             fi
 
-            cd ~/deployments/web_scraping_chatbot
-            git fetch --all
-            git reset --hard origin/${GITHUB_REF_NAME}
+            # Ensure Docker Compose exists
+            if ! command -v docker-compose &> /dev/null
+            then
+                echo "docker-compose could not be found. Installing..."
+                sudo curl -L "https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                sudo chmod +x /usr/local/bin/docker-compose
+            fi
 
             docker-compose down
             docker-compose up -d --build
+          EOF

@@ -150,12 +150,12 @@
 
 
 
+
 import uuid
 from pathlib import Path
 from flask import Blueprint, jsonify, request
 from threading import Thread, Lock
 from app.helper.utils import COMMON
-
 from app.core.logger import logger
 from app.web_scraping.scraper_function import web_scraping
 from app.services.embeddings_store_v2 import store_embeddings_from_folder
@@ -264,7 +264,7 @@ def background_scraping(site_urls, job_id):
                     "status": "failed"
                 })
 
-    logger.info("Background scraping started for all URLs.")
+    logging.info("Background scraping started for all URLs.")
 
 
 @scraper_bp.route("/web-scraper", methods=["POST"])
@@ -281,6 +281,14 @@ def scraper():
 
     Thread(target=background_scraping, args=(site_urls, job_id), daemon=True).start()
 
+    logger.info("Inserting result into web scraping table.")
+    PostgreSQL().insert_web_scraping_status({
+        "status": "success",
+        "message": "Scraping started in background.",
+        "job_id": job_id
+    })
+
+    # Immediately return response with job_id
     return jsonify({
         "status": "success",
         "message": "Scraping started in background.",
@@ -303,4 +311,3 @@ def scraper_status(job_id):
             "status": job_status[job_id]["status"],
             "results": job_status[job_id]["results"]
         })
-    

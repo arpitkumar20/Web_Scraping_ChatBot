@@ -4,11 +4,9 @@ import logging
 from psycopg2 import OperationalError
 from psycopg2.pool import SimpleConnectionPool
 from psycopg2.extras import RealDictCursor
+
 from app.helper.utils import COMMON
-
-
-logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO)
+from app.core.logger import logger
 
 DATABASE_HOST = os.getenv('DATABASE_HOST')
 DATABASE_PORT = os.getenv('DATABASE_PORT')
@@ -278,99 +276,27 @@ class PostgreSQL:
             return {"message": "Insert operation failed.", "description": str(error)}, 500
 
 
-    # def insert_web_scraping_status(self, data: dict):
-    #     """
-    #     Insert job result into job_results table.
-    #     Missing fields will be inserted as NULL.
-    #     """
-
-    #     try:
-    #         insert_query = f"""
-    #             INSERT INTO web_scraping_status (
-    #                 job_id, message, namespace, url, status
-    #             ) VALUES (%s, %s, %s, %s, %s)
-    #         """
-
-    #         # Extract fields safely, defaulting to None if missing
-    #         job_id = data.get("job_id")
-    #         message = data.get("message")
-    #         namespace = data.get("namespace") or None
-    #         url = data.get("url") or None
-    #         status = data.get("status")
-
-    #         values = (job_id, message, namespace, url, status)
-
-    #         with self.pg_connection.cursor() as cur:
-    #             cur.execute(insert_query, values)
-    #             self.pg_connection.commit()
-
-    #         logger.info("✅ Record inserted successfully into PostgreSQL.")
-    #         return {"message": "Record inserted successfully."}, 200
-
-    #     except Exception as error:
-    #         logger.error(f'❌ Insert operation failed: {error}')
-    #         return {
-    #             "message": "Insert operation failed.",
-    #             "description": str(error)
-    #         }, 500
-        
-    # def update_web_scraping_status(self, data: dict):
-    #     """
-    #     Update job result in web_scraping_status table.
-    #     Updates the row matching the given job_id.
-    #     """
-    #     try:
-    #         update_query = """
-    #             UPDATE web_scraping_status
-    #             SET message = %s,
-    #                 namespace = %s,
-    #                 url = %s,
-    #                 status = %s
-    #             WHERE job_id = %s
-    #         """
-
-    #         # Extract fields safely
-    #         job_id = data.get("job_id")
-    #         message = data.get("message")
-    #         namespace = data.get("namespace") or None
-    #         url = data.get("url") or None
-    #         status = data.get("status")
-
-    #         values = (message, namespace, url, status, job_id)
-
-    #         with self.pg_connection.cursor() as cur:
-    #             cur.execute(update_query, values)
-    #             self.pg_connection.commit()
-
-    #         logger.info(f"✅ Record updated successfully for job_id={job_id}.")
-    #         return {"message": "Record updated successfully."}, 200
-
-    #     except Exception as error:
-    #         logger.error(f'❌ Update operation failed: {error}')
-    #         return {
-    #             "message": "Update operation failed.",
-    #             "description": str(error)
-    #         }, 500
-
-
     def insert_web_scraping_status(self, data: dict):
         """
-        Insert job result into web_scraping_status table (new row per URL).
+        Insert job result into job_results table.
+        Missing fields will be inserted as NULL.
         """
+
         try:
-            insert_query = """
+            insert_query = f"""
                 INSERT INTO web_scraping_status (
                     job_id, message, namespace, url, status
                 ) VALUES (%s, %s, %s, %s, %s)
             """
 
-            values = (
-                data.get("job_id"),
-                data.get("message"),
-                data.get("namespace"),
-                data.get("url"),
-                data.get("status"),
-            )
+            # Extract fields safely, defaulting to None if missing
+            job_id = data.get("job_id")
+            message = data.get("message")
+            namespace = data.get("namespace") or None
+            url = data.get("url") or None
+            status = data.get("status")
+
+            values = (job_id, message, namespace, url, status)
 
             with self.pg_connection.cursor() as cur:
                 cur.execute(insert_query, values)
@@ -385,35 +311,36 @@ class PostgreSQL:
                 "message": "Insert operation failed.",
                 "description": str(error)
             }, 500
-
-
+        
     def update_web_scraping_status(self, data: dict):
         """
         Update job result in web_scraping_status table.
-        Uses (job_id + url) to uniquely identify each row.
+        Updates the row matching the given job_id.
         """
         try:
             update_query = """
                 UPDATE web_scraping_status
                 SET message = %s,
                     namespace = %s,
+                    url = %s,
                     status = %s
-                WHERE job_id = %s AND url = %s
+                WHERE job_id = %s
             """
 
-            values = (
-                data.get("message"),
-                data.get("namespace"),
-                data.get("status"),
-                data.get("job_id"),
-                data.get("url"),
-            )
+            # Extract fields safely
+            job_id = data.get("job_id")
+            message = data.get("message")
+            namespace = data.get("namespace") or None
+            url = data.get("url") or None
+            status = data.get("status")
+
+            values = (message, namespace, url, status, job_id)
 
             with self.pg_connection.cursor() as cur:
                 cur.execute(update_query, values)
                 self.pg_connection.commit()
 
-            logger.info(f"✅ Record updated successfully for job_id={data.get('job_id')} url={data.get('url')}.")
+            logger.info(f"✅ Record updated successfully for job_id={job_id}.")
             return {"message": "Record updated successfully."}, 200
 
         except Exception as error:
@@ -422,4 +349,3 @@ class PostgreSQL:
                 "message": "Update operation failed.",
                 "description": str(error)
             }, 500
-

@@ -1,6 +1,7 @@
-import os
 import mimetypes
+import os
 import requests
+import logging
 from urllib.parse import unquote
 
 from app.core.logger import logger
@@ -10,7 +11,7 @@ API_KEY = os.getenv("API_KEY")
 TENANT_ID = os.getenv("TENANT_ID")
 PHONE_NUMBER = os.getenv("PHONE_NUMBER")
 CHANNEL_NUMBER = os.getenv("CHANNEL_NUMBER")
-BASE_URL=os.getenv("BASE_URL")
+BASE_URL="https://live-mt-server.wati.io"
 
 
 def send_whatsapp_message_v2(phone_number: str, message: str) -> dict:

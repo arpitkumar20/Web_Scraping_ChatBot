@@ -264,7 +264,7 @@ def background_scraping(site_urls, job_id):
                     "status": "failed"
                 })
 
-    logging.info("Background scraping started for all URLs.")
+    logger.info("Background scraping started for all URLs.")
 
 
 @scraper_bp.route("/web-scraper", methods=["POST"])

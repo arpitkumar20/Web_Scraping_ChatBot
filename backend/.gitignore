@@ -12,9 +12,8 @@ ENV/
 env/
 .venv/
 
-# Environment variable files
-.env
-.env.*
+
+
 
 # VSCode or other IDE settings
 .vscode/

@@ -4,23 +4,20 @@ import logging
 import google.generativeai as genai
 from pinecone import Pinecone
 
+from app.core.logger import logger
+
 # Environment Variables
 PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
 PINECONE_ENV = os.getenv('PINECONE_ENV')
 PINECONE_INDEX = os.getenv('PINECONE_INDEX')
-NAMESPACE = os.getenv('NAMESPACE')
 
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 GEMINI_MODEL = os.getenv('GEMINI_MODEL')          # Reserved for future use
 EMBEDDING_MODEL = os.getenv('EMBEDDING_MODEL')  # High-quality embedding model
 
-# Configure Logger
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
-logger = logging.getLogger(__name__)
 
 # Configure GenAI
 genai.configure(api_key=GOOGLE_API_KEY)
-
 
 def clean_text(text: str) -> str:
     if not isinstance(text, str):
@@ -64,7 +61,7 @@ def generate_embedding(text: str) -> list[float]:
         raise
 
 
-def query_pinecone_index(query_text: str, top_k: int = 5, namespace: str = NAMESPACE) -> list[dict]:
+def query_pinecone_index(query_text: str, top_k: int = 5, namespace: str = None) -> list[dict]:
     # Do NOT reformulate the query with any non-existent API.
     # Instead, rely on strong embeddings directly.
     enriched_query = preprocess_text(query_text)

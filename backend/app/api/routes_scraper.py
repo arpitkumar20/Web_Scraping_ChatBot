@@ -1,10 +1,9 @@
+import logging
 import uuid
 from pathlib import Path
 from flask import Blueprint, jsonify, request
 from threading import Thread, Lock
 from app.helper.utils import COMMON
-
-from app.core.logger import logger
 from app.web_scraping.scraper_function import web_scraping
 from app.services.embeddings_store_v2 import store_embeddings_from_folder
 from app.models.postgresql_db import PostgreSQL
@@ -32,7 +31,7 @@ def async_store_embeddings(result_path, web_info, job_id):
 
         # Save JSON via COMMON helper
         COMMON.save_json_data(web_info_with_ns)
-        logger.info("Website record saved successfully")
+        logging.info("Website record saved successfully")
 
         with lock:
             job_status[job_id]["results"].append({
@@ -43,7 +42,7 @@ def async_store_embeddings(result_path, web_info, job_id):
             job_status[job_id]["status"] = "completed"
 
     except Exception as e:
-        logger.exception("Error storing embeddings for %s", web_info.get("url", "unknown"))
+        logging.exception("Error storing embeddings for %s", web_info.get("url", "unknown"))
         with lock:
             job_status[job_id]["results"].append({
                 "message": "Failed to store embeddings",
@@ -72,7 +71,7 @@ def background_scraping(site_urls, job_id):
             threads.append(thread)
 
         except Exception as e:
-            logger.exception("Error processing URL %s", url)
+            logging.exception("Error processing URL %s", url)
             with lock:
                 job_status[job_id]["results"].append({
                     "message": "Failed to scrape data",
@@ -81,7 +80,7 @@ def background_scraping(site_urls, job_id):
                 })
                 job_status[job_id]["status"] = "failed"
 
-    logger.info("Background scraping started for all URLs.")
+    logging.info("Background scraping started for all URLs.")
 
 
 @scraper_bp.route("/web-scraper", methods=["POST"])
@@ -100,7 +99,7 @@ def scraper():
     # Start background thread for scraping
     Thread(target=background_scraping, args=(site_urls, job_id), daemon=True).start()
 
-    logger.info("Inserting result into web scraping table.")
+    logging.info("Inserting result into web scraping table.")
     PostgreSQL().insert_web_scraping_status({
         "status": "success",
         "message": "Scraping started in background.",

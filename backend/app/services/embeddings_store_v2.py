@@ -1,11 +1,10 @@
 import os
+import logging
 import json
 import re
 import uuid
 from dotenv import load_dotenv
 from langchain.schema import Document
-
-from app.core.logger import logger
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from pinecone import Pinecone, ServerlessSpec
@@ -18,6 +17,9 @@ PINECONE_ENV = os.getenv('PINECONE_ENV')
 PINECONE_INDEX = os.getenv('PINECONE_INDEX')
 CLOUD_STORAGE = os.getenv('CLOUD_STORAGE')
 EMBEDDING_MODEL= os.getenv('EMBEDDING_MODEL')
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 def store_embeddings_from_folder(folder_path: str):

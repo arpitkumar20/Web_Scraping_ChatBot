@@ -7,11 +7,11 @@ from urllib.parse import unquote
 from app.core.logger import logger
 
 # Load environment variables
-API_KEY = os.getenv("API_KEY")
+WATI_APY_KEY = os.getenv("WATI_APY_KEY")
 TENANT_ID = os.getenv("TENANT_ID")
 PHONE_NUMBER = os.getenv("PHONE_NUMBER")
 CHANNEL_NUMBER = os.getenv("CHANNEL_NUMBER")
-BASE_URL="https://live-mt-server.wati.io"
+BASE_URL=os.getenv("BASE_URL")
 
 
 def send_whatsapp_message_v2(phone_number: str, message: str) -> dict:
@@ -29,7 +29,7 @@ def send_whatsapp_message_v2(phone_number: str, message: str) -> dict:
     }
     headers = {
         'accept': '*/*',
-        'Authorization': f'Bearer {API_KEY}'
+        'Authorization': f'Bearer {WATI_APY_KEY}'
     }
 
     logger.info(f"Sending WhatsApp message to user via admin")
@@ -54,7 +54,7 @@ def send_whatsapp_image_v2(phone_number: str, image_path: str, caption: str) -> 
     }
     headers = {
         'accept': '*/*',
-        'Authorization': f'Bearer {API_KEY}'
+        'Authorization': f'Bearer {WATI_APY_KEY}'
     }
 
     mime_type, _ = mimetypes.guess_type(image_path)
@@ -90,13 +90,13 @@ def get_whatsapp_messages_v2(phone_number: str) -> dict:
     """
     Fetch WhatsApp messages from WATI API for a specific phone number.
     """
-    if not all([BASE_URL, API_KEY, CHANNEL_NUMBER]):
+    if not all([BASE_URL, WATI_APY_KEY, CHANNEL_NUMBER]):
         logger.error("Missing environment variables: WATI_BASE_URL, WATI_API_KEY, or WATI_CHANNEL_NUMBER")
         return {"error": "Missing environment variables: WATI_BASE_URL, WATI_API_KEY, or WATI_CHANNEL_NUMBER"}
 
     url = f"{BASE_URL}/{TENANT_ID}/api/v1/getMessages/{phone_number}?channelPhoneNumber={CHANNEL_NUMBER}"
     headers = {
-        "Authorization": f"Bearer {API_KEY}",
+        "Authorization": f"Bearer {WATI_APY_KEY}",
         "Accept": "application/json"
     }
 

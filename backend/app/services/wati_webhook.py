@@ -1,6 +1,5 @@
 import logging
 import threading
-from flask import jsonify
 
 from app.services.genai_response import handle_user_query
 from app.services.vectordb_retrive import query_pinecone_index
@@ -13,6 +12,7 @@ from app.models.postgresql_db import PostgreSQL
 # ✅ Call insert_message_data after successful processing
 DB = PostgreSQL()
 # DB = MySQL()
+
 # Keep track of processed message IDs to prevent duplicate processing
 processed_message_ids = set()
 
@@ -70,10 +70,9 @@ def handle_wati_webhook(data: dict) -> dict:
                     'text': message_text
                 }
 
-
                 # insert_result = DB.insert_message_data(data_to_insert)
-                insert_result = DB.insert_rds_message_data(data_to_insert)
-                logging.info(f"Insert result: {insert_result}")
+                DB.insert_rds_message_data(data_to_insert)
+                logging.info(f"Record inserted sucessfully")
 
             except Exception as e:
                 logging.error(f"Error processing message {message_id}: {str(e)}")
@@ -83,7 +82,7 @@ def handle_wati_webhook(data: dict) -> dict:
         return response
 
     except Exception as e:
-        logging.error(f"Webhook error: {str(e)}")
+        logging.error(f"webhook error: {str(e)}")
         return {"error": str(e)}
     
 '''

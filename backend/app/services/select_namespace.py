@@ -6,7 +6,6 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 from app.core.logger import logger
 
-
 def run_namespace_selector(user_query: str) -> str:
     """
     Use Google GenAI (Gemini) + LangChain to intelligently detect
@@ -31,7 +30,7 @@ def run_namespace_selector(user_query: str) -> str:
     genai.configure(api_key=GOOGLE_API_KEY)
 
     llm = ChatGoogleGenerativeAI(
-        model=os.getenv("GEMINI_MODEL", "gemini-1.5-pro"),
+        model=os.getenv("GEMINI_MODEL"),
         temperature=0,
     )
     logger.info("Initialized Google GenAI LLM.")

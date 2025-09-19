@@ -1,16 +1,13 @@
 import os
-import json
 import re
+import json
 import uuid
-from dotenv import load_dotenv
 from langchain.schema import Document
-
-from app.core.logger import logger
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from pinecone import Pinecone, ServerlessSpec
 
-load_dotenv()
+from app.core.logger import logger
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
@@ -21,13 +18,6 @@ EMBEDDING_MODEL= os.getenv('EMBEDDING_MODEL')
 
 
 def store_embeddings_from_folder(folder_path: str):
-    # Extract site name from folder path
-    # try:
-    #     site_name = folder_path.split("/www.")[1].split("/")[0].replace('.', '_')
-    # except IndexError:
-    #     logger.error("Invalid folder path format. Expected to find '/www.<site_name>/' in path.")
-    #     return None
-
     # Regex pattern to extract domain-like folder name (e.g., www.example.com, example.in, my-site.org)
     domain_pattern = re.compile(r'([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})')
 

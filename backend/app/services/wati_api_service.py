@@ -1,7 +1,6 @@
-import mimetypes
 import os
+import mimetypes
 import requests
-import logging
 from urllib.parse import unquote
 
 from app.core.logger import logger

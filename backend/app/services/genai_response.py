@@ -1,5 +1,4 @@
 import os
-import json
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import ChatPromptTemplate
 import google.generativeai as genai
@@ -22,12 +21,9 @@ llm = ChatGoogleGenerativeAI(
     temperature=LLM_TEMPERATURE,
     google_api_key=GOOGLE_API_KEY
 )
-
 '''
 CORRECT
-
 '''
-
 
 # SYSTEM_PROMPT = """
 # You are a helpful retrieval-augmented chatbot.
@@ -80,8 +76,6 @@ INSTRUCTIONS FOR YOU:
 """)
 ])
 
-
-
 # Core function to handle the query
 def handle_user_query(retrieved_context: str, query: str) -> str:
     # Ensure inputs are valid strings
@@ -98,16 +92,3 @@ def handle_user_query(retrieved_context: str, query: str) -> str:
     response = llm.predict(formatted_prompt).strip()
 
     return response
-
-
-# === Example Usage ===
-# pinecone_context = "Previous queries show available appointment slots on Friday from 10 AM to 3 PM."
-# user_query = "Can I book an appointment on Friday afternoon?"
-
-# response = handle_user_query(
-#     retrieved_context=pinecone_context,
-#     query=user_query
-# )
-
-# print("\n🌟 GenAI Response:\n", response)
-

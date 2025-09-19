@@ -7,7 +7,6 @@ from typing import Dict, List, Union
 
 from app.core.logger import logger
 
-
 class COMMON:
     def stringify(item):
         if isinstance(item, (bson.objectid.ObjectId,datetime.datetime,datetime.date,datetime.time,datetime.timezone,decimal.Decimal)):

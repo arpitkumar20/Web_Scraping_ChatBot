@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web-scraping-chatbot:
+    build:
+      context: ./backend        
+      dockerfile: Dockerfile
+    image: web-scraping-chatbot
+    container_name: web-scraping-chatbot
+    env_file:
+      - ./backend/.env          
+    ports:
+      - "5000:5000"
+    restart: unless-stopped

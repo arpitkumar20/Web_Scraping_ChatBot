@@ -6,6 +6,7 @@ flask==3.0.0
 genai
 langchain-google-genai
 requests
+playwright
 python-dotenv
 google-generativeai
 psycopg2-binary

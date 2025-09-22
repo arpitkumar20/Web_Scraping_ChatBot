@@ -237,10 +237,21 @@ class PostgreSQL:
             if isinstance(is_deleted, str):
                 is_deleted = is_deleted.lower() in ['true', '1']
 
-            # --- Convert created time ---
+            # # --- Convert created time ---
+            # created_time = data['message']['created']
+            # if isinstance(created_time, str):
+            #     created_time = datetime.datetime.fromisoformat(created_time.replace('Z', '+00:00')[:26])
+            
             created_time = data['message']['created']
             if isinstance(created_time, str):
-                created_time = datetime.datetime.fromisoformat(created_time.replace('Z', '+00:00')[:26])
+                try:
+                    if created_time.endswith('+'):
+                        created_time = created_time.rstrip('+') + '+00:00'
+                    created_time = datetime.datetime.fromisoformat(created_time)
+                except ValueError:
+                    # fallback parser
+                    from dateutil import parser
+                    created_time = parser.isoparse(created_time)
 
             values = (
                 data['status'],

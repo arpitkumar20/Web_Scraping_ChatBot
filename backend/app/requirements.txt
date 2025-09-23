@@ -1,4 +1,5 @@
 bson
+chardet
 pip
 setuptools>=68.0.0
 wheel>=0.41.0

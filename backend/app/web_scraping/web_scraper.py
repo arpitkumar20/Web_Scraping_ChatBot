@@ -304,7 +304,7 @@ from urllib.parse import urlparse, urljoin
 from dotenv import load_dotenv
 import requests
 from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.util.retry import Retry
+from urllib3.util.retry import Retry
 
 import chardet
 from bs4 import BeautifulSoup

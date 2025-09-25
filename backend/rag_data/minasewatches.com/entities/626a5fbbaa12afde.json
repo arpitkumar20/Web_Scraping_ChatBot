@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/collections/round/#schema-23736",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/collections/round/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/collections/round/#schema-23736::0",
+      "text_preview": "Rediscover Round Watches | Made in Japan | Minase Watches. Rediscover what a round watch can be ! Divido is Minase round collection. Handmade in Japan, its construction is unique and inspired by 3D puzzle. VideoObject. https://minasewatches.com/collections/round/#webpage. https://minasewatches.com/#",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "8d1db8b048755bc6b58741dd542e49d1c2413ae22470cbc4cd78fd7143214ee1",
+  "dynamic_hash": "def53ec637b4bafcf5a3b9d84f4e02166210f62c8d8a93350af3c7cc862160e0",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "Rediscover Round Watches | Made in Japan | Minase Watches",
+    "description": "Rediscover what a round watch can be ! Divido is Minase round collection. Handmade in Japan, its construction is unique and inspired by 3D puzzle",
+    "isPartOf.@id": "https://minasewatches.com/collections/round/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/collections/round/#webpage"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2023-04-12T15:04:28+02:00",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2022/11/Case-in-Case-More_DIVIDO-1.mp4",
+    "width": "1920",
+    "height": "1080",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/collections/round/#schema-23736",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

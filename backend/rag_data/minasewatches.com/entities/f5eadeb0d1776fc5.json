@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM14-RBKKA2-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/divido-shibo-urushi-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM14-RBKKA2-SSD::0",
+      "text_preview": "Divido Shibo Urushi Rubber - Metallic Haze. A tribute to Japan’s finest traditional crafts. With the shibo urushi technique, urushi laquer is mixed with paint and egg white. The viscous consistency allows the artist to play with the puddle-like color spots.. Product. A tribute to Japan’s finest trad",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "084a6d368fc94b49fcdfec7d0c1a8d494f2ff0b2dd69d1bf007214ef8495eeab",
+  "dynamic_hash": "f0e29ff641d127ff7ef1b12a30f521052daaf843acb750813234b4858501c17e",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Divido Shibo Urushi Rubber - Metallic Haze",
+    "description": "A tribute to Japan’s finest traditional crafts. With the shibo urushi technique, urushi laquer is mixed with paint and egg white. The viscous consistency allows the artist to play with the puddle-like color spots.",
+    "offers.description": "A tribute to Japan’s finest traditional crafts. With the shibo urushi technique, urushi laquer is mixed with paint and egg white. The viscous consistency allows the artist to play with the puddle-like color spots.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/divido-shibo-urushi-rubber/?attribute_pa_divido-shibo=metallic-haze"
+  },
+  "dynamic_fields": {
+    "sku": "VM14-RBKKA2-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-shibo-urushi-grey-rubber-1-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "7450",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

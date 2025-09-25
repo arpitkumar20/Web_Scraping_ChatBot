@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM12-RBKNBL-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/horizon-rubber-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM12-RBKNBL-SSD::0",
+      "text_preview": "Horizon Rubber - Blue. Horizon is a tribute to Japan. The overall watch looks calm and peaceful. Yet if you look at the sides, there is something strong, powerful and virile. The finishing of the sides was inspired by the Katana, the famous samurai sword.. Product. Horizon is a tribute to Japan. The",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "4dfdc2688414986fb660c6868943c3d2db5722de6bddb211319e53a91bba5e9d",
+  "dynamic_hash": "c4e338a1f2c98783f70d14f170b1f1edd1328233fc679134cb405d53dfe4e5a9",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Horizon Rubber - Blue",
+    "description": "Horizon is a tribute to Japan. The overall watch looks calm and peaceful. Yet if you look at the sides, there is something strong, powerful and virile. The finishing of the sides was inspired by the Katana, the famous samurai sword.",
+    "offers.description": "Horizon is a tribute to Japan. The overall watch looks calm and peaceful. Yet if you look at the sides, there is something strong, powerful and virile. The finishing of the sides was inspired by the Katana, the famous samurai sword.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/horizon-rubber-collection/?attribute_pa_horizon-dials=blue"
+  },
+  "dynamic_fields": {
+    "sku": "VM12-RBKNBL-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-blue-rubber-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4200",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

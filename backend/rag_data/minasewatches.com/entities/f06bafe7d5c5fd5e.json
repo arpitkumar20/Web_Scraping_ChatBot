@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-hakose-regular-and-midsize.jpg",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/japanese-masterpieces/urushi/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-hakose-regular-and-midsize.jpg::0",
+      "text_preview": "ImageObject. Minase métier d'art watches by hakose",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "bfda5b81f81e5418591fb256977a597b9750d195136135d94b9da116813a0e6d",
+  "dynamic_hash": "dfdd0dcec0670977decc2edc466ba0300c5f1a5bde19d92cf1f80c7c8d5cf9f2",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase métier d'art watches by hakose"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-hakose-regular-and-midsize.jpg",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-hakose-regular-and-midsize.jpg",
+    "width": "1739",
+    "height": "2000",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

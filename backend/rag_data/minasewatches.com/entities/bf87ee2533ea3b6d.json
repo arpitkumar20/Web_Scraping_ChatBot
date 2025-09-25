@@ -1,0 +1,60 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/hello/#richSnippet",
+  "entity_type": "BlogPosting",
+  "source_url": "https://minasewatches.com/hello/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/hello/#richSnippet::0",
+      "text_preview": "How did Minase emerge from Japan ? | Minase watches | Handmade in Japan. We’ve been talking a lot about Minase during the last couple of months. A recurring question we get is: “How comes a small, traditional Japanese watch brand like Minase got to be internationally commercialized by a Switzerland-",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "9965faba9693dca86df6aa12e3f866a48d16b56949e5e9337ef2bccdf0cbf47f",
+  "dynamic_hash": "16cabd5c6b7a2c8e9e2fb213b45b384b8586b1053c26d689550104620f8af9ad",
+  "static_paths": [
+    "@type",
+    "headline",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "keywords",
+    "datePublished",
+    "dateModified",
+    "articleSection",
+    "image.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "BlogPosting",
+    "headline": "How did Minase emerge from Japan ? | Minase watches | Handmade in Japan",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "We’ve been talking a lot about Minase during the last couple of months. A recurring question we get is: “How comes a small, traditional Japanese watch brand like Minase got to be internationally commercialized by a Switzerland-based small company such as H-Development ?",
+    "name": "How did Minase emerge from Japan ? | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/hello/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/hello/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/hello/#webpage"
+  },
+  "dynamic_fields": {
+    "keywords": "Minase",
+    "datePublished": "2021-01-05T16:00:30+01:00",
+    "dateModified": "2023-03-03T10:10:40+01:00",
+    "articleSection": "Minase",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2023/02/SvenErikHenriksen-H-DevelopmentManagingPartner.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

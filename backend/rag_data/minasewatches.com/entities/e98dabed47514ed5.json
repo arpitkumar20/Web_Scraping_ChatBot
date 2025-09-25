@@ -1,0 +1,56 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/after-sale-service/#richSnippet",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/after-sale-service/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/after-sale-service/#richSnippet::0",
+      "text_preview": "After Sale Service | Made in Japan | Minase watches. Find out more about Minase's after sale service in Switzerland, in the United States or in other parts of the world.. Article. After Sale Service | Made in Japan | Minase watches. After Sale Service. https://minasewatches.com/author/kellyhenriksen",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "38bac8322ac84df24d393673de039b353a333b0560a002e9c9c0d29ff3b0b3c7",
+  "dynamic_hash": "8d2567f7d68d6e2195ee0dc19c0de751f98f30946d4bc5427124612d8759ed9a",
+  "static_paths": [
+    "@type",
+    "headline",
+    "keywords",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "Article",
+    "headline": "After Sale Service | Made in Japan | Minase watches",
+    "keywords": "After Sale Service",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Find out more about Minase&#039;s after sale service in Switzerland, in the United States or in other parts of the world.",
+    "name": "After Sale Service | Made in Japan | Minase watches",
+    "@id": "https://minasewatches.com/after-sale-service/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/after-sale-service/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/after-sale-service/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2025-08-08T16:45:01+02:00",
+    "dateModified": "2025-08-20T13:37:17+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

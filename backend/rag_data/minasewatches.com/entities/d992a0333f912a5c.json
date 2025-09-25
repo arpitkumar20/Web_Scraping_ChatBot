@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM14-RBKGBK-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/divido-rubber-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM14-RBKGBK-SSD::0",
+      "text_preview": "Divido Rubber - Grey. Divido's unique design is inspired by the Japanese 3-dimentional puzzle. The dial seems to be floating inside the case, suspended below the box-type sapphire crystal. Handmade in Japan and finished with the rare sallaz polishing technique.. Product. Divido's unique design is in",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "0e5b59f5bacc5fc00923a686c6d7344ab0793a43107602a060b35e956c37a9cb",
+  "dynamic_hash": "9885c987d7fe8ffe71e18ff010ff81cfffa91c38ab96b4f97f926187d21566d8",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Divido Rubber - Grey",
+    "description": "Divido's unique design is inspired by the Japanese 3-dimentional puzzle. The dial seems to be floating inside the case, suspended below the box-type sapphire crystal. Handmade in Japan and finished with the rare sallaz polishing technique.",
+    "offers.description": "Divido's unique design is inspired by the Japanese 3-dimentional puzzle. The dial seems to be floating inside the case, suspended below the box-type sapphire crystal. Handmade in Japan and finished with the rare sallaz polishing technique.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/divido-rubber-collection/?attribute_pa_divido-dials=grey"
+  },
+  "dynamic_fields": {
+    "sku": "VM14-RBKGBK-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-grey-rubber-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4400",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,60 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/sallaz-polish/#richSnippet",
+  "entity_type": "BlogPosting",
+  "source_url": "https://minasewatches.com/sallaz-polish/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/sallaz-polish/#richSnippet::0",
+      "text_preview": "Sallaz polishing for Minase watches | Minase watches | Handmade in Japan. Minase uses the Sallaz polishing technique to finish steel parts. sallaz polishing is done by hand and only found in high-end timepieces.. BlogPosting. Sallaz polishing for Minase watches | Minase watches | Handmade in Japan. ",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "ebf16528342957d32e84ed4f2f3a6652375108aa4c326f55f0b9dcb4e6c21d8b",
+  "dynamic_hash": "8763bad6a16339cf52c1901f97f198ef502aa17de02f364e0bee437a9bf06b4d",
+  "static_paths": [
+    "@type",
+    "headline",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "keywords",
+    "datePublished",
+    "dateModified",
+    "articleSection",
+    "image.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "BlogPosting",
+    "headline": "Sallaz polishing for Minase watches | Minase watches | Handmade in Japan",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Minase uses the Sallaz polishing technique to finish steel parts. sallaz polishing is done by hand and only found in high-end timepieces.",
+    "name": "Sallaz polishing for Minase watches | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/sallaz-polish/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/sallaz-polish/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/sallaz-polish/#webpage"
+  },
+  "dynamic_fields": {
+    "keywords": "sallaz",
+    "datePublished": "2020-05-15T16:00:43+02:00",
+    "dateModified": "2023-03-03T10:13:03+01:00",
+    "articleSection": "Minase",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2023/02/Minase_2019_Reportage-19.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

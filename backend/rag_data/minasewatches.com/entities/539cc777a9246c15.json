@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Bra-divido-2-transp-1.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/divido-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Bra-divido-2-transp-1.png::0",
+      "text_preview": "ImageObject. Minase Steel bracelet divido",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "193fc9b8391e37936d68ff6c164d144d15fd9cde64341ccabfea1a0603112637",
+  "dynamic_hash": "b39d96abf3d22946ad0ff9b5c1aede7c24144b4f589f8a60fb0fe12260e785ce",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase Steel bracelet divido"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/02/Bra-divido-2-transp-1.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/02/Bra-divido-2-transp-1.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

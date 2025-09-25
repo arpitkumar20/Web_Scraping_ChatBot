@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/collections/accessories/wooden-boxes/#schema-23908",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/collections/accessories/wooden-boxes/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/collections/accessories/wooden-boxes/#schema-23908::0",
+      "text_preview": "Buy Minase Wooden Boxes for Watches | Made in Japan. Minase wooden boxes for watches are perfect to store your timepieces. Made in Japan with kiri wood or hand-made in marquetery.. VideoObject. https://minasewatches.com/collections/accessories/wooden-boxes/#webpage. https://minasewatches.com/#organi",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "aac1f8a790bc23a3345a571da95ab3a0d22b9c5ea7199f5f5049b6be8c5d536a",
+  "dynamic_hash": "f968f19cca63385ac1a6b0ac151ef8d8f13b86f18a72fef001ba5ad59d609a19",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "Buy Minase Wooden Boxes for Watches | Made in Japan",
+    "description": "Minase wooden boxes for watches are perfect to store your timepieces. Made in Japan with kiri wood or hand-made in marquetery.",
+    "isPartOf.@id": "https://minasewatches.com/collections/accessories/wooden-boxes/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2023-04-14T20:26:22+02:00",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2022/11/video-collection.mp4",
+    "width": "1920",
+    "height": "1080",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/collections/accessories/wooden-boxes/#schema-23908",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

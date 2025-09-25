@@ -1,0 +1,87 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/m3-bracelet/#richSnippet",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/m3-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/m3-bracelet/#richSnippet::0",
+      "text_preview": "Buy Bracelet M3 | Minase Watches | Handmade in Japan. Minase bracelet M3 is handmade in stainless steel at the factory in Japan and polished with the sallaz (also known as sarazu) technique.. Product. Steel bracelets. ImageObject. NewCondition. Organization. https://minasewatches.com/. minasewatches",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "a33c71a91d869330392ed3d6d80080c34d44de04a3c1ee3f5087bf5b310c84b2",
+  "dynamic_hash": "0b226d58770dd4a170513d1239c0e83d8e8e0729f487474372563070364258b4",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "image",
+    "image[0].@type",
+    "offers.itemCondition",
+    "offers.seller.@type",
+    "offers.seller.@id",
+    "offers.seller.name",
+    "offers.seller.url"
+  ],
+  "dynamic_paths": [
+    "mainEntityOfPage.@id",
+    "image[0].url",
+    "image[0].height",
+    "image[0].width",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.priceValidUntil",
+    "offers.availability",
+    "offers.url",
+    "offers.seller.logo",
+    "offers.priceSpecification",
+    "@id"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Buy Bracelet M3 | Minase Watches | Handmade in Japan",
+    "description": "Minase bracelet M3 is handmade in stainless steel at the factory in Japan and polished with the sallaz (also known as sarazu) technique.",
+    "category": "Steel bracelets",
+    "image": [
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-M3-steel-bracelet.png",
+        "height": "800",
+        "width": "800"
+      }
+    ],
+    "image[0].@type": "ImageObject",
+    "offers.itemCondition": "NewCondition",
+    "offers.seller.@type": "Organization",
+    "offers.seller.@id": "https://minasewatches.com/",
+    "offers.seller.name": "minasewatches.com",
+    "offers.seller.url": "https://minasewatches.com"
+  },
+  "dynamic_fields": {
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/m3-bracelet/#webpage",
+    "image[0].url": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-M3-steel-bracelet.png",
+    "image[0].height": "800",
+    "image[0].width": "800",
+    "offers.@type": "Offer",
+    "offers.price": "860.00",
+    "offers.priceCurrency": "CHF",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.url": "https://minasewatches.com/webshop/m3-bracelet/",
+    "offers.seller.logo": "",
+    "offers.priceSpecification": {
+      "price": "860",
+      "priceCurrency": "CHF",
+      "valueAddedTaxIncluded": "true"
+    },
+    "@id": "https://minasewatches.com/webshop/m3-bracelet/#richSnippet"
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

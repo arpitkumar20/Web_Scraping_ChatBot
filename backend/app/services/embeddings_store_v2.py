@@ -1,123 +1,117 @@
 import os
-import logging
 import json
-import re
-import uuid
-from dotenv import load_dotenv
+import logging
+from pathlib import Path
+from typing import Dict, Any, List
+
+from pinecone import Pinecone, exceptions as pinecone_exceptions
 from langchain.schema import Document
-from langchain_text_splitters import CharacterTextSplitter
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from pinecone import Pinecone, ServerlessSpec
-
-load_dotenv()
-
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_ENV = os.getenv('PINECONE_ENV')
-PINECONE_INDEX = os.getenv('PINECONE_INDEX')
-CLOUD_STORAGE = os.getenv('CLOUD_STORAGE')
-EMBEDDING_MODEL= os.getenv('EMBEDDING_MODEL')
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 
-def store_embeddings_from_folder(folder_path: str):
-    # Extract site name from folder path
-    # try:
-    #     site_name = folder_path.split("/www.")[1].split("/")[0].replace('.', '_')
-    # except IndexError:
-    #     logger.error("Invalid folder path format. Expected to find '/www.<site_name>/' in path.")
-    #     return None
+# ---------------- Metadata Sanitizer ---------------- #
+def sanitize_metadata(metadata: dict, max_size: int = 40960) -> dict:
+    """Ensure Pinecone metadata is valid (string/number/bool/list[str]) and within size limits."""
+    if not isinstance(metadata, dict):
+        return {}
 
-    # Regex pattern to extract domain-like folder name (e.g., www.example.com, example.in, my-site.org)
-    domain_pattern = re.compile(r'([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})')
+    def fix_value(value):
+        if value is None:
+            return ""  # replace null
+        if isinstance(value, (str, int, float, bool)):
+            return value
+        if isinstance(value, list):
+            return [str(v) for v in value]  # force all strings
+        if isinstance(value, dict):
+            return json.dumps(value, ensure_ascii=False)  # dict → JSON string
+        return str(value)  # fallback to string
 
-    # Search for domain in the folder path
-    match = domain_pattern.search(folder_path)
-    if not match:
-        logger.error("No valid domain found in the folder path.")
-        return None
+    clean_meta = {k: fix_value(v) for k, v in metadata.items()}
 
-    site_name = match.group(1).replace('.', '_')
-
-    unique_namespace = f"{site_name}_{uuid.uuid4().hex}"
-    logger.info(f"Generated unique namespace: {unique_namespace}")
-
-    json_file_path = os.path.join(folder_path, 'embedding_ready.json')
-
-    if not os.path.exists(json_file_path):
-        logger.error(f"Embedding file not found at {json_file_path}")
-        return None
-
-    logger.info(f"Loading data from JSON file at {json_file_path}...")
-    with open(json_file_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-    texts = data.get("texts", [])
-    metadatas = data.get("metadatas", [])
-
-    logger.info(f"Loaded {len(texts)} texts and {len(metadatas)} metadatas.")
-
-    if not texts or not metadatas:
-        logger.warning("No texts or metadatas found in embedding_ready.json")
-        return None
-
-    # Step 1: Create Document objects
-    documents = [
-        Document(page_content=text, metadata=metadata)
-        for text, metadata in zip(texts, metadatas)
-    ]
-    logger.info(f"Created {len(documents)} Document objects.")
-
-    # Step 2: Split documents into chunks
-    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
-    chunks = text_splitter.split_documents(documents)
-    logger.info(f"Split documents into {len(chunks)} chunks.")
-
-    # Step 3: Generate Embeddings
-    logger.info("Generating embeddings using GoogleGenerativeAIEmbeddings...")
-    embeddings = GoogleGenerativeAIEmbeddings(model=EMBEDDING_MODEL, api_key=GOOGLE_API_KEY)
-    texts_for_embedding = [chunk.page_content for chunk in chunks]
-    vector_data = embeddings.embed_documents(texts_for_embedding)
-    logger.info(f"Generated {len(vector_data)} embedding vectors.")
-
-    # Step 4: Initialize Pinecone Client
-    logger.info("Initializing Pinecone client...")
-    pc = Pinecone(api_key=PINECONE_API_KEY)
-
-    if PINECONE_INDEX not in [idx.name for idx in pc.list_indexes()]:
-        logger.info(f"Creating Pinecone index: {PINECONE_INDEX}")
-        pc.create_index(
-            name=PINECONE_INDEX,
-            dimension=768,
-            metric="cosine",
-            spec=ServerlessSpec(cloud=CLOUD_STORAGE, region=PINECONE_ENV)
+    # Enforce Pinecone metadata size limit
+    meta_str = json.dumps(clean_meta, ensure_ascii=False)
+    if len(meta_str.encode("utf-8")) > max_size:
+        logging.warning(
+            f"⚠ Metadata too large ({len(meta_str)} bytes). Truncating to {max_size}."
         )
-    else:
-        logger.info(f"Pinecone index '{PINECONE_INDEX}' already exists.")
+        reduced = {}
+        size = 0
+        for k, v in clean_meta.items():
+            v_str = json.dumps(v, ensure_ascii=False)
+            v_size = len(v_str.encode("utf-8"))
+            if size + v_size < max_size:
+                reduced[k] = v
+                size += v_size
+            else:
+                logging.debug(f"Dropped metadata field '{k}' to fit size limit.")
+        return reduced
 
-    index = pc.Index(name=PINECONE_INDEX)
+    return clean_meta
 
-    # Step 5: Prepare and Upsert Vectors
-    vectors_to_upsert = []
-    for i, (vector, chunk) in enumerate(zip(vector_data, chunks)):
-        unique_id = f"{site_name}_{uuid.uuid4().hex}"
-        metadata = chunk.metadata.copy()
-        metadata.update({"source_text": chunk.page_content})
 
-        vectors_to_upsert.append({
-            'id': unique_id,
-            'values': vector,
-            'metadata': metadata
-        })
+# ---------------- Embedding Store Function ---------------- #
+def store_embeddings_from_folder(folder_path: str, index_name: str = "nisaa-knowledge"):
+    """
+    Load embeddings from embedding_ready.json and store them into Pinecone.
+    """
+    try:
+        # Load Pinecone
+        api_key = os.getenv("PINECONE_API_KEY")
+        if not api_key:
+            raise ValueError("PINECONE_API_KEY not set in environment.")
 
-    # Upsert in batches (if needed, here we use 100 per batch as example)
-    batch_size = 100
-    for j in range(0, len(vectors_to_upsert), batch_size):
-        batch = vectors_to_upsert[j:j + batch_size]
-        index.upsert(vectors=batch, namespace=unique_namespace)
-        logger.info(f"Upserted batch {j // batch_size + 1} into namespace '{unique_namespace}'.")
+        pc = Pinecone(api_key=api_key)
 
-    logger.info(f"✅ All documents successfully added to namespace '{unique_namespace}'.")
-    return unique_namespace
+        # Ensure index exists
+        if index_name not in [idx["name"] for idx in pc.list_indexes()]:
+            raise ValueError(f"Pinecone index '{index_name}' does not exist.")
+
+        index = pc.Index(index_name)
+
+        # Load embedding_ready.json
+        embedding_file = Path(folder_path) / "chunks" / "embedding_ready.json"
+        if not embedding_file.exists():
+            raise FileNotFoundError(f"embedding_ready.json not found at {embedding_file}")
+
+        logging.info(f"📂 Loading embedding data from {embedding_file} ...")
+        with open(embedding_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        texts = data.get("texts", [])
+        metadatas = data.get("metadatas", [])
+        embeddings = data.get("embeddings", [])
+
+        if not (texts and metadatas and embeddings):
+            raise ValueError("Embedding file missing required fields (texts/metadatas/embeddings).")
+
+        if not (len(texts) == len(metadatas) == len(embeddings)):
+            raise ValueError("Mismatch between texts, metadatas, and embeddings lengths.")
+
+        logging.info(f"✅ Loaded {len(texts)} embeddings from file.")
+
+        # Prepare batches
+        batch_size = 100
+        total = len(embeddings)
+        for start in range(0, total, batch_size):
+            end = min(start + batch_size, total)
+            batch = []
+            for i in range(start, end):
+                vector = embeddings[i]
+                metadata = sanitize_metadata(metadatas[i])
+                batch.append((str(i), vector, metadata))
+
+            try:
+                index.upsert(vectors=batch, namespace=folder_path.replace("\\", "_").replace("/", "_"))
+                logging.info(
+                    f"⬆️ Upserted batch {start // batch_size + 1} "
+                    f"({len(batch)} vectors) into namespace '{folder_path}'."
+                )
+            except pinecone_exceptions.PineconeApiException as e:
+                logging.error(f"❌ Pinecone API Error during upsert: {e}")
+                continue
+
+        logging.info(f"🎉 Finished storing {total} embeddings into Pinecone index '{index_name}'.")
+        return True
+
+    except Exception as e:
+        logging.error(f"❌ Error in store_embeddings_from_folder: {e}", exc_info=True)
+        return False

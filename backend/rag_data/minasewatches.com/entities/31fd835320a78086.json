@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM15-CDLYBL-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/7-windows-leather-2-0/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM15-CDLYBL-SSD::0",
+      "text_preview": "7 Windows Leather 2.0 - Blue. 7 Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Leather strap and hand-painted dial.. Product. 7 Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skille",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "ba5f103da5e09516823641794cdcc226fe3baf93493155ed4fdd7f61056c9d36",
+  "dynamic_hash": "952dcc374af4203a86b94fd181bad251e86bc4b823bb699cd793c13f127583fe",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "7 Windows Leather 2.0 - Blue",
+    "description": "7 Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Leather strap and hand-painted dial.",
+    "offers.description": "7 Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Leather strap and hand-painted dial.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "VM15-CDLYBL-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2025/05/VM15-CDLYBL-SSD_transp-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4400",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/7-windows-leather-2-0/?attribute_pa_7-windows-dials=blue"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM15-CDBNGY-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/7-windows-leather/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM15-CDBNGY-SSD::0",
+      "text_preview": "7 Windows Leather - Grey. Windows is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or leather strap. Product. Windows is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel ",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    }
+  ],
+  "static_hash": "e6bf279597baf1701e08fea3d8da046d83448d5e0749565f4c3cc8f104361e26",
+  "dynamic_hash": "74a21b3c73fc7feeb7e77239824924636238e9e65ad7978c6cc73f3703c09ab8",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "7 Windows Leather - Grey",
+    "description": "Windows is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or leather strap",
+    "offers.description": "Windows is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or leather strap",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "VM15-CDBNGY-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-grey-leather-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4400",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/7-windows-leather/?attribute_pa_7-windows-dials=grey"
+  },
+  "last_seen": "2025-09-25T18:01:10.385867"
+}

@@ -1,0 +1,60 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/makie/#richSnippet",
+  "entity_type": "BlogPosting",
+  "source_url": "https://minasewatches.com/makie/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/makie/#richSnippet::0",
+      "text_preview": "Blue Urushi Silver Maki-e Dial for DIVIDO | Minase watches | Handmade in Japan. Minase’s latest creation in the Divido collection pays tribute to Japan’s finest traditional crafts. Following on from the success of the blue hand-lackered dial of the regular serie, Minase is lauching a more special an",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "034017f4f6441832a7bfa6d9d32a34864683c3a0ed3da72671bcca08e2d37f87",
+  "dynamic_hash": "6152a3752c7dfeca3e777c05eaa01f13436f3e5bffb0b77af3a38fbe3a3c7d2d",
+  "static_paths": [
+    "@type",
+    "headline",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "keywords",
+    "datePublished",
+    "dateModified",
+    "articleSection",
+    "image.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "BlogPosting",
+    "headline": "Blue Urushi Silver Maki-e Dial for DIVIDO | Minase watches | Handmade in Japan",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Minase’s latest creation in the Divido collection pays tribute to Japan’s finest traditional crafts. Following on from the success of the blue hand-lackered dial of the regular serie, Minase is lauching a more special and artisanal version, a deep blue Urushi silver maki-e dial. Handcrafted in the studio of Urushi master Megumi Shimamoto, in Kyoto, this new dial is a gift for the eye.",
+    "name": "Blue Urushi Silver Maki-e Dial for DIVIDO | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/makie/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/makie/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/makie/#webpage"
+  },
+  "dynamic_fields": {
+    "keywords": "Urushi",
+    "datePublished": "2020-12-10T16:00:54+01:00",
+    "dateModified": "2023-03-20T08:56:15+01:00",
+    "articleSection": "Minase",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2023/02/Divido_cadran_bleue_lowdef.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

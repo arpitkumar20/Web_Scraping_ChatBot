@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/07/UG03-M01NBL-SSB.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/uruga-42mm-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/07/UG03-M01NBL-SSB.png::0",
+      "text_preview": "ImageObject. Minase Uruga stainless steel with blue dial",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.370361"
+      }
+    }
+  ],
+  "static_hash": "6ca755511d1ae2232e5be1e61a33d976e56c3f74c96dcf8e34afe9ecd291748d",
+  "dynamic_hash": "f522c41852df6e56f29860b4964b81f03866994739c6259bf754b4cf642a6a37",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase Uruga stainless steel with blue dial"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/07/UG03-M01NBL-SSB.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/07/UG03-M01NBL-SSB.png",
+    "width": "1500",
+    "height": "1500",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.370361"
+}

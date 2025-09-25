@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/best-luxury-watches/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/best-luxury-watches/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/best-luxury-watches/#webpage::0",
+      "text_preview": "The Best Luxury Watches | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/best-luxury-watches/#webpage. https://minasewatches.com/best-luxury-watches/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "92d121b757ae6aad365ea0f60509cf7801dc5e1becc93d588a238e9392246d79",
+  "dynamic_hash": "6262dba2d70b00a561f89828d11ee021d7328366eb0c724c621286f5c9216c76",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/best-luxury-watches/#webpage",
+    "url": "https://minasewatches.com/best-luxury-watches/",
+    "name": "The Best Luxury Watches | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-08-05T16:00:28+02:00",
+    "dateModified": "2025-09-20T11:01:57+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/01/MinaseDividoShiboUrushi-ScarletIllusion.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

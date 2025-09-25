@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM15-M01MA5-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/mexico-limited-edition/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM15-M01MA5-SSD::0",
+      "text_preview": "Mexico Limited Edition - Steel. The Mexico Limited Editions blends Japanese traditional craftsmanship and the rich heritage of Mexican civilization.. Product. The Mexico Limited Editions blends Japanese traditional craftsmanship and the rich heritage of Mexican civilization.. NewCondition. https://m",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "6476dae6bb624c9a2c98bb7e433b52ae41798d36a2339f2ce9db63f44dd9bff0",
+  "dynamic_hash": "4bc8a7fb502020270b6bd7195f37be596547e12bb3c5411067ed03f5b3a586cd",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Mexico Limited Edition - Steel",
+    "description": "The Mexico Limited Editions blends Japanese traditional craftsmanship and the rich heritage of Mexican civilization.",
+    "offers.description": "The Mexico Limited Editions blends Japanese traditional craftsmanship and the rich heritage of Mexican civilization.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/mexico-limited-edition/?attribute_pa_mexico-limited-edition=steel"
+  },
+  "dynamic_fields": {
+    "sku": "VM15-M01MA5-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2024/09/minase-windows-hakose-mexico-stainless-steel-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "16950",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

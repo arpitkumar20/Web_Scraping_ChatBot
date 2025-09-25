@@ -1,0 +1,58 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/sizing-shipping/#richSnippet",
+  "entity_type": "BlogPosting",
+  "source_url": "https://minasewatches.com/sizing-shipping/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/sizing-shipping/#richSnippet::0",
+      "text_preview": "Minase Official Webshop | Minase watches | Handmade in Japan. Minase watches are exclusively produced in Japan and distributed through Minase International office which is based in Switzerland. You benefit from several. BlogPosting. Minase Official Webshop | Minase watches | Handmade in Japan. https",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "8b09f6c2788616e2543d262535f117440a89659c9f3cf09c267699389f6dca55",
+  "dynamic_hash": "c3688f7bf5ecd8102a665d684386ae1850426f4a77393de418ae4ea8af0fb110",
+  "static_paths": [
+    "@type",
+    "headline",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "articleSection",
+    "image.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "BlogPosting",
+    "headline": "Minase Official Webshop | Minase watches | Handmade in Japan",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Minase watches are exclusively produced in Japan and distributed through Minase International office which is based in Switzerland. You benefit from several",
+    "name": "Minase Official Webshop | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/sizing-shipping/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/sizing-shipping/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/sizing-shipping/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-05-08T16:00:38+02:00",
+    "dateModified": "2025-09-20T11:02:00+02:00",
+    "articleSection": "Minase",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2017/02/minaseboxinluxurykiriwoodbox.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

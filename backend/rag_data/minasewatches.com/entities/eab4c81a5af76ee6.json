@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/my-account/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/my-account/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/my-account/#webpage::0",
+      "text_preview": "My account | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/my-account/#webpage. https://minasewatches.com/my-account/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "6e6dedf1c4b0da847e962ca3ecd6187d961b4264f587e033396ff447d2552e1e",
+  "dynamic_hash": "c114f30b96f5f559db530bbf2134b6df67f4e499c409b3a0b3267f4a3d0acfad",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/my-account/#webpage",
+    "url": "https://minasewatches.com/my-account/",
+    "name": "My account | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-10-26T16:19:53+02:00",
+    "dateModified": "2022-10-26T16:19:53+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

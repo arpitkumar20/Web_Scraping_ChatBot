@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/makie-dials/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/makie-dials/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/makie-dials/#webpage::0",
+      "text_preview": "Urushi Silver Makie Dials for DIVIDO | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/makie-dials/#webpage. https://minasewatches.com/makie-dials/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "242061b8b6e01ddffdccf49d41209222307b39b09a01a28b2c4416dc1505e012",
+  "dynamic_hash": "13ead8bc41067f23ddfaffff5a856c161cb8fa4f8b9dec16a1da13e2712f044f",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/makie-dials/#webpage",
+    "url": "https://minasewatches.com/makie-dials/",
+    "name": "Urushi Silver Makie Dials for DIVIDO | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2020-12-08T16:00:01+01:00",
+    "dateModified": "2023-03-20T08:56:44+01:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/02/Divido_urushi_makie-scaled.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

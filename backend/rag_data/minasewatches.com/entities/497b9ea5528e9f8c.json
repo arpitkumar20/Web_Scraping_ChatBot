@@ -1,0 +1,56 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/personalized/#richSnippet",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/japanese-masterpieces/personalized/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/personalized/#richSnippet::0",
+      "text_preview": "Personalize your Watch | Handmade in Japan | Minase watches. Personalize your watch with your name or with the text of your choice engraved on the movement holder of any Minase watch.. Article. Personalize your Watch | Handmade in Japan | Minase watches. Personalize your watch. https://minasewatches",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "1eb95b2f9e359b72672cfa7e044a79ad01f6443f90f8afec0a77269a8ec91baf",
+  "dynamic_hash": "65477eec3535fd28b4b91f0edf25cec9682ef859be5c8f19303530f15fba7a37",
+  "static_paths": [
+    "@type",
+    "headline",
+    "keywords",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "Article",
+    "headline": "Personalize your Watch | Handmade in Japan | Minase watches",
+    "keywords": "Personalize your watch",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Personalize your watch with your name or with the text of your choice engraved on the movement holder of any Minase watch.",
+    "name": "Personalize your Watch | Handmade in Japan | Minase watches",
+    "@id": "https://minasewatches.com/japanese-masterpieces/personalized/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/japanese-masterpieces/personalized/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/japanese-masterpieces/personalized/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-12-24T14:33:42+01:00",
+    "dateModified": "2025-07-09T14:55:41+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

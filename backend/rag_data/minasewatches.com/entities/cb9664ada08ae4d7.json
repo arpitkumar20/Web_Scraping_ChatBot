@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/#webpage",
+  "entity_type": "ItemPage",
+  "source_url": "https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/#webpage::0",
+      "text_preview": "Discover Uruga 42mm Leather | Minase Watches |Made in Japan. ItemPage. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "9db6b9189bb5e5d952c5f27c90cf4701826be4a1e9f3b47cb2d86814a536c0a5",
+  "dynamic_hash": "f91486033ebe81d6fd7fcf0464ef905b388e6874f1d62199dfa21ceb2202c4e7",
+  "static_paths": [
+    "@type",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ItemPage",
+    "name": "Discover Uruga 42mm Leather | Minase Watches |Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/#webpage",
+    "url": "https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/",
+    "datePublished": "2025-07-10T12:09:54+02:00",
+    "dateModified": "2025-07-10T12:11:43+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/07/UG03-CDBNGR-SSD.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

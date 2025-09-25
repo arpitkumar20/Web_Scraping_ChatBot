@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::RUN.MI.001",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/divido-rubber-strap/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::RUN.MI.001::0",
+      "text_preview": "Divido - Rubber Strap. Black rubber band for Minase Divido, handmade in Japan at the Minase factory. Buckle is not included.. Product. RUN.MI.001. Black rubber band for Minase Divido, handmade in Japan at the Minase factory. Buckle is not included.. NewCondition. https://minasewatches.com/webshop/di",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.356856"
+      }
+    }
+  ],
+  "static_hash": "ca24b55034c916d162d1c76f848a74af98dec8e399c82b74091ee3f6a233227e",
+  "dynamic_hash": "7443cf6676475f8828402271a489ca512918194ba5641ff67452e1d69c8a146e",
+  "static_paths": [
+    "@type",
+    "sku",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "sku": "RUN.MI.001",
+    "name": "Divido - Rubber Strap",
+    "description": "Black rubber band for Minase Divido, handmade in Japan at the Minase factory. Buckle is not included.",
+    "offers.description": "Black rubber band for Minase Divido, handmade in Japan at the Minase factory. Buckle is not included.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/divido-rubber-strap/?attribute_pa_rubber-color=black-rubber&amp;attribute_pa_buckle=without-buckle"
+  },
+  "dynamic_fields": {
+    "image": "https://minasewatches.com/wp-content/uploads/2024/06/Divido-black-rubber-band-transp-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "365",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.356856"
+}

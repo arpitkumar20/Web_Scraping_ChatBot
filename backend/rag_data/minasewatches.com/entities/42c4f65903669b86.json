@@ -1,0 +1,56 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/measure-wrist-size/#schema-23171",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/measure-wrist-size/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/measure-wrist-size/#schema-23171::0",
+      "text_preview": "How to correctly measure your wrist size? | Minase watches | Handmade in Japan. Minase offers to size your metal bracelet to your wrist’s size at no cost. Hence we thought it might be useful to write a small guide about how to properly measure your wrist’s size.. VideoObject. https://minasewatches.c",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "b2916c210e8136fd1619f000f0297d6efe69c10c2dd45c9bb5e64d7b8d14da07",
+  "dynamic_hash": "0cc9626c499f327dac48dfada53bc1ee3fa10450c48510a70037a5456ebe99e9",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "thumbnailUrl",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "How to correctly measure your wrist size? | Minase watches | Handmade in Japan",
+    "description": "Minase offers to size your metal bracelet to your wrist’s size at no cost. Hence we thought it might be useful to write a small guide about how to properly measure your wrist’s size.",
+    "isPartOf.@id": "https://minasewatches.com/measure-wrist-size/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/measure-wrist-size/#webpage"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2020-10-09T16:00:12+02:00",
+    "thumbnailUrl": "https://minasewatches.com/wp-content/uploads/2020/10/Capturedecran2020-10-09a16.44.49.png",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2022/12/wrist-measurements.mp4",
+    "width": "720",
+    "height": "1280",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/measure-wrist-size/#schema-23171",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

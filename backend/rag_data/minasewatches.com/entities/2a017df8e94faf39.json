@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-steel/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/horizon-midsize-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-steel/#webpage::0",
+      "text_preview": "Buy Horizon Midsize Steel | Minase Watches | Made in Japan. WebPage. https://minasewatches.com/webshop/horizon-midsize-steel/#webpage. https://minasewatches.com/webshop/horizon-midsize-steel/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.381358"
+      }
+    }
+  ],
+  "static_hash": "0918b7743f38a5976a1c4f6760f2fc8a2bc62f32128f28fab7a883e170f201ec",
+  "dynamic_hash": "042c07de9cc9df9382767d05312e9039433755738884609dc5feeafc888b3038",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/horizon-midsize-steel/#webpage",
+    "url": "https://minasewatches.com/webshop/horizon-midsize-steel/",
+    "name": "Buy Horizon Midsize Steel | Minase Watches | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-11-12T12:57:06+01:00",
+    "dateModified": "2025-06-18T17:08:51+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2024/08/minase-watch-horizon-midsize-steel-blue.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.381358"
+}

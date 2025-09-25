@@ -1,0 +1,60 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/#richSnippet",
+  "entity_type": "BlogPosting",
+  "source_url": "https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/#richSnippet::0",
+      "text_preview": "Toolmaker to Watchmaker | Minase Watchs | Handmade in Japan. Minase story is a factory who went from toolmaker to watchmaker out of passion. Kyowa produces tools for the luxury watch industry for years.. BlogPosting. Toolmaker to Watchmaker | Minase Watchs | Handmade in Japan. Toolmaker to watchmake",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "04bf8dbd33a5976758eea2be5d07345a547a1dbdc16cf156e1f800d4b4e6a06e",
+  "dynamic_hash": "f4b588af5b470457d17ae64b8198c896c53e71cb487f1b04645ed91cf4807e6b",
+  "static_paths": [
+    "@type",
+    "headline",
+    "keywords",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "articleSection",
+    "image.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "BlogPosting",
+    "headline": "Toolmaker to Watchmaker | Minase Watchs | Handmade in Japan",
+    "keywords": "Toolmaker to watchmaker",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Minase story is a factory who went from toolmaker to watchmaker out of passion. Kyowa produces tools for the luxury watch industry for years.",
+    "name": "Toolmaker to Watchmaker | Minase Watchs | Handmade in Japan",
+    "@id": "https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-01-01T16:00:46+01:00",
+    "dateModified": "2023-03-03T10:06:56+01:00",
+    "articleSection": "Minase",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2022/01/minase_press_drill_handmade_watches.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/urushi/#schema-89935",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/japanese-masterpieces/urushi/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/urushi/#schema-89935::0",
+      "text_preview": "Urushi Watches | Minase watches | Handmade in Japan. Discover Minase's urushi watches and dials by Hakose. Handmade in Japan, each piece is unique, decorated with urushi laquer, paint and gold.. VideoObject. https://minasewatches.com/japanese-masterpieces/urushi/#webpage. https://minasewatches.com/#",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "cc520e4bde2dd286ec08170d10606efa65360a295661b351f4492820fe1474d1",
+  "dynamic_hash": "9437403955ea23bed77a5ac80bdecebce11b7ba7fc0b752fe34a9d14e55e8793",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "thumbnailUrl",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "Urushi Watches | Minase watches | Handmade in Japan",
+    "description": "Discover Minase&#039;s urushi watches and dials by Hakose. Handmade in Japan, each piece is unique, decorated with urushi laquer, paint and gold.",
+    "isPartOf.@id": "https://minasewatches.com/japanese-masterpieces/urushi/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2023-02-10T16:58:58+01:00",
+    "thumbnailUrl": "https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-hakose-regular-and-midsize.jpg",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2024/10/Urushi-laquer-movie-compressed.mp4",
+    "width": "1920",
+    "height": "1080",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/japanese-masterpieces/urushi/#schema-89935",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/my-account/wishlist/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/my-account/wishlist/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/my-account/wishlist/#webpage::0",
+      "text_preview": "Wishlist | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/my-account/wishlist/#webpage. https://minasewatches.com/my-account/wishlist/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "c26c5249b5bbbc22f0ab84109a6a4db8435a7aedbb556ab92ca420dc6f91a534",
+  "dynamic_hash": "361f580408ae4e961f20f6a8792c42b616742a6a6611508df64f591f03298e9f",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/my-account/wishlist/#webpage",
+    "url": "https://minasewatches.com/my-account/wishlist/",
+    "name": "Wishlist | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2013-08-11T16:31:20+02:00",
+    "dateModified": "2013-08-11T16:31:20+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

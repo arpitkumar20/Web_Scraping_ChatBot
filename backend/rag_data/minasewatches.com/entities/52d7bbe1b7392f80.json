@@ -1,0 +1,58 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/events/#richSnippet",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/minase-journal/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/events/#richSnippet::0",
+      "text_preview": "Next Minase Events | Handmade in Japan | Minase watches. Check next Minase events and come over to look at our watches and learn more about the brand and collections.. Article. Next Minase Events | Handmade in Japan | Minase watches. Minase events. https://minasewatches.com/author/kellyhenriksen/. k",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "90b488b46926cd6a5a73b58aa68ddaf80437b877ccb91dbf6c1efeb729a8ecf6",
+  "dynamic_hash": "4496a2f4f1516a46bae927b8028dcae29d9827dbf8e5f3ab98d171257dc59882",
+  "static_paths": [
+    "@type",
+    "headline",
+    "keywords",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "image.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "Article",
+    "headline": "Next Minase Events | Handmade in Japan | Minase watches",
+    "keywords": "Minase events",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Check next Minase events and come over to look at our watches and learn more about the brand and collections.",
+    "name": "Next Minase Events | Handmade in Japan | Minase watches",
+    "@id": "https://minasewatches.com/events/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/events/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/events/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-01-29T14:02:49+01:00",
+    "dateModified": "2025-09-01T07:53:39+02:00",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2016/08/dummy-1.jpg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

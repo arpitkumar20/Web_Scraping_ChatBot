@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-31mm-rubber/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/uruga-31mm-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-31mm-rubber/#webpage::0",
+      "text_preview": "Discover Uruga 31mm Rubber | Minase Watches |Made in Japan. WebPage. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.365537"
+      }
+    }
+  ],
+  "static_hash": "4e4ace981325952f5dfa337ea121094b4bdb38bcd16073753de729f15d816264",
+  "dynamic_hash": "5379d8e06830404a39d582b2ace582e1083e938ae59488ec92465b8ce6a9d984",
+  "static_paths": [
+    "@type",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "name": "Discover Uruga 31mm Rubber | Minase Watches |Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/webshop/uruga-31mm-rubber/#webpage",
+    "url": "https://minasewatches.com/webshop/uruga-31mm-rubber/",
+    "datePublished": "2025-07-24T22:53:02+02:00",
+    "dateModified": "2025-07-24T23:04:34+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-31mm-white-rubber-ice-blue-dial.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.365537"
+}

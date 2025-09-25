@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/collections/accessories/wooden-boxes/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/collections/accessories/wooden-boxes/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/collections/accessories/wooden-boxes/#webpage::0",
+      "text_preview": "Buy Minase Wooden Boxes for Watches | Made in Japan. WebPage. https://minasewatches.com/collections/accessories/wooden-boxes/#webpage. https://minasewatches.com/collections/accessories/wooden-boxes/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "4ebf88fb52c4b4c1c434b1aaef6a3a428eaf677846ce6dd42d790e09745e35f5",
+  "dynamic_hash": "87321804fefd2406fdf598e6d74470d679640f68c090e9f65dc48fe537b85f9d",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/collections/accessories/wooden-boxes/#webpage",
+    "url": "https://minasewatches.com/collections/accessories/wooden-boxes/",
+    "name": "Buy Minase Wooden Boxes for Watches | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-04-14T20:26:22+02:00",
+    "dateModified": "2025-02-04T10:23:12+01:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

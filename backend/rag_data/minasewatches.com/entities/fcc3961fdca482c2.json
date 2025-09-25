@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/cart/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/checkout/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/cart/#webpage::0",
+      "text_preview": "Cart | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/cart/#webpage. https://minasewatches.com/cart/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "910dbd3d6af667cfa9af90bc704bd43ce8b462a09f9a5b2ee076ee5d33ec9f6f",
+  "dynamic_hash": "c114f30b96f5f559db530bbf2134b6df67f4e499c409b3a0b3267f4a3d0acfad",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/cart/#webpage",
+    "url": "https://minasewatches.com/cart/",
+    "name": "Cart | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-10-26T16:19:53+02:00",
+    "dateModified": "2022-10-26T16:19:53+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

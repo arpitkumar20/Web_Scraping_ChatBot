@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::UG02-M01NBL-SSB",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/uruga-31mm-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::UG02-M01NBL-SSB::0",
+      "text_preview": "Uruga 31mm Steel - Blue. The Uruga 31mm Steel model was specifically designed for ladies. Inspired by gems setting, it is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.. Product. The Uruga 31mm Steel mode",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "3c11fe5e1df66f42a4bcaf541146556c08ff8bd70cf29962f2627757c0f7dd76",
+  "dynamic_hash": "e947d6694e780dbdf5bfa53c34758dc5c34e82304b721c597191cd875363bf81",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Uruga 31mm Steel - Blue",
+    "description": "The Uruga 31mm Steel model was specifically designed for ladies. Inspired by gems setting, it is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+    "offers.description": "The Uruga 31mm Steel model was specifically designed for ladies. Inspired by gems setting, it is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "UG02-M01NBL-SSB",
+    "image": "https://minasewatches.com/wp-content/uploads/2023/07/UG02-M01NBL-SSB-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "5350",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/uruga-31mm-steel/?attribute_pa_uruga-31-dials=blue"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

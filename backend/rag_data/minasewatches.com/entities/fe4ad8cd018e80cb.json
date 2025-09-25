@@ -1,0 +1,56 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/horizon-midsize-2/#richSnippet",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/horizon-midsize-2/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/horizon-midsize-2/#richSnippet::0",
+      "text_preview": "Horizon midsize | Minase watches | Handmade in Japan. Minase is a luxury watch brand based in Japan. Handcrafted by skilled watchmakers, the highly qualitative hand-made timepieces embody Japanese values, traditions and typical crafts. All the watches are polished with the sallaz (zaratsu) technique",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "0ae628931d5b081a550597bb89f5750399aec1ee67ae3436aa0b4c249d1dea4d",
+  "dynamic_hash": "bc57527b9f6277b1bd8f8cd19419b33833048ad099349c46c4381a82e26c346a",
+  "static_paths": [
+    "@type",
+    "headline",
+    "keywords",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "@id",
+    "isPartOf.@id",
+    "inLanguage",
+    "mainEntityOfPage.@id"
+  ],
+  "static_fields": {
+    "@type": "Article",
+    "headline": "Horizon midsize | Minase watches | Handmade in Japan",
+    "keywords": "horizon midsize",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Minase is a luxury watch brand based in Japan. Handcrafted by skilled watchmakers, the highly qualitative hand-made timepieces embody Japanese values, traditions and typical crafts. All the watches are polished with the sallaz (zaratsu) technique. Minase has 4 collections: Divido, horizon, 5 windows and Masterpieces. Minase watches are for sale on Chrono24 or on our ch webshop at their best prices",
+    "name": "Horizon midsize | Minase watches | Handmade in Japan"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-03-07T15:47:49+01:00",
+    "dateModified": "2023-03-20T08:50:16+01:00",
+    "@id": "https://minasewatches.com/horizon-midsize-2/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/horizon-midsize-2/#webpage",
+    "inLanguage": "en-US",
+    "mainEntityOfPage.@id": "https://minasewatches.com/horizon-midsize-2/#webpage"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2024/08/minase-watch-horizon-midsize-steel-blue.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/horizon-midsize-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2024/08/minase-watch-horizon-midsize-steel-blue.png::0",
+      "text_preview": "ImageObject. Horizon Midsize steel blue dial",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.381358"
+      }
+    }
+  ],
+  "static_hash": "44f23c8e2c1e6f47ca7f8fdba5adc66dfc15b4a67f66b729641888ff77f32384",
+  "dynamic_hash": "070f39f9f42b2e5e331c87b98460fb5541f7007e5f76e6c96c736e6746a359d3",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Horizon Midsize steel blue dial"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2024/08/minase-watch-horizon-midsize-steel-blue.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2024/08/minase-watch-horizon-midsize-steel-blue.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.381358"
+}

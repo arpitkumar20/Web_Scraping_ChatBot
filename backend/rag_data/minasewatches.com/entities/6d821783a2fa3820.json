@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/my-account/#richSnippet",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/my-account/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/my-account/#richSnippet::0",
+      "text_preview": "My account | Minase watches | Handmade in Japan. Article. My account | Minase watches | Handmade in Japan. https://minasewatches.com/author/kellyhenriksen/. kellyhenriksen. https://minasewatches.com/#organization. https://minasewatches.com/my-account/#richSnippet. https://minasewatches.com/my-accoun",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "39d5d7237aa779b5e9527f85e616d0e052e98b0bbe038a01f5b660e21ccfd752",
+  "dynamic_hash": "c114f30b96f5f559db530bbf2134b6df67f4e499c409b3a0b3267f4a3d0acfad",
+  "static_paths": [
+    "@type",
+    "headline",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "Article",
+    "headline": "My account | Minase watches | Handmade in Japan",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "name": "My account | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/my-account/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/my-account/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/my-account/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-10-26T16:19:53+02:00",
+    "dateModified": "2022-10-26T16:19:53+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

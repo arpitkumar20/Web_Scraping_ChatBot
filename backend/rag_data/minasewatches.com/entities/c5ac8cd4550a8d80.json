@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/author/kellyhenriksen/",
+  "entity_type": "Person",
+  "source_url": "https://minasewatches.com/sizing-shipping/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/author/kellyhenriksen/::0",
+      "text_preview": "kellyhenriksen. https://minasewatches.com/author/kellyhenriksen/. https://minasewatches.com/author/kellyhenriksen/. ImageObject. kellyhenriksen. https://minasewatches.com/#organization",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.318161"
+      }
+    }
+  ],
+  "static_hash": "5229547c02c1ce5aeade1d7189ab96304bf2d6c2c5a05a0a77edbd828230360d",
+  "dynamic_hash": "e2692b8eb9626416202a95ba1992219d299abf2bcf848176779cdbb300ef1334",
+  "static_paths": [
+    "@id",
+    "name",
+    "url",
+    "image.@type",
+    "image.caption",
+    "sameAs",
+    "worksFor.@id"
+  ],
+  "dynamic_paths": [
+    "@type",
+    "image.@id",
+    "image.url",
+    "image.inLanguage"
+  ],
+  "static_fields": {
+    "@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "name": "kellyhenriksen",
+    "url": "https://minasewatches.com/author/kellyhenriksen/",
+    "image.@type": "ImageObject",
+    "image.caption": "kellyhenriksen",
+    "sameAs": [
+      "https://minasewatches.com"
+    ],
+    "worksFor.@id": "https://minasewatches.com/#organization"
+  },
+  "dynamic_fields": {
+    "@type": "Person",
+    "image.@id": "https://secure.gravatar.com/avatar/295c7a4900aba34a3842794e3c2bde10147a055daa21392397ccd560459debe3?s=96&amp;d=mm&amp;r=g",
+    "image.url": "https://secure.gravatar.com/avatar/295c7a4900aba34a3842794e3c2bde10147a055daa21392397ccd560459debe3?s=96&amp;d=mm&amp;r=g",
+    "image.inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.318161"
+}

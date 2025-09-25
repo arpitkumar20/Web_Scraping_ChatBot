@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM15-CDBMA4-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/windows-hakose-urushi/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM15-CDBMA4-SSD::0",
+      "text_preview": "Windows Hakose Steel - Yama. Available in stainless steel or in 18K rose gold, the rectangular case of the 7 Windows symbolizes the imperfection of our earthly world, while the round shape of the dial symbolizes perfection, infinity, calm. The 7 sapphire crystal windows reveal the hand-painted urush",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "d3a3264040d1b792ff21270712e5a7dc8e8bebb7fea215b67bcc881d37895ae8",
+  "dynamic_hash": "4593838f577081b1faae3395b09edb18f0dccdb340ae2f1d52c634ec9b0cdd37",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Windows Hakose Steel - Yama",
+    "description": "Available in stainless steel or in 18K rose gold, the rectangular case of the 7 Windows symbolizes the imperfection of our earthly world, while the round shape of the dial symbolizes perfection, infinity, calm. The 7 sapphire crystal windows reveal the hand-painted urushi dial, viewed through the watch case from a multitude of different angles.",
+    "offers.description": "Available in stainless steel or in 18K rose gold, the rectangular case of the 7 Windows symbolizes the imperfection of our earthly world, while the round shape of the dial symbolizes perfection, infinity, calm. The 7 sapphire crystal windows reveal the hand-painted urushi dial, viewed through the watch case from a multitude of different angles.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/windows-hakose-urushi/?attribute_pa_hakose-dials=yama"
+  },
+  "dynamic_fields": {
+    "sku": "VM15-CDBMA4-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2023/02/minase-windows-hakose-steel-02-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "15850",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

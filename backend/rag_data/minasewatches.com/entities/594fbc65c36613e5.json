@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM14-M01MBK",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/divido-steel-collection-dark/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM14-M01MBK::0",
+      "text_preview": "Divido Steel - Black. Divido is Minase's round watch collection. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or rubber band.. Product. Divido is Minase's round watch collection. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "b9854048e782b3b9b5164bc1ab706f461f1ba348d83be89a097df2bed92e8768",
+  "dynamic_hash": "86454ccab548d61a7a2391e92087bc0442ae26ac0cca77c1390d5609fdc8a8d2",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Divido Steel - Black",
+    "description": "Divido is Minase's round watch collection. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or rubber band.",
+    "offers.description": "Divido is Minase's round watch collection. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or rubber band.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/divido-steel-collection-dark/?attribute_pa_divido-dials=black"
+  },
+  "dynamic_fields": {
+    "sku": "VM14-M01MBK",
+    "image": "https://minasewatches.com/wp-content/uploads/2024/04/minase-watches-black-steel-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "5226.64",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

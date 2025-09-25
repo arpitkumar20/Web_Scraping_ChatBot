@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM06-M04SB",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/horizon-midsize-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM06-M04SB::0",
+      "text_preview": "Horizon Midsize Steel - Blue. Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.. Product. Horizon is a tribute to Japan",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.381358"
+      }
+    }
+  ],
+  "static_hash": "04cde068704c767053c1bcc94f77b4e837ae5e86722bc2410b4d870bf8ab7110",
+  "dynamic_hash": "1e3611d5a79f8c071caaecbe54b41fc95cf769c678dcb75298312c710e2f9ee4",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Horizon Midsize Steel - Blue",
+    "description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+    "offers.description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/horizon-midsize-steel/?attribute_pa_horizon-midsize-rubber-dials=blue"
+  },
+  "dynamic_fields": {
+    "sku": "VM06-M04SB",
+    "image": "https://minasewatches.com/wp-content/uploads/2024/08/minase-watch-horizon-midsize-steel-blue-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4750",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.381358"
+}

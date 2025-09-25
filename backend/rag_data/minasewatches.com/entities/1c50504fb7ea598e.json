@@ -1,0 +1,56 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/contact/#richSnippet",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/contact/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/contact/#richSnippet::0",
+      "text_preview": "Contact | Minase watches | Handmade in Japan. For any request, including custom timepieces, do not hesitate to contact us via the form below or call us at +41 32 521 06 13. Article. Contact | Minase watches | Handmade in Japan. contact. https://minasewatches.com/author/kellyhenriksen/. kellyhenrikse",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "daaad9af0c2c2c5c60f8b49df4ea71ca2df44f0006f25baaee47f395b1a63f1b",
+  "dynamic_hash": "07a122b4f879027c60ef913b01936e76417ad30a3f094495c22a2fe52acdb58b",
+  "static_paths": [
+    "@type",
+    "headline",
+    "keywords",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "Article",
+    "headline": "Contact | Minase watches | Handmade in Japan",
+    "keywords": "contact",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "For any request, including custom timepieces, do not hesitate to contact us via the form below or call us at +41 32 521 06 13",
+    "name": "Contact | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/contact/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/contact/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/contact/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-03-04T15:23:38+01:00",
+    "dateModified": "2025-09-20T11:59:10+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

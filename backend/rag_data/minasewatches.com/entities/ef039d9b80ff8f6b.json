@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/events/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/minase-journal/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/events/#webpage::0",
+      "text_preview": "Next Minase Events | Handmade in Japan | Minase watches. WebPage. https://minasewatches.com/events/#webpage. https://minasewatches.com/events/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "a231824765a624cbc910d71b7ce314b7feb1a2b0a52dea457872c30e292bc464",
+  "dynamic_hash": "401d9d5cffe61063c433b267ada171833186b49960689cb3beeecbf6c3d096f0",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/events/#webpage",
+    "url": "https://minasewatches.com/events/",
+    "name": "Next Minase Events | Handmade in Japan | Minase watches",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-01-29T14:02:49+01:00",
+    "dateModified": "2025-09-01T07:53:39+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2016/08/dummy-1.jpg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

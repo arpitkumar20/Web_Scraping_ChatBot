@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/collections/accessories/leather-strap/#schema-23811",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/collections/accessories/leather-strap/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/collections/accessories/leather-strap/#schema-23811::0",
+      "text_preview": "Buy Leather Straps | Made in Japan | Minase Watches. Minase leather straps are available in several colors and are all handsewed at the Minase factory.. Buy Leather Straps | Made in Japan | Minase Watches. https://minasewatches.com/author/kellyhenriksen/. kellyhenriksen. Article. https://minasewatch",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "11648c0ca4188df3b4d122f76305ec075fd760e6f52b559d8088e2048ce2000c",
+  "dynamic_hash": "e0a363c630aba50ee0faa3ce9d0a1ee1e175c357914f9ee5bd56a0df7abb175c",
+  "static_paths": [
+    "headline",
+    "description",
+    "author.@id",
+    "author.name",
+    "@type",
+    "name",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "headline": "Buy Leather Straps | Made in Japan | Minase Watches",
+    "description": "Minase leather straps are available in several colors and are all handsewed at the Minase factory.",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "@type": "Article",
+    "name": "Buy Leather Straps | Made in Japan | Minase Watches",
+    "isPartOf.@id": "https://minasewatches.com/collections/accessories/leather-strap/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/collections/accessories/leather-strap/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-04-14T15:56:17+02:00",
+    "dateModified": "2024-06-20T13:30:59+02:00",
+    "@id": "https://minasewatches.com/collections/accessories/leather-strap/#schema-23811",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

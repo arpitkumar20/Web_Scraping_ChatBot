@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-rubber/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/uruga-42mm-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-rubber/#webpage::0",
+      "text_preview": "Discover Uruga 42mm Rubber | Minase Watches |Made in Japan. WebPage. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.365537"
+      }
+    }
+  ],
+  "static_hash": "ede5e83a4ca6e89cda3a1cab9a10f3afd7b33395b6f6014f38304b7c40a60350",
+  "dynamic_hash": "27f51326c02f3ca35d45fc8f94336f850198e9dd2ff4ae823c5efba737916085",
+  "static_paths": [
+    "@type",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "name": "Discover Uruga 42mm Rubber | Minase Watches |Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/webshop/uruga-42mm-rubber/#webpage",
+    "url": "https://minasewatches.com/webshop/uruga-42mm-rubber/",
+    "datePublished": "2025-07-16T15:36:36+02:00",
+    "dateModified": "2025-07-24T23:06:56+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-white-rubber-ice-blue-dial.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.365537"
+}

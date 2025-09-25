@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/divido-shibo-urushi-steel/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/divido-shibo-urushi-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/divido-shibo-urushi-steel/#webpage::0",
+      "text_preview": "Buy Divido Shibo Urushi | Minase Watches | Handmade in Japan. WebPage. https://minasewatches.com/webshop/divido-shibo-urushi-steel/#webpage. https://minasewatches.com/webshop/divido-shibo-urushi-steel/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    }
+  ],
+  "static_hash": "390bed11b560f682c443de52314fe2c2e74cfd1c1b33fddcf9ebd39599e42bf1",
+  "dynamic_hash": "8ef2860e0263827c66879c1e90b7f0a85a18174cc9545e6b064765ae16868945",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/divido-shibo-urushi-steel/#webpage",
+    "url": "https://minasewatches.com/webshop/divido-shibo-urushi-steel/",
+    "name": "Buy Divido Shibo Urushi | Minase Watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-11-27T21:34:48+01:00",
+    "dateModified": "2025-06-18T16:56:04+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-shibo-urushi-shells-steel-1.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.385867"
+}

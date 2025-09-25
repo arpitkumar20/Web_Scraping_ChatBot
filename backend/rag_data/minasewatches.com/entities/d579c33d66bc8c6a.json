@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/windows-leather-straps/::7500aa85563b89d4937a717b0b81dbc1fc7fc02b90db258b613281adca614134",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/windows-leather-straps/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/windows-leather-straps/::7500aa85563b89d4937a717b0b81dbc1fc7fc02b90db258b613281adca614134::0",
+      "text_preview": "Windows - Leather Straps. Windows leather straps are hand sewed in Japan at the Minase factory. Available in several colors, they are light and comfortable to wear. Available in three different sizes and with or without deployment buckle.. Product. Windows leather straps are hand sewed in Japan at t",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.355092"
+      }
+    }
+  ],
+  "static_hash": "3d48a6c62863a259507546650d81c190ca7008b74eaebfc3d46075e2f855e118",
+  "dynamic_hash": "3b4225d4fd10af3ee32e32bffe24e42e1885aa100bc53c50bd99cf147277e90f",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Windows - Leather Straps",
+    "description": "Windows leather straps are hand sewed in Japan at the Minase factory. Available in several colors, they are light and comfortable to wear. Available in three different sizes and with or without deployment buckle.",
+    "offers.description": "Windows leather straps are hand sewed in Japan at the Minase factory. Available in several colors, they are light and comfortable to wear. Available in three different sizes and with or without deployment buckle.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/windows-leather-straps/?attribute_pa_leather-color=black&amp;attribute_pa_length=large&amp;attribute_pa_buckle=with-buckle"
+  },
+  "dynamic_fields": {
+    "image": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-black-leather-strap-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "730",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.355092"
+}

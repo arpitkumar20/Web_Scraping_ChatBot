@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/windows-midsize-strap/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/windows-midsize-strap/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/windows-midsize-strap/#webpage::0",
+      "text_preview": "Buy Windows Midsize Strap | Minase Watches | Made in Japan. WebPage. https://minasewatches.com/webshop/windows-midsize-strap/#webpage. https://minasewatches.com/webshop/windows-midsize-strap/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "5cc0712793986660b08eeec92363ee33d7fa743e392536768b6a4a4c4ba04572",
+  "dynamic_hash": "a03041140cb64e4dc63a7f49924c538e643d8c7f158463f7d25af889cf2eec9e",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/windows-midsize-strap/#webpage",
+    "url": "https://minasewatches.com/webshop/windows-midsize-strap/",
+    "name": "Buy Windows Midsize Strap | Minase Watches | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-02-25T15:33:19+01:00",
+    "dateModified": "2024-10-04T10:14:18+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-braun-leather-strap.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

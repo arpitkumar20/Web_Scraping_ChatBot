@@ -1,0 +1,87 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/divido-bracelet/#richSnippet",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/divido-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/divido-bracelet/#richSnippet::0",
+      "text_preview": "Buy Steel Bracelet Divido | Minase Watches | Made in Japan. Minase Watches stainless steel bracelet divido is handpolished with the sarazu polishing technique. Order your bracelet for Divido now !. Product. Steel bracelets. https://minasewatches.com/webshop/divido-bracelet/#webpage. ImageObject. New",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "2bfa8cfdff8b6913a5d601f1bd2d18dbef6745d30b66d0f331ace0b09cb3d053",
+  "dynamic_hash": "06f62ddbc3f3d708ea5c46cfbaffe59e4f4e4e37f62fdbcb662287140f5922f4",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "mainEntityOfPage.@id",
+    "image",
+    "image[0].@type",
+    "offers.itemCondition",
+    "offers.url",
+    "offers.seller.@type",
+    "offers.seller.@id",
+    "offers.seller.name",
+    "offers.seller.url",
+    "@id"
+  ],
+  "dynamic_paths": [
+    "image[0].url",
+    "image[0].height",
+    "image[0].width",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.priceValidUntil",
+    "offers.availability",
+    "offers.seller.logo",
+    "offers.priceSpecification"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Buy Steel Bracelet Divido | Minase Watches | Made in Japan",
+    "description": "Minase Watches stainless steel bracelet divido is handpolished with the sarazu polishing technique. Order your bracelet for Divido now !",
+    "category": "Steel bracelets",
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/divido-bracelet/#webpage",
+    "image": [
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/02/Bra-divido-2-transp-1.png",
+        "height": "1200",
+        "width": "1200"
+      }
+    ],
+    "image[0].@type": "ImageObject",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/divido-bracelet/",
+    "offers.seller.@type": "Organization",
+    "offers.seller.@id": "https://minasewatches.com/",
+    "offers.seller.name": "minasewatches.com",
+    "offers.seller.url": "https://minasewatches.com",
+    "@id": "https://minasewatches.com/webshop/divido-bracelet/#richSnippet"
+  },
+  "dynamic_fields": {
+    "image[0].url": "https://minasewatches.com/wp-content/uploads/2023/02/Bra-divido-2-transp-1.png",
+    "image[0].height": "1200",
+    "image[0].width": "1200",
+    "offers.@type": "Offer",
+    "offers.price": "1950.00",
+    "offers.priceCurrency": "CHF",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.seller.logo": "",
+    "offers.priceSpecification": {
+      "price": "1950",
+      "priceCurrency": "CHF",
+      "valueAddedTaxIncluded": "true"
+    }
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

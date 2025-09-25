@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/windows/#schema-23390",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/windows/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/windows/#schema-23390::0",
+      "text_preview": "Discover Windows Watches | Made in Japan | Minase watches. Windows is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or leather strap. Discover Windows Watches | Made in Japan | Minase watches. https://minasewatches.com/author/kel",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "fa98b049250cf35d24893f2f201e082c5f811ae425a7330683ca6cae35549865",
+  "dynamic_hash": "1d8490bd4c90b8260f03ad242a427d296547f179e3ae7a3aeccb5d8d7e1da6c7",
+  "static_paths": [
+    "headline",
+    "description",
+    "author.@id",
+    "author.name",
+    "@type",
+    "name",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "headline": "Discover Windows Watches | Made in Japan | Minase watches",
+    "description": "Windows is one of Minase&#039;s collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or leather strap",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "@type": "Article",
+    "name": "Discover Windows Watches | Made in Japan | Minase watches",
+    "isPartOf.@id": "https://minasewatches.com/windows/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/windows/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-01-22T13:44:17+01:00",
+    "dateModified": "2025-09-22T08:24:01+02:00",
+    "@id": "https://minasewatches.com/windows/#schema-23390",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

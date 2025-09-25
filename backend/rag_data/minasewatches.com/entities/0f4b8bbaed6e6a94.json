@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-black-leather.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/7-windows-leather/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-black-leather.png::0",
+      "text_preview": "ImageObject. minase watch 7 windows leather band black",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    }
+  ],
+  "static_hash": "c8b7b3b34311e4b016213ba76dd9bab8725b2300b14afc72cc8219ebeba3f3cc",
+  "dynamic_hash": "f0de2683ce48cc2337e0964dd110eb747261105df67295dc46b1259c385bbfaf",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "minase watch 7 windows leather band black"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-black-leather.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-black-leather.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.385867"
+}

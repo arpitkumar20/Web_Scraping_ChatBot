@@ -1,0 +1,111 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/divido-urushi-makie-steel-2/#richSnippet",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/divido-urushi-makie-steel-2/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/divido-urushi-makie-steel-2/#richSnippet::0",
+      "text_preview": "Buy Divido Urushi Makie Steel | Minase Watches | Japan Made. Divido urushi makie steel is powered with a high-quality Swiss movement and every dial is hand-made in Japan by Urushi Master Shimamoto.. Product. Divido. QuantitativeValue. QuantitativeValue. QuantitativeValue. QuantitativeValue. ImageObj",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "e7569364ecc8efcb7f80612b3819c552326edd435f376123e4e6542bb074c4c9",
+  "dynamic_hash": "bde7cd73898da8d47bd27cfeb267c3041643793b29fe144b918f98f10c13e827",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "weight.@type",
+    "height.@type",
+    "width.@type",
+    "depth.@type",
+    "image",
+    "image[0].@type",
+    "offers.itemCondition",
+    "offers.seller.@type",
+    "offers.seller.@id",
+    "offers.seller.name",
+    "offers.seller.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "mainEntityOfPage.@id",
+    "weight.unitCode",
+    "weight.value",
+    "height.unitCode",
+    "height.value",
+    "width.unitCode",
+    "depth.unitCode",
+    "depth.value",
+    "image[0].url",
+    "image[0].height",
+    "image[0].width",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.priceValidUntil",
+    "offers.availability",
+    "offers.url",
+    "offers.seller.logo",
+    "offers.priceSpecification",
+    "@id"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Buy Divido Urushi Makie Steel | Minase Watches | Japan Made",
+    "description": "Divido urushi makie steel is powered with a high-quality Swiss movement and every dial is hand-made in Japan by Urushi Master Shimamoto.",
+    "category": "Divido",
+    "weight.@type": "QuantitativeValue",
+    "height.@type": "QuantitativeValue",
+    "width.@type": "QuantitativeValue",
+    "depth.@type": "QuantitativeValue",
+    "image": [
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/02/divido-urushi-makie-01.jpg",
+        "height": "1000",
+        "width": "1000"
+      }
+    ],
+    "image[0].@type": "ImageObject",
+    "offers.itemCondition": "NewCondition",
+    "offers.seller.@type": "Organization",
+    "offers.seller.@id": "https://minasewatches.com/",
+    "offers.seller.name": "minasewatches.com",
+    "offers.seller.url": "https://minasewatches.com"
+  },
+  "dynamic_fields": {
+    "sku": "VM14-M01KA-1-2",
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/divido-urushi-makie-steel-2/#webpage",
+    "weight.unitCode": "GRM",
+    "weight.value": "150",
+    "height.unitCode": "MMT",
+    "height.value": "12",
+    "width.unitCode": "MMT",
+    "depth.unitCode": "MMT",
+    "depth.value": "40.5",
+    "image[0].url": "https://minasewatches.com/wp-content/uploads/2023/02/divido-urushi-makie-01.jpg",
+    "image[0].height": "1000",
+    "image[0].width": "1000",
+    "offers.@type": "Offer",
+    "offers.price": "3800.00",
+    "offers.priceCurrency": "CHF",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.availability": "https://schema.org/OutOfStock",
+    "offers.url": "https://minasewatches.com/webshop/divido-urushi-makie-steel-2/",
+    "offers.seller.logo": "",
+    "offers.priceSpecification": {
+      "price": "3800",
+      "priceCurrency": "CHF",
+      "valueAddedTaxIncluded": "true"
+    },
+    "@id": "https://minasewatches.com/webshop/divido-urushi-makie-steel-2/#richSnippet"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

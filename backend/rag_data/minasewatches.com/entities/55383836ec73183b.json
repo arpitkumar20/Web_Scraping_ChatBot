@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::UG02-M01NCP-PSB",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/uruga-31mm-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::UG02-M01NCP-PSB::0",
+      "text_preview": "Uruga 31mm Steel - Champagne bicolor. The Uruga 31mm Steel model was specifically designed for ladies. Inspired by gems setting, it is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.. Product. The Uruga 31",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "274343fa2e63e67b2b1c842b4c5f0c4b814426ec73708603c4cefeda196e93a8",
+  "dynamic_hash": "cc6c0919d093891d828974eaa88b7f48b77fbcb7226f7e37d6231a15377ce0dd",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Uruga 31mm Steel - Champagne bicolor",
+    "description": "The Uruga 31mm Steel model was specifically designed for ladies. Inspired by gems setting, it is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+    "offers.description": "The Uruga 31mm Steel model was specifically designed for ladies. Inspired by gems setting, it is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "UG02-M01NCP-PSB",
+    "image": "https://minasewatches.com/wp-content/uploads/2023/07/UG02-M01NCP-PSB-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "5550",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/uruga-31mm-steel/?attribute_pa_uruga-31-dials=champagne-bicolor"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

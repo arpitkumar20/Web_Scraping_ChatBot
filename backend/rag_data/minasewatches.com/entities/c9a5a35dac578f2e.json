@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/7-windows-leather-2-0/::277ca47accf5d6f225a117d5c1e48b3e65bef91b904119b98d9bd69a52eedab9",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/7-windows-leather-2-0/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/7-windows-leather-2-0/::277ca47accf5d6f225a117d5c1e48b3e65bef91b904119b98d9bd69a52eedab9::0",
+      "text_preview": "7 Windows Leather 2.0 - Ice Blue. 7 Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Leather strap and hand-painted dial.. Product. 7 Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-polished by sk",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "9c85a05bc1bcaa6b4a08da5a0efefa1a5a643ece96a4d78e45fea3a398f6486c",
+  "dynamic_hash": "062b7b9021adb14f4121d5afdfa955a1f9cabac5a53d6b2378b43bb364f0fc3b",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "7 Windows Leather 2.0 - Ice Blue",
+    "description": "7 Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Leather strap and hand-painted dial.",
+    "offers.description": "7 Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Leather strap and hand-painted dial.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "image": "https://minasewatches.com/wp-content/uploads/2025/05/VM15-CBKYIB-SSD_transp-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4400",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/7-windows-leather-2-0/?attribute_pa_7-windows-dials=ice-blue"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

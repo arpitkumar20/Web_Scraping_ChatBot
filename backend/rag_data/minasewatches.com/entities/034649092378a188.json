@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/windows/#schema-23751",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/windows/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/windows/#schema-23751::0",
+      "text_preview": "Discover Windows Watches | Made in Japan | Minase watches. Windows is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or leather strap. VideoObject. https://minasewatches.com/windows/#webpage. https://minasewatches.com/#organizatio",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "b6cb62df668c2db777d4c50ea009cfbd14e8e3a98d4933f3361a9d55871f4052",
+  "dynamic_hash": "98e212061936ac3d7c4c4fd5b8717a6aa20a9b6041505f58f57625ca0156dc77",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "Discover Windows Watches | Made in Japan | Minase watches",
+    "description": "Windows is one of Minase&#039;s collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or leather strap",
+    "isPartOf.@id": "https://minasewatches.com/windows/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2023-01-22T13:44:17+01:00",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2023/04/seven-windows-case-in-case-movie_A6CeCzfd.mp4",
+    "width": "1920",
+    "height": "1080",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/windows/#schema-23751",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

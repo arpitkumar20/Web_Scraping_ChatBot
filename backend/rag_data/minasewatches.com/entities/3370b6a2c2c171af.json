@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM14-RBKGBL-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/divido-rubber-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM14-RBKGBL-SSD::0",
+      "text_preview": "Divido Rubber - Navy. Divido's unique design is inspired by the Japanese 3-dimentional puzzle. The dial seems to be floating inside the case, suspended below the box-type sapphire crystal. Handmade in Japan and finished with the rare sallaz polishing technique.. Product. Divido's unique design is in",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "5a613171d67e19f754a882a230d72c34f10a3eef8b3a28aecbc58e34a06b5cb7",
+  "dynamic_hash": "d126a2724b1a43281102716e349166532d26295224c1e43360f380e22c9b8800",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Divido Rubber - Navy",
+    "description": "Divido's unique design is inspired by the Japanese 3-dimentional puzzle. The dial seems to be floating inside the case, suspended below the box-type sapphire crystal. Handmade in Japan and finished with the rare sallaz polishing technique.",
+    "offers.description": "Divido's unique design is inspired by the Japanese 3-dimentional puzzle. The dial seems to be floating inside the case, suspended below the box-type sapphire crystal. Handmade in Japan and finished with the rare sallaz polishing technique.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/divido-rubber-collection/?attribute_pa_divido-dials=navy"
+  },
+  "dynamic_fields": {
+    "sku": "VM14-RBKGBL-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-blue-rubber-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4400",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/minase-windows-hakose-gold-03.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/windows-hakose-gold/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/minase-windows-hakose-gold-03.png::0",
+      "text_preview": "ImageObject. Minase urushi gold watch by hakose komon",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "a5c0ca203281effd80b3122fc01036504f72d3027b62119eda571396ec8e6d90",
+  "dynamic_hash": "3206b334eb33b311a828d035d6e3c5160cabda1684aff9061f3ff752b223c987",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase urushi gold watch by hakose komon"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/02/minase-windows-hakose-gold-03.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/02/minase-windows-hakose-gold-03.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/12/minase-fratello-watch-engraved-personalized-1.jpg",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/watch-personalization/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/12/minase-fratello-watch-engraved-personalized-1.jpg::0",
+      "text_preview": "ImageObject. watch-personalization-minase-engraved",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "773d0d5751eb934ac8e2c7a304fec2fd82a5721f530fbe50eb6ee4b8efaea5f2",
+  "dynamic_hash": "32bdcacf986b1a14b903393b9fa7203af42b2cf3f71be236f2874b0d8ce0a3c8",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "watch-personalization-minase-engraved"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2022/12/minase-fratello-watch-engraved-personalized-1.jpg",
+    "url": "https://minasewatches.com/wp-content/uploads/2022/12/minase-fratello-watch-engraved-personalized-1.jpg",
+    "width": "1500",
+    "height": "1001",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM14-M01KA4-SSB",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/divido-shibo-urushi-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM14-M01KA4-SSB::0",
+      "text_preview": "Divido Shibo Urushi Steel - Sky of Shells. Minase watch Divido with Shibo Urushi sky of shells dial. Handpainted with urushi laquer, paint and egg whites.. Product. Minase watch Divido with Shibo Urushi sky of shells dial. Handpainted with urushi laquer, paint and egg whites.. NewCondition. https://",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.397236"
+      }
+    }
+  ],
+  "static_hash": "c96f0bf93d3d94dc88a2c8ad6d557f886ed78a9d9718cbeeecced7c50ceabcfc",
+  "dynamic_hash": "a77b9afb0deccfdebaedbce5653f7ea6ce8a24f65f068f3a3a4ca2a825266e58",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Divido Shibo Urushi Steel - Sky of Shells",
+    "description": "Minase watch Divido with Shibo Urushi sky of shells dial. Handpainted with urushi laquer, paint and egg whites.",
+    "offers.description": "Minase watch Divido with Shibo Urushi sky of shells dial. Handpainted with urushi laquer, paint and egg whites.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/divido-shibo-urushi-steel/?attribute_pa_divido-shibo=sky-of-shells"
+  },
+  "dynamic_fields": {
+    "sku": "VM14-M01KA4-SSB",
+    "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-shibo-urushi-shells-steel-1-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "8048.1",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.397236"
+}

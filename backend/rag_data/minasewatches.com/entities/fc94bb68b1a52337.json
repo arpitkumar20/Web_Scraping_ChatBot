@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-rubber-collection/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/horizon-rubber-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-rubber-collection/#webpage::0",
+      "text_preview": "Discover Horizon Rubber | Minase Watches | Made in Japan. WebPage. https://minasewatches.com/webshop/horizon-rubber-collection/#webpage. https://minasewatches.com/webshop/horizon-rubber-collection/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "03c2a18b67ff567be6b5c419d88f219707596ef31b232b6f9d77ec876c35cba3",
+  "dynamic_hash": "d308bd526a65fdaea2d0d28f30e4d98cd18f36bcc15e80a8aeee5a43d32fb753",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/horizon-rubber-collection/#webpage",
+    "url": "https://minasewatches.com/webshop/horizon-rubber-collection/",
+    "name": "Discover Horizon Rubber | Minase Watches | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-11-11T20:08:34+01:00",
+    "dateModified": "2025-08-28T06:52:19+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-black-rubber.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

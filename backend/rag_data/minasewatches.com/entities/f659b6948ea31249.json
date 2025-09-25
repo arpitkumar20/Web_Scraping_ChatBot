@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/bra-horizon-2.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/horizon-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/bra-horizon-2.png::0",
+      "text_preview": "ImageObject. Minase horizon steel bracelet",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "e64d5bf0c4d7b1ccf725561e67939b471d584704b506e5cc54de2126b0f36c8a",
+  "dynamic_hash": "2f580c436fb2491318af5ef206261f779e543609419139f7ea3311c5713809db",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase horizon steel bracelet"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/02/bra-horizon-2.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/02/bra-horizon-2.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

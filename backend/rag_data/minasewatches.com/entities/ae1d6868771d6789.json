@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-steel/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/uruga-42mm-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-steel/#webpage::0",
+      "text_preview": "Discover Uruga 42mm Steel | Minase Watches | Made in Japan. WebPage. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.370361"
+      }
+    }
+  ],
+  "static_hash": "9d35cae40323b1cf596e1a0f51cda06db8762630d3e68d9d849a5aad6a6f418b",
+  "dynamic_hash": "f5ce59465ba00901a2dfaf48831f6e86db0fc0b0cf41d4d534e41fa394733224",
+  "static_paths": [
+    "@type",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "name": "Discover Uruga 42mm Steel | Minase Watches | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/webshop/uruga-42mm-steel/#webpage",
+    "url": "https://minasewatches.com/webshop/uruga-42mm-steel/",
+    "datePublished": "2023-07-09T13:13:38+02:00",
+    "dateModified": "2025-07-16T15:35:14+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/07/UG03-M01NBL-SSB.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.370361"
+}

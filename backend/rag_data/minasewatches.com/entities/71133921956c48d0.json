@@ -1,0 +1,40 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-braun-leather-strap.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/windows-midsize-strap/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-braun-leather-strap.png::0",
+      "text_preview": "ImageObject",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "e511ba42a1fb2e0f3ecb8a42d7a5628d320661b14dbb3a6d00a9ff9899fd014b",
+  "dynamic_hash": "0a250563fdd9a68c88f95b587ea73e62c58ea08ec782bd40fe388bfdf717045e",
+  "static_paths": [
+    "@type"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-braun-leather-strap.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-braun-leather-strap.png",
+    "width": "2000",
+    "height": "2000",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

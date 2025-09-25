@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/windows-midsize-bracelet/#webpage",
+  "entity_type": "ItemPage",
+  "source_url": "https://minasewatches.com/webshop/windows-midsize-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/windows-midsize-bracelet/#webpage::0",
+      "text_preview": "Buy Steel Bracelet Windows Midsize | Minase Watches. ItemPage. https://minasewatches.com/webshop/windows-midsize-bracelet/#webpage. https://minasewatches.com/webshop/windows-midsize-bracelet/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "5111456c02ff3469a1015c56ba1b70299f65bc074b8326dc73dada38dbd53eda",
+  "dynamic_hash": "ab34c70f9ee42120c9e13f14e7563fd2e37838953bcc969184be17910eff641b",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ItemPage",
+    "@id": "https://minasewatches.com/webshop/windows-midsize-bracelet/#webpage",
+    "url": "https://minasewatches.com/webshop/windows-midsize-bracelet/",
+    "name": "Buy Steel Bracelet Windows Midsize | Minase Watches",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2024-06-20T13:16:02+02:00",
+    "dateModified": "2024-10-04T10:14:06+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/02/Bra-windows-2-tranp.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

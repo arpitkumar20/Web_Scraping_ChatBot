@@ -1,0 +1,40 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2020/08/Minase_Para_2019_DSC_2990.jpeg",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/paragliding/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2020/08/Minase_Para_2019_DSC_2990.jpeg::0",
+      "text_preview": "ImageObject",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "e511ba42a1fb2e0f3ecb8a42d7a5628d320661b14dbb3a6d00a9ff9899fd014b",
+  "dynamic_hash": "6a2bfe9041b8a0d33677d78125f1de4a46e12f58758acd78bb5f78ba34b7425c",
+  "static_paths": [
+    "@type"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2020/08/Minase_Para_2019_DSC_2990.jpeg",
+    "url": "https://minasewatches.com/wp-content/uploads/2020/08/Minase_Para_2019_DSC_2990.jpeg",
+    "width": "1024",
+    "height": "684",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

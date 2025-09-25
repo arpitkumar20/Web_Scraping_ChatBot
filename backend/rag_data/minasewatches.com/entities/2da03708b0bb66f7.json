@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM14-RBKUGR-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/divido-urushi-makie-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM14-RBKUGR-SSD::0",
+      "text_preview": "Divido Urushi Makie Rubber - Green. Minase watch Divido with a handmade blue urushi makie dial. Stainless steel case hand-polished with the sarazu technique and rubber band.. Product. Minase watch Divido with a handmade blue urushi makie dial. Stainless steel case hand-polished with the sarazu techn",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.397236"
+      }
+    }
+  ],
+  "static_hash": "7f028c613e9a358c7dfcb02f9bf634c9eb7d8223ea82085430dde2c6a1e65d24",
+  "dynamic_hash": "c2abba582abdb0f9e5e781eac47cf3491494d289b95463540a1340ed5606358a",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Divido Urushi Makie Rubber - Green",
+    "description": "Minase watch Divido with a handmade blue urushi makie dial. Stainless steel case hand-polished with the sarazu technique and rubber band.",
+    "offers.description": "Minase watch Divido with a handmade blue urushi makie dial. Stainless steel case hand-polished with the sarazu technique and rubber band.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/divido-urushi-makie-rubber/?attribute_pa_divido-makie=green"
+  },
+  "dynamic_fields": {
+    "sku": "VM14-RBKUGR-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2023/01/minase-divido-urushi-makie-green-rubber-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "7100",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.397236"
+}

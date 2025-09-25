@@ -1,0 +1,56 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/gold/rose-gold/#schema-24336",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/japanese-masterpieces/gold/rose-gold/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/gold/rose-gold/#schema-24336::0",
+      "text_preview": "Rose Gold Watch | Handmade in Japan | Minase Watches. Discover Minase rose gold watches. Minase uses 18K gold composed of 75% of pure metal, silver and copper to reach the desired color.. VideoObject. https://minasewatches.com/japanese-masterpieces/gold/rose-gold/#webpage. https://minasewatches.com/",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "7800bee9b3a15366d93b3ba5625e7c1c14542343b95432cd1a0020b401f9e851",
+  "dynamic_hash": "8ccc8c058cf2629352d8b5cadbbc99c6f51c5bfc74901424406a64df57df6020",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "thumbnailUrl",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "Rose Gold Watch | Handmade in Japan | Minase Watches",
+    "description": "Discover Minase rose gold watches. Minase uses 18K gold composed of 75% of pure metal, silver and copper to reach the desired color.",
+    "isPartOf.@id": "https://minasewatches.com/japanese-masterpieces/gold/rose-gold/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/japanese-masterpieces/gold/rose-gold/#webpage"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2023-04-18T09:22:26+02:00",
+    "thumbnailUrl": "https://minasewatches.com/wp-content/uploads/2023/02/7-windows-hakose-gold-urushi-01.jpg",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2022/11/video-collection.mp4",
+    "width": "1920",
+    "height": "1080",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/japanese-masterpieces/gold/rose-gold/#schema-24336",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

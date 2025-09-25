@@ -1,0 +1,114 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-31mm-leather-blue/#richSnippet",
+  "entity_type": "ProductGroup",
+  "source_url": "https://minasewatches.com/webshop/uruga-31mm-leather-blue/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-31mm-leather-blue/#richSnippet::0",
+      "text_preview": "Discover Uruga 31mm Leather | Minase Watches |Made in Japan. Uruga 31mm leather is powered with a high quality Swiss movement, every steel parts is hand-polished with the Sallaz (sarazu) technique.. ProductGroup. Leather straps. QuantitativeValue. QuantitativeValue. QuantitativeValue. QuantitativeVa",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "4c5cc9137a2c809b65da456f8566b547f1afa4b89e428aae1bd38e3682aa6672",
+  "dynamic_hash": "407f5b801144aa61383c906dc3fd5f2ab7ab2729f89b46c4cb4662e149576e56",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "weight.@type",
+    "height.@type",
+    "width.@type",
+    "depth.@type",
+    "hasVariant",
+    "hasVariant[0].@type",
+    "hasVariant[0].name",
+    "hasVariant[0].description",
+    "hasVariant[0].offers.description",
+    "hasVariant[0].offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "mainEntityOfPage.@id",
+    "weight.unitCode",
+    "weight.value",
+    "height.unitCode",
+    "height.value",
+    "width.unitCode",
+    "depth.unitCode",
+    "depth.value",
+    "image.@id",
+    "url",
+    "productGroupID",
+    "hasVariant[0].sku",
+    "hasVariant[0].image",
+    "hasVariant[0].offers.@type",
+    "hasVariant[0].offers.price",
+    "hasVariant[0].offers.priceCurrency",
+    "hasVariant[0].offers.availability",
+    "hasVariant[0].offers.priceValidUntil",
+    "hasVariant[0].offers.url",
+    "@id"
+  ],
+  "static_fields": {
+    "@type": "ProductGroup",
+    "name": "Discover Uruga 31mm Leather | Minase Watches |Made in Japan",
+    "description": "Uruga 31mm leather is powered with a high quality Swiss movement, every steel parts is hand-polished with the Sallaz (sarazu) technique.",
+    "category": "Leather straps",
+    "weight.@type": "QuantitativeValue",
+    "height.@type": "QuantitativeValue",
+    "width.@type": "QuantitativeValue",
+    "depth.@type": "QuantitativeValue",
+    "hasVariant": [
+      {
+        "@type": "Product",
+        "sku": "UG02-CDLNBL-SSD-1",
+        "name": "Uruga 31mm Leather Blue - Blue",
+        "description": "The Uruga 31mm Leather model was specifically designed for ladies. It is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+        "image": "https://minasewatches.com/wp-content/uploads/2023/07/UG02-CDLNBL-SSD-280x280.png",
+        "offers": {
+          "@type": "Offer",
+          "description": "The Uruga 31mm Leather model was specifically designed for ladies. It is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+          "price": "3280",
+          "priceCurrency": "CHF",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "NewCondition",
+          "priceValidUntil": "2026-12-31",
+          "url": "https://minasewatches.com/webshop/uruga-31mm-leather-blue/?attribute_pa_uruga-31-dials=blue"
+        }
+      }
+    ],
+    "hasVariant[0].@type": "Product",
+    "hasVariant[0].name": "Uruga 31mm Leather Blue - Blue",
+    "hasVariant[0].description": "The Uruga 31mm Leather model was specifically designed for ladies. It is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+    "hasVariant[0].offers.description": "The Uruga 31mm Leather model was specifically designed for ladies. It is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+    "hasVariant[0].offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/uruga-31mm-leather-blue/#webpage",
+    "weight.unitCode": "GRM",
+    "weight.value": "50",
+    "height.unitCode": "MMT",
+    "height.value": "10",
+    "width.unitCode": "MMT",
+    "depth.unitCode": "MMT",
+    "depth.value": "31",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2023/07/UG02-CDLNBL-SSD.png",
+    "url": "https://minasewatches.com/webshop/uruga-31mm-leather-blue/",
+    "productGroupID": "34403",
+    "hasVariant[0].sku": "UG02-CDLNBL-SSD-1",
+    "hasVariant[0].image": "https://minasewatches.com/wp-content/uploads/2023/07/UG02-CDLNBL-SSD-280x280.png",
+    "hasVariant[0].offers.@type": "Offer",
+    "hasVariant[0].offers.price": "3280",
+    "hasVariant[0].offers.priceCurrency": "CHF",
+    "hasVariant[0].offers.availability": "https://schema.org/InStock",
+    "hasVariant[0].offers.priceValidUntil": "2026-12-31",
+    "hasVariant[0].offers.url": "https://minasewatches.com/webshop/uruga-31mm-leather-blue/?attribute_pa_uruga-31-dials=blue",
+    "@id": "https://minasewatches.com/webshop/uruga-31mm-leather-blue/#richSnippet"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

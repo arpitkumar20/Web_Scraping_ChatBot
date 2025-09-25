@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/measure-wrist-size/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/measure-wrist-size/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/measure-wrist-size/#webpage::0",
+      "text_preview": "How to correctly measure your wrist size? | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/measure-wrist-size/#webpage. https://minasewatches.com/measure-wrist-size/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "fc40f36070c2a1bb77c54a2a92921ed76debcd7810528679cc352668bb6021d4",
+  "dynamic_hash": "a3d38fdf367d6daa23be8d6f20dd316b73566625e3b30dfdc2cc8c8e1d85f1c5",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/measure-wrist-size/#webpage",
+    "url": "https://minasewatches.com/measure-wrist-size/",
+    "name": "How to correctly measure your wrist size? | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2020-10-09T16:00:12+02:00",
+    "dateModified": "2023-03-20T09:26:23+01:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2020/10/Capturedecran2020-10-09a16.44.49.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,126 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-steel/#richSnippet",
+  "entity_type": "ProductGroup",
+  "source_url": "https://minasewatches.com/webshop/horizon-midsize-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-steel/#richSnippet::0",
+      "text_preview": "Buy Horizon Midsize Steel | Minase Watches | Made in Japan. Horizon Midsize Steel is one of Minase's collections. Handmade in Japan, it is a hommage to Japanese crafts and traditions.. ProductGroup. Horizon. https://minasewatches.com/webshop/horizon-midsize-steel/#webpage. QuantitativeValue. Quantit",
+      "chunk_index": 0,
+      "chunk_total": 2,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.381358"
+      }
+    },
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-steel/#richSnippet::1",
+      "text_preview": ". So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.. NewCondition. https://minasewatches.com/webshop/horizon-midsize- steel/?attribute_pa_horizon-midsize-rubber-dials=blue. https://minasewatches.com/webshop/hor",
+      "chunk_index": 1,
+      "chunk_total": 2,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.381358"
+      }
+    }
+  ],
+  "static_hash": "19149d2d471738debb76608ab0280f88b6784c6a75c4a7679ae6058a3bcc00a3",
+  "dynamic_hash": "707fa507f4a88d9489ee1f45c75a17a4ae7e6f036219c20b3bb78fa0586f3959",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "mainEntityOfPage.@id",
+    "weight.@type",
+    "height.@type",
+    "width.@type",
+    "depth.@type",
+    "url",
+    "hasVariant",
+    "hasVariant[0].@type",
+    "hasVariant[0].name",
+    "hasVariant[0].description",
+    "hasVariant[0].offers.description",
+    "hasVariant[0].offers.itemCondition",
+    "hasVariant[0].offers.url",
+    "@id"
+  ],
+  "dynamic_paths": [
+    "weight.unitCode",
+    "weight.value",
+    "height.unitCode",
+    "height.value",
+    "width.unitCode",
+    "width.value",
+    "depth.unitCode",
+    "depth.value",
+    "image.@id",
+    "productGroupID",
+    "hasVariant[0].sku",
+    "hasVariant[0].image",
+    "hasVariant[0].offers.@type",
+    "hasVariant[0].offers.price",
+    "hasVariant[0].offers.priceCurrency",
+    "hasVariant[0].offers.availability",
+    "hasVariant[0].offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "ProductGroup",
+    "name": "Buy Horizon Midsize Steel | Minase Watches | Made in Japan",
+    "description": "Horizon Midsize Steel is one of Minase's collections. Handmade in Japan, it is a hommage to Japanese crafts and traditions.",
+    "category": "Horizon",
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/horizon-midsize-steel/#webpage",
+    "weight.@type": "QuantitativeValue",
+    "height.@type": "QuantitativeValue",
+    "width.@type": "QuantitativeValue",
+    "depth.@type": "QuantitativeValue",
+    "url": "https://minasewatches.com/webshop/horizon-midsize-steel/",
+    "hasVariant": [
+      {
+        "@type": "Product",
+        "sku": "VM06-M04SB",
+        "name": "Horizon Midsize Steel - Blue",
+        "description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+        "image": "https://minasewatches.com/wp-content/uploads/2024/08/minase-watch-horizon-midsize-steel-blue-280x280.png",
+        "offers": {
+          "@type": "Offer",
+          "description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+          "price": "4750",
+          "priceCurrency": "CHF",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "NewCondition",
+          "priceValidUntil": "2026-12-31",
+          "url": "https://minasewatches.com/webshop/horizon-midsize-steel/?attribute_pa_horizon-midsize-rubber-dials=blue"
+        }
+      }
+    ],
+    "hasVariant[0].@type": "Product",
+    "hasVariant[0].name": "Horizon Midsize Steel - Blue",
+    "hasVariant[0].description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+    "hasVariant[0].offers.description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+    "hasVariant[0].offers.itemCondition": "NewCondition",
+    "hasVariant[0].offers.url": "https://minasewatches.com/webshop/horizon-midsize-steel/?attribute_pa_horizon-midsize-rubber-dials=blue",
+    "@id": "https://minasewatches.com/webshop/horizon-midsize-steel/#richSnippet"
+  },
+  "dynamic_fields": {
+    "weight.unitCode": "GRM",
+    "weight.value": "120",
+    "height.unitCode": "MMT",
+    "height.value": "12",
+    "width.unitCode": "MMT",
+    "width.value": "37",
+    "depth.unitCode": "MMT",
+    "depth.value": "46",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2024/08/minase-watch-horizon-midsize-steel-blue.png",
+    "productGroupID": "29698",
+    "hasVariant[0].sku": "VM06-M04SB",
+    "hasVariant[0].image": "https://minasewatches.com/wp-content/uploads/2024/08/minase-watch-horizon-midsize-steel-blue-280x280.png",
+    "hasVariant[0].offers.@type": "Offer",
+    "hasVariant[0].offers.price": "4750",
+    "hasVariant[0].offers.priceCurrency": "CHF",
+    "hasVariant[0].offers.availability": "https://schema.org/InStock",
+    "hasVariant[0].offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.381358"
+}

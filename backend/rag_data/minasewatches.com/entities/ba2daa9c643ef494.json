@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-leather-collection/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/horizon-leather-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-leather-collection/#webpage::0",
+      "text_preview": "Discover Horizon Leather | Minase Watches | Made in Japan. WebPage. https://minasewatches.com/webshop/horizon-leather-collection/#webpage. https://minasewatches.com/webshop/horizon-leather-collection/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "f7cbf8b6d74806222de6be981feb5350bde542ba07efc0ea41aa5e649de8e9a7",
+  "dynamic_hash": "2251c8af4574386a7b735acdc85ca9a4eeef95a843f13772d226242a37a497b9",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/horizon-leather-collection/#webpage",
+    "url": "https://minasewatches.com/webshop/horizon-leather-collection/",
+    "name": "Discover Horizon Leather | Minase Watches | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-11-11T19:27:19+01:00",
+    "dateModified": "2025-09-08T19:15:08+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-blue-leather.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,60 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/divido-blood-orange/#richSnippet",
+  "entity_type": "BlogPosting",
+  "source_url": "https://minasewatches.com/divido-blood-orange/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/divido-blood-orange/#richSnippet::0",
+      "text_preview": "Divido Blood Orange Limited Edition | Minase watches | Handmade in Japan. Inspired by the famous Arabic Coffee Bean and combining the heritage of Japanese artistry and craftsmanship, Minase and 10tenLabs® present the Divido Coffea Arabica Edition. This exclusive 10 pieces limited edition celebrates ",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "feb725b6f722da2ecd7486dc6f5403799cc77507b8eaae7949f0f5a87812dd26",
+  "dynamic_hash": "c32541608b759af43c0414a003d252c3ac04cd4f8c00471cd8842f5efc7c3511",
+  "static_paths": [
+    "@type",
+    "headline",
+    "keywords",
+    "articleSection",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "image.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "BlogPosting",
+    "headline": "Divido Blood Orange Limited Edition | Minase watches | Handmade in Japan",
+    "keywords": "Divido Blood Orange",
+    "articleSection": "Press Release",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Inspired by the famous Arabic Coffee Bean and combining the heritage of Japanese artistry and craftsmanship, Minase and 10tenLabs® present the Divido Coffea Arabica Edition. This exclusive 10 pieces limited edition celebrates the partnership between Minase and 10tenLabs®, new official distributor and retailer for the Middle East region.",
+    "name": "Divido Blood Orange Limited Edition | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/divido-blood-orange/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/divido-blood-orange/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/divido-blood-orange/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2021-10-20T16:00:44+02:00",
+    "dateModified": "2023-03-03T10:07:29+01:00",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2021/10/MinaseBloodOrangedivido-scaled.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

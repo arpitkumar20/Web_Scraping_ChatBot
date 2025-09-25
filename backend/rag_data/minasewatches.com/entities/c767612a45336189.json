@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/hello/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/hello/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/hello/#webpage::0",
+      "text_preview": "How did Minase emerge from Japan ? | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/hello/#webpage. https://minasewatches.com/hello/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "77f0238ba5feefe39e095cb4eec444a542f75c1b304c9978301f86539a84cee9",
+  "dynamic_hash": "8ed7d3bc895706d0fb6af1f3ddbaca349ad0e868f53fb47614a6f40845992f9c",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/hello/#webpage",
+    "url": "https://minasewatches.com/hello/",
+    "name": "How did Minase emerge from Japan ? | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2021-01-05T16:00:30+01:00",
+    "dateModified": "2023-03-03T10:10:40+01:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/02/SvenErikHenriksen-H-DevelopmentManagingPartner.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

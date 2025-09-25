@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-31mm-leather-blue/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/uruga-31mm-leather-blue/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-31mm-leather-blue/#webpage::0",
+      "text_preview": "Discover Uruga 31mm Leather | Minase Watches |Made in Japan. WebPage. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "7e40987171859194753dc07fa8f6797cd0d623fc62fe5703c313462d043497f5",
+  "dynamic_hash": "75cd53914632fd73dcd568a656b8d85755bb0d28acb16a6fed6f81e25da9cbdc",
+  "static_paths": [
+    "@type",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "name": "Discover Uruga 31mm Leather | Minase Watches |Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/webshop/uruga-31mm-leather-blue/#webpage",
+    "url": "https://minasewatches.com/webshop/uruga-31mm-leather-blue/",
+    "datePublished": "2025-07-10T12:17:17+02:00",
+    "dateModified": "2025-07-10T16:51:58+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/07/UG02-CDLNBL-SSD.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

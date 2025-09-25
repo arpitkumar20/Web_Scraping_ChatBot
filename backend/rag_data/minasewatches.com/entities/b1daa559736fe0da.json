@@ -1,0 +1,24 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/locations.kml::c99a8e357af5c77a42ccbd9d4261a08dbc02e6f304074dc4a405a099982a86e9",
+  "entity_type": "fallback",
+  "source_url": "https://minasewatches.com/locations.kml",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/locations.kml::c99a8e357af5c77a42ccbd9d4261a08dbc02e6f304074dc4a405a099982a86e9::0",
+      "text_preview": "Locations for minasewatches.com 1 minasewatches.com Minase watches | Handmade in Japan - Japanese Handmade Watches 0 0",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "cleaned_text",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": null,
+  "dynamic_hash": null,
+  "static_paths": [],
+  "dynamic_paths": [],
+  "static_fields": {},
+  "dynamic_fields": {},
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

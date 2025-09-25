@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM07-CBKMA7-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/windows-midsize-hakose-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM07-CBKMA7-SSD::0",
+      "text_preview": "Windows Midsize Hakose Steel - Nagare Sakura Kuro. The Urushi lacquer technique uses the sap of the eponymous Asian tree to create watch dials of unparalleled beauty and depth of color. Inspired by intoxicating local landscapes or traditional motives, each dial is handcrafted by a highly skilled art",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "a02ae4eea6875be5127dc7761ceee7296d1ba102457edd57b58efab07769ddfd",
+  "dynamic_hash": "def0d246a7c8571c93369d5964157908d1242f6f26f2052569db40a9e85e49a4",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Windows Midsize Hakose Steel - Nagare Sakura Kuro",
+    "description": "The Urushi lacquer technique uses the sap of the eponymous Asian tree to create watch dials of unparalleled beauty and depth of color. Inspired by intoxicating local landscapes or traditional motives, each dial is handcrafted by a highly skilled artisan. Urushi lacquer has been used in Japanese culture for over 7000 years.",
+    "offers.description": "The Urushi lacquer technique uses the sap of the eponymous Asian tree to create watch dials of unparalleled beauty and depth of color. Inspired by intoxicating local landscapes or traditional motives, each dial is handcrafted by a highly skilled artisan. Urushi lacquer has been used in Japanese culture for over 7000 years.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/windows-midsize-hakose-steel/?attribute_pa_hakose-midsize=nagare-sakura-kuro"
+  },
+  "dynamic_fields": {
+    "sku": "VM07-CBKMA7-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2023/11/urushi-nagare-sakura-kuro-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "14153.56",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

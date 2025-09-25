@@ -1,0 +1,40 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/01/MinaseDividoShiboUrushi-ScarletIllusion.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/best-luxury-watches/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/01/MinaseDividoShiboUrushi-ScarletIllusion.png::0",
+      "text_preview": "ImageObject",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "e511ba42a1fb2e0f3ecb8a42d7a5628d320661b14dbb3a6d00a9ff9899fd014b",
+  "dynamic_hash": "0eb4cf0856d22f9bb984953452c28fe94dfa4b9b570faafd1a7ad8a4c41fe899",
+  "static_paths": [
+    "@type"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/01/MinaseDividoShiboUrushi-ScarletIllusion.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/01/MinaseDividoShiboUrushi-ScarletIllusion.png",
+    "width": "1024",
+    "height": "682",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

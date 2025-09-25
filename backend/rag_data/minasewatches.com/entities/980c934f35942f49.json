@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/my-account/wishlist/#richSnippet",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/my-account/wishlist/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/my-account/wishlist/#richSnippet::0",
+      "text_preview": "Wishlist | Minase watches | Handmade in Japan. Article. Wishlist | Minase watches | Handmade in Japan. https://minasewatches.com/author/kellyhenriksen/. kellyhenriksen. https://minasewatches.com/#organization. https://minasewatches.com/my-account/wishlist/#richSnippet. https://minasewatches.com/my-a",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "4adb928804a58ed3e0576f9d68fb38d985ef80a954c92e418d1a1e5342fe56cc",
+  "dynamic_hash": "361f580408ae4e961f20f6a8792c42b616742a6a6611508df64f591f03298e9f",
+  "static_paths": [
+    "@type",
+    "headline",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "Article",
+    "headline": "Wishlist | Minase watches | Handmade in Japan",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "name": "Wishlist | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/my-account/wishlist/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/my-account/wishlist/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/my-account/wishlist/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2013-08-11T16:31:20+02:00",
+    "dateModified": "2013-08-11T16:31:20+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/divido-blood-orange/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/divido-blood-orange/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/divido-blood-orange/#webpage::0",
+      "text_preview": "Divido Blood Orange Limited Edition | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/divido-blood-orange/#webpage. https://minasewatches.com/divido-blood-orange/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "d672cef59e8402f2fe522441da99b6fd65f5295c725778f981cd2223b1cf9449",
+  "dynamic_hash": "d2c43c1786f931de6de498b7210ec4a674be1a66bb59fe20ba1488837eada209",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/divido-blood-orange/#webpage",
+    "url": "https://minasewatches.com/divido-blood-orange/",
+    "name": "Divido Blood Orange Limited Edition | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2021-10-20T16:00:44+02:00",
+    "dateModified": "2023-03-03T10:07:29+01:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2021/10/MinaseBloodOrangedivido-scaled.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

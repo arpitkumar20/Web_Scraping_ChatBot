@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-red-leather-strap.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/windows-leather-straps/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-red-leather-strap.png::0",
+      "text_preview": "ImageObject. Minase red leather straps",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "b80678fb617c092adfef801b4b6a7029341a4cd2157d30609b5d48de84f0765b",
+  "dynamic_hash": "7b693f6a6eb0eadadc22d92d9513162ee743804494b148040d678d6b77673273",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase red leather straps"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-red-leather-strap.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-red-leather-strap.png",
+    "width": "2000",
+    "height": "2000",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

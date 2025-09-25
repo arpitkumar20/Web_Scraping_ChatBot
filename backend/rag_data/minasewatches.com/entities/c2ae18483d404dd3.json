@@ -1,0 +1,56 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/representatives/#richSnippet",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/representatives/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/representatives/#richSnippet::0",
+      "text_preview": "Our representatives | Made in Japan | Minase watches. Find Minase's representatives or write us directly from the website and we'll assist you the best we can.. Article. Our representatives | Made in Japan | Minase watches. Representatives. https://minasewatches.com/author/kellyhenriksen/. kellyhenr",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "501b0d21addae4019bf7ac2d6b4a56b9959a4ab942414a0916b7e6a47bc33443",
+  "dynamic_hash": "442612bd8cad69af5a2dc9313e5726b033c05404b8be20d3d24d5368d5a594a2",
+  "static_paths": [
+    "@type",
+    "headline",
+    "keywords",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "Article",
+    "headline": "Our representatives | Made in Japan | Minase watches",
+    "keywords": "Representatives",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Find Minase&#039;s representatives or write us directly from the website and we&#039;ll assist you the best we can.",
+    "name": "Our representatives | Made in Japan | Minase watches",
+    "@id": "https://minasewatches.com/representatives/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/representatives/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/representatives/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-01-20T15:44:04+01:00",
+    "dateModified": "2025-02-27T10:52:14+01:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

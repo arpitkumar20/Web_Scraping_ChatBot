@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM07-CBKMA0-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/windows-midsize-hakose-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM07-CBKMA0-SSD::0",
+      "text_preview": "Windows Midsize Hakose Steel - Hoshimi Sakura. The Urushi lacquer technique uses the sap of the eponymous Asian tree to create watch dials of unparalleled beauty and depth of color. Inspired by intoxicating local landscapes or traditional motives, each dial is handcrafted by a highly skilled artisan",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "65a3588ff2e4e5bf1d670852167891ddd2e6442ea3c568caa2b13b47b7a6377c",
+  "dynamic_hash": "c3a60ef64c00853aae8302759e80ed45870340703f82764d73a4190e1bbdbf9d",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Windows Midsize Hakose Steel - Hoshimi Sakura",
+    "description": "The Urushi lacquer technique uses the sap of the eponymous Asian tree to create watch dials of unparalleled beauty and depth of color. Inspired by intoxicating local landscapes or traditional motives, each dial is handcrafted by a highly skilled artisan. Urushi lacquer has been used in Japanese culture for over 7000 years.",
+    "offers.description": "The Urushi lacquer technique uses the sap of the eponymous Asian tree to create watch dials of unparalleled beauty and depth of color. Inspired by intoxicating local landscapes or traditional motives, each dial is handcrafted by a highly skilled artisan. Urushi lacquer has been used in Japanese culture for over 7000 years.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/windows-midsize-hakose-steel/?attribute_pa_hakose-midsize=hoshimi-sakura"
+  },
+  "dynamic_fields": {
+    "sku": "VM07-CBKMA0-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2023/11/urushi-hoshimi-sakura-ss-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "14153.56",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

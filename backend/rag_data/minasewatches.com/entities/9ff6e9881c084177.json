@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/general-conditions/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/general-conditions/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/general-conditions/#webpage::0",
+      "text_preview": "General Conditions | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/general-conditions/#webpage. https://minasewatches.com/general-conditions/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "ec60e3be41a8e7ba47145e4c0c1f88fb662210be50f2468229b51865f2878919",
+  "dynamic_hash": "b5ba1c256156e72ebdacf0dfc0f1f0b9444bb1c9cbac9315f001177b49a2ec6f",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/general-conditions/#webpage",
+    "url": "https://minasewatches.com/general-conditions/",
+    "name": "General Conditions | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-03-12T20:38:01+01:00",
+    "dateModified": "2025-08-27T15:17:21+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

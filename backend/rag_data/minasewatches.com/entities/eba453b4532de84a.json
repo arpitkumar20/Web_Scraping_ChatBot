@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/collections/accessories/rubber-strap/#schema-23792",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/collections/accessories/rubber-strap/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/collections/accessories/rubber-strap/#schema-23792::0",
+      "text_preview": "Buy Rubber Straps | Made in Japan | Minase Watches. Minase rubber straps are available in black or white rubber and are all handmade at the Minase factory.. VideoObject. https://minasewatches.com/collections/accessories/rubber-strap/#webpage. https://minasewatches.com/#organization",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "4b56af808b6da374d7ca22443336e0b74f2afb50bbfaf6acac8bc3ba4add6a74",
+  "dynamic_hash": "a211cedb5faaa63a74fbd88908945400a7d8b559fdce653d9cae9f937a1fb39a",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "Buy Rubber Straps | Made in Japan | Minase Watches",
+    "description": "Minase rubber straps are available in black or white rubber and are all handmade at the Minase factory.",
+    "isPartOf.@id": "https://minasewatches.com/collections/accessories/rubber-strap/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2023-04-14T11:05:37+02:00",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2023/03/more-compressed.mp4",
+    "width": "1920",
+    "height": "1080",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/collections/accessories/rubber-strap/#schema-23792",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,60 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/paragliding/#richSnippet",
+  "entity_type": "BlogPosting",
+  "source_url": "https://minasewatches.com/paragliding/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/paragliding/#richSnippet::0",
+      "text_preview": "Minase supports Paragliding | Minase watches | Handmade in Japan. Precision, elegance and emotion are all values Minase shares with the sport of paragliding. Learn more about Minase's latest collaboration. Handcrafted watches of Japan.. BlogPosting. Minase supports Paragliding | Minase watches | Han",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "ea31d541f3e449c14b9e275d5fda18a5fcc477d888c3780f55f8cd482f051fed",
+  "dynamic_hash": "54412f31ec40b59717935ffbad9a290b450abd4d0e395c2e61e13705ded52499",
+  "static_paths": [
+    "@type",
+    "headline",
+    "keywords",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "articleSection",
+    "image.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "BlogPosting",
+    "headline": "Minase supports Paragliding | Minase watches | Handmade in Japan",
+    "keywords": "paragliding",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Precision, elegance and emotion are all values Minase shares with the sport of paragliding. Learn more about Minase&#039;s latest collaboration. Handcrafted watches of Japan.",
+    "name": "Minase supports Paragliding | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/paragliding/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/paragliding/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/paragliding/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2020-08-14T16:00:28+02:00",
+    "dateModified": "2023-03-03T10:12:10+01:00",
+    "articleSection": "Minase",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2020/08/Minase_Para_2019_DSC_2990.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

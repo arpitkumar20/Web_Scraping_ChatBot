@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-urushi-hakose-midsize02.jpg",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-urushi-hakose-midsize02.jpg::0",
+      "text_preview": "ImageObject. Minase official Webshop",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "1cde693b36aae6ec364c8aeb5c494b87637651fa7396ce3b1211f5b69755afe6",
+  "dynamic_hash": "a822439f0a4158e165b7d25cd94f3aca460c8f48c80a852186427d3c734f2151",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase official Webshop"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-urushi-hakose-midsize02.jpg",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-urushi-hakose-midsize02.jpg",
+    "width": "1333",
+    "height": "2000",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

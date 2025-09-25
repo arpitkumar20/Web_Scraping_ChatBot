@@ -1,0 +1,139 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/windows-rose-gold/#richSnippet",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/windows-rose-gold/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/windows-rose-gold/#richSnippet::0",
+      "text_preview": "Rose Gold Watch Windows | Handmade in Japan | Minase. Discover Windows Rose Gold watch collection. Hand in Japan with 18K gold, the watches are available on our webshop.. Product. Leather straps. https://minasewatches.com/webshop/windows-rose-gold/#webpage. QuantitativeValue. QuantitativeValue. Quan",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "b47e70d4dd3ed06986fe0cc45bba8d308aad262803b32d5a6eb376bb81f2f8ee",
+  "dynamic_hash": "6d65304a783df879c0886bc1e6067ff6e575dbf7ec4efbf756a0990634c3880b",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "mainEntityOfPage.@id",
+    "weight.@type",
+    "height.@type",
+    "width.@type",
+    "depth.@type",
+    "image",
+    "image[0].@type",
+    "image[1].@type",
+    "image[2].@type",
+    "offers.itemCondition",
+    "offers.url",
+    "offers.seller.@type",
+    "offers.seller.@id",
+    "offers.seller.name",
+    "offers.seller.url",
+    "@id"
+  ],
+  "dynamic_paths": [
+    "weight.unitCode",
+    "weight.value",
+    "height.unitCode",
+    "height.value",
+    "width.unitCode",
+    "width.value",
+    "depth.unitCode",
+    "depth.value",
+    "image[0].url",
+    "image[0].height",
+    "image[0].width",
+    "image[1].url",
+    "image[1].height",
+    "image[1].width",
+    "image[2].url",
+    "image[2].height",
+    "image[2].width",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.priceValidUntil",
+    "offers.availability",
+    "offers.seller.logo",
+    "offers.priceSpecification"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Rose Gold Watch Windows | Handmade in Japan | Minase",
+    "description": "Discover Windows Rose Gold watch collection. Hand in Japan with 18K gold, the watches are available on our webshop.",
+    "category": "Leather straps",
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/windows-rose-gold/#webpage",
+    "weight.@type": "QuantitativeValue",
+    "height.@type": "QuantitativeValue",
+    "width.@type": "QuantitativeValue",
+    "depth.@type": "QuantitativeValue",
+    "image": [
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-gold-watch-grey.png",
+        "height": "1000",
+        "width": "1000"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/02/7-windows-hakose-gold-urushi-01.jpg",
+        "height": "1000",
+        "width": "1000"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/02/7-windows-hakose-gold-urushi-03.jpg",
+        "height": "1000",
+        "width": "1000"
+      }
+    ],
+    "image[0].@type": "ImageObject",
+    "image[1].@type": "ImageObject",
+    "image[2].@type": "ImageObject",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/windows-rose-gold/",
+    "offers.seller.@type": "Organization",
+    "offers.seller.@id": "https://minasewatches.com/",
+    "offers.seller.name": "minasewatches.com",
+    "offers.seller.url": "https://minasewatches.com",
+    "@id": "https://minasewatches.com/webshop/windows-rose-gold/#richSnippet"
+  },
+  "dynamic_fields": {
+    "weight.unitCode": "GRM",
+    "weight.value": "160",
+    "height.unitCode": "MMT",
+    "height.value": "13",
+    "width.unitCode": "MMT",
+    "width.value": "38",
+    "depth.unitCode": "MMT",
+    "depth.value": "47",
+    "image[0].url": "https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-gold-watch-grey.png",
+    "image[0].height": "1000",
+    "image[0].width": "1000",
+    "image[1].url": "https://minasewatches.com/wp-content/uploads/2023/02/7-windows-hakose-gold-urushi-01.jpg",
+    "image[1].height": "1000",
+    "image[1].width": "1000",
+    "image[2].url": "https://minasewatches.com/wp-content/uploads/2023/02/7-windows-hakose-gold-urushi-03.jpg",
+    "image[2].height": "1000",
+    "image[2].width": "1000",
+    "offers.@type": "Offer",
+    "offers.price": "22900.00",
+    "offers.priceCurrency": "CHF",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.seller.logo": "",
+    "offers.priceSpecification": {
+      "price": "22900",
+      "priceCurrency": "CHF",
+      "valueAddedTaxIncluded": "true"
+    }
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

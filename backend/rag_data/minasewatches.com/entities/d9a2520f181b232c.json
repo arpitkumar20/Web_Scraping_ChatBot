@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/5-windows/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/5-windows/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/5-windows/#webpage::0",
+      "text_preview": "Minase 5 Windows Collection | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "902a468b6384950e58ab652181a816a59ce1f5cca6a9d0b43ff8138dce7b5f4e",
+  "dynamic_hash": "b1443abe0fa7e2e8c570a600b701534968737f02b8fb9561e690408c31d1c9ac",
+  "static_paths": [
+    "@type",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "name": "Minase 5 Windows Collection | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/5-windows/#webpage",
+    "url": "https://minasewatches.com/5-windows/",
+    "datePublished": "2020-06-19T16:00:43+02:00",
+    "dateModified": "2023-03-03T10:12:31+01:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/02/Minase5Windows.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

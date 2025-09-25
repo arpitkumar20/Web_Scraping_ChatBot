@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/windows-midsize-hakose-gold/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/windows-midsize-hakose-gold/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/windows-midsize-hakose-gold/#webpage::0",
+      "text_preview": "Buy Windows Midsize Hakose Urushi | Minase | Made in Japan. WebPage. https://minasewatches.com/webshop/windows-midsize-hakose-gold/#webpage. https://minasewatches.com/webshop/windows-midsize-hakose-gold/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.356856"
+      }
+    }
+  ],
+  "static_hash": "58a39b52404134594b33efff845b5cb502cffcf58973bc284c60b126dff74faa",
+  "dynamic_hash": "ec10e5762ba2540bc77e5f799974caad08fe99bc8d6103a0da42acbc04dedb1d",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/windows-midsize-hakose-gold/#webpage",
+    "url": "https://minasewatches.com/webshop/windows-midsize-hakose-gold/",
+    "name": "Buy Windows Midsize Hakose Urushi | Minase | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-11-03T11:08:26+01:00",
+    "dateModified": "2025-07-31T11:16:19+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/11/VM07-CBKMA0-KYJ-hoshimi-sakura-k18yg.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.356856"
+}

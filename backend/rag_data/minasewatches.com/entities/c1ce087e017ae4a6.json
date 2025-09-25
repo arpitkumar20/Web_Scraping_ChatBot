@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/divido-shibo-urushi-rubber/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/divido-shibo-urushi-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/divido-shibo-urushi-rubber/#webpage::0",
+      "text_preview": "Buy Divido Shibo Urushi | Minase Watches | Handmade in Japan. WebPage. https://minasewatches.com/webshop/divido-shibo-urushi-rubber/#webpage. https://minasewatches.com/webshop/divido-shibo-urushi-rubber/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "e9c32ae39bdfe2e7137bc0d0d884dbb045db900cd5d9709eb19854eb40229474",
+  "dynamic_hash": "3bb1642285efc262e4be5335f8eb07e7f515b08d18a1950e9be4e97ead86f964",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/divido-shibo-urushi-rubber/#webpage",
+    "url": "https://minasewatches.com/webshop/divido-shibo-urushi-rubber/",
+    "name": "Buy Divido Shibo Urushi | Minase Watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-11-04T14:14:53+01:00",
+    "dateModified": "2025-06-18T17:38:17+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2022/11/6.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

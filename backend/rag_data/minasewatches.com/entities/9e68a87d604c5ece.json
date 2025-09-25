@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Divido_urushi_makie-scaled.jpeg",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/makie-dials/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Divido_urushi_makie-scaled.jpeg::0",
+      "text_preview": "ImageObject. divide with red blue and green urushi makie dials",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "b752e0828136e4ce706a87806b516da0eec54f01d133840517fd0d377c3cf525",
+  "dynamic_hash": "494cb86f2ea9fbb5b400ce3747d1ad2e02959ad852adbf756d7be7c5ee86608d",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "divide with red blue and green urushi makie dials"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/02/Divido_urushi_makie-scaled.jpeg",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/02/Divido_urushi_makie-scaled.jpeg",
+    "width": "1920",
+    "height": "2560",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

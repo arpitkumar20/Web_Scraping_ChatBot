@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/7-windows-collection-steel-bracelet/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/7-windows-collection-steel-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/7-windows-collection-steel-bracelet/#webpage::0",
+      "text_preview": "Discover 7 Windows Collection | Minase Watches | Japan Made. WebPage. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.381358"
+      }
+    }
+  ],
+  "static_hash": "4ed37bd5fadc9d5778e96af7b87a259e4a4f5f21c18bec14085942912514aaaf",
+  "dynamic_hash": "ee7a4f46c97ccbf22cacea007b412e62231ed4e93e49476f19ee4e74d490a00f",
+  "static_paths": [
+    "@type",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "name": "Discover 7 Windows Collection | Minase Watches | Japan Made",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/webshop/7-windows-collection-steel-bracelet/#webpage",
+    "url": "https://minasewatches.com/webshop/7-windows-collection-steel-bracelet/",
+    "datePublished": "2022-11-12T15:48:12+01:00",
+    "dateModified": "2025-06-18T17:01:58+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-blue-steel.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.381358"
+}

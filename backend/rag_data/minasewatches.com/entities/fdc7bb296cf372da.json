@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM06-R02PD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/horizon-midsize-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM06-R02PD::0",
+      "text_preview": "Horizon Midsize Rubber - Rose. Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.. Product. Horizon is a tribute to Japa",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "5ef51dd29edddfa0919e58cb00ab2e4d78156e58616a0a69eaa1afd323141961",
+  "dynamic_hash": "243a6fd797c345ff92280246e2ac7e101e2a10e8c84e31992ea95c214b470202",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Horizon Midsize Rubber - Rose",
+    "description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+    "offers.description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/horizon-midsize-rubber/?attribute_pa_horizon-midsize-dials=rose"
+  },
+  "dynamic_fields": {
+    "sku": "VM06-R02PD",
+    "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-horizon-midsize-rose-rubber-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "3540",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

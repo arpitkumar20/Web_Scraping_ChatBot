@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/general-conditions/#schema-19954",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/general-conditions/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/general-conditions/#schema-19954::0",
+      "text_preview": "General Conditions | Minase watches | Handmade in Japan. Divido's unique design is inspired by the Japanese 3-dimentional puzzle. Through a revolutionary approach in watchmaking, the dial seems to be floating inside. General Conditions | Minase watches | Handmade in Japan. https://minasewatches.com/",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "eb515025cc9402deef3089dc1673601cae00fbacb085b6a13ff45c33e7c53225",
+  "dynamic_hash": "3c73b8f7436969df7001f8c6db28b50336520cbe12db1bf5aa8f9bd7039bcf51",
+  "static_paths": [
+    "headline",
+    "description",
+    "author.@id",
+    "author.name",
+    "@type",
+    "name",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "headline": "General Conditions | Minase watches | Handmade in Japan",
+    "description": "Divido&#039;s unique design is inspired by the Japanese 3-dimentional puzzle. Through a revolutionary approach in watchmaking, the dial seems to be floating inside",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "@type": "Article",
+    "name": "General Conditions | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/general-conditions/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/general-conditions/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-03-12T20:38:01+01:00",
+    "dateModified": "2025-08-27T15:17:21+02:00",
+    "@id": "https://minasewatches.com/general-conditions/#schema-19954",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

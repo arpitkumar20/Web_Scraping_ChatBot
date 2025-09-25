@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/general-conditions/#schema-19955",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/general-conditions/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/general-conditions/#schema-19955::0",
+      "text_preview": "General Conditions | Minase watches | Handmade in Japan. Divido's unique design is inspired by the Japanese 3-dimentional puzzle. Through a revolutionary approach in watchmaking, the dial seems to be floating inside. VideoObject. https://minasewatches.com/general-conditions/#webpage. https://minasew",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "f758ac047ea9f7cbe02c084dcb846ac8e1698f749ab5ba1879272922083e2f75",
+  "dynamic_hash": "e7c1b9f61ac2d41b9eceb856752d44f7a1d3c8cade42a8b3893c0ea53c252b47",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "General Conditions | Minase watches | Handmade in Japan",
+    "description": "Divido&#039;s unique design is inspired by the Japanese 3-dimentional puzzle. Through a revolutionary approach in watchmaking, the dial seems to be floating inside",
+    "isPartOf.@id": "https://minasewatches.com/general-conditions/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/general-conditions/#webpage"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2023-03-12T20:38:01+01:00",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2023/01/The-Universe-of-Minase-2020.mp4",
+    "width": "3840",
+    "height": "2160",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/general-conditions/#schema-19955",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

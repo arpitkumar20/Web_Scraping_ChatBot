@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/07/UG03-CDBNGR-SSD.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/07/UG03-CDBNGR-SSD.png::0",
+      "text_preview": "ImageObject. Minase Uruga on leather with green dial",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "e50c1c9e7503ee8a3b4912845c05d9fd755f3c0b9e7fc78e5624555075624ad0",
+  "dynamic_hash": "f2fffb8d29ca3c4a21f9900783dcecab53187aaae4dcac23ae0912be37693919",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase Uruga on leather with green dial"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/07/UG03-CDBNGR-SSD.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/07/UG03-CDBNGR-SSD.png",
+    "width": "1500",
+    "height": "1500",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

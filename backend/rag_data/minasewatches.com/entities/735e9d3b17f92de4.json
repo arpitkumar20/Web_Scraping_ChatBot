@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/windows-rose-gold/#webpage",
+  "entity_type": "ItemPage",
+  "source_url": "https://minasewatches.com/webshop/windows-rose-gold/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/windows-rose-gold/#webpage::0",
+      "text_preview": "Rose Gold Watch Windows | Handmade in Japan | Minase. ItemPage. https://minasewatches.com/webshop/windows-rose-gold/#webpage. https://minasewatches.com/webshop/windows-rose-gold/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "5461a64b31e6aa9fd8875b7c7f12d7afad2f265fd4863c893a1fbf61e73903bc",
+  "dynamic_hash": "6b0e7bc63359ced838a23bbc74c211ab5ff6217c9c800cfd0902cd2d9ae16779",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ItemPage",
+    "@id": "https://minasewatches.com/webshop/windows-rose-gold/#webpage",
+    "url": "https://minasewatches.com/webshop/windows-rose-gold/",
+    "name": "Rose Gold Watch Windows | Handmade in Japan | Minase",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-04-16T23:10:15+02:00",
+    "dateModified": "2025-06-18T16:20:07+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-gold-watch-grey.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

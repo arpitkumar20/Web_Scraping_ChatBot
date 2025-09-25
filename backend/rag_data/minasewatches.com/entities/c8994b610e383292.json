@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::UG03-RWHNIB-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/uruga-42mm-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::UG03-RWHNIB-SSD::0",
+      "text_preview": "Uruga 42mm Rubber - White rubber. Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pron",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.365537"
+      }
+    }
+  ],
+  "static_hash": "99df657ebda965cd08b1bcc0289a819cd114f6741e67bda8e1fdde1f2c05aaff",
+  "dynamic_hash": "1a9689d69e802dc78edf557ef316eaafcd7f637ea3dc0c42b0b3b6adc61d881f",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Uruga 42mm Rubber - White rubber",
+    "description": "Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces. Available on black or white rubber band.",
+    "offers.description": "Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces. Available on black or white rubber band.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "UG03-RWHNIB-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-white-rubber-ice-blue-dial-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4070.31",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/uruga-42mm-rubber/?attribute_pa_rubber-color=white-rubber"
+  },
+  "last_seen": "2025-09-25T18:01:10.365537"
+}

@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-green-rubber.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/divido-rubber-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-green-rubber.png::0",
+      "text_preview": "ImageObject. minase watch 40mm divido green rubber",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "9a581685ea7a2f4ba737579ff3b528b1d7fe11b4eaa07475478477f82e9669cb",
+  "dynamic_hash": "45f38e7dffa6aeec631c1541fd71d3a2e0d5cf384a51a83f67f41f6d0a44b035",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "minase watch 40mm divido green rubber"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-green-rubber.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-green-rubber.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

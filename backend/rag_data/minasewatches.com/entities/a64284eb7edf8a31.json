@@ -1,0 +1,173 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-rubber/#richSnippet",
+  "entity_type": "ProductGroup",
+  "source_url": "https://minasewatches.com/webshop/uruga-42mm-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-rubber/#richSnippet::0",
+      "text_preview": "Discover Uruga 42mm Rubber | Minase Watches |Made in Japan. Uruga 42mm Rubber is powered with a high quality Swiss movement, every steel parts is hand-polished with the Sallaz (sarazu) technique.. ProductGroup. Leather straps. QuantitativeValue. QuantitativeValue. QuantitativeValue. QuantitativeValu",
+      "chunk_index": 0,
+      "chunk_total": 3,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.365537"
+      }
+    },
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-rubber/#richSnippet::1",
+      "text_preview": ". Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectivel",
+      "chunk_index": 1,
+      "chunk_total": 3,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.365537"
+      }
+    },
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-rubber/#richSnippet::2",
+      "text_preview": ". Its case only is made of 27 pieces. Available on black or white rubber band.. Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of th",
+      "chunk_index": 2,
+      "chunk_total": 3,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.365537"
+      }
+    }
+  ],
+  "static_hash": "9179afe88c6315ee4782221eb9d370e3e763015b9f201a86fc9c9542f86e9c6e",
+  "dynamic_hash": "502bbccf62828ac291bb02b20ed794636075531613127c5247b5dabf9a8bd8c2",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "weight.@type",
+    "height.@type",
+    "width.@type",
+    "depth.@type",
+    "color",
+    "hasVariant",
+    "hasVariant[0].@type",
+    "hasVariant[0].name",
+    "hasVariant[0].description",
+    "hasVariant[0].offers.description",
+    "hasVariant[0].offers.itemCondition",
+    "hasVariant[1].@type",
+    "hasVariant[1].name",
+    "hasVariant[1].description",
+    "hasVariant[1].offers.description",
+    "hasVariant[1].offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "mainEntityOfPage.@id",
+    "weight.unitCode",
+    "height.unitCode",
+    "width.unitCode",
+    "depth.unitCode",
+    "image.@id",
+    "url",
+    "productGroupID",
+    "hasVariant[0].sku",
+    "hasVariant[0].image",
+    "hasVariant[0].offers.@type",
+    "hasVariant[0].offers.price",
+    "hasVariant[0].offers.priceCurrency",
+    "hasVariant[0].offers.availability",
+    "hasVariant[0].offers.priceValidUntil",
+    "hasVariant[0].offers.url",
+    "hasVariant[1].sku",
+    "hasVariant[1].image",
+    "hasVariant[1].offers.@type",
+    "hasVariant[1].offers.price",
+    "hasVariant[1].offers.priceCurrency",
+    "hasVariant[1].offers.availability",
+    "hasVariant[1].offers.priceValidUntil",
+    "hasVariant[1].offers.url",
+    "@id"
+  ],
+  "static_fields": {
+    "@type": "ProductGroup",
+    "name": "Discover Uruga 42mm Rubber | Minase Watches |Made in Japan",
+    "description": "Uruga 42mm Rubber is powered with a high quality Swiss movement, every steel parts is hand-polished with the Sallaz (sarazu) technique.",
+    "category": "Leather straps",
+    "weight.@type": "QuantitativeValue",
+    "height.@type": "QuantitativeValue",
+    "width.@type": "QuantitativeValue",
+    "depth.@type": "QuantitativeValue",
+    "color": "Black rubber, White rubber",
+    "hasVariant": [
+      {
+        "@type": "Product",
+        "sku": "UG03-RBKNIB-SSD",
+        "name": "Uruga 42mm Rubber - Black rubber",
+        "description": "Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces. Available on black or white rubber band.",
+        "image": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-rubber-ice-blue-dial-280x280.png",
+        "offers": {
+          "@type": "Offer",
+          "description": "Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces. Available on black or white rubber band.",
+          "price": "4070.31",
+          "priceCurrency": "CHF",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "NewCondition",
+          "priceValidUntil": "2026-12-31",
+          "url": "https://minasewatches.com/webshop/uruga-42mm-rubber/?attribute_pa_rubber-color=black-rubber"
+        }
+      },
+      {
+        "@type": "Product",
+        "sku": "UG03-RWHNIB-SSD",
+        "name": "Uruga 42mm Rubber - White rubber",
+        "description": "Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces. Available on black or white rubber band.",
+        "image": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-white-rubber-ice-blue-dial-280x280.png",
+        "offers": {
+          "@type": "Offer",
+          "description": "Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces. Available on black or white rubber band.",
+          "price": "4070.31",
+          "priceCurrency": "CHF",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "NewCondition",
+          "priceValidUntil": "2026-12-31",
+          "url": "https://minasewatches.com/webshop/uruga-42mm-rubber/?attribute_pa_rubber-color=white-rubber"
+        }
+      }
+    ],
+    "hasVariant[0].@type": "Product",
+    "hasVariant[0].name": "Uruga 42mm Rubber - Black rubber",
+    "hasVariant[0].description": "Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces. Available on black or white rubber band.",
+    "hasVariant[0].offers.description": "Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces. Available on black or white rubber band.",
+    "hasVariant[0].offers.itemCondition": "NewCondition",
+    "hasVariant[1].@type": "Product",
+    "hasVariant[1].name": "Uruga 42mm Rubber - White rubber",
+    "hasVariant[1].description": "Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces. Available on black or white rubber band.",
+    "hasVariant[1].offers.description": "Uruga 42mm Rubber's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces. Available on black or white rubber band.",
+    "hasVariant[1].offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/uruga-42mm-rubber/#webpage",
+    "weight.unitCode": "GRM",
+    "height.unitCode": "MMT",
+    "width.unitCode": "MMT",
+    "depth.unitCode": "MMT",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-white-rubber-ice-blue-dial.png",
+    "url": "https://minasewatches.com/webshop/uruga-42mm-rubber/",
+    "productGroupID": "34428",
+    "hasVariant[0].sku": "UG03-RBKNIB-SSD",
+    "hasVariant[0].image": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-rubber-ice-blue-dial-280x280.png",
+    "hasVariant[0].offers.@type": "Offer",
+    "hasVariant[0].offers.price": "4070.31",
+    "hasVariant[0].offers.priceCurrency": "CHF",
+    "hasVariant[0].offers.availability": "https://schema.org/InStock",
+    "hasVariant[0].offers.priceValidUntil": "2026-12-31",
+    "hasVariant[0].offers.url": "https://minasewatches.com/webshop/uruga-42mm-rubber/?attribute_pa_rubber-color=black-rubber",
+    "hasVariant[1].sku": "UG03-RWHNIB-SSD",
+    "hasVariant[1].image": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-white-rubber-ice-blue-dial-280x280.png",
+    "hasVariant[1].offers.@type": "Offer",
+    "hasVariant[1].offers.price": "4070.31",
+    "hasVariant[1].offers.priceCurrency": "CHF",
+    "hasVariant[1].offers.availability": "https://schema.org/InStock",
+    "hasVariant[1].offers.priceValidUntil": "2026-12-31",
+    "hasVariant[1].offers.url": "https://minasewatches.com/webshop/uruga-42mm-rubber/?attribute_pa_rubber-color=white-rubber",
+    "@id": "https://minasewatches.com/webshop/uruga-42mm-rubber/#richSnippet"
+  },
+  "last_seen": "2025-09-25T18:01:10.365537"
+}

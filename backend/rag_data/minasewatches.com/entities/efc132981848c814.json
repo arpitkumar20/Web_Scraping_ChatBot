@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/collections/square/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/collections/square/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/collections/square/#webpage::0",
+      "text_preview": "Rediscover Square Watches | Made in Japan | Minase Watches. WebPage. https://minasewatches.com/collections/square/#webpage. https://minasewatches.com/collections/square/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "171aabdc715417976d6c4fffa14f675121697f5378d3b372c05ce56003e519cb",
+  "dynamic_hash": "adae0aafe5820bd8b40c5c3f7f1d0fc7c2749aca0a9274b2c27ab212dee9befc",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/collections/square/#webpage",
+    "url": "https://minasewatches.com/collections/square/",
+    "name": "Rediscover Square Watches | Made in Japan | Minase Watches",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-01-23T12:25:38+01:00",
+    "dateModified": "2023-04-21T10:35:13+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,225 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-rubber/#richSnippet",
+  "entity_type": "ProductGroup",
+  "source_url": "https://minasewatches.com/webshop/horizon-midsize-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-rubber/#richSnippet::0",
+      "text_preview": "Buy Horizon Midsize Rubber | Minase Watches | Made in Japan. Horizon Midsize Rubber is one of Minase's collections. Handmade in Japan, it is a hommage to Japanese crafts and traditions.. ProductGroup. Horizon. https://minasewatches.com/webshop/horizon-midsize-rubber/#webpage. QuantitativeValue. Quan",
+      "chunk_index": 0,
+      "chunk_total": 3,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    },
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-rubber/#richSnippet::1",
+      "text_preview": ". Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.. Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smalle",
+      "chunk_index": 1,
+      "chunk_total": 3,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    },
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-rubber/#richSnippet::2",
+      "text_preview": ". So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.. NewCondition. https://minasewatches.com/webshop/horizon-midsize- rubber/?attribute_pa_horizon-midsize-dials=rose. https://minasewatches.com/webshop/horizon-m",
+      "chunk_index": 2,
+      "chunk_total": 3,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "a7f7667dd4bef11a6f74d0955514b11e2b2c62d288ba4e02646eb82060ec8ed8",
+  "dynamic_hash": "7e7c6c69bb614f72b886d774b50b8df99e5d9c4f28e5bb30519c0a2744b63008",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "mainEntityOfPage.@id",
+    "weight.@type",
+    "height.@type",
+    "width.@type",
+    "depth.@type",
+    "review",
+    "review[0].description",
+    "review[0].author.name",
+    "url",
+    "hasVariant",
+    "hasVariant[0].@type",
+    "hasVariant[0].name",
+    "hasVariant[0].description",
+    "hasVariant[0].offers.description",
+    "hasVariant[0].offers.itemCondition",
+    "hasVariant[0].offers.url",
+    "hasVariant[1].@type",
+    "hasVariant[1].name",
+    "hasVariant[1].description",
+    "hasVariant[1].offers.description",
+    "hasVariant[1].offers.itemCondition",
+    "hasVariant[1].offers.url",
+    "@id"
+  ],
+  "dynamic_paths": [
+    "weight.unitCode",
+    "weight.value",
+    "height.unitCode",
+    "height.value",
+    "width.unitCode",
+    "width.value",
+    "depth.unitCode",
+    "depth.value",
+    "image.@id",
+    "aggregateRating",
+    "review[0].@type",
+    "review[0].@id",
+    "review[0].datePublished",
+    "review[0].reviewRating",
+    "review[0].author.@type",
+    "productGroupID",
+    "hasVariant[0].sku",
+    "hasVariant[0].image",
+    "hasVariant[0].offers.@type",
+    "hasVariant[0].offers.price",
+    "hasVariant[0].offers.priceCurrency",
+    "hasVariant[0].offers.availability",
+    "hasVariant[0].offers.priceValidUntil",
+    "hasVariant[1].sku",
+    "hasVariant[1].image",
+    "hasVariant[1].offers.@type",
+    "hasVariant[1].offers.price",
+    "hasVariant[1].offers.priceCurrency",
+    "hasVariant[1].offers.availability",
+    "hasVariant[1].offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "ProductGroup",
+    "name": "Buy Horizon Midsize Rubber | Minase Watches | Made in Japan",
+    "description": "Horizon Midsize Rubber is one of Minase's collections. Handmade in Japan, it is a hommage to Japanese crafts and traditions.",
+    "category": "Horizon",
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/horizon-midsize-rubber/#webpage",
+    "weight.@type": "QuantitativeValue",
+    "height.@type": "QuantitativeValue",
+    "width.@type": "QuantitativeValue",
+    "depth.@type": "QuantitativeValue",
+    "review": [
+      {
+        "@type": "Review",
+        "@id": "https://minasewatches.com/webshop/horizon-midsize-rubber/#li-comment-1044",
+        "description": "Another hand built masterpiece from Minase!  (I previously purchased a 5 Windows) Excellent craftsmanship is an understatement and it’s my pleasure to wear and talk to people about this watch and brand!",
+        "datePublished": "2025-02-08 15:23:55",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "John Mungcal"
+        }
+      }
+    ],
+    "review[0].description": "Another hand built masterpiece from Minase!  (I previously purchased a 5 Windows) Excellent craftsmanship is an understatement and it’s my pleasure to wear and talk to people about this watch and brand!",
+    "review[0].author.name": "John Mungcal",
+    "url": "https://minasewatches.com/webshop/horizon-midsize-rubber/",
+    "hasVariant": [
+      {
+        "@type": "Product",
+        "sku": "VM06-R04SD",
+        "name": "Horizon Midsize Rubber - Purple",
+        "description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+        "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-horizon-midsize-blue-rubber-280x280.png",
+        "offers": {
+          "@type": "Offer",
+          "description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+          "price": "3540",
+          "priceCurrency": "CHF",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "NewCondition",
+          "priceValidUntil": "2026-12-31",
+          "url": "https://minasewatches.com/webshop/horizon-midsize-rubber/?attribute_pa_horizon-midsize-dials=purple"
+        }
+      },
+      {
+        "@type": "Product",
+        "sku": "VM06-R02PD",
+        "name": "Horizon Midsize Rubber - Rose",
+        "description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+        "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-horizon-midsize-rose-rubber-280x280.png",
+        "offers": {
+          "@type": "Offer",
+          "description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+          "price": "3540",
+          "priceCurrency": "CHF",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "NewCondition",
+          "priceValidUntil": "2026-12-31",
+          "url": "https://minasewatches.com/webshop/horizon-midsize-rubber/?attribute_pa_horizon-midsize-dials=rose"
+        }
+      }
+    ],
+    "hasVariant[0].@type": "Product",
+    "hasVariant[0].name": "Horizon Midsize Rubber - Purple",
+    "hasVariant[0].description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+    "hasVariant[0].offers.description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+    "hasVariant[0].offers.itemCondition": "NewCondition",
+    "hasVariant[0].offers.url": "https://minasewatches.com/webshop/horizon-midsize-rubber/?attribute_pa_horizon-midsize-dials=purple",
+    "hasVariant[1].@type": "Product",
+    "hasVariant[1].name": "Horizon Midsize Rubber - Rose",
+    "hasVariant[1].description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+    "hasVariant[1].offers.description": "Horizon is a tribute to Japan. Whenever you go to the shore, you can see the horizon line. So far away, the ocean always looks calm. Horizon Midsize was designed for thinner wrists, a slightly smaller and very elegant alternative.",
+    "hasVariant[1].offers.itemCondition": "NewCondition",
+    "hasVariant[1].offers.url": "https://minasewatches.com/webshop/horizon-midsize-rubber/?attribute_pa_horizon-midsize-dials=rose",
+    "@id": "https://minasewatches.com/webshop/horizon-midsize-rubber/#richSnippet"
+  },
+  "dynamic_fields": {
+    "weight.unitCode": "GRM",
+    "weight.value": "79",
+    "height.unitCode": "MMT",
+    "height.value": "12",
+    "width.unitCode": "MMT",
+    "width.value": "37",
+    "depth.unitCode": "MMT",
+    "depth.value": "46",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-horizon-midsize-blue-rubber.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.00",
+      "bestRating": "5",
+      "ratingCount": "1",
+      "reviewCount": "1"
+    },
+    "review[0].@type": "Review",
+    "review[0].@id": "https://minasewatches.com/webshop/horizon-midsize-rubber/#li-comment-1044",
+    "review[0].datePublished": "2025-02-08 15:23:55",
+    "review[0].reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review[0].author.@type": "Person",
+    "productGroupID": "29705",
+    "hasVariant[0].sku": "VM06-R04SD",
+    "hasVariant[0].image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-horizon-midsize-blue-rubber-280x280.png",
+    "hasVariant[0].offers.@type": "Offer",
+    "hasVariant[0].offers.price": "3540",
+    "hasVariant[0].offers.priceCurrency": "CHF",
+    "hasVariant[0].offers.availability": "https://schema.org/InStock",
+    "hasVariant[0].offers.priceValidUntil": "2026-12-31",
+    "hasVariant[1].sku": "VM06-R02PD",
+    "hasVariant[1].image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-horizon-midsize-rose-rubber-280x280.png",
+    "hasVariant[1].offers.@type": "Offer",
+    "hasVariant[1].offers.price": "3540",
+    "hasVariant[1].offers.priceCurrency": "CHF",
+    "hasVariant[1].offers.availability": "https://schema.org/InStock",
+    "hasVariant[1].offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

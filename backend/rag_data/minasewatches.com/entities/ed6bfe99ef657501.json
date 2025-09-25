@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-rubber-strap/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/horizon-rubber-strap/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-rubber-strap/#webpage::0",
+      "text_preview": "Horizon Rubber Strap | Handmade in Japan | Minase Watches. WebPage. https://minasewatches.com/webshop/horizon-rubber-strap/#webpage. https://minasewatches.com/webshop/horizon-rubber-strap/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.355092"
+      }
+    }
+  ],
+  "static_hash": "8b1990f94d2bd32b87457de955303b665b8aee0272a2127bec48edeb09dbe63e",
+  "dynamic_hash": "f7f1e3602a9fb07cf0f0ede5be9e9cc2e855a5f597b330c9a91e0558d7547c29",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/horizon-rubber-strap/#webpage",
+    "url": "https://minasewatches.com/webshop/horizon-rubber-strap/",
+    "name": "Horizon Rubber Strap | Handmade in Japan | Minase Watches",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-04-10T10:58:10+02:00",
+    "dateModified": "2025-08-04T16:26:42+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/04/Minase-horizon-black-rubber-strap.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.355092"
+}

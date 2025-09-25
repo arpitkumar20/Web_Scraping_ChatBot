@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/windows-leather-straps/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/windows-leather-straps/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/windows-leather-straps/#webpage::0",
+      "text_preview": "Buy Windows Leather Straps | Minase Watches | Made in Japan. WebPage. https://minasewatches.com/webshop/windows-leather-straps/#webpage. https://minasewatches.com/webshop/windows-leather-straps/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.349608"
+      }
+    }
+  ],
+  "static_hash": "3ccc49ba709ba3980ea302a7740bbc3866b4a68b3cc4f016c48e9afebf31f987",
+  "dynamic_hash": "9910d01e5f3826cc288539bb849a017713f3bd03159a13bbc6eba02c48b4d076",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/windows-leather-straps/#webpage",
+    "url": "https://minasewatches.com/webshop/windows-leather-straps/",
+    "name": "Buy Windows Leather Straps | Minase Watches | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-02-19T22:12:14+01:00",
+    "dateModified": "2025-08-04T16:47:03+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-red-leather-strap.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.349608"
+}

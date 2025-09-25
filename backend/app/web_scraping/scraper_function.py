@@ -53,3 +53,13 @@ def web_scraping(url):
     else:
         logging.warning("⚠️ Embedding data not found. Returning None.")
         return None
+    
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python -m app.web_scraping.scraper_function <url>")
+        sys.exit(1)
+
+    url = sys.argv[1]
+    print(f"🔎 Running scraper_function with URL: {url}")
+    web_scraping(url)

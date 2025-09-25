@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-white-rubber-ice-blue-dial.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/uruga-42mm-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-white-rubber-ice-blue-dial.png::0",
+      "text_preview": "ImageObject. Minae Uruga 42mm white rubber ice blue dial",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.365537"
+      }
+    }
+  ],
+  "static_hash": "4b21e20cce03f08b008903c29e88dc50ce0a8c9b3d95e489d14bdce0db47f113",
+  "dynamic_hash": "28b14fde2f9b2d8619c638329731d502ff7e9717cd7cb073ea065e71c8e9e860",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minae Uruga 42mm white rubber ice blue dial"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-white-rubber-ice-blue-dial.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-white-rubber-ice-blue-dial.png",
+    "width": "1500",
+    "height": "1500",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.365537"
+}

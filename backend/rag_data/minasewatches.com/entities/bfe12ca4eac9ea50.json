@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/collections/square/#schema-23738",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/collections/square/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/collections/square/#schema-23738::0",
+      "text_preview": "Rediscover Square Watches | Made in Japan | Minase Watches. Rediscover what a square watch can be ! Horizon and Windows both are square face watches 100% handmade in Japan. Unique and original !. VideoObject. https://minasewatches.com/collections/square/#webpage. https://minasewatches.com/#organizat",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "55d5a5162ef920723ac260618d5c5d24f124211b6ee88abc3fcef770c77bf113",
+  "dynamic_hash": "a6f7b7d509ec92091eba17a6abc010859d8643ad3734480fb972d11b21ac246c",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "Rediscover Square Watches | Made in Japan | Minase Watches",
+    "description": "Rediscover what a square watch can be ! Horizon and Windows both are square face watches 100% handmade in Japan. Unique and original !",
+    "isPartOf.@id": "https://minasewatches.com/collections/square/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2023-01-23T12:25:38+01:00",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2023/03/more-compressed.mp4",
+    "width": "1920",
+    "height": "1080",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/collections/square/#schema-23738",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

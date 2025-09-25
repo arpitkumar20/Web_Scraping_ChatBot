@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM07-L06SD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/5-windows-midsize-leather/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM07-L06SD::0",
+      "text_preview": "5 windows Midsize leather - Blue. With a 40×32 mm case, the midsize collection is perfect for smaller wrists. The watches are fitted with 5 sapphire crystals on top, on the back of the watch, at 9 and at 3 on both sides of the crown.. Product. With a 40×32 mm case, the midsize collection is perfect ",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "a8317e0b399d3d7b11f0013e43c6409575c21f4cab902ec59d959a8735e46cf4",
+  "dynamic_hash": "e8bf1444329fd1b718d035b096e50a0e090b92d932c9f42bc931829f54620608",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "5 windows Midsize leather - Blue",
+    "description": "With a 40×32 mm case, the midsize collection is perfect for smaller wrists. The watches are fitted with 5 sapphire crystals on top, on the back of the watch, at 9 and at 3 on both sides of the crown.",
+    "offers.description": "With a 40×32 mm case, the midsize collection is perfect for smaller wrists. The watches are fitted with 5 sapphire crystals on top, on the back of the watch, at 9 and at 3 on both sides of the crown.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "VM07-L06SD",
+    "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-5-windows-midsize-white-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "3550",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/5-windows-midsize-leather/?attribute_pa_horizon-midsize-dials=blue"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

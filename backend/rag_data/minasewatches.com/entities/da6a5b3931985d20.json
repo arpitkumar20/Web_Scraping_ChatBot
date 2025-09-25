@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/7-windows-leather/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/7-windows-leather/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/7-windows-leather/#webpage::0",
+      "text_preview": "Discover 7 Windows Leather | Minase Watches | Japan Made. WebPage. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    }
+  ],
+  "static_hash": "5af9816b010c09421a53aedf1c297d358122e3e3842d4fdeaedfb9545f8c0a4b",
+  "dynamic_hash": "569e9e75e25616eda11e836704a227155be27c88a438fcf050649a6feffeb090",
+  "static_paths": [
+    "@type",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "name": "Discover 7 Windows Leather | Minase Watches | Japan Made",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/webshop/7-windows-leather/#webpage",
+    "url": "https://minasewatches.com/webshop/7-windows-leather/",
+    "datePublished": "2022-11-12T16:24:49+01:00",
+    "dateModified": "2025-06-18T16:58:39+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-black-leather.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.385867"
+}

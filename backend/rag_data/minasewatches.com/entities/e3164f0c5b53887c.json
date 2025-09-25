@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Bra-windows-2-tranp.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/windows-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Bra-windows-2-tranp.png::0",
+      "text_preview": "ImageObject. Stainless Steel bracelet for Minase Windows",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "86399f8c929c70c180596fa2de0f51d1ca0e2b09acabfeb43452dde5c3507735",
+  "dynamic_hash": "cc680101c064aa1e28af82d947e326892a9ff721e21af2575c016143d2cf6230",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Stainless Steel bracelet for Minase Windows"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/02/Bra-windows-2-tranp.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/02/Bra-windows-2-tranp.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

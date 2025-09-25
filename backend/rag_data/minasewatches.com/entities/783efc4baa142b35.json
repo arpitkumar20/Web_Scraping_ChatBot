@@ -1,0 +1,56 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/history/#richSnippet",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/history/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/history/#richSnippet::0",
+      "text_preview": "Minase History | Minase watches | Handmade in Japan. Divido's unique design is inspired by the Japanese 3-dimentional puzzle. Through a revolutionary approach in watchmaking, the dial seems to be floating inside. Article. Minase History | Minase watches | Handmade in Japan. minase history. https://m",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "3abe3f8c2e5f5118d0e12f3c653f626aafab5deda91b5a718eb8f2be55389aa4",
+  "dynamic_hash": "d15c528d442494864f9ea4c4601b1716c733e66a66da40f2c024a48268dceb84",
+  "static_paths": [
+    "@type",
+    "headline",
+    "keywords",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "Article",
+    "headline": "Minase History | Minase watches | Handmade in Japan",
+    "keywords": "minase history",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Divido&#039;s unique design is inspired by the Japanese 3-dimentional puzzle. Through a revolutionary approach in watchmaking, the dial seems to be floating inside",
+    "name": "Minase History | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/history/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/history/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/history/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-03-03T21:27:46+01:00",
+    "dateModified": "2023-03-03T22:09:16+01:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

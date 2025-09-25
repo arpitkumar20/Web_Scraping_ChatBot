@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Minase-M3-steel-bracelet.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/m3-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/Minase-M3-steel-bracelet.png::0",
+      "text_preview": "ImageObject. Minase Watches M3 steel bracelet",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "04eca5d2721a2d1b769918c945b89e6d27e699afc241ddc8611dd9f230f21173",
+  "dynamic_hash": "c855f9c5d8d51535c23a479b8495c56eacb5388385f52bd664ffc7067dc5a8cf",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase Watches M3 steel bracelet"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-M3-steel-bracelet.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-M3-steel-bracelet.png",
+    "width": "800",
+    "height": "800",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

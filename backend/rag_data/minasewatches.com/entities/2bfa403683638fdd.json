@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2025/07/Uruga-31mm-white-rubber-ice-blue-dial.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/uruga-31mm-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2025/07/Uruga-31mm-white-rubber-ice-blue-dial.png::0",
+      "text_preview": "ImageObject. Minase Uruga 31mm white rubber ice blue dial",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.365537"
+      }
+    }
+  ],
+  "static_hash": "7a0ba96bab55ba916eda19ea6c85aeecd3aeac6f8800274caddf5fbff9e19643",
+  "dynamic_hash": "7f65e6708cf18d7a363811b02f3115d7a98a6f2d026303eb44c25aaa7319bee0",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase Uruga 31mm white rubber ice blue dial"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-31mm-white-rubber-ice-blue-dial.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-31mm-white-rubber-ice-blue-dial.png",
+    "width": "1500",
+    "height": "1500",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.365537"
+}

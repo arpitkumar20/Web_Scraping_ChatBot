@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM15-M01YIB-SSB",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/7-windows-steel-2/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM15-M01YIB-SSB::0",
+      "text_preview": "7 Windows Steel 2.0 - Ice Blue. Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or leather strap and hand-painted dial.. Product. Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-po",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "575126f6bc017b015bc43caf9d3bcb965d5ad0361ae07e6c61bb4dc3a8ce203b",
+  "dynamic_hash": "0cebf95f568e7280fc8f23be5df549c0c0769e466124991fd5bebcae5c98c73b",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "7 Windows Steel 2.0 - Ice Blue",
+    "description": "Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or leather strap and hand-painted dial.",
+    "offers.description": "Windows 2.0 is one of Minase's collections. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or leather strap and hand-painted dial.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "VM15-M01YIB-SSB",
+    "image": "https://minasewatches.com/wp-content/uploads/2025/05/VM15-M01YIB-SSB_transp-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "5650",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/7-windows-steel-2/?attribute_pa_7-windows-dials=ice-blue"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

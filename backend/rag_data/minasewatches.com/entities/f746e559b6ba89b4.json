@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/diamond/#schema-24482",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/japanese-masterpieces/diamond/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/diamond/#schema-24482::0",
+      "text_preview": "Diamond Watchesl | Handmade in Japan | Minase Watches. Discover Minase diamond watches. Handmade in Japan, every watch is unique and crafted upon the customer's wishes.. VideoObject. https://minasewatches.com/japanese-masterpieces/diamond/#webpage. https://minasewatches.com/#organization. https://mi",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "4e810524a901f13eff6a17efdfc71cd8ac1ef9d8df87cfa65f69ecacb3426406",
+  "dynamic_hash": "c4e436b495b66b2966232ced7590eeb3166d3466261c505758dae3721fa578ed",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "Diamond Watchesl | Handmade in Japan | Minase Watches",
+    "description": "Discover Minase diamond watches. Handmade in Japan, every watch is unique and crafted upon the customer&#039;s wishes.",
+    "isPartOf.@id": "https://minasewatches.com/japanese-masterpieces/diamond/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/japanese-masterpieces/diamond/#webpage"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2023-04-19T14:46:34+02:00",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2022/11/video-collection.mp4",
+    "width": "1920",
+    "height": "1080",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/japanese-masterpieces/diamond/#schema-24482",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

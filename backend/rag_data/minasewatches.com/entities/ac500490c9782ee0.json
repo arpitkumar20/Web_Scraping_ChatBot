@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/Minase-divido-grey-steel-01.jpg",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/divido-2/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/Minase-divido-grey-steel-01.jpg::0",
+      "text_preview": "ImageObject. Minase Divido grey dial stainless steel bracelet",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "d17c69bf74894f0d783eaa01145ac9747e530b135f0983826bb82838219d9d22",
+  "dynamic_hash": "4c2270b5dc66e17e6240ca4e195251b26b75af38fe843fbc567a2d596dc301ca",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase Divido grey dial stainless steel bracelet"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2022/11/Minase-divido-grey-steel-01.jpg",
+    "url": "https://minasewatches.com/wp-content/uploads/2022/11/Minase-divido-grey-steel-01.jpg",
+    "width": "1000",
+    "height": "1000",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

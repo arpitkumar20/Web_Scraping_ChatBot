@@ -1,0 +1,56 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/divido/#schema-23379",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/divido-2/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/divido/#schema-23379::0",
+      "text_preview": "Discover Divido Collection | Made in Japan | Minase Watches. Divido is Minase's round watch collection. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or rubber band. Discover Divido Collection | Made in Japan | Minase Watches. https://minasewatches.com/autho",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "7733f15162735a101ac60d3aa791adcecd4183a396cf0cee944c215b71b2791f",
+  "dynamic_hash": "ac6f919c7a8636c36b076b30b5a3e79bc079c954ab04761266e2bc4107c2fd00",
+  "static_paths": [
+    "headline",
+    "description",
+    "author.@id",
+    "author.name",
+    "@type",
+    "name",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "image.@id",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "headline": "Discover Divido Collection | Made in Japan | Minase Watches",
+    "description": "Divido is Minase&#039;s round watch collection. Handmade in Japan, all watches are hand-polished by skilled watchmakers. Steel bracelet or rubber band",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "@type": "Article",
+    "name": "Discover Divido Collection | Made in Japan | Minase Watches",
+    "isPartOf.@id": "https://minasewatches.com/divido/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/divido/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-11-18T01:35:41+01:00",
+    "dateModified": "2025-08-04T15:11:14+02:00",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2022/11/Minase-divido-grey-steel-01.jpg",
+    "@id": "https://minasewatches.com/divido/#schema-23379",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

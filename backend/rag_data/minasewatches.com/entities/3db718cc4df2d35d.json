@@ -1,0 +1,40 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/featured_item/#webpage",
+  "entity_type": "CollectionPage",
+  "source_url": "https://minasewatches.com/featured_item/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/featured_item/#webpage::0",
+      "text_preview": "Portfolio | Minase watches | Handmade in Japan. CollectionPage. https://minasewatches.com/featured_item/#webpage. https://minasewatches.com/featured_item/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "375322f403d99d1a547777dbad0b3a3d9652e9632277e4780569a7efc9284bbb",
+  "dynamic_hash": "bc4eb24d29fa9373d2f9c04766a25b27dc6a9229fc2230c097197739c404c3e1",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "CollectionPage",
+    "@id": "https://minasewatches.com/featured_item/#webpage",
+    "url": "https://minasewatches.com/featured_item/",
+    "name": "Portfolio | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::BRA-VM04.R3.BK",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/horizon-rubber-strap/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::BRA-VM04.R3.BK::0",
+      "text_preview": "Horizon - Rubber Strap. Minase rubber straps are handmade in Japan. Very light and comfortable to wear, the straps for Horizon are available in white, grey and black. They come with or without buckle.. Product. Minase rubber straps are handmade in Japan. Very light and comfortable to wear, the strap",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.356856"
+      }
+    }
+  ],
+  "static_hash": "23a3802b9dda088fafa87786628829e5f9546bd2114f118e348197ce38ef11a1",
+  "dynamic_hash": "01babc30075eacbfcbd635ec179b5806aa47a22bd96a0bd147b6e706f47c68b9",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Horizon - Rubber Strap",
+    "description": "Minase rubber straps are handmade in Japan. Very light and comfortable to wear, the straps for Horizon are available in white, grey and black. They come with or without buckle.",
+    "offers.description": "Minase rubber straps are handmade in Japan. Very light and comfortable to wear, the straps for Horizon are available in white, grey and black. They come with or without buckle.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/horizon-rubber-strap/?attribute_pa_rubber-color=grey-rubber&amp;attribute_pa_buckle=with-buckle"
+  },
+  "dynamic_fields": {
+    "sku": "BRA-VM04.R3.BK",
+    "image": "https://minasewatches.com/wp-content/uploads/2023/04/Minase-horizon-grey-rubber-strap-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "730",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.356856"
+}

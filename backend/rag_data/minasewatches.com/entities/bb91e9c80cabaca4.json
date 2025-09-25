@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/cart/#richSnippet",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/checkout/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/cart/#richSnippet::0",
+      "text_preview": "Cart | Minase watches | Handmade in Japan. Article. Cart | Minase watches | Handmade in Japan. https://minasewatches.com/author/kellyhenriksen/. kellyhenriksen. https://minasewatches.com/#organization. https://minasewatches.com/cart/#richSnippet. https://minasewatches.com/cart/#webpage. https://mina",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "e3aa61f64d79a62ded8a18cb6c7439f8d9d044249a54d203e0127d6cfd4c7653",
+  "dynamic_hash": "c114f30b96f5f559db530bbf2134b6df67f4e499c409b3a0b3267f4a3d0acfad",
+  "static_paths": [
+    "@type",
+    "headline",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "Article",
+    "headline": "Cart | Minase watches | Handmade in Japan",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "name": "Cart | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/cart/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/cart/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/cart/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-10-26T16:19:53+02:00",
+    "dateModified": "2022-10-26T16:19:53+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

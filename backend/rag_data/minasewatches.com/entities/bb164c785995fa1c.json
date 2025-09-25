@@ -1,0 +1,224 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-gen-black-dlc/#richSnippet",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/horizon-gen-black-dlc/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-gen-black-dlc/#richSnippet::0",
+      "text_preview": "Limited Edition | Horizon GEN Black DLC | Minase Watches. Limited to 25 pieces, Horizon GEN black DLC on rubber band is powered with a high quality Swiss movement, and covered in resistant, black DLC.. Product. Horizon. https://minasewatches.com/webshop/horizon-gen-black-dlc/#webpage. ImageObject. I",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "1755453e674f827fd1c52566899229ff68e899e1d01aefadbc76128a5c4ebc9e",
+  "dynamic_hash": "4afa12dab1bd8d577c0fdf95c8b7a7158985d608bb1a66a67a009830612a9bef",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "mainEntityOfPage.@id",
+    "image",
+    "image[0].@type",
+    "image[1].@type",
+    "image[2].@type",
+    "image[3].@type",
+    "image[4].@type",
+    "review",
+    "review[0].description",
+    "review[0].author.name",
+    "review[1].description",
+    "review[1].author.name",
+    "offers.itemCondition",
+    "offers.url",
+    "offers.seller.@type",
+    "offers.seller.@id",
+    "offers.seller.name",
+    "offers.seller.url",
+    "@id"
+  ],
+  "dynamic_paths": [
+    "image[0].url",
+    "image[0].height",
+    "image[0].width",
+    "image[1].url",
+    "image[1].height",
+    "image[1].width",
+    "image[2].url",
+    "image[2].height",
+    "image[2].width",
+    "image[3].url",
+    "image[3].height",
+    "image[3].width",
+    "image[4].url",
+    "image[4].height",
+    "image[4].width",
+    "aggregateRating",
+    "review[0].@type",
+    "review[0].@id",
+    "review[0].datePublished",
+    "review[0].reviewRating",
+    "review[0].author.@type",
+    "review[1].@type",
+    "review[1].@id",
+    "review[1].datePublished",
+    "review[1].reviewRating",
+    "review[1].author.@type",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.priceValidUntil",
+    "offers.availability",
+    "offers.seller.logo",
+    "offers.priceSpecification"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Limited Edition | Horizon GEN Black DLC | Minase Watches",
+    "description": "Limited to 25 pieces, Horizon GEN black DLC on rubber band is powered with a high quality Swiss movement, and covered in resistant, black DLC.",
+    "category": "Horizon",
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/horizon-gen-black-dlc/#webpage",
+    "image": [
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2024/02/minase-watches-horizon-gen-black-dlc.webp",
+        "height": "1200",
+        "width": "1200"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/02/horizon-rubber-01.jpg",
+        "height": "1000",
+        "width": "1000"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2024/02/Minase_Horizon_GEN.jpg",
+        "height": "1200",
+        "width": "1200"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2024/02/Minase_Horizon_GEN_Wrist.jpg",
+        "height": "1200",
+        "width": "1200"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2024/02/minase-watches-horizon-gen-black-dlc-back.jpg",
+        "height": "1200",
+        "width": "1200"
+      }
+    ],
+    "image[0].@type": "ImageObject",
+    "image[1].@type": "ImageObject",
+    "image[2].@type": "ImageObject",
+    "image[3].@type": "ImageObject",
+    "image[4].@type": "ImageObject",
+    "review": [
+      {
+        "@type": "Review",
+        "@id": "https://minasewatches.com/webshop/horizon-gen-black-dlc/#li-comment-656",
+        "description": "I have bought this watch as a wedding gift. Still the gift is with me but I am very sure the groom will like it. That is why I'm giving 5 out of 5 on his behalf",
+        "datePublished": "2024-05-01 15:15:31",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Hanan Alawadhi"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://minasewatches.com/webshop/horizon-gen-black-dlc/#li-comment-641",
+        "description": "Time piece is excellent and the rubber strap very excellent quality",
+        "datePublished": "2024-04-21 10:10:16",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Saud Almazrouei"
+        }
+      }
+    ],
+    "review[0].description": "I have bought this watch as a wedding gift. Still the gift is with me but I am very sure the groom will like it. That is why I'm giving 5 out of 5 on his behalf",
+    "review[0].author.name": "Hanan Alawadhi",
+    "review[1].description": "Time piece is excellent and the rubber strap very excellent quality",
+    "review[1].author.name": "Saud Almazrouei",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/horizon-gen-black-dlc/",
+    "offers.seller.@type": "Organization",
+    "offers.seller.@id": "https://minasewatches.com/",
+    "offers.seller.name": "minasewatches.com",
+    "offers.seller.url": "https://minasewatches.com",
+    "@id": "https://minasewatches.com/webshop/horizon-gen-black-dlc/#richSnippet"
+  },
+  "dynamic_fields": {
+    "image[0].url": "https://minasewatches.com/wp-content/uploads/2024/02/minase-watches-horizon-gen-black-dlc.webp",
+    "image[0].height": "1200",
+    "image[0].width": "1200",
+    "image[1].url": "https://minasewatches.com/wp-content/uploads/2023/02/horizon-rubber-01.jpg",
+    "image[1].height": "1000",
+    "image[1].width": "1000",
+    "image[2].url": "https://minasewatches.com/wp-content/uploads/2024/02/Minase_Horizon_GEN.jpg",
+    "image[2].height": "1200",
+    "image[2].width": "1200",
+    "image[3].url": "https://minasewatches.com/wp-content/uploads/2024/02/Minase_Horizon_GEN_Wrist.jpg",
+    "image[3].height": "1200",
+    "image[3].width": "1200",
+    "image[4].url": "https://minasewatches.com/wp-content/uploads/2024/02/minase-watches-horizon-gen-black-dlc-back.jpg",
+    "image[4].height": "1200",
+    "image[4].width": "1200",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.00",
+      "bestRating": "5",
+      "ratingCount": "2",
+      "reviewCount": "2"
+    },
+    "review[0].@type": "Review",
+    "review[0].@id": "https://minasewatches.com/webshop/horizon-gen-black-dlc/#li-comment-656",
+    "review[0].datePublished": "2024-05-01 15:15:31",
+    "review[0].reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review[0].author.@type": "Person",
+    "review[1].@type": "Review",
+    "review[1].@id": "https://minasewatches.com/webshop/horizon-gen-black-dlc/#li-comment-641",
+    "review[1].datePublished": "2024-04-21 10:10:16",
+    "review[1].reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review[1].author.@type": "Person",
+    "offers.@type": "Offer",
+    "offers.price": "4700.00",
+    "offers.priceCurrency": "CHF",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.seller.logo": "",
+    "offers.priceSpecification": {
+      "price": "4700",
+      "priceCurrency": "CHF",
+      "valueAddedTaxIncluded": "true"
+    }
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

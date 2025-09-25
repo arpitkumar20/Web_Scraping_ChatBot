@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-blue-steel.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/7-windows-collection-steel-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-blue-steel.png::0",
+      "text_preview": "ImageObject. minase watch 7 windows stainless steel and blue dial",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.381358"
+      }
+    }
+  ],
+  "static_hash": "51f807cafe9bdb7a0ae04911f3b02b5c9f64df3a0115ac9bf4ace22a02766b74",
+  "dynamic_hash": "b4d9b1590264782d000fcc8206d37e7224ac05749c4fa0442abb65ea437cbf3b",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "minase watch 7 windows stainless steel and blue dial"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-blue-steel.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-blue-steel.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.381358"
+}

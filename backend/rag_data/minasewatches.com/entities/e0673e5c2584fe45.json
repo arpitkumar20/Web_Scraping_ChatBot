@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/5-windows-midsize-leather/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/5-windows-midsize-leather/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/5-windows-midsize-leather/#webpage::0",
+      "text_preview": "Discover 5 Windows Midsize | Minase Watches | Made in Japan. WebPage. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "d59bf0a8704757a4ba5d5358e9b3d247c55b4cc62ae0a159aa7bf0f856d94e3f",
+  "dynamic_hash": "080c50c0df3f3731126c976125d04ac43e959711126125cd38f3ff73b3944b70",
+  "static_paths": [
+    "@type",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "name": "Discover 5 Windows Midsize | Minase Watches | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/webshop/5-windows-midsize-leather/#webpage",
+    "url": "https://minasewatches.com/webshop/5-windows-midsize-leather/",
+    "datePublished": "2022-11-06T15:03:41+01:00",
+    "dateModified": "2025-06-18T17:30:59+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2022/11/5-windows-midsize.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

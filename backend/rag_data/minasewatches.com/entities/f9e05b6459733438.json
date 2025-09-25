@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/windows-hakose-gold/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/windows-hakose-gold/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/windows-hakose-gold/#webpage::0",
+      "text_preview": "Buy Windows Hakose Urushi | Minase Watches | Japan Made. WebPage. https://minasewatches.com/webshop/windows-hakose-gold/#webpage. https://minasewatches.com/webshop/windows-hakose-gold/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "40813f29469df058b879456192503c0a780b2feaee93c7965f69274eb1815cb9",
+  "dynamic_hash": "234caf1a61a72746c341ead4a749e5f13784e0d3521b917fd463be33f64f2a4b",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/windows-hakose-gold/#webpage",
+    "url": "https://minasewatches.com/webshop/windows-hakose-gold/",
+    "name": "Buy Windows Hakose Urushi | Minase Watches | Japan Made",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-02-11T13:38:40+01:00",
+    "dateModified": "2025-06-18T16:35:56+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/02/minase-windows-hakose-gold-03.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

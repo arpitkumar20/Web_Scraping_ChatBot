@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-blue-steel.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/divido-steel-collection-dark/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-blue-steel.png::0",
+      "text_preview": "ImageObject. Minase Divido Steel watch with blue dial on stainless steel bracelet",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "ae5feb4a4f591d8136da49330e5308c98f018168064350581053ed7e6dbb499c",
+  "dynamic_hash": "10dcf17b2c4fb9992d7247e8839c399b4666878f5d11e24c8359c6c4f9e8346d",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase Divido Steel watch with blue dial on stainless steel bracelet"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-blue-steel.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-blue-steel.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

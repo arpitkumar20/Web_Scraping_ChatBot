@@ -1,0 +1,87 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-bracelet/#richSnippet",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/horizon-midsize-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-bracelet/#richSnippet::0",
+      "text_preview": "Buy Steel Bracelet Horizon Midsize | Minase Watches. Minase Watches stainless steel bracelet Horizon midsize is handpolished with the sarazu polishing technique. Order your bracelet for Horizon now !. Product. Steel bracelets. https://minasewatches.com/webshop/horizon-midsize-bracelet/#webpage. Imag",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "1297c3839708aecccf39f25e79d9941e5df48fd8ab9ab3643cfbff0cbaf63eee",
+  "dynamic_hash": "68001b6a4ad5a52b8585349669a4f9bbe6506cb83e66bdfd7ee970a6985a7c09",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "mainEntityOfPage.@id",
+    "image",
+    "image[0].@type",
+    "offers.itemCondition",
+    "offers.url",
+    "offers.seller.@type",
+    "offers.seller.@id",
+    "offers.seller.name",
+    "offers.seller.url",
+    "@id"
+  ],
+  "dynamic_paths": [
+    "image[0].url",
+    "image[0].height",
+    "image[0].width",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.priceValidUntil",
+    "offers.availability",
+    "offers.seller.logo",
+    "offers.priceSpecification"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Buy Steel Bracelet Horizon Midsize | Minase Watches",
+    "description": "Minase Watches stainless steel bracelet Horizon midsize is handpolished with the sarazu polishing technique. Order your bracelet for Horizon now !",
+    "category": "Steel bracelets",
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/horizon-midsize-bracelet/#webpage",
+    "image": [
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/02/bra-horizon-2.png",
+        "height": "1200",
+        "width": "1200"
+      }
+    ],
+    "image[0].@type": "ImageObject",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/horizon-midsize-bracelet/",
+    "offers.seller.@type": "Organization",
+    "offers.seller.@id": "https://minasewatches.com/",
+    "offers.seller.name": "minasewatches.com",
+    "offers.seller.url": "https://minasewatches.com",
+    "@id": "https://minasewatches.com/webshop/horizon-midsize-bracelet/#richSnippet"
+  },
+  "dynamic_fields": {
+    "image[0].url": "https://minasewatches.com/wp-content/uploads/2023/02/bra-horizon-2.png",
+    "image[0].height": "1200",
+    "image[0].width": "1200",
+    "offers.@type": "Offer",
+    "offers.price": "1950.00",
+    "offers.priceCurrency": "CHF",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.seller.logo": "",
+    "offers.priceSpecification": {
+      "price": "1950",
+      "priceCurrency": "CHF",
+      "valueAddedTaxIncluded": "true"
+    }
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

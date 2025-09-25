@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM12-CDBNGY-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/horizon-leather-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM12-CDBNGY-SSD::0",
+      "text_preview": "Horizon Leather - Grey. Horizon is a tribute to Japan. The overall watch looks calm and peaceful. Yet if you look at the sides, there is something strong, powerful and virile. The finishing of the sides was inspired by the Katana, the famous samurai sword.. Product. Horizon is a tribute to Japan. Th",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "2190eb97015d609fde627d7c4b7b0916db2d4e18f00bdddba9e6c6e3ca5b7c51",
+  "dynamic_hash": "77d35339807dfc70a80890f57f901352a59daeeff62c9dfa62c5fef9dd2fc355",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Horizon Leather - Grey",
+    "description": "Horizon is a tribute to Japan. The overall watch looks calm and peaceful. Yet if you look at the sides, there is something strong, powerful and virile. The finishing of the sides was inspired by the Katana, the famous samurai sword.",
+    "offers.description": "Horizon is a tribute to Japan. The overall watch looks calm and peaceful. Yet if you look at the sides, there is something strong, powerful and virile. The finishing of the sides was inspired by the Katana, the famous samurai sword.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/horizon-leather-collection/?attribute_pa_horizon-dials=grey"
+  },
+  "dynamic_fields": {
+    "sku": "VM12-CDBNGY-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-grey-leather-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4200",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

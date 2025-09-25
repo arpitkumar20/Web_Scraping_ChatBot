@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::UG02-RWHNIB-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/uruga-31mm-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::UG02-RWHNIB-SSD::0",
+      "text_preview": "Uruga 31mm Rubber - White rubber. The Uruga 31mm Rubber model was specifically designed for ladies. It is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.. Product. The Uruga 31mm Rubber model was specifica",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.367479"
+      }
+    }
+  ],
+  "static_hash": "507ce3246793cc8a1957ab126e0035a843d34200ba962105f9ce66f0c984be38",
+  "dynamic_hash": "fa9249e18bb21729459200a102c0904853b63b13e0bbb15d26dc7875258e6186",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Uruga 31mm Rubber - White rubber",
+    "description": "The Uruga 31mm Rubber model was specifically designed for ladies. It is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+    "offers.description": "The Uruga 31mm Rubber model was specifically designed for ladies. It is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "UG02-RWHNIB-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-31mm-white-rubber-ice-blue-dial-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4100",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/uruga-31mm-rubber/?attribute_pa_rubber-color=white-rubber"
+  },
+  "last_seen": "2025-09-25T18:01:10.367479"
+}

@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/collections/square/#schema-23712",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/collections/square/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/collections/square/#schema-23712::0",
+      "text_preview": "Rediscover Square Watches | Made in Japan | Minase Watches. Rediscover what a square watch can be ! Horizon and Windows both are square face watches 100% handmade in Japan. Unique and original !. Rediscover Square Watches | Made in Japan | Minase Watches. https://minasewatches.com/author/kellyhenrik",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "4f1e2350863dadc23467d1febf7fdd051aac871408aa0b8e97ec44ccb8780e08",
+  "dynamic_hash": "7b51867a6b3ebe86468d93376861ff063c027515d49375cca1a177be46c9f73f",
+  "static_paths": [
+    "headline",
+    "description",
+    "author.@id",
+    "author.name",
+    "@type",
+    "name",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "headline": "Rediscover Square Watches | Made in Japan | Minase Watches",
+    "description": "Rediscover what a square watch can be ! Horizon and Windows both are square face watches 100% handmade in Japan. Unique and original !",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "@type": "Article",
+    "name": "Rediscover Square Watches | Made in Japan | Minase Watches",
+    "isPartOf.@id": "https://minasewatches.com/collections/square/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/collections/square/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-01-23T12:25:38+01:00",
+    "dateModified": "2023-04-21T10:35:13+02:00",
+    "@id": "https://minasewatches.com/collections/square/#schema-23712",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

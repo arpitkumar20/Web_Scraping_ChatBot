@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/gold/#schema-23924",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/japanese-masterpieces/gold/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/gold/#schema-23924::0",
+      "text_preview": "Gold watch | Minase watches | Handmade in Japan. For every gold watch, Minase uses 18K gold, containing 75% of pure metal. Minase gold watches are decorated with diamonds or handcrafted dials. Gold watch | Minase watches | Handmade in Japan. https://minasewatches.com/author/kellyhenriksen/. kellyhen",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "7303c5290f6e4aa565e0fca2809a2f4f64e951b12a2c63ed4e13d3d97be207b9",
+  "dynamic_hash": "3b8e7001663ea77f4d3530b4d70ff78790169febe09c17fffebc051ef7a962b5",
+  "static_paths": [
+    "headline",
+    "description",
+    "author.@id",
+    "author.name",
+    "@type",
+    "name",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "headline": "Gold watch | Minase watches | Handmade in Japan",
+    "description": "For every gold watch, Minase uses 18K gold, containing 75% of pure metal. Minase gold watches are decorated with diamonds or handcrafted dials",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "@type": "Article",
+    "name": "Gold watch | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/japanese-masterpieces/gold/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/japanese-masterpieces/gold/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-02-10T13:40:33+01:00",
+    "dateModified": "2025-07-09T14:35:23+02:00",
+    "@id": "https://minasewatches.com/japanese-masterpieces/gold/#schema-23924",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

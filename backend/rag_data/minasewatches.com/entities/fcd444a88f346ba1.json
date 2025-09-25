@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/07/f647d77a3c791686922287-divido-urushi-makie-blue-dial.webp",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/07/f647d77a3c791686922287-divido-urushi-makie-blue-dial.webp::0",
+      "text_preview": "ImageObject. Minase divido makie handmade",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "5a49cf55db179bd791382f3eda78d61471b78c52d02b9fb0357bcc2f7b2ed506",
+  "dynamic_hash": "f4bae667589b1d62c83f3ec3d49700b0f60c9f3a5aaf5ce0c5feb0e5dc2b161c",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase divido makie handmade"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/07/f647d77a3c791686922287-divido-urushi-makie-blue-dial.webp",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/07/f647d77a3c791686922287-divido-urushi-makie-blue-dial.webp",
+    "width": "1710",
+    "height": "1139",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

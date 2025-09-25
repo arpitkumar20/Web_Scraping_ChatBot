@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-bracelet/#webpage",
+  "entity_type": "ItemPage",
+  "source_url": "https://minasewatches.com/webshop/horizon-midsize-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-bracelet/#webpage::0",
+      "text_preview": "Buy Steel Bracelet Horizon Midsize | Minase Watches. ItemPage. https://minasewatches.com/webshop/horizon-midsize-bracelet/#webpage. https://minasewatches.com/webshop/horizon-midsize-bracelet/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "fef8fcc91914ee891c7bfd7813e87edf31afa19e5921738c7805aa8c476bef07",
+  "dynamic_hash": "425aab4a7f55407f4b7e7cff560a58d8d9b26bd839e3793a6d9f17c6a33f07f5",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ItemPage",
+    "@id": "https://minasewatches.com/webshop/horizon-midsize-bracelet/#webpage",
+    "url": "https://minasewatches.com/webshop/horizon-midsize-bracelet/",
+    "name": "Buy Steel Bracelet Horizon Midsize | Minase Watches",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2024-06-20T13:12:28+02:00",
+    "dateModified": "2025-05-12T15:23:03+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/02/bra-horizon-2.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

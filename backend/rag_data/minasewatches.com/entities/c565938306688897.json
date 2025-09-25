@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2025/05/VM15-CDBYGR-SSD_transp.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/7-windows-leather-2-0/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2025/05/VM15-CDBYGR-SSD_transp.png::0",
+      "text_preview": "ImageObject. 7 windows 2.0 green dial leather strap",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "0b2c0f94df5629d1eeb0253b5e3b1658f069a15729f433b6a0e99cec27b1ca6e",
+  "dynamic_hash": "aaf98c3acc4d860f9ddfdc315a26c97fc7a67bdfd96457214b45c5f97e90ea5a",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "7 windows 2.0 green dial leather strap"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2025/05/VM15-CDBYGR-SSD_transp.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2025/05/VM15-CDBYGR-SSD_transp.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

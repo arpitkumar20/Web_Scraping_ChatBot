@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/urushi/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/japanese-masterpieces/urushi/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/urushi/#webpage::0",
+      "text_preview": "Urushi Watches | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/japanese-masterpieces/urushi/#webpage. https://minasewatches.com/japanese-masterpieces/urushi/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "9a6287a7429945b57d3a42f428d117088a0d2442152e5a853c2132e4976e08ee",
+  "dynamic_hash": "27b6ed8998856f5f3bf36eb557643db4f5e8f86b0c09b6e46d7a0b547c6ac1c9",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/japanese-masterpieces/urushi/#webpage",
+    "url": "https://minasewatches.com/japanese-masterpieces/urushi/",
+    "name": "Urushi Watches | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-02-10T16:58:58+01:00",
+    "dateModified": "2025-07-09T14:49:52+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/04/minase-windows-hakose-regular-and-midsize.jpg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

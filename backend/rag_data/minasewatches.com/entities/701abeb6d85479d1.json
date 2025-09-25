@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-black-rubber.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/horizon-rubber-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-black-rubber.png::0",
+      "text_preview": "ImageObject. minase horizon rubber watch black dial",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "509bc895fef18ab4e36185118a6665eb1de9732cfe06cb272c75c907a8208205",
+  "dynamic_hash": "f5d760492c55ab1eaeafd541bb4e9292c568404bba1b52ee07d30cb8c6ae7e1e",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "minase horizon rubber watch black dial"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-black-rubber.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-black-rubber.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

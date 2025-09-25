@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/01/minase-divido-urushi-makie-red-rubber.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/divido-urushi-makie-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/01/minase-divido-urushi-makie-red-rubber.png::0",
+      "text_preview": "ImageObject. minase divido URUSHI makie rubber red",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.397236"
+      }
+    }
+  ],
+  "static_hash": "0580fe815dd389b4d6ce2c2d9ee69215a84051b3ef3d0fa86f2609e7f5b6be83",
+  "dynamic_hash": "ecdc9ac63b02cb3c9a9ab40360973eb4987fe1d2c5a79c4f480ecd8cb50eb7da",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "minase divido URUSHI makie rubber red"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/01/minase-divido-urushi-makie-red-rubber.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/01/minase-divido-urushi-makie-red-rubber.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.397236"
+}

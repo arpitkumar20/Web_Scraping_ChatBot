@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/#website",
+  "entity_type": "WebSite",
+  "source_url": "https://minasewatches.com/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/#website::0",
+      "text_preview": "minasewatches.com. WebSite. https://minasewatches.com/#website. https://minasewatches.com. https://minasewatches.com/#organization. SearchAction. https://minasewatches.com/?s={search_term_string}. required name=search_term_string",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.318161"
+      }
+    }
+  ],
+  "static_hash": "fbbfe3e5d90d6008620e2b4485ef7f287f8eed7ef057060604a543d9c4f01719",
+  "dynamic_hash": "bc4eb24d29fa9373d2f9c04766a25b27dc6a9229fc2230c097197739c404c3e1",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "publisher.@id",
+    "potentialAction.@type",
+    "potentialAction.target",
+    "potentialAction.query-input"
+  ],
+  "dynamic_paths": [
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebSite",
+    "@id": "https://minasewatches.com/#website",
+    "url": "https://minasewatches.com",
+    "name": "minasewatches.com",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "potentialAction.@type": "SearchAction",
+    "potentialAction.target": "https://minasewatches.com/?s={search_term_string}",
+    "potentialAction.query-input": "required name=search_term_string"
+  },
+  "dynamic_fields": {
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.318161"
+}

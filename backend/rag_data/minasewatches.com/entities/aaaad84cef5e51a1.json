@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::UG02-CDLNBL-SSD-1",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/uruga-31mm-leather-blue/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::UG02-CDLNBL-SSD-1::0",
+      "text_preview": "Uruga 31mm Leather Blue - Blue. The Uruga 31mm Leather model was specifically designed for ladies. It is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.. Product. The Uruga 31mm Leather model was specifica",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "b59f90204088f0ba7550a729882932c2e2f63b3798d55758b387a51d0fd32135",
+  "dynamic_hash": "868933c7af83f764a88cf7d58ab1546b07a7915da54abd7e18f15d9ac72f938a",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Uruga 31mm Leather Blue - Blue",
+    "description": "The Uruga 31mm Leather model was specifically designed for ladies. It is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+    "offers.description": "The Uruga 31mm Leather model was specifically designed for ladies. It is an elegant version of the 42mm model with highly polished clamps. In alternance to the indexes, the dial is decorated with 6 genuine diamonds.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "UG02-CDLNBL-SSD-1",
+    "image": "https://minasewatches.com/wp-content/uploads/2023/07/UG02-CDLNBL-SSD-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "3280",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/uruga-31mm-leather-blue/?attribute_pa_uruga-31-dials=blue"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

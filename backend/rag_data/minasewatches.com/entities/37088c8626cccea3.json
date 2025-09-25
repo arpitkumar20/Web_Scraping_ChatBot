@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-shibo-urushi-shells-steel-1.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/divido-shibo-urushi-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-shibo-urushi-shells-steel-1.png::0",
+      "text_preview": "ImageObject. Minase watch Divido Shibo Urushi with stainless steel bracelet",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    }
+  ],
+  "static_hash": "4c9776a74334c81fca625035099808901814f6dae1c8f88066aabf45c5f48098",
+  "dynamic_hash": "7777fc0148c9dbf16725083816ea3181bec0d7b8e2fe4b0eb4a6c524274eff8e",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase watch Divido Shibo Urushi with stainless steel bracelet"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-shibo-urushi-shells-steel-1.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-shibo-urushi-shells-steel-1.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.385867"
+}

@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-blue-leather.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/horizon-leather-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-blue-leather.png::0",
+      "text_preview": "ImageObject. horizon leather minase watch blue dial",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "1bbeb59cd4b411ce8bf5bffcb9209ddf20a6ba7b94fab7dc05edf9b5de720231",
+  "dynamic_hash": "a240cf13f0081bb43118f7f4a2c85185732d7e6018a4a28765e57d4047d0552e",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "horizon leather minase watch blue dial"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-blue-leather.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-blue-leather.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

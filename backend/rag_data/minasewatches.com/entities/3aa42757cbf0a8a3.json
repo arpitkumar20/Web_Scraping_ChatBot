@@ -1,0 +1,87 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/watch-personalization/#richSnippet",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/watch-personalization/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/watch-personalization/#richSnippet::0",
+      "text_preview": "Watch Personalization | Minase Watches | Handmade in Japan. Minase offers watch personalizations. Capture something important on the back of your Minase watch, for a unique timepiece.. Product. Watch Accessories. https://minasewatches.com/webshop/watch-personalization/#webpage. ImageObject. NewCondi",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "224345b82950c51eb5fc04e2ace812a6368003e8bf83051a6fa7492dd58accc7",
+  "dynamic_hash": "0058edfcd081ce4c72265ae71b0b6bc91b189d7f6a934e572ec69f590ea5d65f",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "mainEntityOfPage.@id",
+    "image",
+    "image[0].@type",
+    "offers.itemCondition",
+    "offers.url",
+    "offers.seller.@type",
+    "offers.seller.@id",
+    "offers.seller.name",
+    "offers.seller.url",
+    "@id"
+  ],
+  "dynamic_paths": [
+    "image[0].url",
+    "image[0].height",
+    "image[0].width",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.priceValidUntil",
+    "offers.availability",
+    "offers.seller.logo",
+    "offers.priceSpecification"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Watch Personalization | Minase Watches | Handmade in Japan",
+    "description": "Minase offers watch personalizations. Capture something important on the back of your Minase watch, for a unique timepiece.",
+    "category": "Watch Accessories",
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/watch-personalization/#webpage",
+    "image": [
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2022/12/minase-fratello-watch-engraved-personalized-1.jpg",
+        "height": "1001",
+        "width": "1500"
+      }
+    ],
+    "image[0].@type": "ImageObject",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/watch-personalization/",
+    "offers.seller.@type": "Organization",
+    "offers.seller.@id": "https://minasewatches.com/",
+    "offers.seller.name": "minasewatches.com",
+    "offers.seller.url": "https://minasewatches.com",
+    "@id": "https://minasewatches.com/webshop/watch-personalization/#richSnippet"
+  },
+  "dynamic_fields": {
+    "image[0].url": "https://minasewatches.com/wp-content/uploads/2022/12/minase-fratello-watch-engraved-personalized-1.jpg",
+    "image[0].height": "1001",
+    "image[0].width": "1500",
+    "offers.@type": "Offer",
+    "offers.price": "920.00",
+    "offers.priceCurrency": "USD",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.seller.logo": "",
+    "offers.priceSpecification": {
+      "price": "920",
+      "priceCurrency": "USD",
+      "valueAddedTaxIncluded": "true"
+    }
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

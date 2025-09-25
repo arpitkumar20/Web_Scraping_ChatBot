@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/history/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/history/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/history/#webpage::0",
+      "text_preview": "Minase History | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/history/#webpage. https://minasewatches.com/history/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "32e9fef910d02b63e0675c5a9591b326e104fd16c92978332c422a60754346c5",
+  "dynamic_hash": "d15c528d442494864f9ea4c4601b1716c733e66a66da40f2c024a48268dceb84",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/history/#webpage",
+    "url": "https://minasewatches.com/history/",
+    "name": "Minase History | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-03-03T21:27:46+01:00",
+    "dateModified": "2023-03-03T22:09:16+01:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

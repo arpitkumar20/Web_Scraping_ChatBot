@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2025/05/VM15-M01YIB-SSB_transp.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/7-windows-steel-2/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2025/05/VM15-M01YIB-SSB_transp.png::0",
+      "text_preview": "ImageObject. 7 Windows 2.0 stainless steel ice blue dial",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "b51428fab8a71950623b4c155a05dfe3d43c29f091ff4b831e06d6b4e5ce4c82",
+  "dynamic_hash": "8615167a9e1739503fc156940ea447c97d8a8022b4971aadadbed57cf9a811f4",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "7 Windows 2.0 stainless steel ice blue dial"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2025/05/VM15-M01YIB-SSB_transp.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2025/05/VM15-M01YIB-SSB_transp.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

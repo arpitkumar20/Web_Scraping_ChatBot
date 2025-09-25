@@ -1,0 +1,114 @@
+{
+  "entity_id": "minasewatches.com::VM15-M01NBL-SSB",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/7-windows-collection-steel-bracelet/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM15-M01NBL-SSB::0",
+      "text_preview": "7 Windows Steel - Blue. 7 Windows Steel Minase wanted to create a watch that would showcase its vision, by embracing geometric designs seldom seen in watchmaking. In Japan, mathematics and geometry are not just for academics, but are utilized to emphasize aesthetic dimensions of beauty. The 7 Window",
+      "chunk_index": 0,
+      "chunk_total": 10,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    },
+    {
+      "chunk_id": "minasewatches.com::VM15-M01NBL-SSB::1",
+      "text_preview": ". The polyhedric crown bears the brand’s logo, a drill head that pays homage to the origins of the parent company, Kyowa. Kyowa is a tool maker who has work for the likes of the biggest international watch companies since the seventies. Handmade in Japan As every Minase watch, the 5 Windows Collecti",
+      "chunk_index": 1,
+      "chunk_total": 10,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    },
+    {
+      "chunk_id": "minasewatches.com::VM15-M01NBL-SSB::2",
+      "text_preview": ". This high-end execution displays hand-finished surfaces with perlage, blue screws, bridges with diamond polished bevels and a main plate and bridges in black “or”. 50 hours’ power reserve. The Minase rotor was personalized for Minase and displays the brand's drill head logo, while several openings",
+      "chunk_index": 2,
+      "chunk_total": 10,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    },
+    {
+      "chunk_id": "minasewatches.com::VM15-M01NBL-SSB::3",
+      "text_preview": ". They spend more than 18 hours on a single case. The sallaz polishing technique only enables the craftsmen to polish flat surfaces, so they need to be very careful not to damage the case. Hand-made dials 7 Windows on leather is available with five different dial colors : black, blue, ice blue, grey",
+      "chunk_index": 3,
+      "chunk_total": 10,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    },
+    {
+      "chunk_id": "minasewatches.com::VM15-M01NBL-SSB::4",
+      "text_preview": ". Blue screws. Bridges with diamond polished bevels. Customized Minase rotor. ETACHRON regulator system. MPS lubrication-free bearings. Very high precision TOP range execution. 50 hours’ power reserve. 21 Jewels. Frequency 28’800 vibrations/hour (4 Hz) Hands : Polished steel, minute and second bent ",
+      "chunk_index": 4,
+      "chunk_total": 10,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    },
+    {
+      "chunk_id": "minasewatches.com::VM15-M01NBL-SSB::5",
+      "text_preview": ". Product. 7 Windows Steel Minase wanted to create a watch that would showcase its vision, by embracing geometric designs seldom seen in watchmaking. In Japan, mathematics and geometry are not just for academics, but are utilized to emphasize aesthetic dimensions of beauty. The 7 Windows collection ",
+      "chunk_index": 5,
+      "chunk_total": 10,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    },
+    {
+      "chunk_id": "minasewatches.com::VM15-M01NBL-SSB::9",
+      "text_preview": ". Blue screws. Bridges with diamond polished bevels. Customized Minase rotor. ETACHRON regulator system. MPS lubrication-free bearings. Very high precision TOP range execution. 50 hours’ power reserve. 21 Jewels. Frequency 28’800 vibrations/hour (4 Hz) Hands : Polished steel, minute and second bent ",
+      "chunk_index": 9,
+      "chunk_total": 10,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.385867"
+      }
+    }
+  ],
+  "static_hash": "c71812d2902079a3bff9251536f7bcce3754c0c42f196c564d7f2bd89e8f96d7",
+  "dynamic_hash": "c70bbbfdddf15afe20ac7db7d21b22dd2d799ce5a65ab63bdbaa4d0c4bb9ff9d",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "7 Windows Steel - Blue",
+    "description": "7 Windows Steel Minase wanted to create a watch that would showcase its vision, by embracing geometric designs seldom seen in watchmaking. In Japan, mathematics and geometry are not just for academics, but are utilized to emphasize aesthetic dimensions of beauty. The 7 Windows collection is available in stainless steel or in 18K rose or yellow gold. Tab content Tab content Tab content Tab content A square watch The rectangular case go the 7 Windows steel symbolizes the imperfection of our earthly world, while the round shape of the dial symbolizes perfection, infinity, calm. The 7 sapphire crystal windows reveal the dial through the watch case from seven different angles. The top sapphire crystal is spherical on both of its axis and has an antireflective coating. The polyhedric crown bears the brand’s logo, a drill head that pays homage to the origins of the parent company, Kyowa. Kyowa is a tool maker who has work for the likes of the biggest international watch companies since the seventies. Handmade in Japan As every Minase watch, the 5 Windows Collection is manufactured in Japan. All Minase timepieces bear the registered label “HiZ“, a concept inspired by the Japanese words Hizu (exceptional) and Hi Izuru Kuni (Land of the rising sun). The products labelled HiZ are unique with innovative features such as the “case in case” structure, the extraordinary Sallaz finish and the construction principle “MORE” (Minase Original Rebuild Equation). Mechanical movement Minase’s KT7002 movement is based on the Swiss ETA 2892/A2 ébauches. This high-end execution displays hand-finished surfaces with perlage, blue screws, bridges with diamond polished bevels and a main plate and bridges in black “or”. 50 hours’ power reserve. The Minase rotor was personalized for Minase and displays the brand's drill head logo, while several openings reveal the movement underneath. This component is assembled with MPS lubrication-free bearings. With its ETACHRON regulating system, this is a very high precision execution. 21 Jewels. Frequency 28’800 vibrations/hour (4 Hz). Stainless Steel 316L Bracelet Minase uses stainless steel 316L for all of its watches. The metal is hand-polished with the Sallaz (also called sarazu) polishing technique. The artisan polish the pieces by hand for an incredible result. They spend more than 18 hours on a single case. The sallaz polishing technique only enables the craftsmen to polish flat surfaces, so they need to be very careful not to damage the case. Hand-made dials 7 Windows on leather is available with five different dial colors : black, blue, ice blue, grey and white. Specifications Case : Stainless steel 316L. Dual spherical box type sapphire crystal (with multi layers non-reflective coating) on the top, see through case back and 5 sapphire windows at 12', 3' (2), 6’ and 9'. Water resistant up to 50 meters (5 Bar). Dimensions : 38 x 47 mm. Thickness : 13 mm. Lug to lug: 46.5 mm. Weight total : 1.6 g. Movement : Swiss ETA based components (2892A2) high end execution with hand-finished surfaces with perlage, bridges and main plate in black “or”. Blue screws. Bridges with diamond polished bevels. Customized Minase rotor. ETACHRON regulator system. MPS lubrication-free bearings. Very high precision TOP range execution. 50 hours’ power reserve. 21 Jewels. Frequency 28’800 vibrations/hour (4 Hz) Hands : Polished steel, minute and second bent at the tip, luminous material on hours’ and minutes’ Functions : Hours, minutes and central second hands. Date at 4. Powered with a high quality Swiss movement specially decorated for Minase, every watch displays great traditional crafts from Japan. Every single steel part is hand-polished with the rare and time-consuming Sallaz technique (also known as sarazu). The Seven Windows’ 7 sapphire crystal windows reveal the dial, viewed through the watch case from a multitude of different angles.",
+    "offers.description": "7 Windows Steel Minase wanted to create a watch that would showcase its vision, by embracing geometric designs seldom seen in watchmaking. In Japan, mathematics and geometry are not just for academics, but are utilized to emphasize aesthetic dimensions of beauty. The 7 Windows collection is available in stainless steel or in 18K rose or yellow gold. Tab content Tab content Tab content Tab content A square watch The rectangular case go the 7 Windows steel symbolizes the imperfection of our earthly world, while the round shape of the dial symbolizes perfection, infinity, calm. The 7 sapphire crystal windows reveal the dial through the watch case from seven different angles. The top sapphire crystal is spherical on both of its axis and has an antireflective coating. The polyhedric crown bears the brand’s logo, a drill head that pays homage to the origins of the parent company, Kyowa. Kyowa is a tool maker who has work for the likes of the biggest international watch companies since the seventies. Handmade in Japan As every Minase watch, the 5 Windows Collection is manufactured in Japan. All Minase timepieces bear the registered label “HiZ“, a concept inspired by the Japanese words Hizu (exceptional) and Hi Izuru Kuni (Land of the rising sun). The products labelled HiZ are unique with innovative features such as the “case in case” structure, the extraordinary Sallaz finish and the construction principle “MORE” (Minase Original Rebuild Equation). Mechanical movement Minase’s KT7002 movement is based on the Swiss ETA 2892/A2 ébauches. This high-end execution displays hand-finished surfaces with perlage, blue screws, bridges with diamond polished bevels and a main plate and bridges in black “or”. 50 hours’ power reserve. The Minase rotor was personalized for Minase and displays the brand's drill head logo, while several openings reveal the movement underneath. This component is assembled with MPS lubrication-free bearings. With its ETACHRON regulating system, this is a very high precision execution. 21 Jewels. Frequency 28’800 vibrations/hour (4 Hz). Stainless Steel 316L Bracelet Minase uses stainless steel 316L for all of its watches. The metal is hand-polished with the Sallaz (also called sarazu) polishing technique. The artisan polish the pieces by hand for an incredible result. They spend more than 18 hours on a single case. The sallaz polishing technique only enables the craftsmen to polish flat surfaces, so they need to be very careful not to damage the case. Hand-made dials 7 Windows on leather is available with five different dial colors : black, blue, ice blue, grey and white. Specifications Case : Stainless steel 316L. Dual spherical box type sapphire crystal (with multi layers non-reflective coating) on the top, see through case back and 5 sapphire windows at 12', 3' (2), 6’ and 9'. Water resistant up to 50 meters (5 Bar). Dimensions : 38 x 47 mm. Thickness : 13 mm. Lug to lug: 46.5 mm. Weight total : 1.6 g. Movement : Swiss ETA based components (2892A2) high end execution with hand-finished surfaces with perlage, bridges and main plate in black “or”. Blue screws. Bridges with diamond polished bevels. Customized Minase rotor. ETACHRON regulator system. MPS lubrication-free bearings. Very high precision TOP range execution. 50 hours’ power reserve. 21 Jewels. Frequency 28’800 vibrations/hour (4 Hz) Hands : Polished steel, minute and second bent at the tip, luminous material on hours’ and minutes’ Functions : Hours, minutes and central second hands. Date at 4. Powered with a high quality Swiss movement specially decorated for Minase, every watch displays great traditional crafts from Japan. Every single steel part is hand-polished with the rare and time-consuming Sallaz technique (also known as sarazu). The Seven Windows’ 7 sapphire crystal windows reveal the dial, viewed through the watch case from a multitude of different angles.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "VM15-M01NBL-SSB",
+    "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-7windows-blue-steel-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "5650",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/7-windows-collection-steel-bracelet/?attribute_pa_7-windows-dials=blue"
+  },
+  "last_seen": "2025-09-25T18:01:10.385867"
+}

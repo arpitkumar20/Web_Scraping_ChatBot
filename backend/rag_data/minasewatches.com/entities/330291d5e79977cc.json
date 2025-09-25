@@ -1,0 +1,34 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/#organization",
+  "entity_type": "Organization",
+  "source_url": "https://minasewatches.com/sizing-shipping/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/#organization::0",
+      "text_preview": "minasewatches.com. Organization. https://minasewatches.com/#organization. https://minasewatches.com",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.318161"
+      }
+    }
+  ],
+  "static_hash": "5f11be319f8f9a897114c73190d1e718c0bafba4c803191135e482f15626238e",
+  "dynamic_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "static_paths": [
+    "@type",
+    "@id",
+    "name",
+    "url"
+  ],
+  "dynamic_paths": [],
+  "static_fields": {
+    "@type": "Organization",
+    "@id": "https://minasewatches.com/#organization",
+    "name": "minasewatches.com",
+    "url": "https://minasewatches.com"
+  },
+  "dynamic_fields": {},
+  "last_seen": "2025-09-25T18:01:10.318161"
+}

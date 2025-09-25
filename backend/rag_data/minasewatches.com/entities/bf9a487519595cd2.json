@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/representatives/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/representatives/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/representatives/#webpage::0",
+      "text_preview": "Our representatives | Made in Japan | Minase watches. WebPage. https://minasewatches.com/representatives/#webpage. https://minasewatches.com/representatives/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "6cbe1c0bdad2ec9eb3993b9ecd2f90a84718a3a8a2f720293f02f5f5ced57580",
+  "dynamic_hash": "442612bd8cad69af5a2dc9313e5726b033c05404b8be20d3d24d5368d5a594a2",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/representatives/#webpage",
+    "url": "https://minasewatches.com/representatives/",
+    "name": "Our representatives | Made in Japan | Minase watches",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-01-20T15:44:04+01:00",
+    "dateModified": "2025-02-27T10:52:14+01:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,128 @@
+Excellent 👌 — this is the right step before editing. Let’s think like “QA testers” and list the **loopholes and edge cases** that could still bite us, even after the fixes.
+
+---
+
+## 🔎 Loopholes & Risks
+
+### 1. **JSON-LD variations**
+
+* Not all JSON-LD is product-like. Pages may have:
+
+  * `BreadcrumbList`, `Organization`, `Website`, `WebPage`.
+  * These aren’t useful for RAG but will still be extracted.
+* Risk: your `entities_ready.json` fills up with “noise entities” instead of just products/doctors/rooms.
+
+👉 **Mitigation:** filter entities to only embed/keep useful `@type`s (Product, ProductGroup, Offer, Person, Article, Event, etc.).
+
+---
+
+### 2. **Nested structures duplication**
+
+* Many sites (like Minase) put the same data in both `ProductGroup` and each `Product` in `hasVariant`.
+* Our extractor flattens both, so you might get duplicate `name/description`.
+
+👉 **Mitigation:** deduplicate chunks by `entity_id` or hash of static fields.
+
+---
+
+### 3. **Huge JSON-LD blocks**
+
+* Some e-commerce sites dump hundreds of variants/reviews into one `<script>`.
+* Without limits, you might generate **hundreds of chunks per page**.
+
+👉 **Mitigation:** enforce `max_entities` and `max_chunks_per_entity` (you already have these, but they should be carefully tuned).
+
+---
+
+### 4. **Fallback content quality**
+
+* On sites with **no JSON-LD at all** (blogs, corporate sites):
+
+  * You fall back to cleaned text chunks.
+  * But fallback has no static/dynamic separation.
+* Risk: inconsistent metadata across your dataset (some chunks richly annotated, some empty).
+
+👉 **Mitigation:** add a simple heuristic classifier (regex-based) for fallback chunks (e.g., detect prices, dates, stock status in plain text).
+
+---
+
+### 5. **SPA mis-detection**
+
+* `_is_spa_site` currently uses weak heuristics.
+* A normal site with some JS may be misdetected as SPA → Playwright → expensive and slower.
+* Or a true SPA may slip through.
+
+👉 **Mitigation:**
+
+* Don’t rely only on heuristics.
+* Use sitemap first always (as long as it exists).
+* Only trigger SPA crawling if **no sitemap and recursive also fails**.
+
+---
+
+### 6. **Loss of structured data if raw_html missing**
+
+* If for some reason a loader doesn’t put full HTML in `doc.page_content` (e.g., Selenium bug), JSON-LD extraction will fail.
+
+👉 **Mitigation:** always save raw HTML as `metadata["raw_html"]` during scraping step, not later.
+
+---
+
+### 7. **Embedding cost explosion**
+
+* If you embed raw descriptions + reviews without summarization, cost grows fast.
+* E.g., Minase reviews/variants repeated across products = redundant embeddings.
+
+👉 **Mitigation:**
+
+* Use a `build_entity_summary()` helper to condense static fields into compact text.
+* Limit reviews to 1–2 samples or summary.
+
+---
+
+### 8. **Dynamic field drift**
+
+* Dynamic data (price, availability, ratings) will be stored in metadata, not embeddings.
+* But if metadata isn’t updated frequently, RAG will answer with **stale data**.
+
+👉 **Mitigation:**
+
+* Re-run crawler periodically.
+* Or implement a “metadata-only refresh” mode that updates `dynamic_fields` without re-embedding.
+
+---
+
+### 9. **Entity ID instability**
+
+* Right now `_stable_entity_id` tries `@id`, `url`, or `sku`.
+* If those aren’t stable (e.g., product URLs with session tokens), IDs will change across runs.
+* Result: duplicates in Pinecone.
+
+👉 **Mitigation:** ensure entity_id falls back to a **stable hash of (domain + URL + product name)**.
+
+---
+
+### 10. **Noise in embeddings**
+
+* If you embed entire JSON objects (static_fields dumped as text), embeddings may include irrelevant tokens (keys, boilerplate).
+
+👉 **Mitigation:**
+
+* Summarize static fields into human-readable text.
+* E.g., “Uruga 42mm Rubber – Swiss movement luxury watch, available in black or white rubber.”
+
+---
+
+## 🎯 Summary
+
+Even after fixing the scraping flow, you still need to watch for:
+
+* **Over-crawling / duplication** (variants, reviews).
+* **Useless JSON-LD entities** (Website, Organization).
+* **Embedding cost** (long texts, duplicates).
+* **Stale dynamic fields** (need refresh).
+* **Unstable entity IDs** (risk of duplicate inserts).
+
+---
+
+👉 Do you want me to patch the code with **filters + summarization** (so you only embed meaningful entities and reduce duplication), or should we first focus only on **restoring the original complete scraping flow** (all URLs covered, JSON-LD preserved)?

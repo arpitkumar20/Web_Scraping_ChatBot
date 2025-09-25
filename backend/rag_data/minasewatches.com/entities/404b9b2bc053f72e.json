@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-rubber/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/horizon-midsize-rubber/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/horizon-midsize-rubber/#webpage::0",
+      "text_preview": "Buy Horizon Midsize Rubber | Minase Watches | Made in Japan. WebPage. https://minasewatches.com/webshop/horizon-midsize-rubber/#webpage. https://minasewatches.com/webshop/horizon-midsize-rubber/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "4cf08b1c00118b97ec11d4a98e2ed55c60e80b57383b4d81fbff1a5c4991c4ac",
+  "dynamic_hash": "d31baad1b2f5cd5e295ded4ba61eebcf13386906eb7ef2e0fb332e67a73ecbd8",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/horizon-midsize-rubber/#webpage",
+    "url": "https://minasewatches.com/webshop/horizon-midsize-rubber/",
+    "name": "Buy Horizon Midsize Rubber | Minase Watches | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-11-12T12:58:33+01:00",
+    "dateModified": "2025-07-07T15:51:17+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watch-horizon-midsize-blue-rubber.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

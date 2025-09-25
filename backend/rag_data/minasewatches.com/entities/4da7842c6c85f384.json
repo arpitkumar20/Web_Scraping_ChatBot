@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/privacy/#schema-23156",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/privacy/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/privacy/#schema-23156::0",
+      "text_preview": "Privacy | Minase watches | Handmade in Japan. If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we. Privacy | Minase watches | Handmade in Japan. https://minasewatches.com/author/kellyhenriksen/. kell",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "54ca861bfe93a160426c6b03cc96cb8f73eaa2998be91a864ced3657f0a082c8",
+  "dynamic_hash": "543d9e060c62c84e7af878fadbaca51647d01954576b032d97b6db5895d1d9a5",
+  "static_paths": [
+    "headline",
+    "description",
+    "author.@id",
+    "author.name",
+    "@type",
+    "name",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "headline": "Privacy | Minase watches | Handmade in Japan",
+    "description": "If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "@type": "Article",
+    "name": "Privacy | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/privacy/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/privacy/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-03-03T16:40:52+01:00",
+    "dateModified": "2023-03-20T08:46:36+01:00",
+    "@id": "https://minasewatches.com/privacy/#schema-23156",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

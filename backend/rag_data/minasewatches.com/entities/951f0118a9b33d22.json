@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/collections/accessories/leather-strap/#schema-23812",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/collections/accessories/leather-strap/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/collections/accessories/leather-strap/#schema-23812::0",
+      "text_preview": "Buy Leather Straps | Made in Japan | Minase Watches. Minase leather straps are available in several colors and are all handsewed at the Minase factory.. VideoObject. https://minasewatches.com/collections/accessories/leather-strap/#webpage. https://minasewatches.com/#organization",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "120cf554e7b0df5e5ed484803b12a77f5c7695c885bba9be36f66388ba7e84aa",
+  "dynamic_hash": "6ce298dd6f82f11bb8919ecaba214abe7f911bbd765844f50a95582987afd671",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "Buy Leather Straps | Made in Japan | Minase Watches",
+    "description": "Minase leather straps are available in several colors and are all handsewed at the Minase factory.",
+    "isPartOf.@id": "https://minasewatches.com/collections/accessories/leather-strap/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2023-04-14T15:56:17+02:00",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2022/11/video-collection.mp4",
+    "width": "1920",
+    "height": "1080",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/collections/accessories/leather-strap/#schema-23812",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

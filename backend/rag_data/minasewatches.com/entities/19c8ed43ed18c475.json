@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/collections/accessories/wooden-boxes/#schema-23907",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/collections/accessories/wooden-boxes/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/collections/accessories/wooden-boxes/#schema-23907::0",
+      "text_preview": "Buy Minase Wooden Boxes for Watches | Made in Japan. Minase wooden boxes for watches are perfect to store your timepieces. Made in Japan with kiri wood or hand-made in marquetery.. Buy Minase Wooden Boxes for Watches | Made in Japan. https://minasewatches.com/author/kellyhenriksen/. kellyhenriksen. ",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "bdbc98a22e7e0f5143194b966e4539e63013031ae1f13ee9f3584b56d5f0bd9f",
+  "dynamic_hash": "450a7d32ee247042496d5c2cfed6b3f9ca06915ad2f5f452a5b9873f2f677554",
+  "static_paths": [
+    "headline",
+    "description",
+    "author.@id",
+    "author.name",
+    "@type",
+    "name",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "headline": "Buy Minase Wooden Boxes for Watches | Made in Japan",
+    "description": "Minase wooden boxes for watches are perfect to store your timepieces. Made in Japan with kiri wood or hand-made in marquetery.",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "@type": "Article",
+    "name": "Buy Minase Wooden Boxes for Watches | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/collections/accessories/wooden-boxes/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/collections/accessories/wooden-boxes/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-04-14T20:26:22+02:00",
+    "dateModified": "2025-02-04T10:23:12+01:00",
+    "@id": "https://minasewatches.com/collections/accessories/wooden-boxes/#schema-23907",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

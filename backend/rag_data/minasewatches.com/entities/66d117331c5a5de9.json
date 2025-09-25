@@ -1,0 +1,129 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/#richSnippet",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/#richSnippet::0",
+      "text_preview": "Discover Uruga 42mm Leather | Minase Watches |Made in Japan. Uruga 42mm leather is powered with a high quality Swiss movement, every steel parts is hand-polished with the Sallaz (sarazu) technique.. Product. Leather straps. ImageObject. ImageObject. ImageObject. ImageObject. NewCondition. Organizati",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "6484c01581de61cc35d8cb91cc8cfa23757b997be9e7b994c4e29c8726918802",
+  "dynamic_hash": "70f062cc6e4a9e5e388d2d88c32bd0e24ee7983d7533e05bfdc3094a6a0ed4de",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "category",
+    "image",
+    "image[0].@type",
+    "image[1].@type",
+    "image[2].@type",
+    "image[3].@type",
+    "offers.itemCondition",
+    "offers.seller.@type",
+    "offers.seller.@id",
+    "offers.seller.name",
+    "offers.seller.url"
+  ],
+  "dynamic_paths": [
+    "mainEntityOfPage.@id",
+    "image[0].url",
+    "image[0].height",
+    "image[0].width",
+    "image[1].url",
+    "image[1].height",
+    "image[1].width",
+    "image[2].url",
+    "image[2].height",
+    "image[2].width",
+    "image[3].url",
+    "image[3].height",
+    "image[3].width",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.priceValidUntil",
+    "offers.availability",
+    "offers.url",
+    "offers.seller.logo",
+    "offers.priceSpecification",
+    "@id"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Discover Uruga 42mm Leather | Minase Watches |Made in Japan",
+    "description": "Uruga 42mm leather is powered with a high quality Swiss movement, every steel parts is hand-polished with the Sallaz (sarazu) technique.",
+    "category": "Leather straps",
+    "image": [
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/07/UG03-CDBNGR-SSD.png",
+        "height": "1500",
+        "width": "1500"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/07/UG03-CDBNGR-SSD.png",
+        "height": "1500",
+        "width": "1500"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/07/Minase_uruga-42mm-01-square.jpg",
+        "height": "1000",
+        "width": "1000"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "https://minasewatches.com/wp-content/uploads/2023/07/Minase_uruga-42mm-02-square.jpg",
+        "height": "1000",
+        "width": "1000"
+      }
+    ],
+    "image[0].@type": "ImageObject",
+    "image[1].@type": "ImageObject",
+    "image[2].@type": "ImageObject",
+    "image[3].@type": "ImageObject",
+    "offers.itemCondition": "NewCondition",
+    "offers.seller.@type": "Organization",
+    "offers.seller.@id": "https://minasewatches.com/",
+    "offers.seller.name": "minasewatches.com",
+    "offers.seller.url": "https://minasewatches.com"
+  },
+  "dynamic_fields": {
+    "mainEntityOfPage.@id": "https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/#webpage",
+    "image[0].url": "https://minasewatches.com/wp-content/uploads/2023/07/UG03-CDBNGR-SSD.png",
+    "image[0].height": "1500",
+    "image[0].width": "1500",
+    "image[1].url": "https://minasewatches.com/wp-content/uploads/2023/07/UG03-CDBNGR-SSD.png",
+    "image[1].height": "1500",
+    "image[1].width": "1500",
+    "image[2].url": "https://minasewatches.com/wp-content/uploads/2023/07/Minase_uruga-42mm-01-square.jpg",
+    "image[2].height": "1000",
+    "image[2].width": "1000",
+    "image[3].url": "https://minasewatches.com/wp-content/uploads/2023/07/Minase_uruga-42mm-02-square.jpg",
+    "image[3].height": "1000",
+    "image[3].width": "1000",
+    "offers.@type": "Offer",
+    "offers.price": "3520.00",
+    "offers.priceCurrency": "CHF",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.url": "https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/",
+    "offers.seller.logo": "",
+    "offers.priceSpecification": {
+      "price": "3520",
+      "priceCurrency": "CHF",
+      "valueAddedTaxIncluded": "true"
+    },
+    "@id": "https://minasewatches.com/webshop/uruga-42mm-leather-green-dial/#richSnippet"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/windows/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/windows/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/windows/#webpage::0",
+      "text_preview": "Discover Windows Watches | Made in Japan | Minase watches. WebPage. https://minasewatches.com/windows/#webpage. https://minasewatches.com/windows/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "595b92cf5d7bb10bd2db37097349ff18266cf90f57ef6e0eac29a826301ec772",
+  "dynamic_hash": "c77f3f294d36d6510ef3fb1868d14afcb7e30c9c717089ca97862899a644f9c7",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/windows/#webpage",
+    "url": "https://minasewatches.com/windows/",
+    "name": "Discover Windows Watches | Made in Japan | Minase watches",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-01-22T13:44:17+01:00",
+    "dateModified": "2025-09-22T08:24:01+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/SvenErikHenriksen-H-DevelopmentManagingPartner.jpeg",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/hello/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/02/SvenErikHenriksen-H-DevelopmentManagingPartner.jpeg::0",
+      "text_preview": "ImageObject. Sven Erik Henriksen - H-Development Managing Partner",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "a33023679575bfb06b845a5a1d04bda0e0ed912576ed5ea765473c8bdd5fa145",
+  "dynamic_hash": "2acaca801c051736b36f31f227488fbdd5cd447b61bf2f7a8517d5b4aaf8aa24",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Sven Erik Henriksen - H-Development Managing Partner"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/02/SvenErikHenriksen-H-DevelopmentManagingPartner.jpeg",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/02/SvenErikHenriksen-H-DevelopmentManagingPartner.jpeg",
+    "width": "1200",
+    "height": "801",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

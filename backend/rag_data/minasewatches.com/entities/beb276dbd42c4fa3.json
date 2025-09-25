@@ -1,0 +1,40 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/category/press-release/#webpage",
+  "entity_type": "CollectionPage",
+  "source_url": "https://minasewatches.com/category/press-release/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/category/press-release/#webpage::0",
+      "text_preview": "Press Release | Minase watches | Handmade in Japan. CollectionPage. https://minasewatches.com/category/press-release/#webpage. https://minasewatches.com/category/press-release/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "a163dc4db9972b363d02cf4297c7c70483357f3c483d4f443c272c1d7fd9e151",
+  "dynamic_hash": "bc4eb24d29fa9373d2f9c04766a25b27dc6a9229fc2230c097197739c404c3e1",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "CollectionPage",
+    "@id": "https://minasewatches.com/category/press-release/#webpage",
+    "url": "https://minasewatches.com/category/press-release/",
+    "name": "Press Release | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

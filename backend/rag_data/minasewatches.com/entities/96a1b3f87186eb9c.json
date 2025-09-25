@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-grey-steel.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/horizon-steel-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-grey-steel.png::0",
+      "text_preview": "ImageObject. minase watch horizon steel made in Japan",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "fdd13c68bedceac189513d9be83a25e5a93cd12ac6ca647cb2f24e8d779600e5",
+  "dynamic_hash": "f458b666e7a7e9402d634b9ecc18c8f2ef0f60a8098d844c46c2c5fd08020194",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "minase watch horizon steel made in Japan"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-grey-steel.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-horizon-grey-steel.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

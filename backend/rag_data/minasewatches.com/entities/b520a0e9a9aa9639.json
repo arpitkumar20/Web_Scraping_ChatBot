@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::VM14-RBKGIB-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/divido-rubber-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::VM14-RBKGIB-SSD::0",
+      "text_preview": "Divido Rubber - Ice Blue. Divido's unique design is inspired by the Japanese 3-dimentional puzzle. The dial seems to be floating inside the case, suspended below the box-type sapphire crystal. Handmade in Japan and finished with the rare sallaz polishing technique.. Product. Divido's unique design i",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "824ef5d8abf95b21588c1a7d9359efb51d8f7946fd5324d6ba2581f9d15ac556",
+  "dynamic_hash": "0ac77eef173e48d1081c74d69b277ffe5d54c919f0bab6aee7d5cc51eb3c7396",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Divido Rubber - Ice Blue",
+    "description": "Divido's unique design is inspired by the Japanese 3-dimentional puzzle. The dial seems to be floating inside the case, suspended below the box-type sapphire crystal. Handmade in Japan and finished with the rare sallaz polishing technique.",
+    "offers.description": "Divido's unique design is inspired by the Japanese 3-dimentional puzzle. The dial seems to be floating inside the case, suspended below the box-type sapphire crystal. Handmade in Japan and finished with the rare sallaz polishing technique.",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/divido-rubber-collection/?attribute_pa_divido-dials=ice-blue"
+  },
+  "dynamic_fields": {
+    "sku": "VM14-RBKGIB-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2022/11/minase-watches-ice-blue-rubber-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4400",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

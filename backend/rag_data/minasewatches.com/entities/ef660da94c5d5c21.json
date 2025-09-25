@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/rare-wristwatch/#schema-24443",
+  "entity_type": "VideoObject",
+  "source_url": "https://minasewatches.com/japanese-masterpieces/rare-wristwatch/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/rare-wristwatch/#schema-24443::0",
+      "text_preview": "Rare Wrist Watches | Handmade in Japan | Minase Watches. Discover Minase rare and special dials as silver filigree, needle art or many other typical Japanese crafts.. VideoObject. https://minasewatches.com/japanese-masterpieces/rare-wristwatch/#webpage. https://minasewatches.com/#organization. https",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "1f90a478028a39553b66c79177c1bc3df93d90cdbe62898e708d350d032852e3",
+  "dynamic_hash": "2e43d92fc815c19eb238fedcc8e21fcf44faec1d97f6aba848ef13c6acbe0892",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "uploadDate",
+    "contentUrl",
+    "width",
+    "height",
+    "isFamilyFriendly",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "VideoObject",
+    "name": "Rare Wrist Watches | Handmade in Japan | Minase Watches",
+    "description": "Discover Minase rare and special dials as silver filigree, needle art or many other typical Japanese crafts.",
+    "isPartOf.@id": "https://minasewatches.com/japanese-masterpieces/rare-wristwatch/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/japanese-masterpieces/rare-wristwatch/#webpage"
+  },
+  "dynamic_fields": {
+    "uploadDate": "2023-04-19T14:34:41+02:00",
+    "contentUrl": "https://minasewatches.com/wp-content/uploads/2022/11/video-collection.mp4",
+    "width": "1920",
+    "height": "1080",
+    "isFamilyFriendly": "True",
+    "@id": "https://minasewatches.com/japanese-masterpieces/rare-wristwatch/#schema-24443",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

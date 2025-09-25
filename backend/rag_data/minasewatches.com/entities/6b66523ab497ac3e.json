@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/watch-personalization/#webpage",
+  "entity_type": "ItemPage",
+  "source_url": "https://minasewatches.com/webshop/watch-personalization/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/watch-personalization/#webpage::0",
+      "text_preview": "Watch Personalization | Minase Watches | Handmade in Japan. ItemPage. https://minasewatches.com/webshop/watch-personalization/#webpage. https://minasewatches.com/webshop/watch-personalization/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "3d5f36a36da1a43a3da3496bf5b32571870ad5698ec106129037a17d6a2e31fc",
+  "dynamic_hash": "60637bc4cde642e942dbba2bba63c899553ea2f1142ab21c408ab6038d8eea87",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ItemPage",
+    "@id": "https://minasewatches.com/webshop/watch-personalization/#webpage",
+    "url": "https://minasewatches.com/webshop/watch-personalization/",
+    "name": "Watch Personalization | Minase Watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-12-25T16:14:17+01:00",
+    "dateModified": "2024-10-04T10:14:14+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2022/12/minase-fratello-watch-engraved-personalized-1.jpg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

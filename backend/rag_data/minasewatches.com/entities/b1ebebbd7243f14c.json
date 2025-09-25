@@ -1,0 +1,52 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/windows-midsize-strap/::e998f93d516377c96c941647aec10124efca1ccc35b6103af053ac129e3cc35b",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/windows-midsize-strap/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/windows-midsize-strap/::e998f93d516377c96c941647aec10124efca1ccc35b6103af053ac129e3cc35b::0",
+      "text_preview": "Windows Midsize - Strap. Leather strap with deployment buckle. Product. Leather strap with deployment buckle. NewCondition. https://minasewatches.com/webshop/windows-midsize-strap/?attribute_pa_leather- color=black&attribute_pa_length=large&attribute_pa_buckle=with-buckle",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "c7206baa1309e60ea4d8d9c355c8e5539c17237beb4c5fcd64f30f911a93a9d5",
+  "dynamic_hash": "5894182f6184fbd81c22e4772ccc1e059684e3e7625977f50d56b801af631dc6",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition",
+    "offers.url"
+  ],
+  "dynamic_paths": [
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Windows Midsize - Strap",
+    "description": "Leather strap with deployment buckle",
+    "offers.description": "Leather strap with deployment buckle",
+    "offers.itemCondition": "NewCondition",
+    "offers.url": "https://minasewatches.com/webshop/windows-midsize-strap/?attribute_pa_leather-color=black&amp;attribute_pa_length=large&amp;attribute_pa_buckle=with-buckle"
+  },
+  "dynamic_fields": {
+    "image": "https://minasewatches.com/wp-content/uploads/2023/02/Minase-windows-black-leather-strap-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "690",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/divido-urushi-makie-steel-2/#webpage",
+  "entity_type": "ItemPage",
+  "source_url": "https://minasewatches.com/webshop/divido-urushi-makie-steel-2/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/divido-urushi-makie-steel-2/#webpage::0",
+      "text_preview": "Buy Divido Urushi Makie Steel | Minase Watches | Japan Made. ItemPage. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "46df6d45767c297808d39417e3f3943c029d1ef6b8fa7109a912776e3d1f21fc",
+  "dynamic_hash": "2891d61863d90086ba26e8913da957f1156ceb3f3e2db1b292322d13b7f05afd",
+  "static_paths": [
+    "@type",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ItemPage",
+    "name": "Buy Divido Urushi Makie Steel | Minase Watches | Japan Made",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/webshop/divido-urushi-makie-steel-2/#webpage",
+    "url": "https://minasewatches.com/webshop/divido-urushi-makie-steel-2/",
+    "datePublished": "2023-02-19T20:04:48+01:00",
+    "dateModified": "2025-09-01T18:42:48+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/02/divido-urushi-makie-01.jpg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

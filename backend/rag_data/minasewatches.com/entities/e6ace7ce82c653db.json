@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2024/09/minase-windows-hakose-mexico-leather.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/mexico-limited-edition/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2024/09/minase-windows-hakose-mexico-leather.png::0",
+      "text_preview": "ImageObject. Minase Windows Mexico limited edition leather",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "af88f20ec3af0d0605f74fdb43424c4c27b4b1117f86f46ee2e2b9c1e9e63de7",
+  "dynamic_hash": "90dc397b1d637b7cea557212e22d0a96cfa098d1848345eb6f37150af9461cdb",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase Windows Mexico limited edition leather"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2024/09/minase-windows-hakose-mexico-leather.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2024/09/minase-windows-hakose-mexico-leather.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

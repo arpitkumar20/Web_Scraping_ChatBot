@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/makie/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/makie/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/makie/#webpage::0",
+      "text_preview": "Blue Urushi Silver Maki-e Dial for DIVIDO | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/makie/#webpage. https://minasewatches.com/makie/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "cb9cc26e883b89e7c7aa305cd824474c88fb142d020639fa3e65045ce0a00447",
+  "dynamic_hash": "246271fdc21302b0cf201af1e1f509c8d8ef2c79b574084517513d1b81c2e9b7",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/makie/#webpage",
+    "url": "https://minasewatches.com/makie/",
+    "name": "Blue Urushi Silver Maki-e Dial for DIVIDO | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2020-12-10T16:00:54+01:00",
+    "dateModified": "2023-03-20T08:56:15+01:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/02/Divido_cadran_bleue_lowdef.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

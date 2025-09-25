@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/#webpage::0",
+      "text_preview": "Toolmaker to Watchmaker | Minase Watchs | Handmade in Japan. WebPage. https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/#webpage. https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/. https://minasewatches.co",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "764a9dac8d0ca42c96ad0fb08f7ae2156474187393d529ef370d03ed9154a163",
+  "dynamic_hash": "1b9c4f497612831dc119ae70414b433cce48c3264fac5627c1067ab08b9e8809",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/#webpage",
+    "url": "https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/",
+    "name": "Toolmaker to Watchmaker | Minase Watchs | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2022-01-01T16:00:46+01:00",
+    "dateModified": "2023-03-03T10:06:56+01:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2022/01/minase_press_drill_handmade_watches.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

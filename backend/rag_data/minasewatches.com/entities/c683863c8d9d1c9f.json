@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/more/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/more/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/more/#webpage::0",
+      "text_preview": "MORE (Minase Original Rebuilding Equation) Concept | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/more/#webpage. https://minasewatches.com/more/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "24439ac96f7a4cd12e4c962c87b0a415478a5b3523aaa3b5b1c2523b242fbeb6",
+  "dynamic_hash": "5671ce9eaf154e381f2368e76366f8449df357188b747a2a847a3c8fe1591ffc",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/more/#webpage",
+    "url": "https://minasewatches.com/more/",
+    "name": "MORE (Minase Original Rebuilding Equation) Concept | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2021-05-26T16:00:53+02:00",
+    "dateModified": "2023-03-03T10:08:27+01:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/02/MORE.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

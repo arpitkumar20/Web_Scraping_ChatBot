@@ -1,0 +1,48 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/#webpage::0",
+      "text_preview": "Minase Official website – Luxury Japanese Watches. WebPage. https://minasewatches.com/#webpage. https://minasewatches.com/. https://minasewatches.com/#organization. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "73842695987cd7a9561f308742287123b9d75b005465291b37e02363ba74e84a",
+  "dynamic_hash": "8c8ccf3cab560ee721af3c8c200e77106de9f4ca561f25edb076cc482cc17b77",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "about.@id",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/#webpage",
+    "url": "https://minasewatches.com/",
+    "name": "Minase Official website – Luxury Japanese Watches",
+    "about.@id": "https://minasewatches.com/#organization",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-02-12T18:13:44+01:00",
+    "dateModified": "2025-09-01T10:43:48+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2023/07/f647d77a3c791686922287-divido-urushi-makie-blue-dial.webp",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

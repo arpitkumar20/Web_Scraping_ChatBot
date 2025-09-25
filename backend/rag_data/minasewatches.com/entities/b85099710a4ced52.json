@@ -1,0 +1,56 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/#schema-23698",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/japanese-masterpieces/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/#schema-23698::0",
+      "text_preview": "Masterpiece Watches | Métiers d'art | Minase Watches. Discover Minase Japanese Masterpiece watches. Minase offers métier d'art watches, the timepieces are personalized upon the customers' wishes. Masterpiece Watches | Métiers d'art | Minase Watches. https://minasewatches.com/author/kellyhenriksen/. ",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "701ac4809d6b258c7cc441606712791aad34f0770b1fb27228794769da18fac4",
+  "dynamic_hash": "360ebdff7089db3959601a3b17d855f8271d13d33c15b1cbe8dca3cf79afb151",
+  "static_paths": [
+    "headline",
+    "description",
+    "author.@id",
+    "author.name",
+    "@type",
+    "name",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "image.@id",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "headline": "Masterpiece Watches | Métiers d&#039;art | Minase Watches",
+    "description": "Discover Minase Japanese Masterpiece watches. Minase offers métier d&#039;art watches, the timepieces are personalized upon the customers&#039; wishes",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "@type": "Article",
+    "name": "Masterpiece Watches | Métiers d&#039;art | Minase Watches",
+    "isPartOf.@id": "https://minasewatches.com/japanese-masterpieces/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/japanese-masterpieces/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-01-29T17:12:32+01:00",
+    "dateModified": "2025-07-09T14:29:41+02:00",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2023/03/MinaseMasterpiece-Uniqueurushimakiewatch-3.jpeg",
+    "@id": "https://minasewatches.com/japanese-masterpieces/#schema-23698",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

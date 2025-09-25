@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/privacy/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/privacy/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/privacy/#webpage::0",
+      "text_preview": "Privacy | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/privacy/#webpage. https://minasewatches.com/privacy/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "da13173eaeaff2e4ba59ac7861e5623c4dc9d7f61ebb9d5bf016aca0e2ccd6a0",
+  "dynamic_hash": "5572864acc5a28f5d72464924016bff23751f4c07b2321845e891cf35777390a",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/privacy/#webpage",
+    "url": "https://minasewatches.com/privacy/",
+    "name": "Privacy | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-03-03T16:40:52+01:00",
+    "dateModified": "2023-03-20T08:46:36+01:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

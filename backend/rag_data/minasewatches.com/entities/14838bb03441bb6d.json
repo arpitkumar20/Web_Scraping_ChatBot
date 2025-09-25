@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/01/minase_press_drill_handmade_watches.jpeg",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/minase-history-from-toolmaker-to-one-of-the-best-japanese-watch-brands/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2022/01/minase_press_drill_handmade_watches.jpeg::0",
+      "text_preview": "ImageObject. Minase press drill over a 7 windows case with sallaz polish",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "d43fae4df12f39e9c1fcd558c399936fd9dc356cd8fc06f7e879d7c3ca91955f",
+  "dynamic_hash": "c3843601ffff9c5b2adc6ae2e85dfc93ac5f26a5df173a6359c04a7e484abb0f",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase press drill over a 7 windows case with sallaz polish"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2022/01/minase_press_drill_handmade_watches.jpeg",
+    "url": "https://minasewatches.com/wp-content/uploads/2022/01/minase_press_drill_handmade_watches.jpeg",
+    "width": "1000",
+    "height": "1000",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

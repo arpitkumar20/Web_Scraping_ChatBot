@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::UG03-CBKNIB-SSD",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/uruga-42mm-leather/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::UG03-CBKNIB-SSD::0",
+      "text_preview": "Uruga 42mm Leather - Ice Blue. Uruga 42mm Leather's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronou",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "4ca3f473676e5c81c543384b9ab595dd2af17dd3e583862567683f02467ec67e",
+  "dynamic_hash": "2815283490b6deec70896812f0a4aa5cd7cceff66f0a1e560aec8b4bede1c37c",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Uruga 42mm Leather - Ice Blue",
+    "description": "Uruga 42mm Leather's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces.",
+    "offers.description": "Uruga 42mm Leather's design is inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance. Its case only is made of 27 pieces.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "UG03-CBKNIB-SSD",
+    "image": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-leather-ice-blue-dial-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "4400",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/uruga-42mm-leather/?attribute_pa_uruga-dials=ice-blue"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

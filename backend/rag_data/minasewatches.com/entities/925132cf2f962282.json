@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/11/VM07-CBKMA0-KYJ-hoshimi-sakura-k18yg.png",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/webshop/windows-midsize-hakose-gold/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/11/VM07-CBKMA0-KYJ-hoshimi-sakura-k18yg.png::0",
+      "text_preview": "ImageObject. 5 windows gold midsize",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.356856"
+      }
+    }
+  ],
+  "static_hash": "80a08432ca21205bc5afbb6572f9de7f713a10f3e62fec90147ffa5bbb0d17e1",
+  "dynamic_hash": "cd8dfbbe80c523c68cfd9c471f2d50589094ec42d9eb8058c47f228b70b8a611",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "5 windows gold midsize"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/11/VM07-CBKMA0-KYJ-hoshimi-sakura-k18yg.png",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/11/VM07-CBKMA0-KYJ-hoshimi-sakura-k18yg.png",
+    "width": "1200",
+    "height": "1200",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.356856"
+}

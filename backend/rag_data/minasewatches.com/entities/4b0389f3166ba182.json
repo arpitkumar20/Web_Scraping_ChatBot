@@ -1,0 +1,42 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/03/MinaseMasterpiece-Uniqueurushimakiewatch-3.jpeg",
+  "entity_type": "ImageObject",
+  "source_url": "https://minasewatches.com/japanese-masterpieces/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/wp-content/uploads/2023/03/MinaseMasterpiece-Uniqueurushimakiewatch-3.jpeg::0",
+      "text_preview": "ImageObject. Minase Masterpiece - Unique urushi makie watch",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "419d0993e309c7f2e8439604151878b7149d0cc00f57c5a4763154c76f0c9904",
+  "dynamic_hash": "9b2c478b32a827a16dd9b721964f2383532af7e8589f4863665bc8861a3bc83e",
+  "static_paths": [
+    "@type",
+    "caption"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "width",
+    "height",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "ImageObject",
+    "caption": "Minase Masterpiece - Unique urushi makie watch"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/wp-content/uploads/2023/03/MinaseMasterpiece-Uniqueurushimakiewatch-3.jpeg",
+    "url": "https://minasewatches.com/wp-content/uploads/2023/03/MinaseMasterpiece-Uniqueurushimakiewatch-3.jpeg",
+    "width": "1000",
+    "height": "667",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

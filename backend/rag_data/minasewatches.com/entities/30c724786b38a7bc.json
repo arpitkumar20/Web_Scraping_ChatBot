@@ -1,0 +1,46 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/webshop/mexico-limited-edition/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/webshop/mexico-limited-edition/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/webshop/mexico-limited-edition/#webpage::0",
+      "text_preview": "Buy Mexico Limited Edition | Minase Watches | Made in Japan. WebPage. https://minasewatches.com/webshop/mexico-limited-edition/#webpage. https://minasewatches.com/webshop/mexico-limited-edition/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.401075"
+      }
+    }
+  ],
+  "static_hash": "4811fa2d79a3cef8820b92e518b1716c82ba6db2b6faed7e30aa840c56ffac92",
+  "dynamic_hash": "c3f6181e8c724621a55f1fdaf9e78881c0d477bbb614e935afc4242ffa43cc8a",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "primaryImageOfPage.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/webshop/mexico-limited-edition/#webpage",
+    "url": "https://minasewatches.com/webshop/mexico-limited-edition/",
+    "name": "Buy Mexico Limited Edition | Minase Watches | Made in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2024-09-04T10:53:28+02:00",
+    "dateModified": "2024-10-14T16:10:40+02:00",
+    "primaryImageOfPage.@id": "https://minasewatches.com/wp-content/uploads/2024/09/minase-windows-hakose-mexico-leather.png",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.401075"
+}

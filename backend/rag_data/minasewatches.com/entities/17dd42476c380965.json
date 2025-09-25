@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/horizon-midsize-2/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/horizon-midsize-2/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/horizon-midsize-2/#webpage::0",
+      "text_preview": "Horizon midsize | Minase watches | Handmade in Japan. WebPage. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "ab2311edeb916d428bf713837ee670e0c98d60f35e997c2972e4e09aa7089551",
+  "dynamic_hash": "bf5e8423738922bcce9f836bc2037ddebfae020d45ff1049823de5726b5697e4",
+  "static_paths": [
+    "@type",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "@id",
+    "url",
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "name": "Horizon midsize | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "@id": "https://minasewatches.com/horizon-midsize-2/#webpage",
+    "url": "https://minasewatches.com/horizon-midsize-2/",
+    "datePublished": "2023-03-07T15:47:49+01:00",
+    "dateModified": "2023-03-20T08:50:16+01:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

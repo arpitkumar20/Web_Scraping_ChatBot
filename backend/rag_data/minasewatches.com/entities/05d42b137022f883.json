@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/enamel-champleve-dial/#schema-24462",
+  "entity_type": "Article",
+  "source_url": "https://minasewatches.com/japanese-masterpieces/enamel-champleve-dial/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/japanese-masterpieces/enamel-champleve-dial/#schema-24462::0",
+      "text_preview": "Enamel Watch | Handmade in Japan | Minase Watches. Discover Minase enamel champlevé watches. Handmade in Japan, each piece is unique and embodies Japanese traditional crafts and techniques.. Enamel Watch | Handmade in Japan | Minase Watches. https://minasewatches.com/author/kellyhenriksen/. kellyhen",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "094437941693c7891216b59a3fdc037c913de86ca114b5346a0dcbf9b2a10237",
+  "dynamic_hash": "0e4c328121de68397e85e2681909009c09289961fc93a848b4027e0cd66e266d",
+  "static_paths": [
+    "headline",
+    "description",
+    "author.@id",
+    "author.name",
+    "@type",
+    "name",
+    "isPartOf.@id",
+    "publisher.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "headline": "Enamel Watch | Handmade in Japan | Minase Watches",
+    "description": "Discover Minase enamel champlevé watches. Handmade in Japan, each piece is unique and embodies Japanese traditional crafts and techniques.",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "@type": "Article",
+    "name": "Enamel Watch | Handmade in Japan | Minase Watches",
+    "isPartOf.@id": "https://minasewatches.com/japanese-masterpieces/enamel-champleve-dial/#webpage",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "mainEntityOfPage.@id": "https://minasewatches.com/japanese-masterpieces/enamel-champleve-dial/#webpage"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-04-19T14:41:10+02:00",
+    "dateModified": "2025-07-09T14:51:18+02:00",
+    "@id": "https://minasewatches.com/japanese-masterpieces/enamel-champleve-dial/#schema-24462",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

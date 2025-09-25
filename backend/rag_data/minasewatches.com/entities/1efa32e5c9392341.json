@@ -1,0 +1,60 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/makie-dials/#richSnippet",
+  "entity_type": "BlogPosting",
+  "source_url": "https://minasewatches.com/makie-dials/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/makie-dials/#richSnippet::0",
+      "text_preview": "Urushi Silver Makie Dials for DIVIDO | Minase watches | Handmade in Japan. Minase’s latest creation in the Divido collection pays tribute to Japan’s finest traditional crafts. Following on from the success of the blue hand-lackered dial of the regular serie, Minase is lauching a more special and art",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "0e2ba776975203f3519d0b0b565786fcd93e57cb805c3d44ffc6829660ae9cec",
+  "dynamic_hash": "81e4b71da5774704d60b7b4b4b19b6c4e428df245f3b2f2a02d3bef236446c1a",
+  "static_paths": [
+    "@type",
+    "headline",
+    "articleSection",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "keywords",
+    "datePublished",
+    "dateModified",
+    "image.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "BlogPosting",
+    "headline": "Urushi Silver Makie Dials for DIVIDO | Minase watches | Handmade in Japan",
+    "articleSection": "Press Release",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "Minase’s latest creation in the Divido collection pays tribute to Japan’s finest traditional crafts. Following on from the success of the blue hand-lackered dial of the regular serie, Minase is lauching a more special and artisanal version, blue, green and red Urushi silver makie dials Handcrafted in the studio of Urushi master Megumi Shimamoto, in Kyoto, this new dial is a gift for the eye.",
+    "name": "Urushi Silver Makie Dials for DIVIDO | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/makie-dials/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/makie-dials/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/makie-dials/#webpage"
+  },
+  "dynamic_fields": {
+    "keywords": "makie",
+    "datePublished": "2020-12-08T16:00:01+01:00",
+    "dateModified": "2023-03-20T08:56:44+01:00",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2023/02/Divido_urushi_makie-scaled.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,60 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/divido-collection/#richSnippet",
+  "entity_type": "BlogPosting",
+  "source_url": "https://minasewatches.com/divido-collection/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/divido-collection/#richSnippet::0",
+      "text_preview": "Minase Divido Collection | Minase watches | Handmade in Japan. DIVIDO has a very peculiar yet beguiling appearance. For starters, its dial seemingly floats inside the case. This is no optical illusion, there is physical. BlogPosting. Minase Divido Collection | Minase watches | Handmade in Japan. htt",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "c0b50041311669a0191988b4493c052fb51b83972de7241a5c1e0d2d050536e4",
+  "dynamic_hash": "af704fde04e70183347e18dac79024f45c48a9a63168fc0afcb2c7ac3f6e9499",
+  "static_paths": [
+    "@type",
+    "headline",
+    "author.@id",
+    "author.name",
+    "publisher.@id",
+    "description",
+    "name",
+    "@id",
+    "isPartOf.@id",
+    "mainEntityOfPage.@id"
+  ],
+  "dynamic_paths": [
+    "keywords",
+    "datePublished",
+    "dateModified",
+    "articleSection",
+    "image.@id",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "BlogPosting",
+    "headline": "Minase Divido Collection | Minase watches | Handmade in Japan",
+    "author.@id": "https://minasewatches.com/author/kellyhenriksen/",
+    "author.name": "kellyhenriksen",
+    "publisher.@id": "https://minasewatches.com/#organization",
+    "description": "DIVIDO has a very peculiar yet beguiling appearance. For starters, its dial seemingly floats inside the case. This is no optical illusion, there is physical",
+    "name": "Minase Divido Collection | Minase watches | Handmade in Japan",
+    "@id": "https://minasewatches.com/divido-collection/#richSnippet",
+    "isPartOf.@id": "https://minasewatches.com/divido-collection/#webpage",
+    "mainEntityOfPage.@id": "https://minasewatches.com/divido-collection/#webpage"
+  },
+  "dynamic_fields": {
+    "keywords": "divido",
+    "datePublished": "2020-05-29T16:00:03+02:00",
+    "dateModified": "2023-03-03T10:12:47+01:00",
+    "articleSection": "Minase",
+    "image.@id": "https://minasewatches.com/wp-content/uploads/2023/02/divido.jpeg",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

@@ -1,0 +1,44 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/collections/accessories/#webpage",
+  "entity_type": "WebPage",
+  "source_url": "https://minasewatches.com/collections/accessories/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/collections/accessories/#webpage::0",
+      "text_preview": "Buy Watch Accessories | Made in Japan | Minase Watches. WebPage. https://minasewatches.com/collections/accessories/#webpage. https://minasewatches.com/collections/accessories/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.333823"
+      }
+    }
+  ],
+  "static_hash": "730bc058f70912f00caaa3c5aeec84031209284a28887d495e9deaba0ffa7999",
+  "dynamic_hash": "6961b195bffaf4c8f25a0c9753cf4bb6a234a9aab97ae33d5cf635c69370de3b",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "datePublished",
+    "dateModified",
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "WebPage",
+    "@id": "https://minasewatches.com/collections/accessories/#webpage",
+    "url": "https://minasewatches.com/collections/accessories/",
+    "name": "Buy Watch Accessories | Made in Japan | Minase Watches",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "datePublished": "2023-04-14T09:32:12+02:00",
+    "dateModified": "2023-04-21T10:44:01+02:00",
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.333823"
+}

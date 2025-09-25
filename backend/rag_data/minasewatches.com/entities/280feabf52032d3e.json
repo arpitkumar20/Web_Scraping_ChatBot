@@ -1,0 +1,54 @@
+{
+  "entity_id": "minasewatches.com::UG03-M01NIB-SSB",
+  "entity_type": "Product",
+  "source_url": "https://minasewatches.com/webshop/uruga-42mm-steel/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::UG03-M01NIB-SSB::0",
+      "text_preview": "Uruga 42mm Steel - Ice Blue. Uruga 42mm Steel's design was inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounce",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.372367"
+      }
+    }
+  ],
+  "static_hash": "afe6c2874ffbb9dd3493c6f0630af073c25c171520fa348df52a40f6827070fc",
+  "dynamic_hash": "c69592ad868e585305e4daefd016a716598c363de5c9d238f4c20a934d8a18ab",
+  "static_paths": [
+    "@type",
+    "name",
+    "description",
+    "offers.description",
+    "offers.itemCondition"
+  ],
+  "dynamic_paths": [
+    "sku",
+    "image",
+    "offers.@type",
+    "offers.price",
+    "offers.priceCurrency",
+    "offers.availability",
+    "offers.priceValidUntil",
+    "offers.url"
+  ],
+  "static_fields": {
+    "@type": "Product",
+    "name": "Uruga 42mm Steel - Ice Blue",
+    "description": "Uruga 42mm Steel's design was inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance.",
+    "offers.description": "Uruga 42mm Steel's design was inspired by gems setting. The whole is more round, more classic than the other Minase timepieces and the collection's name clearly represents this novel approach. “Uruga” is an acronym of the Japanese words \"Uruwashii\" and \"Myabi\" (pronounced \"ga\") meaning respectively beauty and elegance.",
+    "offers.itemCondition": "NewCondition"
+  },
+  "dynamic_fields": {
+    "sku": "UG03-M01NIB-SSB",
+    "image": "https://minasewatches.com/wp-content/uploads/2025/07/Uruga-42mm-steel-ice-blue-dial-280x280.png",
+    "offers.@type": "Offer",
+    "offers.price": "5650",
+    "offers.priceCurrency": "CHF",
+    "offers.availability": "https://schema.org/InStock",
+    "offers.priceValidUntil": "2026-12-31",
+    "offers.url": "https://minasewatches.com/webshop/uruga-42mm-steel/?attribute_pa_uruga-dials=ice-blue"
+  },
+  "last_seen": "2025-09-25T18:01:10.372367"
+}

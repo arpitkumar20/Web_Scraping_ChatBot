@@ -1,0 +1,40 @@
+{
+  "entity_id": "minasewatches.com::https://minasewatches.com/category/watchmaking-world/#webpage",
+  "entity_type": "CollectionPage",
+  "source_url": "https://minasewatches.com/category/watchmaking-world/",
+  "chunks": [
+    {
+      "chunk_id": "minasewatches.com::https://minasewatches.com/category/watchmaking-world/#webpage::0",
+      "text_preview": "Watchmaking World | Minase watches | Handmade in Japan. CollectionPage. https://minasewatches.com/category/watchmaking-world/#webpage. https://minasewatches.com/category/watchmaking-world/. https://minasewatches.com/#website",
+      "chunk_index": 0,
+      "chunk_total": 1,
+      "provenance": {
+        "extracted_from": "jsonld",
+        "fetch_ts": "2025-09-25T18:01:10.413202"
+      }
+    }
+  ],
+  "static_hash": "55b0c4496a0caa022eae50dac526da3a4b56228dac737c4444ad6c45a72b0eee",
+  "dynamic_hash": "bc4eb24d29fa9373d2f9c04766a25b27dc6a9229fc2230c097197739c404c3e1",
+  "static_paths": [
+    "@type",
+    "@id",
+    "url",
+    "name",
+    "isPartOf.@id"
+  ],
+  "dynamic_paths": [
+    "inLanguage"
+  ],
+  "static_fields": {
+    "@type": "CollectionPage",
+    "@id": "https://minasewatches.com/category/watchmaking-world/#webpage",
+    "url": "https://minasewatches.com/category/watchmaking-world/",
+    "name": "Watchmaking World | Minase watches | Handmade in Japan",
+    "isPartOf.@id": "https://minasewatches.com/#website"
+  },
+  "dynamic_fields": {
+    "inLanguage": "en-US"
+  },
+  "last_seen": "2025-09-25T18:01:10.413202"
+}

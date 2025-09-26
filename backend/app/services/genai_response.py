@@ -1,42 +1,68 @@
-import os
-import json
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.prompts import ChatPromptTemplate
-import google.generativeai as genai
-from dotenv import load_dotenv
+# import os
+# import json
+# from langchain_google_genai import ChatGoogleGenerativeAI
+# from langchain.prompts import ChatPromptTemplate
+# import google.generativeai as genai
+# from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# # Load environment variables
+# load_dotenv()
 
-# === Configuration ===
-GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
-GEMINI_MODEL = os.getenv('GEMINI_MODEL')
-LLM_TEMPERATURE = float(os.getenv('LLM_TEMPERATURE', 0.7))
+# # === Configuration ===
+# GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+# GEMINI_MODEL = os.getenv('GEMINI_MODEL')
+# LLM_TEMPERATURE = float(os.getenv('LLM_TEMPERATURE', 0.7))
 
-# Configure GenAI
-genai.configure(api_key=GOOGLE_API_KEY)
+# # Configure GenAI
+# genai.configure(api_key=GOOGLE_API_KEY)
 
-# Initialize GenAI model
-llm = ChatGoogleGenerativeAI(
-    model=GEMINI_MODEL,
-    temperature=LLM_TEMPERATURE,
-    google_api_key=GOOGLE_API_KEY
-)
+# # Initialize GenAI model
+# llm = ChatGoogleGenerativeAI(
+#     model=GEMINI_MODEL,
+#     temperature=LLM_TEMPERATURE,
+#     google_api_key=GOOGLE_API_KEY
+# )
 
-'''
-CORRECT
+# '''
+# CORRECT
 
-'''
+# '''
+
+
+# # SYSTEM_PROMPT = """
+# # You are a helpful retrieval-augmented chatbot.
+
+# # 1. Use ONLY the provided "Retriever results" context. Do NOT use outside knowledge or invent facts.
+# # 2. Provide a single, concise answer that directly addresses the user’s question.
+# # 3. Do NOT include "Evidence:", "Need more info:", "Confidence:", or similar sections.
+# # 4. If the context lacks sufficient information, reply politely asking the user to rephrase or provide more details.
+# # 5. Keep your answers short, clear, and friendly (≤50 words).
+# # """
+
+# # qa_prompt = ChatPromptTemplate.from_messages([
+# #     ("system", SYSTEM_PROMPT),
+# #     ("human", """Retriever results (top K):
+# # {context}
+
+# # User question:
+# # {query}
+
+# # INSTRUCTIONS FOR YOU:
+# # - Answer concisely using ONLY the Retriever results above.
+# # - If the context is insufficient, reply with a polite request for clarification or more details.
+# # - Output only the final answer.
+# # """)
+# # ])
 
 
 # SYSTEM_PROMPT = """
-# You are a helpful retrieval-augmented chatbot.
+# You are a retrieval-augmented chatbot.
 
-# 1. Use ONLY the provided "Retriever results" context. Do NOT use outside knowledge or invent facts.
-# 2. Provide a single, concise answer that directly addresses the user’s question.
-# 3. Do NOT include "Evidence:", "Need more info:", "Confidence:", or similar sections.
-# 4. If the context lacks sufficient information, reply politely asking the user to rephrase or provide more details.
-# 5. Keep your answers short, clear, and friendly (≤50 words).
+# 1. Use ONLY the provided "Retriever results" and the conversation history. Do NOT use outside knowledge or invent facts.
+# 2. Always give a clear, concise, and direct answer to the user’s query.
+# 3. Prefer exact answers over generic explanations.
+# 4. If the context and history lack sufficient information, politely ask the user for clarification.
+# 5. Keep answers short, precise, and user-friendly (≤40 words).
 # """
 
 # qa_prompt = ChatPromptTemplate.from_messages([
@@ -48,42 +74,59 @@ CORRECT
 # {query}
 
 # INSTRUCTIONS FOR YOU:
-# - Answer concisely using ONLY the Retriever results above.
-# - If the context is insufficient, reply with a polite request for clarification or more details.
-# - Output only the final answer.
+# - Answer directly using ONLY the retriever results.
+# - If information is missing, ask the user to clarify instead of guessing.
+# - Output only the final, concise answer.
 # """)
 # ])
 
 
-SYSTEM_PROMPT = """
-You are a retrieval-augmented chatbot.
 
-1. Use ONLY the provided "Retriever results" and the conversation history. Do NOT use outside knowledge or invent facts.
-2. Always give a clear, concise, and direct answer to the user’s query.
-3. Prefer exact answers over generic explanations.
-4. If the context and history lack sufficient information, politely ask the user for clarification.
-5. Keep answers short, precise, and user-friendly (≤40 words).
-"""
+# # Core function to handle the query
+# def handle_user_query(retrieved_context: str, query: str) -> str:
+#     # Ensure inputs are valid strings
+#     retrieved_context = retrieved_context or "No relevant context available."
+#     query = query or "No query provided."
 
-qa_prompt = ChatPromptTemplate.from_messages([
-    ("system", SYSTEM_PROMPT),
-    ("human", """Retriever results (top K):
-{context}
+#     # Format the prompt
+#     formatted_prompt = qa_prompt.format(
+#         context=retrieved_context,
+#         query=query
+#     )
 
-User question:
-{query}
+#     # Generate response
+#     response = llm.predict(formatted_prompt).strip()
 
-INSTRUCTIONS FOR YOU:
-- Answer directly using ONLY the retriever results.
-- If information is missing, ask the user to clarify instead of guessing.
-- Output only the final, concise answer.
-""")
-])
+#     return response
 
 
+# # === Example Usage ===
+# # pinecone_context = "Previous queries show available appointment slots on Friday from 10 AM to 3 PM."
+# # user_query = "Can I book an appointment on Friday afternoon?"
 
-# Core function to handle the query
+# # response = handle_user_query(
+# #     retrieved_context=pinecone_context,
+# #     query=user_query
+# # )
+
+# # print("\n🌟 GenAI Response:\n", response)
+
+
+
+from app.prompts.qa_prompt import qa_prompt
+from app.core.config import llm
+
 def handle_user_query(retrieved_context: str, query: str) -> str:
+    """
+    Generate a concise response using only the provided retriever context.
+
+    Args:
+        retrieved_context (str): The context retrieved from a vector DB or knowledge source.
+        query (str): The user’s question.
+
+    Returns:
+        str: LLM-generated response.
+    """
     # Ensure inputs are valid strings
     retrieved_context = retrieved_context or "No relevant context available."
     query = query or "No query provided."
@@ -96,18 +139,4 @@ def handle_user_query(retrieved_context: str, query: str) -> str:
 
     # Generate response
     response = llm.predict(formatted_prompt).strip()
-
     return response
-
-
-# === Example Usage ===
-# pinecone_context = "Previous queries show available appointment slots on Friday from 10 AM to 3 PM."
-# user_query = "Can I book an appointment on Friday afternoon?"
-
-# response = handle_user_query(
-#     retrieved_context=pinecone_context,
-#     query=user_query
-# )
-
-# print("\n🌟 GenAI Response:\n", response)
-

@@ -2,18 +2,19 @@ import logging
 from flask import Blueprint, request, jsonify
 from app.models.mysql_db import MySQL
 from app.models.postgresql_db import PostgreSQL
+from app.models.zoho_connectors import Zoho
 # from app.services.store_vectordb_embeddings import process_and_store_data
 
 
-database_bp = Blueprint("database", __name__)
+connector_bp = Blueprint("connector", __name__)
 
 # Initialize MySQL connection
-@database_bp.route("/connection-test", methods=["POST"])
+@connector_bp.route("/connection-test", methods=["POST"])
 def init_connection():
     global mysql_instance
     try:
         data = request.json
-        if data.get('database_type') == 'mysql':
+        if data.get('connector_type') == 'mysql':
             mysql_instance = MySQL(
                 database_host=data.get('database_host'),
                 database_port=data.get('database_port'),
@@ -22,7 +23,7 @@ def init_connection():
                 database_name=data.get('database_name')
             )
             return mysql_instance.connection_test()
-        elif data.get('database_type') == 'postgresql':
+        elif data.get('connector_type') == 'postgresql':
             postgres_instance = PostgreSQL(
                 database_host=data.get('database_host'),
                 database_port=data.get('database_port'),
@@ -31,14 +32,21 @@ def init_connection():
                 database_name=data.get('database_name')
             )
             return postgres_instance.connection_test()
+        elif data.get('connector_type') == 'zoho':
+            zoho_instance = Zoho(
+                client_id=data.get('client_id'),
+                client_secret=data.get('client_secret'),
+                refresh_token=data.get('refresh_token')
+            )
+            return zoho_instance.connection_test()
         else:
             return jsonify({"message": "Connector type doesn't exists."}), 200
     except Exception as e:
-        logging.error(f"Error initializing Database connection: {e}")
+        logging.error(f"Error initializing connector connection: {e}")
         return jsonify({"error": str(e)}), 500
 
 
-@database_bp.route("/database-info", methods=["POST"])
+@connector_bp.route("/database-info", methods=["POST"])
 def database_info():
     try:
         data = request.json
@@ -88,7 +96,7 @@ def database_info():
         logging.error(f"Database operation error: {e}")
         return jsonify({"error": str(e)}), 500
 
-@database_bp.route("/scan-rows", methods=["POST"])
+@connector_bp.route("/scan-rows", methods=["POST"])
 def scan_rows():
     try:
         data = request.json
@@ -139,7 +147,36 @@ def scan_rows():
         return jsonify({"error": str(e)}), 500
 
 
-# @database_bp.route("/store-embeddings", methods=["POST"])
+@connector_bp.route("/reports-list", methods=["POST"])
+def reports_list():
+    data = request.json or {}
+    owner_name = data.get('owner_name')
+    app_link_name = data.get('app_link_name')
+
+    if not owner_name or not app_link_name:
+        return {'message': 'owner_name and app_link_name are required.'}, 400
+
+    zoho_instance = Zoho()
+    result, status = zoho_instance.fetch_reports_list(owner_name, app_link_name)
+    return jsonify(result), status
+
+@connector_bp.route("/report-details", methods=["POST"])
+def report_details():
+    data = request.json or {}
+    owner_name = data.get('owner_name')
+    app_link_name = data.get('app_link_name')
+    report_link_name = data.get('report_link_name')
+
+    if not owner_name or not app_link_name or not report_link_name:
+        return {'message': 'owner_name, app_link_name, and report_link_name are required.'}, 400
+
+    zoho_instance = Zoho()
+    result, status = zoho_instance.fetch_report_deatils(owner_name, app_link_name, report_link_name)
+    return jsonify(result), status
+
+
+
+# @connector_bp.route("/store-embeddings", methods=["POST"])
 # def store_embeddings():
 #     try:
 #         data = request.json

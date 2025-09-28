@@ -91,7 +91,7 @@ def receive_message():
 
             app_result = send_whatsapp_message_v2(
                 phone_number=sender_number,
-                message="testing api for wati server"
+                message=genai_response
             )
             logger.info("WhatsApp message send result: %s", app_result)
         else:

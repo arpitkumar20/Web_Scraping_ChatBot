@@ -1,29 +1,57 @@
-# from pydantic import BaseModel
-# import os
+import os
+from venv import logger
+from pinecone import Pinecone
+from dotenv import load_dotenv
+import google.generativeai as genai
+from langchain_google_genai import ChatGoogleGenerativeAI
 
-# class Settings(BaseModel):
-#     SECRET_KEY: str = os.getenv("SECRET_KEY", "dev")
-#     HOST: str = os.getenv("HOST", "0.0.0.0")
-#     PORT: int = int(os.getenv("PORT", "8080"))
+# Load environment variables
+load_dotenv()
 
-#     TWILIO_AUTH_TOKEN: str | None = os.getenv("TWILIO_AUTH_TOKEN")
-#     TWILIO_ACCOUNT_SID: str | None = os.getenv("TWILIO_ACCOUNT_SID")
-#     WHATSAPP_FROM: str = os.getenv("WHATSAPP_FROM", "whatsapp:+14155238886")
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+GEMINI_MODEL = os.getenv('GEMINI_MODEL')
+LLM_TEMPERATURE = float(os.getenv('LLM_TEMPERATURE', 0.7))
 
-#     VECTOR_BACKEND: str = os.getenv("VECTOR_BACKEND", "faiss")
-#     VECTOR_INDEX_PATH: str = os.getenv("VECTOR_INDEX_PATH", "/data/faiss/nisaa.index")
+# ---- Load Environment Variables ----
+PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
+PINECONE_ENV = os.getenv('PINECONE_ENV')
+PINECONE_INDEX = os.getenv('PINECONE_INDEX')
+# NAMESPACE = os.getenv('NAMESPACE')
+EMBEDDING_MODEL = os.getenv('EMBEDDING_MODEL')
 
-#     EMBEDDINGS_PROVIDER: str = os.getenv("EMBEDDINGS_PROVIDER", "sentence")
-#     SENTENCE_MODEL: str = os.getenv("SENTENCE_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
-#     OPENAI_API_KEY: str | None = os.getenv("OPENAI_API_KEY")
+if not GOOGLE_API_KEY:
+    raise EnvironmentError("GOOGLE_API_KEY not set in environment variables.")
 
-#     CRAWL_OUTPUT_DIR: str = os.getenv("CRAWL_OUTPUT_DIR", "/data/crawls")
+# Configure Google GenAI
+genai.configure(api_key=GOOGLE_API_KEY)
 
-#     POSTGRES_DSN: str = os.getenv("POSTGRES_DSN", "postgresql://user:pass@db:5432/nisaa")
+# # Initialize LLM
+# llm = ChatGoogleGenerativeAI(
+#     model=GEMINI_MODEL,
+#     temperature=LLM_TEMPERATURE,
+#     google_api_key=GOOGLE_API_KEY
+# )
 
-#     TOP_K: int = int(os.getenv("TOP_K", "6"))
-#     MAX_CHUNK_TOKENS: int = int(os.getenv("MAX_CHUNK_TOKENS", "500"))
+try:
+    llm = ChatGoogleGenerativeAI(
+        model=GEMINI_MODEL,
+        temperature=LLM_TEMPERATURE,
+        google_api_key=GOOGLE_API_KEY
+    )
+except Exception as e:
+    logger.error(f"Failed to initialize LLM with model {GEMINI_MODEL}: {e}")
 
-#     DEFAULT_TOUR_URL: str = os.getenv("DEFAULT_TOUR_URL", "https://example.com/tour")
+# ---- Configure Pinecone Client ----
+if not all([PINECONE_API_KEY, PINECONE_ENV, PINECONE_INDEX]):
+    raise EnvironmentError("Pinecone configuration variables missing.")
 
-# settings = Settings()
+pinecone_client = Pinecone(api_key=PINECONE_API_KEY, environment=PINECONE_ENV)
+pinecone_index = pinecone_client.Index(PINECONE_INDEX)
+
+try:
+    select_namespace_llm = ChatGoogleGenerativeAI(
+        model=os.getenv("GEMINI_MODEL"),  # ✅ valid public model
+        temperature=0,
+    )
+except Exception as e:
+    logger.error(f"Failed to select namespace using LLM with model {GEMINI_MODEL}: {e}")

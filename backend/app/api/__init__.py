@@ -3,6 +3,7 @@ from .routes_admin import admin_bp
 from .routes_wati import wati_bp
 from .routes_scraper import scraper_bp
 from .routes_connector import connector_bp
+from .database_scrap import scraper_db
 
 def init_routes(app):
     app.register_blueprint(chat_bp, url_prefix="/chat")
@@ -10,3 +11,4 @@ def init_routes(app):
     app.register_blueprint(wati_bp, url_prefix="/wati")
     app.register_blueprint(scraper_bp, url_prefix="/scrap")
     app.register_blueprint(connector_bp, url_prefix="/connector")
+    app.register_blueprint(scraper_db, url_prefix="/db")

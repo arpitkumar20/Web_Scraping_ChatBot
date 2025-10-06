@@ -345,9 +345,10 @@
 # ====================================================================================================================
 
 
-import logging
+
 import uuid
 from pathlib import Path
+from app.core.logging import get_logger
 from flask import Blueprint, jsonify, request
 from threading import Thread, Lock
 from app.helper.utils import COMMON
@@ -356,6 +357,7 @@ from app.services.embeddings_store_v2 import store_embeddings_from_folder
 from app.models.postgresql_db import PostgreSQL
 
 scraper_bp = Blueprint("scrap", __name__)
+logger = get_logger(__name__)
 lock = Lock()
 
 # Job tracker {job_id: {...}}
@@ -397,7 +399,7 @@ def background_scraping(url, job_id):
         PostgreSQL().update_web_scraping_status(job_data)
 
     except Exception as e:
-        logging.exception("Scraping failed for job %s", job_id)
+        logger.exception("Scraping failed for job %s", job_id)
         with lock:
             job_status[job_id]["scraping_status"] = "failed"
             job_status[job_id]["step"] = "failed"
@@ -444,7 +446,7 @@ def background_embedding(job_id):
                     "message": "Embedding stored successfully"
                 })
             except Exception as e:
-                logging.exception("Error embedding %s", res.get("url"))
+                logger.exception("Error embedding %s", res.get("url"))
                 updated_results.append({
                     "url": res.get("url"),
                     "error": str(e)
@@ -470,7 +472,7 @@ def background_embedding(job_id):
         PostgreSQL().update_web_scraping_status(job_data)
 
     except Exception as e:
-        logging.exception("Embedding failed for job %s", job_id)
+        logger.exception("Embedding failed for job %s", job_id)
         with lock:
             job_status[job_id]["embedding_status"] = "failed"
             job_status[job_id]["step"] = "failed"
@@ -596,7 +598,7 @@ def start_database_embedding():
             offset=offset,
             limit=limit
         )
-        logging.info(f"Fetched {len(fetch_rows)} rows from database.")
+        logger.info(f"Fetched {len(fetch_rows)} rows from database.")
 
         response_jobs = []
         for url in fetch_rows:
@@ -628,6 +630,6 @@ def start_database_embedding():
         })
 
     except Exception as e:
-        logging.error(f"Error in embedding database API: {e}")
+        logger.error(f"Error in embedding database API: {e}")
         return jsonify({"error": str(e)}), 500
 

@@ -1,12 +1,13 @@
 import os
-from venv import logger
 from pinecone import Pinecone
 from dotenv import load_dotenv
 import google.generativeai as genai
+from app.core.logging import get_logger
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Load environment variables
 load_dotenv()
+logger = get_logger(__name__)
 
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 GEMINI_MODEL = os.getenv('GEMINI_MODEL')

@@ -1,6 +1,7 @@
 import os
 import logging
 import requests
+from app.core.logging import get_logger
 
 
 zh_login_url = 'https://accounts.zoho.in'
@@ -17,9 +18,8 @@ APP_LINK_NAME = os.getenv('APP_LINK_NAME')
 REPORT_LINK_NAME = os.getenv('REPORT_LINK_NAME')
 
 
-# Basic logging configuration
-logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
-logger = logging.getLogger(__name__)
+# ------------------ Configure Logging ------------------
+logger = get_logger(__name__)
 
 class Zoho:
     def __init__(self, client_id=CLIENT_ID, client_secret=CLIENT_SECRET, refresh_token=REFRESH_TOKEN):

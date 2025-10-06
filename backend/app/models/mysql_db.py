@@ -4,10 +4,10 @@ import logging
 import mysql.connector
 from mysql.connector import Error
 from app.helper.utils import COMMON
+from app.core.logging import get_logger
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# ------------------ Configure Logging ------------------
+logger = get_logger(__name__)
 
 pool_name = 'mysqlpool'
 pool_size = 20

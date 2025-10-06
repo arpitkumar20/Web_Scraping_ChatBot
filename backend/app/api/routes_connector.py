@@ -1,4 +1,4 @@
-import logging
+from app.core.logging import get_logger
 from flask import Blueprint, request, jsonify
 from app.models.mysql_db import MySQL
 from app.models.postgresql_db import PostgreSQL
@@ -7,6 +7,7 @@ from app.models.zoho_connectors import Zoho
 
 
 connector_bp = Blueprint("connector", __name__)
+logger = get_logger(__name__)
 
 # Initialize MySQL connection
 @connector_bp.route("/connection-test", methods=["POST"])
@@ -42,7 +43,7 @@ def init_connection():
         else:
             return jsonify({"message": "Connector type doesn't exists."}), 200
     except Exception as e:
-        logging.error(f"Error initializing connector connection: {e}")
+        logger.error(f"Error initializing connector connection: {e}")
         return jsonify({"error": str(e)}), 500
 
 
@@ -93,7 +94,7 @@ def database_info():
         return jsonify({"error": "Invalid parameter combination"}), 400
 
     except Exception as e:
-        logging.error(f"Database operation error: {e}")
+        logger.error(f"Database operation error: {e}")
         return jsonify({"error": str(e)}), 500
 
 @connector_bp.route("/scan-rows", methods=["POST"])
@@ -143,7 +144,7 @@ def scan_rows():
         }), 200
 
     except Exception as e:
-        logging.error(f"Error scanning rows: {e}")
+        logger.error(f"Error scanning rows: {e}")
         return jsonify({"error": str(e)}), 500
 
 
@@ -226,5 +227,5 @@ def report_details():
 #         }), 200
 
 #     except Exception as e:
-#         logging.error(f"Error scanning rows: {e}")
+#         logger.error(f"Error scanning rows: {e}")
 #         return jsonify({"error": str(e)}), 500

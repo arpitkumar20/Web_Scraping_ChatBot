@@ -1,19 +1,14 @@
-import os
-import logging
-import tempfile
+# import os
+# import logging
+# import tempfile
+from app.core.logging import get_logger
 from flask import Blueprint, request, jsonify
 # from app.services.wati_service import send_whatsapp_message , get_whatsapp_messages
 from app.services.wati_api_service import send_whatsapp_message_v2, get_whatsapp_messages_v2, send_whatsapp_image_v2
 from app.services.vectordb_retrive import query_pinecone_index
 from app.services.genai_response import handle_user_query
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s [%(levelname)s] %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
-)
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 chat_bp = Blueprint("chat", __name__)
 

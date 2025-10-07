@@ -1,9 +1,10 @@
-import logging
 from dotenv import load_dotenv
+from app.core.logging import get_logger
 from flask import Blueprint, request, jsonify
 from app.services.wati_webhook import handle_wati_webhook
 
 wati_bp = Blueprint("wati", __name__)
+logger = get_logger(__name__)
 
 load_dotenv()
 
@@ -16,5 +17,5 @@ def wati_webhook():
         response = handle_wati_webhook(data)
         return jsonify(response), 200
     except Exception as e:
-        logging.error(f"Unhandled webhook exception: {str(e)}")
+        logger.error(f"Unhandled webhook exception: {str(e)}")
         return jsonify({"error": str(e)}), 500

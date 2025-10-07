@@ -3,14 +3,11 @@ import json
 import bson
 import decimal
 import datetime
-import logging
 from typing import Dict, List, Union
+from app.core.logging import get_logger
 
 # ------------------ Configure Logging ------------------
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
+logger = get_logger(__name__)
 
 class COMMON:
     def stringify(item):
@@ -50,12 +47,12 @@ class COMMON:
                     old_data = json.load(file)
                     if not isinstance(old_data, list):
                         old_data = [old_data]
-                    logging.info(f"Loaded {len(old_data)} existing records from {file_path}")
+                    logger.info(f"Loaded {len(old_data)} existing records from {file_path}")
                 except json.JSONDecodeError:
-                    logging.warning(f"File {file_path} is empty or corrupted. Starting fresh.")
+                    logger.warning(f"File {file_path} is empty or corrupted. Starting fresh.")
                     old_data = []
         else:
-            logging.info(f"No existing file found. Creating new one at {file_path}")
+            logger.info(f"No existing file found. Creating new one at {file_path}")
             old_data = []
 
         # Merge logic: check duplicates by "url" or "namespace"
@@ -69,19 +66,19 @@ class COMMON:
             if key and key in existing_map:
                 # Update existing record (merge dicts)
                 existing_map[key].update(item)
-                logging.info(f"Updated record with key: {key}")
+                logger.info(f"Updated record with key: {key}")
             else:
                 # Add new record
                 old_data.append(item)
                 if key:
                     existing_map[key] = item
-                    logging.info(f"Added new record with key: {key}")
+                    logger.info(f"Added new record with key: {key}")
                 else:
-                    logging.info("Added new record without unique key")
+                    logger.info("Added new record without unique key")
 
         # Save updated data
         with open(file_path, "w", encoding="utf-8") as file:
             json.dump(old_data, file, indent=4, ensure_ascii=False)
 
-        logging.info(f"Saved total {len(old_data)} records into {file_path}")
+        logger.info(f"Saved total {len(old_data)} records into {file_path}")
 

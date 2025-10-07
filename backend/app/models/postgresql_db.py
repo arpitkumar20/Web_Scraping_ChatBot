@@ -1,14 +1,14 @@
 import os
 import datetime
-import logging
 from psycopg2 import OperationalError
 from psycopg2.pool import SimpleConnectionPool
 from psycopg2.extras import RealDictCursor
 from app.helper.utils import COMMON
+from app.core.logging import get_logger
 
 
-logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO)
+# ------------------ Configure Logging ------------------
+logger = get_logger(__name__)
 
 DATABASE_HOST = os.getenv('DATABASE_HOST')
 DATABASE_PORT = os.getenv('DATABASE_PORT')

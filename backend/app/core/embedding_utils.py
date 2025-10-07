@@ -1,8 +1,8 @@
 import re
-import logging
+from app.core.logging import get_logger
 from app.core.config import EMBEDDING_MODEL, genai
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 def clean_text(text: str) -> str:
     """Clean and normalize text."""

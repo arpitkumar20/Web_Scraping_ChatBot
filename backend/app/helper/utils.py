@@ -3,6 +3,8 @@ import json
 import bson
 import decimal
 import datetime
+import hashlib
+import time
 from typing import Dict, List, Union
 from app.core.logging import get_logger
 
@@ -81,4 +83,10 @@ class COMMON:
             json.dump(old_data, file, indent=4, ensure_ascii=False)
 
         logger.info(f"Saved total {len(old_data)} records into {file_path}")
+
+    def get_hash():
+        hash_base = str(time.time()).encode('utf-8')
+        run_hash = hashlib.md5()
+        run_hash.update(hash_base)
+        return run_hash.hexdigest()
 

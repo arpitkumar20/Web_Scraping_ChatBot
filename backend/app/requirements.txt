@@ -23,3 +23,5 @@ lxml
 unstructured
 html2text
 nltk
+pandas
+openpyxl

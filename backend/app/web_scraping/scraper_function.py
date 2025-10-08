@@ -35,8 +35,8 @@ def web_scraping(url):
     logging.info("PROCESSING COMPLETE!")
     logging.info("=" * 60)
 
-    web_info = processor.get_website_info()
-    logging.info("✅ Website informations fetched sucessfully")
+    # web_info = processor.get_website_info()
+    # logging.info("✅ Website informations fetched sucessfully")
 
     embedding_path = processor.website_folder / "chunks" / "embedding_ready.json"
     if embedding_path.exists():
@@ -49,7 +49,8 @@ def web_scraping(url):
         logging.info(f"   • Ready for vector database: YES ✅")
         logging.info(f"Embedding path of that folder is: {embedding_path}")
         logging.info("✅ Web scraping process completed successfully. Returning embedding path.")
-        return web_info, embedding_path
+        # return web_info, embedding_path
+        return embedding_path
     else:
         logging.warning("⚠️ Embedding data not found. Returning None.")
         return None

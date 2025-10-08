@@ -193,11 +193,54 @@ def init_pinecone_index(api_key: str, index_name: str, dimension: int, cloud: st
         logger.info(f"Pinecone index '{index_name}' already exists.")
     return pc.Index(name=index_name)
 
-def upsert_vectors(index, chunks: list, vectors: list, namespace: str, site_name: str, batch_size=100):
-    """Prepare and upsert vectors into Pinecone."""
+# def upsert_vectors(index, chunks: list, vectors: list, namespace: str, site_name: str, batch_size=100):
+#     """Prepare and upsert vectors into Pinecone."""
+#     vectors_to_upsert = []
+#     for vector, chunk in zip(vectors, chunks):
+#         unique_id = f"{site_name}_{uuid.uuid4().hex}"
+#         metadata = chunk.metadata.copy()
+#         metadata.update({"source_text": chunk.page_content})
+#         vectors_to_upsert.append({'id': unique_id, 'values': vector, 'metadata': metadata})
+
+#     for j in range(0, len(vectors_to_upsert), batch_size):
+#         batch = vectors_to_upsert[j:j + batch_size]
+#         index.upsert(vectors=batch, namespace=namespace)
+#         logger.info(f"Upserted batch {j // batch_size + 1} into namespace '{namespace}'.")
+
+# # ----------------- Main Function -----------------
+# def store_embeddings_from_folder(folder_path: str) -> str:
+#     """Main function to process folder, generate embeddings, and store in Pinecone."""
+#     try:
+#         site_name = extract_site_name(folder_path)
+#         namespace = f"{site_name}_{uuid.uuid4().hex}"
+#         logger.info(f"Generated unique namespace: {namespace}")
+
+#         data = load_json(os.path.join(folder_path, 'embedding_ready.json'))
+#         documents = create_documents(data.get("texts", []), data.get("metadatas", []))
+#         logger.info(f"Created {len(documents)} Document objects.")
+
+#         chunks = split_documents(documents)
+#         logger.info(f"Split documents into {len(chunks)} chunks.")
+
+#         vectors = generate_embeddings(chunks, EMBEDDING_MODEL, GOOGLE_API_KEY)
+#         logger.info(f"Generated {len(vectors)} embedding vectors.")
+
+#         index = init_pinecone_index(PINECONE_API_KEY, PINECONE_INDEX, dimension=768, cloud=CLOUD_STORAGE, region=PINECONE_ENV)
+#         upsert_vectors(index, chunks, vectors, namespace, site_name)
+
+#         logger.info(f"✅ All documents successfully added to namespace '{namespace}'.")
+#         return namespace
+
+#     except Exception as e:
+#         logger.error(f"Error processing folder '{folder_path}': {e}")
+#         return None
+
+
+def upsert_vectors(index, chunks: list, vectors: list, namespace: str, batch_size=100):
+    """Prepare and upsert vectors into Pinecone using company_name as namespace."""
     vectors_to_upsert = []
     for vector, chunk in zip(vectors, chunks):
-        unique_id = f"{site_name}_{uuid.uuid4().hex}"
+        unique_id = f"{uuid.uuid4().hex}"
         metadata = chunk.metadata.copy()
         metadata.update({"source_text": chunk.page_content})
         vectors_to_upsert.append({'id': unique_id, 'values': vector, 'metadata': metadata})
@@ -208,12 +251,11 @@ def upsert_vectors(index, chunks: list, vectors: list, namespace: str, site_name
         logger.info(f"Upserted batch {j // batch_size + 1} into namespace '{namespace}'.")
 
 # ----------------- Main Function -----------------
-def store_embeddings_from_folder(folder_path: str) -> str:
+def store_embeddings_from_folder(company_name: str, folder_path: str) -> str:
     """Main function to process folder, generate embeddings, and store in Pinecone."""
     try:
-        site_name = extract_site_name(folder_path)
-        namespace = f"{site_name}_{uuid.uuid4().hex}"
-        logger.info(f"Generated unique namespace: {namespace}")
+        namespace = company_name
+        logger.info(f"Using company_name as namespace: {namespace}")
 
         data = load_json(os.path.join(folder_path, 'embedding_ready.json'))
         documents = create_documents(data.get("texts", []), data.get("metadatas", []))
@@ -226,7 +268,7 @@ def store_embeddings_from_folder(folder_path: str) -> str:
         logger.info(f"Generated {len(vectors)} embedding vectors.")
 
         index = init_pinecone_index(PINECONE_API_KEY, PINECONE_INDEX, dimension=768, cloud=CLOUD_STORAGE, region=PINECONE_ENV)
-        upsert_vectors(index, chunks, vectors, namespace, site_name)
+        upsert_vectors(index, chunks, vectors, namespace)
 
         logger.info(f"✅ All documents successfully added to namespace '{namespace}'.")
         return namespace

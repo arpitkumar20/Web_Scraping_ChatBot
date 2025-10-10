@@ -360,10 +360,11 @@ def get_request_session(proxies: dict = None):
 class WebsiteProcessor:
     """Scraper with sitemap-first and SPA fallback strategy"""
 
-    def __init__(self, website_url: str, proxies: dict = None):
+    def __init__(self, website_url: str, proxies: dict = None, shared_folder: str = "combined"):
         self.website_url = website_url
         self.output_dir = Path("rag_data")
         self.website_folder = self.output_dir / f"{urlparse(website_url).netloc}"
+        self.website_folder = self.output_dir / shared_folder
 
         self.website_folder.mkdir(parents=True, exist_ok=True)
         (self.website_folder / "raw").mkdir(exist_ok=True)
@@ -588,7 +589,8 @@ class WebsiteProcessor:
             'texts': texts,
             'metadatas': metadatas,
             'total_chunks': len(texts),
-            'created_at': datetime.now().isoformat()
+            'created_at': datetime.now().isoformat(),
+            'source_url': self.website_url
         }
         filepath = self.website_folder / "chunks" / "embedding_ready.json"
         with open(filepath, 'w', encoding='utf-8') as f:

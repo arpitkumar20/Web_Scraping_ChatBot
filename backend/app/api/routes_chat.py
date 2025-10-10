@@ -4,7 +4,7 @@
 from app.core.logging import get_logger
 from flask import Blueprint, request, jsonify
 # from app.services.wati_service import send_whatsapp_message , get_whatsapp_messages
-from app.services.wati_api_service import send_whatsapp_message_v2, get_whatsapp_messages_v2, send_whatsapp_image_v2
+from app.services.wati_api_service import send_whatsapp_message_v2, get_whatsapp_messages_v2, send_whatsapp_image_v2, send_whatsapp_template_message
 from app.services.vectordb_retrive import query_pinecone_index
 from app.services.genai_response import handle_user_query
 
@@ -96,3 +96,15 @@ def receive_message():
     except Exception as err:
         return jsonify({"error": str(err)}), 500
 
+
+
+@chat_bp.route("/send-template-message", methods=["POST"])
+def api_send_template_message():
+    data = request.json
+    whatsapp_number = data.get("whatsapp_number")
+    template_name = data.get("template_name")
+    broadcast_name = data.get("broadcast_name")
+    if not whatsapp_number or not template_name or not broadcast_name:
+        return jsonify({"error": "Missing required fields"}), 400
+    result = send_whatsapp_template_message(whatsapp_number, template_name, broadcast_name)
+    return jsonify(result)

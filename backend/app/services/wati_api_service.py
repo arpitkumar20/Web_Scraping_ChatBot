@@ -1,3 +1,4 @@
+import json
 import mimetypes
 import os
 import requests
@@ -137,4 +138,48 @@ def get_whatsapp_messages_v2(phone_number: str) -> dict:
             return {"error": f"API returned status code {response.status_code}", "details": response.text}
     except requests.exceptions.RequestException as e:
         logger.exception(f"Exception occurred while fetching messages : {e}")
+        return {"error": str(e)}
+
+def send_whatsapp_template_message(
+    whatsapp_number: str,
+    template_name: str,
+    broadcast_name: str,
+) -> dict:
+    """
+    Send a WhatsApp template message using the WATI API.
+
+    Args:
+        whatsapp_number (str): Recipient WhatsApp number (with country code).
+        template_name (str): Name of the template in WATI.
+        broadcast_name (str): Name of the broadcast message.
+        channel_number (str): WATI channel phone number.
+        api_key (str): WATI API Bearer token.
+
+    Returns:
+        dict: API response JSON or error details.
+    """
+    url = f"{BASE_URL}/{TENANT_ID}/api/v1/sendTemplateMessage?whatsappNumber={whatsapp_number}"
+
+    payload = json.dumps({
+        "template_name": template_name,
+        "broadcast_name": broadcast_name,
+        "channel_number": CHANNEL_NUMBER
+    })
+
+    headers = {
+        'Authorization': f'Bearer {WATI_APY_KEY}',
+        'Content-Type': 'application/json-patch+json'
+    }
+
+    logger.info(f"Sending WhatsApp template message to {whatsapp_number}")
+    try:
+        response = requests.post(url, headers=headers, data=payload)
+        if response.status_code == 200:
+            logger.info("Template message sent successfully")
+            return response.json()
+        else:
+            logger.error(f"Failed to send template message. Status code: {response.status_code}, Response: {response.text}")
+            return {"error": f"Status code {response.status_code}", "response": response.text}
+    except requests.exceptions.RequestException as e:
+        logger.exception(f"Exception occurred while sending template message: {e}")
         return {"error": str(e)}

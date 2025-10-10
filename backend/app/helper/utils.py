@@ -3,6 +3,8 @@ import json
 import bson
 import decimal
 import datetime
+import hashlib
+import time
 from typing import Dict, List, Union
 from app.core.logging import get_logger
 
@@ -82,3 +84,39 @@ class COMMON:
 
         logger.info(f"Saved total {len(old_data)} records into {file_path}")
 
+    def get_hash():
+        hash_base = str(time.time()).encode('utf-8')
+        run_hash = hashlib.md5()
+        run_hash.update(hash_base)
+        return run_hash.hexdigest()
+
+    def save_name(namespace: str, folder_path: str = "web_info", filename: str = "web_info.json"):
+        """
+        Save a single 'namespace' to a JSON file.
+        If the file exists, overwrite the namespace value (only one key is stored).
+        Always ensures the folder exists before saving.
+        """
+        # Ensure folder exists
+        os.makedirs(folder_path, exist_ok=True)
+
+        # Full file path
+        file_path = os.path.join(folder_path, filename)
+
+        # Load old data if file exists (not strictly necessary since we overwrite)
+        if os.path.exists(file_path):
+            with open(file_path, "r", encoding="utf-8") as f:
+                try:
+                    data = json.load(f)
+                except json.JSONDecodeError:
+                    data = {}
+        else:
+            data = {}
+
+        # Update namespace (only one key)
+        data["namespace"] = namespace
+
+        # Write updated data back to file
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=4)
+
+        print(f"✅ Namespace '{namespace}' saved to {file_path} successfully!")

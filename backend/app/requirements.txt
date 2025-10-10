@@ -25,3 +25,4 @@ html2text
 nltk
 pandas
 openpyxl
+langchain_openai

@@ -44,7 +44,7 @@ def handle_wati_webhook(data: dict) -> dict:
                 # ------------------------------
                 # Select namespace dynamically
                 # ------------------------------
-                namespace = run_namespace_selector(message_text)
+                namespace = run_namespace_selector(namespaces_file='web_info/web_info.json')
                 logging.info(f"Selected namespace: {namespace}")
 
                 query_response = query_pinecone_index(query_text=message_text, namespace=namespace)

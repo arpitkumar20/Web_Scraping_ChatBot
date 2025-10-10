@@ -405,12 +405,13 @@ def background_embedding(company_name, job_id):
                 namespace_value = store_data.get("namespace") if isinstance(store_data, dict) else str(store_data)
 
                 # Instead of using web_info and copying it, save a compact JSON with url/result_path/namespace.
-                saved_json = {
-                    "url": res.get("url"),
-                    "result_path": str(result_path),
-                    "namespace": namespace_value
-                }
-                COMMON.save_json_data(saved_json)
+                # saved_json = {
+                #     "url": res.get("url"),
+                #     "result_path": str(result_path),
+                #     "namespace": namespace_value
+                # }
+                # print(">>>>>>>>>>>>>>>>>>>>>",saved_json)
+                COMMON.save_name(namespace=namespace_value,folder_path="web_info",filename="web_info.json")
 
                 updated_results.append({
                     "url": res["url"],

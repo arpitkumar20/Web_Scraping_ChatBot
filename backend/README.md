@@ -462,6 +462,9 @@ ngrok http --url=aeronautic-showier-marquitta.ngrok-free.app 5000
 
 ---
 
+### TIKA SERVER 
+docker run -d -p 9998:9998 logicalspark/docker-tikaserver
+
 ### 🔹 `backend/Dockerfile`
 
 ```dockerfile

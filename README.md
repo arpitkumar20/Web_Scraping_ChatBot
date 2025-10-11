@@ -84,6 +84,19 @@ pip install -r requirements.txt
 python -m app.service
 ```
 
+# NGROK
+```bash
+Domain : aeronautic-showier-marquitta.ngrok-free.app
+ngrok http 5004 --url aeronautic-showier-marquitta.ngrok-free.app
+ngrok http --url=aeronautic-showier-marquitta.ngrok-free.app 5000
+```
+---
+
+### TIKA SERVER
+```bash
+docker run -d -p 9998:9998 logicalspark/docker-tikaserver
+```
+
 ## Conversational Intelligence (Q&A, RAG)
 
 - **Backend services:**

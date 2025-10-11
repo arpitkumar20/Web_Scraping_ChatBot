@@ -355,25 +355,6 @@ def init_pinecone_index(api_key: str, index_name: str, dimension: int, cloud: st
         logger.info(f"Pinecone index '{index_name}' already exists.")
     return pc.Index(name=index_name)
 
-# def upsert_vectors(index, chunks: list, vectors: list, namespace: str, batch_size=100):
-#     """Upsert vectors to Pinecone."""
-#     vectors_to_upsert = []
-#     for vector, chunk in zip(vectors, chunks):
-#         unique_id = str(uuid.uuid4())
-#         metadata = chunk.metadata.copy()
-#         metadata.update({"source_text": chunk.page_content})
-#         vectors_to_upsert.append({
-#             "id": unique_id,
-#             "values": vector,
-#             "metadata": metadata
-#         })
-    
-#     for i in range(0, len(vectors_to_upsert), batch_size):
-#         batch = vectors_to_upsert[i:i + batch_size]
-#         index.upsert(vectors=batch, namespace=namespace)
-#         logger.info(f"Upserted batch {i // batch_size + 1} into namespace '{namespace}'.")
-
-
 def upsert_vectors(index, chunks: list, vectors: list, namespace: str, metadata_list: list = None, batch_size=100):
     """Upsert vectors to Pinecone safely with optional metadata_list."""
     vectors_to_upsert = []

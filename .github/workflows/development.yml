@@ -9,24 +9,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout repository
       - uses: actions/checkout@v3
 
-      # Step 2: Setup SSH key for EC2
       - name: Setup SSH key
         uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.SERVER_SSH_KEY }}
 
-      # Step 3: Deploy to EC2
       - name: Deploy on EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << EOF
-            set -e
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+            set -e  # Exit on error
 
             DEPLOY_DIR=~/deployments/web_scraping_chatbot
-            mkdir -p \$DEPLOY_DIR
-            cd \$DEPLOY_DIR
+            mkdir -p $DEPLOY_DIR
+            cd $DEPLOY_DIR
 
             # Clone or update repo
             if [ ! -d ".git" ]; then
@@ -36,25 +33,17 @@ jobs:
               git reset --hard origin/main
             fi
 
-            # ===== Update .env safely =====
+            # Update .env
             ENV_FILE=backend/.env
+            echo "Replacing ENV_OPENAI_API_KEY → ${{ vars.DEV_OPENAI_API_KEY }}"
+            sed -i "s|ENV_AUTH_API_BASE_URL|${{ vars.DEV_OPENAI_API_KEY }}|g" $ENV_FILE
 
-            # Remove old ENV_OPENAI_API_KEY line
-            grep -v '^ENV_OPENAI_API_KEY=' "\$ENV_FILE" > "\$ENV_FILE.tmp" || true
-            mv "\$ENV_FILE.tmp" "\$ENV_FILE"
-
-            # Append the new key
-            echo "ENV_OPENAI_API_KEY=${{ vars.DEV_OPENAI_API_KEY }}" >> "\$ENV_FILE"
-
-            # ===== Ensure docker-compose exists =====
+            # Ensure docker-compose is installed
             if ! command -v docker-compose &> /dev/null; then
-              sudo curl -L "https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-\$(uname -s)-\$(uname -m)" -o /usr/local/bin/docker-compose
+              sudo curl -L "https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
               sudo chmod +x /usr/local/bin/docker-compose
             fi
 
-            # ===== Deploy with Docker Compose =====
-            # If docker-compose.yml is inside backend, cd into it
-            cd backend
             sudo docker-compose down
             sudo docker-compose up -d --build
           EOF

@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
@@ -22,8 +23,8 @@ jobs:
             set -e  # Exit immediately if a command fails
 
             DEPLOY_DIR=~/deployments/web_scraping_chatbot
-            mkdir -p $DEPLOY_DIR
-            cd $DEPLOY_DIR
+            mkdir -p "$DEPLOY_DIR"
+            cd "$DEPLOY_DIR"
 
             # Clone or update repo
             if [ ! -d ".git" ]; then
@@ -42,13 +43,19 @@ jobs:
 
             # Update OPENAI_API_KEY in backend/.env
             ENV_FILE=backend/.env
+            if [ ! -f "$ENV_FILE" ]; then
+              touch "$ENV_FILE"
+            fi
+
             if grep -q '^OPENAI_API_KEY=' "$ENV_FILE"; then
-              sed -i "s/^OPENAI_API_KEY=.*/OPENAI_API_KEY=${OPENAI_API_KEY}/" "$ENV_FILE"
+              sed -i "s/^OPENAI_API_KEY=.*/OPENAI_API_KEY=${DEV_OPENAI_API_KEY}/" "$ENV_FILE"
             else
               echo "OPENAI_API_KEY=${DEV_OPENAI_API_KEY}" >> "$ENV_FILE"
             fi
 
-            # Use sudo to access Docker daemon
+            # Deploy with Docker Compose
             sudo docker-compose down
             sudo docker-compose up -d --build
           EOF
+        env:
+          DEV_OPENAI_API_KEY: ${{ vars.DEV_OPENAI_API_KEY }}

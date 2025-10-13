@@ -46,6 +46,6 @@ jobs:
             fi
 
             # Use sudo to access Docker daemon
-            sudo docker-compose down
-            sudo docker-compose up -d --build
+            sudo docker-compose --env-file .env down
+            sudo docker-compose --env-file .env up -d --build
           EOF

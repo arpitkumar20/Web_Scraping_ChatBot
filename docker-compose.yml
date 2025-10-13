@@ -1,3 +1,18 @@
+# version: '3.8'
+
+# services:
+#   web-scraping-chatbot:
+#     build:
+#       context: ./backend        
+#       dockerfile: Dockerfile
+#     image: web-scraping-chatbot
+#     container_name: web-scraping-chatbot
+#     env_file:
+#       - ./backend/.env          
+#     ports:
+#       - "5000:5000"
+#     restart: unless-stopped
+
 version: '3.8'
 
 services:
@@ -7,8 +22,15 @@ services:
       dockerfile: Dockerfile
     image: web-scraping-chatbot
     container_name: web-scraping-chatbot
+    # Load static environment variables from local .env file
     env_file:
-      - ./backend/.env          
+      - ./backend/.env
+    # Override or add dynamic environment variables from GitHub Actions
+    environment:
+      OPENAI_API_KEY: ${DEV_OPENAI_API_KEY}
+      # You can add more dynamic envs here
+      # EXAMPLE_VAR: ${EXAMPLE_VAR}
     ports:
       - "5000:5000"
     restart: unless-stopped
+

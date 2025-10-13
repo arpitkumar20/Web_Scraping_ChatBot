@@ -12,20 +12,12 @@ from pinecone import Pinecone, ServerlessSpec
 # ------------------ Load .env ------------------
 load_dotenv()
 
-# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-# PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-# PINECONE_ENV = os.getenv("PINECONE_ENV")
-# PINECONE_INDEX = os.getenv("PINECONE_INDEX")
-# CLOUD_STORAGE = os.getenv("CLOUD_STORAGE")
-# EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
-
-OPENAI_API_KEY="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" #  OPEN API KEY
-LLM_TEMPERATURE="0.7"
-EMBEDDING_MODEL="text-embedding-3-small"
-CLOUD_STORAGE="aws"
-PINECONE_API_KEY= "pcsk_5ZJEVn_K6FrjVje2XZnYuqxyhfJVYDVKuKg5A6RZc4UWaPKNzARdQxKK82o2xNc82paxBk"
-PINECONE_ENV = "us-east-1"
-PINECONE_INDEX="nisaa-knowledge"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_ENV = os.getenv("PINECONE_ENV")
+PINECONE_INDEX = os.getenv("PINECONE_INDEX")
+CLOUD_STORAGE = os.getenv("CLOUD_STORAGE")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

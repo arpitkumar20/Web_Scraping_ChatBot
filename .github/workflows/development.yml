@@ -33,18 +33,16 @@ jobs:
               git reset --hard origin/main
             fi
 
-            # Replace environment variable in .env
+            # Update .env
             echo "Replacing ENV_OPENAI_API_KEY → ${{ vars.DEV_OPENAI_API_KEY }}"
             sed -i "s|ENV_OPENAI_API_KEY|${{ vars.DEV_OPENAI_API_KEY }}|g" .env
 
-            # Ensure Docker Compose exists
+            # Ensure docker-compose is installed
             if ! command -v docker-compose &> /dev/null; then
-              echo "docker-compose not found. Installing..."
               sudo curl -L "https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
               sudo chmod +x /usr/local/bin/docker-compose
             fi
 
-            # Deploy with Docker Compose
             sudo docker-compose down
             sudo docker-compose up -d --build
           EOF

@@ -34,10 +34,9 @@ jobs:
             fi
 
             # Generate .env file dynamically
-            cat <<ENVEOF > .env.${{ env.Web_Scraping_ChatBot }}
-            OPENAI_API_KEY=${{ env.DEV_OPENAI_API_KEY }}
-            ENVEOF
-
+           cat <<ENVEOF > .env
+           OPENAI_API_KEY=${{ env.DEV_OPENAI_API_KEY }}
+           ENVEOF
 
             # Ensure Docker Compose exists
             if ! command -v docker-compose &> /dev/null; then

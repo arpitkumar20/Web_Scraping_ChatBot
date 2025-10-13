@@ -40,10 +40,8 @@ jobs:
               sudo chmod +x /usr/local/bin/docker-compose
             fi
 
-            # Create .env dynamically with secret
-            cat > .env << ENV_EOF
-            OPENAI_API_KEY=${{ secrets.DEV_OPENAI_API_KEY }}
-            ENV_EOF
+            # Inject GitHub secret into .env
+            echo "OPENAI_API_KEY=${{ secrets.DEV_OPENAI_API_KEY }}" > .env
 
             # Use sudo to access Docker daemon
             sudo docker-compose down

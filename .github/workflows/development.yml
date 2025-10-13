@@ -34,8 +34,9 @@ jobs:
             fi
 
             # Update .env
+            ENV_FILE=backend/.env
             echo "Replacing ENV_OPENAI_API_KEY → ${{ vars.DEV_OPENAI_API_KEY }}"
-            sed -i "s|ENV_OPENAI_API_KEY|${{ vars.DEV_OPENAI_API_KEY }}|g" .env
+            sed -i "s|ENV_OPENAI_API_KEY|${{ vars.DEV_OPENAI_API_KEY }}|g" $ENV_FILE
 
             # Ensure docker-compose is installed
             if ! command -v docker-compose &> /dev/null; then

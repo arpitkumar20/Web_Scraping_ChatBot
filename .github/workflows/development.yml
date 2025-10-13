@@ -15,6 +15,7 @@ jobs:
         uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.SERVER_SSH_KEY }}
+          OPENAI_API_KEY: ${{ secrets.DEV_OPENAI_API_KEY }}
 
       - name: Deploy on EC2
         run: |
@@ -38,11 +39,6 @@ jobs:
               sudo curl -L "https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
               sudo chmod +x /usr/local/bin/docker-compose
             fi
-
-            # Generate .env file on server
-            cat > .env.deploy <<EOF
-            OPENAI_API_KEY=${{ secrets.DEV_OPENAI_API_KEY }}
-            EOF
 
             # Run Docker Compose
             sudo docker-compose down

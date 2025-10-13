@@ -1,28 +1,35 @@
-bson
-chardet
-pip
-setuptools>=68.0.0
-wheel>=0.41.0
+# Core system & package management
+pip==23.3.1
+setuptools==68.0.0
+wheel==0.41.0
+
+# Web & API frameworks
 flask==3.0.0
-genai
-langchain-google-genai
-requests
-playwright
-python-dotenv
-google-generativeai
-psycopg2-binary
-pinecone
-langchain
-langchain-community
-langchain-core
-langchain-pinecone
-langchain-text-splitters
-mysql-connector-python
-beautifulsoup4
-lxml
-unstructured
-html2text
-nltk
-pandas
-openpyxl
-langchain_openai
+requests>=2.32.3,<3
+python-dotenv==1.1.1
+
+# AI/ML & LLM
+langchain==0.3.27
+langchain-community==0.3.31
+langchain_openai==0.3.35
+
+# Database & vector storage
+psycopg2-binary==2.9.11
+mysql-connector-python==9.4.0
+pinecone==7.3.0
+bson==0.5.10
+chardet==5.2.0
+
+# Web scraping / parsing
+beautifulsoup4==4.14.2
+lxml==6.0.2
+html2text==2025.4.15
+unstructured==0.18.15
+
+# Playwright for automation
+playwright==1.55.0
+
+# Data processing
+nltk==3.9.2
+pandas==2.3.3
+openpyxl==3.1.5

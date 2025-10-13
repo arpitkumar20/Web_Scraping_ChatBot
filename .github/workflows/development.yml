@@ -58,4 +58,4 @@ jobs:
             sudo docker-compose up -d --build
           EOF
         env:
-          DEV_OPENAI_API_KEY: ${{ vars.DEV_OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ vars.DEV_OPENAI_API_KEY }}

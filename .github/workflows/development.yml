@@ -1,46 +1,47 @@
-name: Deploy Docker Compose
- 
+name: Deploy Docker Compose to EC2
+
 on:
   push:
     branches:
       - main
- 
+
 jobs:
   deploy:
+    name: Deploy Service to EC2
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
- 
-      - name: Setup SSH key
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup SSH
         uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.SERVER_SSH_KEY }}
- 
+
       - name: Deploy on EC2
+        env:
+          OPENAI_API_KEY: ${{ secrets.DEV_OPENAI_API_KEY }}
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
-            set -e  # Exit immediately if a command fails
- 
+          echo "🔐 Connecting to EC2 and deploying service..."
+
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_HOST }} << 'EOF'
+            set -e
             DEPLOY_DIR=~/deployments/web_scraping_chatbot
             mkdir -p $DEPLOY_DIR
             cd $DEPLOY_DIR
- 
-            # Clone or update repo
-            if [ ! -d ".git" ]; then
-              git clone https://github.com/arpitkumar20/Web_Scraping_ChatBot.git .
-            else
-              git fetch origin
-              git reset --hard origin/main
-            fi
- 
-            # Ensure Docker Compose exists
-            if ! command -v docker-compose &> /dev/null; then
-              echo "docker-compose not found. Installing..."
-              sudo curl -L "https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-              sudo chmod +x /usr/local/bin/docker-compose
-            fi
- 
-            # Use sudo to access Docker daemon
-            sudo docker-compose down
-            sudo docker-compose up -d --build
+
+            echo "📦 Pulling latest code..."
+            git pull origin main
+
+            echo "🧩 Updating .env file..."
+            # Update the .env file inside backend folder with the GitHub secret
+            sed -i "/^OPENAI_API_KEY=/d" backend/.env || true
+            echo "OPENAI_API_KEY=${DEV_OPENAI_API_KEY}" >> backend/.env
+
+            echo "🚀 Deploying Docker Compose..."
+            sudo docker compose down
+            sudo docker compose up -d --build
+
+            echo "✅ Deployment completed successfully!"
           EOF

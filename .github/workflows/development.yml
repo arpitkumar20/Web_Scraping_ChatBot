@@ -44,6 +44,7 @@ jobs:
 
             echo "🧩 Updating .env file..."
             sed -i "/^OPENAI_API_KEY=/d" backend/.env || true
+            cat backend/.env
             echo "OPENAI_API_KEY=${OPENAI_API_KEY}" >> backend/.env
 
             echo "🚀 Redeploying with Docker Compose..."

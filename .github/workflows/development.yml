@@ -42,10 +42,10 @@ jobs:
               git reset --hard origin/main
             fi
 
-            echo "🧩 Updating .env file..."
-            sed -i "/^OPENAI_API_KEY=/d" backend/.env || true
+            
+            sed -i "s|ENV_OPENAI_API_KEY|${{ vars.DEV_OPENAI_API_KEY }}|g" backend/.env
             cat backend/.env
-            echo "OPENAI_API_KEY=${OPENAI_API_KEY}" >> backend/.env
+            
 
             echo "🚀 Redeploying with Docker Compose..."
             sudo docker-compose down || true

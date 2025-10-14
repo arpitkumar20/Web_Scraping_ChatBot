@@ -25,7 +25,7 @@ jobs:
         run: |
           echo "🔐 Connecting to EC2 and deploying service..."
 
-          # ✅ FIX: Removed single quotes around EOF so variable expands correctly
+          # FIX: Removed single quotes around EOF so variable expands correctly
           ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_HOST }} <<EOF
             set -e
             DEPLOY_DIR=~/deployments/web_scraping_chatbot

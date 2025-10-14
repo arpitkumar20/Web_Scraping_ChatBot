@@ -19,6 +19,7 @@ mysql-connector-python==9.4.0
 pinecone==7.3.0
 bson==0.5.10
 chardet==5.2.0
+redis=6.4.0
 
 # Web scraping / parsing
 beautifulsoup4==4.14.2

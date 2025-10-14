@@ -329,6 +329,15 @@ def split_documents(documents: list, chunk_size=1000, chunk_overlap=150) -> list
     splitter = CharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     return splitter.split_documents(documents)
 
+# def generate_embeddings(chunks: list, model: str, api_key: str) -> list:
+#     """Generate embeddings using OpenAI model."""
+#     if not api_key:
+#         raise ValueError("Missing OPENAI_API_KEY.")
+    
+#     logger.info(f"Using OpenAI model '{model}' for embeddings.")
+#     embeddings = OpenAIEmbeddings(model=model, openai_api_key=api_key)
+#     texts = [chunk.page_content for chunk in chunks]
+#     return embeddings.embed_documents(texts)
 def generate_embeddings(chunks: list, model: str, api_key: str) -> list:
     """Generate embeddings using OpenAI model."""
     if not api_key:
@@ -336,7 +345,9 @@ def generate_embeddings(chunks: list, model: str, api_key: str) -> list:
     
     logger.info(f"Using OpenAI model '{model}' for embeddings.")
     embeddings = OpenAIEmbeddings(model=model, openai_api_key=api_key)
-    texts = [chunk.page_content for chunk in chunks]
+    
+    # If chunks are strings, pass directly
+    texts = [str(chunk) for chunk in chunks]
     return embeddings.embed_documents(texts)
 
 def init_pinecone_index(api_key: str, index_name: str, dimension: int, cloud: str, region: str):

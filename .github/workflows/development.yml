@@ -25,28 +25,30 @@ jobs:
         run: |
           echo "🔐 Connecting to EC2 and deploying service..."
 
-          # FIX: Removed single quotes around EOF so variable expands correctly
-          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_HOST }} <<EOF
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_HOST }} <<'EOF'
             set -e
+
             DEPLOY_DIR=~/deployments/web_scraping_chatbot
-            mkdir -p \$DEPLOY_DIR
-            cd \$DEPLOY_DIR
+            mkdir -p $DEPLOY_DIR
+            cd $DEPLOY_DIR
 
-
-            echo "📦 Resetting .env and pulling latest code..."
-            git checkout -- backend/.env || true
- 
-            echo "📦 Pulling latest code..."
-            git pull origin main
+            # Clone if missing, otherwise pull latest
+            if [ ! -d ".git" ]; then
+              echo "🌀 Cloning repository..."
+              git clone https://github.com/arpitkumar20/Web_Scraping_ChatBot.git .
+            else
+              echo "🔄 Pulling latest changes..."
+              git fetch origin
+              git reset --hard origin/main
+            fi
 
             echo "🧩 Updating .env file..."
-            # Update the .env file inside backend folder with the GitHub secret
             sed -i "/^OPENAI_API_KEY=/d" backend/.env || true
-            echo "OPENAI_API_KEY=${DEV_OPENAI_API_KEY}" >> backend/.env
+            echo "OPENAI_API_KEY=${OPENAI_API_KEY}" >> backend/.env
 
-            echo "🚀 Deploying Docker Compose..."
-            sudo docker-compose down
+            echo "🚀 Redeploying with Docker Compose..."
+            sudo docker-compose down || true
             sudo docker-compose up -d --build
 
             echo "✅ Deployment completed successfully!"
-           EOF
+          EOF

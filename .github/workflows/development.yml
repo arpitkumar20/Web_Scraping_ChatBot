@@ -32,6 +32,10 @@ jobs:
             mkdir -p \$DEPLOY_DIR
             cd \$DEPLOY_DIR
 
+
+            echo "📦 Resetting .env and pulling latest code..."
+            git checkout -- backend/.env || true
+ 
             echo "📦 Pulling latest code..."
             git pull origin main
 

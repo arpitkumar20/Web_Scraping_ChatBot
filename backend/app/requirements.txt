@@ -12,6 +12,8 @@ python-dotenv==1.1.1
 langchain==0.3.27
 langchain-community==0.3.31
 langchain_openai==0.3.35
+langchain-core==0.3.79
+langgraph==0.6.10
 
 # Database & vector storage
 psycopg2-binary==2.9.11

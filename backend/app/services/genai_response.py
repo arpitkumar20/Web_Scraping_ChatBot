@@ -425,422 +425,422 @@
 
 
 
-import os
-import re
-import hashlib
-import json
-import math
-import logging
-from typing import List, Dict, Any, Optional, Tuple
+# import os
+# import re
+# import hashlib
+# import json
+# import math
+# import logging
+# from typing import List, Dict, Any, Optional, Tuple
 
-import redis
-from langchain.prompts import ChatPromptTemplate
+# import redis
+# from langchain.prompts import ChatPromptTemplate
 
-from app.core.config import llm  # your LLM interface (must implement .predict(prompt) or .predict/ .generate as used)
+# from app.core.config import llm  # your LLM interface (must implement .predict(prompt) or .predict/ .generate as used)
 
-# ==============================
-# Logging Configuration
-# ==============================
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s"
-)
-logger = logging.getLogger(__name__)
+# # ==============================
+# # Logging Configuration
+# # ==============================
+# logging.basicConfig(
+#     level=logging.INFO,
+#     format="%(asctime)s [%(levelname)s] %(message)s"
+# )
+# logger = logging.getLogger(__name__)
 
-# ==============================
-# Redis Connection
-# ==============================
+# # ==============================
+# # Redis Connection
+# # ==============================
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
-REDIS_HOST = os.getenv("REDIS_HOST")
-REDIS_PORT = os.getenv("REDIS_PORT")
-REDIS_USER = os.getenv("REDIS_USER")
-REDIS_PASS = os.getenv("REDIS_PASS")
+# REDIS_HOST = os.getenv("REDIS_HOST")
+# REDIS_PORT = os.getenv("REDIS_PORT")
+# REDIS_USER = os.getenv("REDIS_USER")
+# REDIS_PASS = os.getenv("REDIS_PASS")
 
-# Create Redis client
-redis_client = redis.Redis(
-    host=REDIS_HOST,
-    port=REDIS_PORT,
-    username=REDIS_USER,
-    password=REDIS_PASS,
-    db=0,
-    decode_responses=True
-)
+# # Create Redis client
+# redis_client = redis.Redis(
+#     host=REDIS_HOST,
+#     port=REDIS_PORT,
+#     username=REDIS_USER,
+#     password=REDIS_PASS,
+#     db=0,
+#     decode_responses=True
+# )
 
-try:
-    response = redis_client.ping()
-    if response:
-        print("✅ Redis connection successful!")
-    else:
-        print("❌ Redis connection failed.")
-except redis.exceptions.AuthenticationError:
-    print("❌ Authentication failed. Check username/password.")
-except redis.exceptions.ConnectionError:
-    print("❌ Cannot connect to Redis server. Check host/port.")
-
-
-# redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
-
-# ==============================
-# Regex Patterns
-# ==============================
-DOCTOR_PATTERN = r"Dr\.?\s+[A-Z][a-zA-Z]+"
-TIME_PATTERN = r"\b(?:[01]?\d|2[0-3]):[0-5]\d\b"
-
-# ==============================
-# Prompt Template (updated)
-# ==============================
-SYSTEM_PROMPT = """
-You are a retrieval-augmented medical assistant chatbot.
-
-Your responsibilities:
-1. Use ONLY the retriever context, chat history, and the user’s latest query.
-2. Avoid repeating responses already given in prior conversation history; if you must repeat some necessary info, rephrase it.
-3. If a booking was already confirmed for the same doctor, acknowledge that instead of reconfirming.
-4. Be concise, clear, and human-like (≤40 words).
-5. If doctor, time, or information is missing, ask for clarification.
-6. Never fabricate data. If unsure, politely say so.
-"""
-
-qa_prompt = ChatPromptTemplate.from_messages([
-    ("system", SYSTEM_PROMPT),
-    ("human", """Retriever context:
-{context}
-
-Conversation history (most recent first — includes the user's current message):
-{history}
-
-User query:
-{query}
-
-INSTRUCTIONS:
-- The 'Conversation history' includes previous user queries and bot responses (most recent first).
-- Do NOT repeat earlier bot responses verbatim; rephrase or provide new clarifying info when possible.
-- If booking was already confirmed with the doctor, say so directly.
-- If slot unavailable, provide available slots from the context.
-- If clarification is needed, ask a short direct question.
-""")
-])
+# try:
+#     response = redis_client.ping()
+#     if response:
+#         print("✅ Redis connection successful!")
+#     else:
+#         print("❌ Redis connection failed.")
+# except redis.exceptions.AuthenticationError:
+#     print("❌ Authentication failed. Check username/password.")
+# except redis.exceptions.ConnectionError:
+#     print("❌ Cannot connect to Redis server. Check host/port.")
 
 
-# ==============================
-# Simple deterministic pseudo-embedding (replace with real embeddings in production)
-# ==============================
-class EmbeddingModel:
-    """Simple pseudo-embedding (replace with real LLM embedding in production)."""
-    def embed_text(self, text: str) -> List[float]:
-        # create deterministic vector from SHA256 -> list of floats
-        h = hashlib.sha256((text or "").encode("utf-8")).hexdigest()
-        return [(int(h[i:i+2], 16) / 255.0) for i in range(0, 32, 2)]  # 16-d floats
+# # redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
 
-embedding_model = EmbeddingModel()
+# # ==============================
+# # Regex Patterns
+# # ==============================
+# DOCTOR_PATTERN = r"Dr\.?\s+[A-Z][a-zA-Z]+"
+# TIME_PATTERN = r"\b(?:[01]?\d|2[0-3]):[0-5]\d\b"
 
-def _safe_embed(text: str) -> List[float]:
-    try:
-        return embedding_model.embed_text(text or "")
-    except Exception:
-        logger.exception("Embedding failed, returning zeros")
-        return [0.0] * 16
+# # ==============================
+# # Prompt Template (updated)
+# # ==============================
+# SYSTEM_PROMPT = """
+# You are a retrieval-augmented medical assistant chatbot.
 
-def _cosine_sim(a: List[float], b: List[float]) -> float:
-    # compute cosine similarity
-    if not a or not b:
-        return 0.0
-    dot = sum(x * y for x, y in zip(a, b))
-    na = math.sqrt(sum(x * x for x in a))
-    nb = math.sqrt(sum(y * y for y in b))
-    if na == 0 or nb == 0:
-        return 0.0
-    return dot / (na * nb)
+# Your responsibilities:
+# 1. Use ONLY the retriever context, chat history, and the user’s latest query.
+# 2. Avoid repeating responses already given in prior conversation history; if you must repeat some necessary info, rephrase it.
+# 3. If a booking was already confirmed for the same doctor, acknowledge that instead of reconfirming.
+# 4. Be concise, clear, and human-like (≤40 words).
+# 5. If doctor, time, or information is missing, ask for clarification.
+# 6. Never fabricate data. If unsure, politely say so.
+# """
 
-# ==============================
-# Utility Functions
-# ==============================
-def _extract_doctor_and_time(text: str) -> Tuple[Optional[str], Optional[str]]:
-    doctor_match = re.search(DOCTOR_PATTERN, text or "")
-    time_match = re.search(TIME_PATTERN, text or "")
-    doctor = doctor_match.group().strip() if doctor_match else None
-    time = time_match.group().strip() if time_match else None
-    return doctor, time
+# qa_prompt = ChatPromptTemplate.from_messages([
+#     ("system", SYSTEM_PROMPT),
+#     ("human", """Retriever context:
+# {context}
 
-def _parse_doctor_availability(retrieved_context: str) -> Dict[str, List[str]]:
-    availability: Dict[str, List[str]] = {}
-    if not retrieved_context:
-        return availability
-    sentences = re.split(r'[.\n]+', retrieved_context)
-    for s in sentences:
-        doc_match = re.search(DOCTOR_PATTERN, s)
-        if not doc_match:
-            continue
-        doc = doc_match.group().strip()
-        slots = re.findall(TIME_PATTERN, s)
-        if slots:
-            availability.setdefault(doc, []).extend(sorted(set(slots)))
-    return availability
+# Conversation history (most recent first — includes the user's current message):
+# {history}
 
-# ==============================
-# Redis Chat History Management (improved)
-# ==============================
-# Each user's history list key: chat:{user_id} stores JSON entries:
-# {"query": str, "response": Optional[str], "query_embedding": [...], "response_embedding": [...], "ts": <optional>}
-def _chat_key(user_id: str) -> str:
-    return f"chat:{user_id}"
+# User query:
+# {query}
 
-def push_pending_query(user_id: str, query: str, q_emb: List[float]) -> int:
-    """
-    Push a pending query into user's chat list with response=null.
-    Returns the absolute index (0-based) of the pushed element so it can be updated later.
-    """
-    key = _chat_key(user_id)
-    entry = {
-        "query": query,
-        "response": None,
-        "query_embedding": q_emb,
-        "response_embedding": None
-    }
-    # rpush then compute index
-    pipe = redis_client.pipeline()
-    pipe.rpush(key, json.dumps(entry))
-    pipe.llen(key)
-    _, length = pipe.execute()
-    index = length - 1
-    logger.debug(f"Pushed pending query for user {user_id} at index {index}")
-    return index
+# INSTRUCTIONS:
+# - The 'Conversation history' includes previous user queries and bot responses (most recent first).
+# - Do NOT repeat earlier bot responses verbatim; rephrase or provide new clarifying info when possible.
+# - If booking was already confirmed with the doctor, say so directly.
+# - If slot unavailable, provide available slots from the context.
+# - If clarification is needed, ask a short direct question.
+# """)
+# ])
 
-def update_history_response(user_id: str, index: int, response: str, r_emb: List[float]) -> None:
-    """
-    Update the list element at absolute index with the response and response_embedding.
-    """
-    key = _chat_key(user_id)
-    entries = redis_client.lrange(key, index, index)
-    if not entries:
-        logger.error(f"No entry found at index {index} for user {user_id}")
-        return
-    entry = json.loads(entries[0])
-    entry["response"] = response
-    entry["response_embedding"] = r_emb
-    redis_client.lset(key, index, json.dumps(entry))
-    logger.info(f"Updated chat history for user {user_id} at index {index}")
 
-def get_chat_history(user_id: str, last_n: int = 10) -> List[Dict[str, Any]]:
-    entries = redis_client.lrange(_chat_key(user_id), -last_n, -1)
-    return [json.loads(e) for e in entries if e]
+# # ==============================
+# # Simple deterministic pseudo-embedding (replace with real embeddings in production)
+# # ==============================
+# class EmbeddingModel:
+#     """Simple pseudo-embedding (replace with real LLM embedding in production)."""
+#     def embed_text(self, text: str) -> List[float]:
+#         # create deterministic vector from SHA256 -> list of floats
+#         h = hashlib.sha256((text or "").encode("utf-8")).hexdigest()
+#         return [(int(h[i:i+2], 16) / 255.0) for i in range(0, 32, 2)]  # 16-d floats
 
-def clear_user_history(user_id: str) -> None:
-    redis_client.delete(_chat_key(user_id))
+# embedding_model = EmbeddingModel()
 
-# ==============================
-# Booking Management (unchanged semantics, but optimized)
-# ==============================
-def book_doctor(user_id: str, doctor: str, slot: str) -> str:
-    logger.info(f"Attempting booking: user={user_id}, doctor={doctor}, slot={slot}")
-    pipe = redis_client.pipeline()
+# def _safe_embed(text: str) -> List[float]:
+#     try:
+#         return embedding_model.embed_text(text or "")
+#     except Exception:
+#         logger.exception("Embedding failed, returning zeros")
+#         return [0.0] * 16
 
-    # If user already has booking with doctor -> acknowledge
-    if redis_client.sismember(f"user_bookings:{user_id}", doctor):
-        return f"✅ You already have a confirmed booking with {doctor}."
+# def _cosine_sim(a: List[float], b: List[float]) -> float:
+#     # compute cosine similarity
+#     if not a or not b:
+#         return 0.0
+#     dot = sum(x * y for x, y in zip(a, b))
+#     na = math.sqrt(sum(x * x for x in a))
+#     nb = math.sqrt(sum(y * y for y in b))
+#     if na == 0 or nb == 0:
+#         return 0.0
+#     return dot / (na * nb)
 
-    # if doctor_slots already contains the slot -> slot busy
-    if redis_client.sismember(f"doctor_slots:{doctor}", slot):
-        return f"❌ Sorry, {doctor} at {slot} is already booked."
+# # ==============================
+# # Utility Functions
+# # ==============================
+# def _extract_doctor_and_time(text: str) -> Tuple[Optional[str], Optional[str]]:
+#     doctor_match = re.search(DOCTOR_PATTERN, text or "")
+#     time_match = re.search(TIME_PATTERN, text or "")
+#     doctor = doctor_match.group().strip() if doctor_match else None
+#     time = time_match.group().strip() if time_match else None
+#     return doctor, time
 
-    # If any user_bookings:* contains this doctor (doctor is fully booked in your model) -> deny
-    all_users = redis_client.keys("user_bookings:*")
-    for key in all_users:
-        if redis_client.sismember(key, doctor):
-            return f"❌ Sorry, {doctor} is already booked by another user."
+# def _parse_doctor_availability(retrieved_context: str) -> Dict[str, List[str]]:
+#     availability: Dict[str, List[str]] = {}
+#     if not retrieved_context:
+#         return availability
+#     sentences = re.split(r'[.\n]+', retrieved_context)
+#     for s in sentences:
+#         doc_match = re.search(DOCTOR_PATTERN, s)
+#         if not doc_match:
+#             continue
+#         doc = doc_match.group().strip()
+#         slots = re.findall(TIME_PATTERN, s)
+#         if slots:
+#             availability.setdefault(doc, []).extend(sorted(set(slots)))
+#     return availability
 
-    # Confirm booking: add slot to doctor_slots and add doctor to user_bookings
-    pipe.sadd(f"doctor_slots:{doctor}", slot)
-    pipe.sadd(f"user_bookings:{user_id}", doctor)
-    pipe.execute()
-    return f"✅ Your booking with {doctor} at {slot} is confirmed."
+# # ==============================
+# # Redis Chat History Management (improved)
+# # ==============================
+# # Each user's history list key: chat:{user_id} stores JSON entries:
+# # {"query": str, "response": Optional[str], "query_embedding": [...], "response_embedding": [...], "ts": <optional>}
+# def _chat_key(user_id: str) -> str:
+#     return f"chat:{user_id}"
 
-def get_user_bookings(user_id: str) -> List[str]:
-    return list(redis_client.smembers(f"user_bookings:{user_id}"))
+# def push_pending_query(user_id: str, query: str, q_emb: List[float]) -> int:
+#     """
+#     Push a pending query into user's chat list with response=null.
+#     Returns the absolute index (0-based) of the pushed element so it can be updated later.
+#     """
+#     key = _chat_key(user_id)
+#     entry = {
+#         "query": query,
+#         "response": None,
+#         "query_embedding": q_emb,
+#         "response_embedding": None
+#     }
+#     # rpush then compute index
+#     pipe = redis_client.pipeline()
+#     pipe.rpush(key, json.dumps(entry))
+#     pipe.llen(key)
+#     _, length = pipe.execute()
+#     index = length - 1
+#     logger.debug(f"Pushed pending query for user {user_id} at index {index}")
+#     return index
 
-def get_doctor_booked_slots(doctor: str) -> List[str]:
-    return list(redis_client.smembers(f"doctor_slots:{doctor}"))
+# def update_history_response(user_id: str, index: int, response: str, r_emb: List[float]) -> None:
+#     """
+#     Update the list element at absolute index with the response and response_embedding.
+#     """
+#     key = _chat_key(user_id)
+#     entries = redis_client.lrange(key, index, index)
+#     if not entries:
+#         logger.error(f"No entry found at index {index} for user {user_id}")
+#         return
+#     entry = json.loads(entries[0])
+#     entry["response"] = response
+#     entry["response_embedding"] = r_emb
+#     redis_client.lset(key, index, json.dumps(entry))
+#     logger.info(f"Updated chat history for user {user_id} at index {index}")
 
-# ==============================
-# Repetition detection & safe re-query
-# ==============================
-REPEAT_SIM_THRESHOLD = 0.92  # high threshold for "too similar"
+# def get_chat_history(user_id: str, last_n: int = 10) -> List[Dict[str, Any]]:
+#     entries = redis_client.lrange(_chat_key(user_id), -last_n, -1)
+#     return [json.loads(e) for e in entries if e]
 
-def _is_repetition(user_id: str, candidate_response: str) -> Tuple[bool, Optional[str]]:
-    """
-    Returns (is_repetition, matched_previous_response_text_or_None)
-    Use cosine similarity between candidate_response embedding and previous response embeddings.
-    """
-    cand_emb = _safe_embed(candidate_response)
-    history = get_chat_history(user_id, last_n=50)
-    best_sim = -1.0
-    best_resp = None
-    for turn in history:
-        prev_resp = turn.get("response") or ""
-        prev_emb = turn.get("response_embedding")
-        if not prev_resp or not prev_emb:
-            continue
-        sim = _cosine_sim(cand_emb, prev_emb)
-        if sim > best_sim:
-            best_sim = sim
-            best_resp = prev_resp
-    logger.debug(f"Repetition check best_sim={best_sim} for user {user_id}")
-    return (best_sim >= REPEAT_SIM_THRESHOLD, best_resp if best_sim >= REPEAT_SIM_THRESHOLD else None)
+# def clear_user_history(user_id: str) -> None:
+#     redis_client.delete(_chat_key(user_id))
 
-# ==============================
-# Dynamic Booking Logic (uses availability parsed from retrieved_context)
-# ==============================
-def _process_dynamic_booking(user_id: str, query: str, response: str, retrieved_context: str) -> str:
-    # Try to extract doctor and slot from query or the model response
-    doctor, slot = _extract_doctor_and_time(query)
-    if not doctor or not slot:
-        doc2, slot2 = _extract_doctor_and_time(response)
-        doctor = doctor or doc2
-        slot = slot or slot2
-    if not doctor or not slot:
-        return response
+# # ==============================
+# # Booking Management (unchanged semantics, but optimized)
+# # ==============================
+# def book_doctor(user_id: str, doctor: str, slot: str) -> str:
+#     logger.info(f"Attempting booking: user={user_id}, doctor={doctor}, slot={slot}")
+#     pipe = redis_client.pipeline()
 
-    availability = _parse_doctor_availability(retrieved_context)
-    matched_doctor = next((d for d in availability if d.lower() == doctor.lower()), None)
-    if not matched_doctor:
-        return f"Sorry, {doctor} is not available."
+#     # If user already has booking with doctor -> acknowledge
+#     if redis_client.sismember(f"user_bookings:{user_id}", doctor):
+#         return f"✅ You already have a confirmed booking with {doctor}."
 
-    if slot not in availability.get(matched_doctor, []):
-        possible_slots = availability.get(matched_doctor, [])
-        if possible_slots:
-            return f"Sorry, {matched_doctor} is not available at {slot}. Available slots: {', '.join(possible_slots)}."
-        return f"Sorry, {matched_doctor} has no available slots."
+#     # if doctor_slots already contains the slot -> slot busy
+#     if redis_client.sismember(f"doctor_slots:{doctor}", slot):
+#         return f"❌ Sorry, {doctor} at {slot} is already booked."
 
-    # Cross-user booking check and attempt to book
-    # (book_doctor will do necessary checks and return appropriate message)
-    return book_doctor(user_id, matched_doctor, slot)
+#     # If any user_bookings:* contains this doctor (doctor is fully booked in your model) -> deny
+#     all_users = redis_client.keys("user_bookings:*")
+#     for key in all_users:
+#         if redis_client.sismember(key, doctor):
+#             return f"❌ Sorry, {doctor} is already booked by another user."
 
-# ==============================
-# Main LLM Query Handler (rewritten to push pending query, call LLM with updated history, update response)
-# ==============================
-def handle_user_query(user_id: str, retrieved_context: str, query: str) -> str:
-    if not user_id or not query:
-        logger.warning("User ID or query missing")
-        return "Please provide a valid user ID and query."
+#     # Confirm booking: add slot to doctor_slots and add doctor to user_bookings
+#     pipe.sadd(f"doctor_slots:{doctor}", slot)
+#     pipe.sadd(f"user_bookings:{user_id}", doctor)
+#     pipe.execute()
+#     return f"✅ Your booking with {doctor} at {slot} is confirmed."
 
-    if not isinstance(retrieved_context, str):
-        retrieved_context = json.dumps(retrieved_context)
+# def get_user_bookings(user_id: str) -> List[str]:
+#     return list(redis_client.smembers(f"user_bookings:{user_id}"))
 
-    # === Prepare embeddings & push pending query to Redis (so history includes current user query) ===
-    q_emb = _safe_embed(query)
-    pending_index = push_pending_query(user_id, query, q_emb)  # will store entry with response=None
+# def get_doctor_booked_slots(doctor: str) -> List[str]:
+#     return list(redis_client.smembers(f"doctor_slots:{doctor}"))
 
-    # === Build history text from Redis (most recent first) and include the newly pushed pending query ===
-    history = get_chat_history(user_id, last_n=10)
-    # Format history most recent first
-    formatted_history = []
-    for turn in reversed(history):  # get most recent first
-        u = turn.get("query")
-        b = turn.get("response") or ""
-        if b:
-            formatted_history.append(f"User: {u}\nBot: {b}")
-        else:
-            formatted_history.append(f"User: {u}\nBot: <pending response>")
-    history_text = "\n\n".join(reversed(formatted_history)) if formatted_history else "No prior conversation."
+# # ==============================
+# # Repetition detection & safe re-query
+# # ==============================
+# REPEAT_SIM_THRESHOLD = 0.92  # high threshold for "too similar"
 
-    # === Add user's current bookings ===
-    user_bookings = get_user_bookings(user_id)
-    if user_bookings:
-        user_booking_info = f"Your current bookings: {', '.join(user_bookings)}"
-    else:
-        user_booking_info = "You have no current bookings."
+# def _is_repetition(user_id: str, candidate_response: str) -> Tuple[bool, Optional[str]]:
+#     """
+#     Returns (is_repetition, matched_previous_response_text_or_None)
+#     Use cosine similarity between candidate_response embedding and previous response embeddings.
+#     """
+#     cand_emb = _safe_embed(candidate_response)
+#     history = get_chat_history(user_id, last_n=50)
+#     best_sim = -1.0
+#     best_resp = None
+#     for turn in history:
+#         prev_resp = turn.get("response") or ""
+#         prev_emb = turn.get("response_embedding")
+#         if not prev_resp or not prev_emb:
+#             continue
+#         sim = _cosine_sim(cand_emb, prev_emb)
+#         if sim > best_sim:
+#             best_sim = sim
+#             best_resp = prev_resp
+#     logger.debug(f"Repetition check best_sim={best_sim} for user {user_id}")
+#     return (best_sim >= REPEAT_SIM_THRESHOLD, best_resp if best_sim >= REPEAT_SIM_THRESHOLD else None)
 
-    # === Build final prompt (LLM sees the current query as part of history) ===
-    final_prompt = qa_prompt.format(
-        context=f"{retrieved_context}\n\n{user_booking_info}",
-        history=history_text,
-        query=query
-    )
-    logger.info(f"Final prompt for LLM (User {user_id}):\n{final_prompt}")
+# # ==============================
+# # Dynamic Booking Logic (uses availability parsed from retrieved_context)
+# # ==============================
+# def _process_dynamic_booking(user_id: str, query: str, response: str, retrieved_context: str) -> str:
+#     # Try to extract doctor and slot from query or the model response
+#     doctor, slot = _extract_doctor_and_time(query)
+#     if not doctor or not slot:
+#         doc2, slot2 = _extract_doctor_and_time(response)
+#         doctor = doctor or doc2
+#         slot = slot or slot2
+#     if not doctor or not slot:
+#         return response
 
-    # === Get initial LLM Response ===
-    raw_response = llm.predict(final_prompt)
-    response_text = " ".join(raw_response) if isinstance(raw_response, (list, tuple)) else str(raw_response)
-    response_text = response_text.strip()
-    logger.info(f"LLM raw response: {response_text}")
+#     availability = _parse_doctor_availability(retrieved_context)
+#     matched_doctor = next((d for d in availability if d.lower() == doctor.lower()), None)
+#     if not matched_doctor:
+#         return f"Sorry, {doctor} is not available."
 
-    # === Save LLM response back to the pending Redis entry ===
-    r_emb = _safe_embed(response_text)
-    update_history_response(user_id, pending_index, response_text, r_emb)
+#     if slot not in availability.get(matched_doctor, []):
+#         possible_slots = availability.get(matched_doctor, [])
+#         if possible_slots:
+#             return f"Sorry, {matched_doctor} is not available at {slot}. Available slots: {', '.join(possible_slots)}."
+#         return f"Sorry, {matched_doctor} has no available slots."
 
-    # === Repetition check: if the new response is too similar to any previous response, ask LLM to rephrase once ===
-    is_rep, matched_prev = _is_repetition(user_id, response_text)
-    if is_rep:
-        logger.info(f"Detected repetition for user {user_id}. Asking LLM to rephrase.")
-        rephrase_prompt = qa_prompt.format(
-            context=f"{retrieved_context}\n\n{user_booking_info}",
-            history=history_text + f"\n\nBot (previous similar response): {matched_prev}",
-            query=f"{query}\n\nPlease rephrase the answer avoiding repeating past responses. Keep <=40 words."
-        )
-        logger.debug(f"Rephrase prompt:\n{rephrase_prompt}")
-        raw_re_resp = llm.predict(rephrase_prompt)
-        rephrase_text = " ".join(raw_re_resp) if isinstance(raw_re_resp, (list, tuple)) else str(raw_re_resp)
-        rephrase_text = rephrase_text.strip()
-        # update Redis with rephrased final answer
-        r_emb2 = _safe_embed(rephrase_text)
-        update_history_response(user_id, pending_index, rephrase_text, r_emb2)
-        final_response = rephrase_text
-    else:
-        final_response = response_text
+#     # Cross-user booking check and attempt to book
+#     # (book_doctor will do necessary checks and return appropriate message)
+#     return book_doctor(user_id, matched_doctor, slot)
 
-    # === Booking logic: attempt or report booking (booking function uses Redis sets and will reflect new booking) ===
-    booking_result = _process_dynamic_booking(user_id, query, final_response, retrieved_context)
+# # ==============================
+# # Main LLM Query Handler (rewritten to push pending query, call LLM with updated history, update response)
+# # ==============================
+# def handle_user_query(user_id: str, retrieved_context: str, query: str) -> str:
+#     if not user_id or not query:
+#         logger.warning("User ID or query missing")
+#         return "Please provide a valid user ID and query."
 
-    # If booking_result is a booking message (starts with ✅ or ❌ or 'Sorry') - we should also persist that as bot response
-    # i.e., if booking changed the final user-visible response, update both Redis and returned text.
-    # Prefer to return the booking_result if it indicates booking activity or conflict, else return final_response.
-    booking_indicators = ("✅", "❌", "Sorry", "sorry")
-    if isinstance(booking_result, str) and booking_result.startswith(booking_indicators):
-        # update Redis entry and return booking_result
-        r_emb_booking = _safe_embed(booking_result)
-        update_history_response(user_id, pending_index, booking_result, r_emb_booking)
-        return booking_result
+#     if not isinstance(retrieved_context, str):
+#         retrieved_context = json.dumps(retrieved_context)
 
-    # Otherwise verify final_response (already saved) and return
-    return final_response
+#     # === Prepare embeddings & push pending query to Redis (so history includes current user query) ===
+#     q_emb = _safe_embed(query)
+#     pending_index = push_pending_query(user_id, query, q_emb)  # will store entry with response=None
 
-# ==============================
-# Helper functions for external use
-# ==============================
-def list_available_slots_for_doctor(doctor_name: str, retrieved_context: str) -> List[str]:
-    availability = _parse_doctor_availability(retrieved_context)
-    return availability.get(doctor_name, [])
+#     # === Build history text from Redis (most recent first) and include the newly pushed pending query ===
+#     history = get_chat_history(user_id, last_n=10)
+#     # Format history most recent first
+#     formatted_history = []
+#     for turn in reversed(history):  # get most recent first
+#         u = turn.get("query")
+#         b = turn.get("response") or ""
+#         if b:
+#             formatted_history.append(f"User: {u}\nBot: {b}")
+#         else:
+#             formatted_history.append(f"User: {u}\nBot: <pending response>")
+#     history_text = "\n\n".join(reversed(formatted_history)) if formatted_history else "No prior conversation."
 
-def get_user_history(user_id: str, include_embeddings: bool = False) -> List[Dict[str, Any]]:
-    hist = get_chat_history(user_id, last_n=100)
-    if not include_embeddings:
-        return [{"query": e["query"], "response": e["response"]} for e in hist]
-    return hist
+#     # === Add user's current bookings ===
+#     user_bookings = get_user_bookings(user_id)
+#     if user_bookings:
+#         user_booking_info = f"Your current bookings: {', '.join(user_bookings)}"
+#     else:
+#         user_booking_info = "You have no current bookings."
 
-def get_booking_summary() -> Dict[str, List[str]]:
-    keys = redis_client.keys("doctor_slots:*")
-    summary = {}
-    for key in keys:
-        doctor = key.split(":")[1]
-        summary[doctor] = list(redis_client.smembers(key))
-    return summary
+#     # === Build final prompt (LLM sees the current query as part of history) ===
+#     final_prompt = qa_prompt.format(
+#         context=f"{retrieved_context}\n\n{user_booking_info}",
+#         history=history_text,
+#         query=query
+#     )
+#     logger.info(f"Final prompt for LLM (User {user_id}):\n{final_prompt}")
 
-# ---------------- NEW: booking-intent + field extraction ---------------- #
+#     # === Get initial LLM Response ===
+#     raw_response = llm.predict(final_prompt)
+#     response_text = " ".join(raw_response) if isinstance(raw_response, (list, tuple)) else str(raw_response)
+#     response_text = response_text.strip()
+#     logger.info(f"LLM raw response: {response_text}")
 
-def _strip_code_fences(text: str) -> str:
-    if not isinstance(text, str):
-        return ""
-    t = text.strip()
-    if t.startswith("```"):
-        # remove leading/trailing ``` and an optional "json" tag
-        t = t.strip("`")
-        if t.lower().startswith("json"):
-            t = t[4:].lstrip()
-    return t
+#     # === Save LLM response back to the pending Redis entry ===
+#     r_emb = _safe_embed(response_text)
+#     update_history_response(user_id, pending_index, response_text, r_emb)
+
+#     # === Repetition check: if the new response is too similar to any previous response, ask LLM to rephrase once ===
+#     is_rep, matched_prev = _is_repetition(user_id, response_text)
+#     if is_rep:
+#         logger.info(f"Detected repetition for user {user_id}. Asking LLM to rephrase.")
+#         rephrase_prompt = qa_prompt.format(
+#             context=f"{retrieved_context}\n\n{user_booking_info}",
+#             history=history_text + f"\n\nBot (previous similar response): {matched_prev}",
+#             query=f"{query}\n\nPlease rephrase the answer avoiding repeating past responses. Keep <=40 words."
+#         )
+#         logger.debug(f"Rephrase prompt:\n{rephrase_prompt}")
+#         raw_re_resp = llm.predict(rephrase_prompt)
+#         rephrase_text = " ".join(raw_re_resp) if isinstance(raw_re_resp, (list, tuple)) else str(raw_re_resp)
+#         rephrase_text = rephrase_text.strip()
+#         # update Redis with rephrased final answer
+#         r_emb2 = _safe_embed(rephrase_text)
+#         update_history_response(user_id, pending_index, rephrase_text, r_emb2)
+#         final_response = rephrase_text
+#     else:
+#         final_response = response_text
+
+#     # === Booking logic: attempt or report booking (booking function uses Redis sets and will reflect new booking) ===
+#     booking_result = _process_dynamic_booking(user_id, query, final_response, retrieved_context)
+
+#     # If booking_result is a booking message (starts with ✅ or ❌ or 'Sorry') - we should also persist that as bot response
+#     # i.e., if booking changed the final user-visible response, update both Redis and returned text.
+#     # Prefer to return the booking_result if it indicates booking activity or conflict, else return final_response.
+#     booking_indicators = ("✅", "❌", "Sorry", "sorry")
+#     if isinstance(booking_result, str) and booking_result.startswith(booking_indicators):
+#         # update Redis entry and return booking_result
+#         r_emb_booking = _safe_embed(booking_result)
+#         update_history_response(user_id, pending_index, booking_result, r_emb_booking)
+#         return booking_result
+
+#     # Otherwise verify final_response (already saved) and return
+#     return final_response
+
+# # ==============================
+# # Helper functions for external use
+# # ==============================
+# def list_available_slots_for_doctor(doctor_name: str, retrieved_context: str) -> List[str]:
+#     availability = _parse_doctor_availability(retrieved_context)
+#     return availability.get(doctor_name, [])
+
+# def get_user_history(user_id: str, include_embeddings: bool = False) -> List[Dict[str, Any]]:
+#     hist = get_chat_history(user_id, last_n=100)
+#     if not include_embeddings:
+#         return [{"query": e["query"], "response": e["response"]} for e in hist]
+#     return hist
+
+# def get_booking_summary() -> Dict[str, List[str]]:
+#     keys = redis_client.keys("doctor_slots:*")
+#     summary = {}
+#     for key in keys:
+#         doctor = key.split(":")[1]
+#         summary[doctor] = list(redis_client.smembers(key))
+#     return summary
+
+# # ---------------- NEW: booking-intent + field extraction ---------------- #
+
+# def _strip_code_fences(text: str) -> str:
+#     if not isinstance(text, str):
+#         return ""
+#     t = text.strip()
+#     if t.startswith("```"):
+#         # remove leading/trailing ``` and an optional "json" tag
+#         t = t.strip("`")
+#         if t.lower().startswith("json"):
+#             t = t[4:].lstrip()
+#     return t
 
 # def detect_booking_intent_and_fields(retrieved_context: str, query: str) -> dict:
 #     """
@@ -919,117 +919,145 @@ def _strip_code_fences(text: str) -> str:
 #     return payload
 
 
-def detect_booking_intent_and_fields(user_id: str, retrieved_context: str, query: str) -> dict:
+# def detect_booking_intent_and_fields(user_id: str, retrieved_context: str, query: str) -> dict:
+#     """
+#     Detect booking intent, extract fields, and store query/response in Redis chat history.
+#     Returns dict matching the JSON schema for booking intent extraction.
+#     """
+#     retrieved_context = retrieved_context or "No relevant context available."
+#     query = query or ""
+
+#     # -----------------------------
+#     # Push pending query to Redis
+#     # -----------------------------
+#     q_emb = _safe_embed(query)
+#     pending_index = push_pending_query(user_id, query, q_emb)
+
+#     # -----------------------------
+#     # Gather user history and bookings
+#     # -----------------------------
+#     user_history = get_user_history(user_id, include_embeddings=False)
+#     user_history_text = "\n".join(
+#         [f"User: {h['query']}\nBot: {h.get('response','')}" for h in user_history[-10:]]
+#     ) or "No prior conversation."
+
+#     user_bookings = get_user_bookings(user_id)
+#     user_booking_info = f"Your confirmed bookings: {', '.join(user_bookings)}" if user_bookings else "You have no confirmed bookings."
+
+#     # -----------------------------
+#     # Cross-user booked doctors
+#     # -----------------------------
+#     all_doctor_keys = redis_client.keys("doctor_slots:*")
+#     booked_doctors = [key.split(":")[1] for key in all_doctor_keys if redis_client.scard(key) > 0]
+#     booked_info = f"Doctors already booked by other users: {', '.join(booked_doctors)}" if booked_doctors else "No doctors are currently fully booked."
+
+#     # -----------------------------
+#     # LLM system + user prompt
+#     # -----------------------------
+#     system_msg = (
+#         "You are a strict JSON extractor for doctor appointment bookings.\n"
+#         "Decide if the user is trying to BOOK an appointment. If yes, extract normalized fields.\n"
+#         "Return STRICT JSON only. No prose, no markdown."
+#     )
+
+#     schema_block = (
+#         '{\n'
+#         '  "intent": "book" | "other",\n'
+#         '  "doctor": string | null,\n'
+#         '  "date": "YYYY-MM-DD" | null,\n'
+#         '  "start": "HH:MM" | null,\n'
+#         '  "duration_min": number | null,\n'
+#         '  "window_start": "HH:MM" | null,\n'
+#         '  "window_end": "HH:MM" | null\n'
+#         '}'
+#     )
+
+#     rules = (
+#         "- If it is clearly a booking request, set intent to 'book'; otherwise 'other'.\n"
+#         "- Use CONTEXT to determine doctor's availability window; convert AM/PM to 24h HH:MM.\n"
+#         "- Convert any user-provided time to 24h HH:MM.\n"
+#         "- Do NOT attempt booking if the doctor is already booked by another user.\n"
+#         "- Include user's previous bookings in context.\n"
+#         "- If a field is unknown, set it to null. Do NOT invent data.\n"
+#         "- Output ONLY JSON matching the schema keys."
+#     )
+
+#     user_prompt = (
+#         f"CONTEXT:\n{retrieved_context}\n{user_booking_info}\n{booked_info}\n\n"
+#         f"Conversation History:\n{user_history_text}\n\n"
+#         f"USER_MESSAGE:\n{query}\n\n"
+#         f"Output JSON matching this schema:\n{schema_block}\n\nRules:\n{rules}"
+#     )
+
+#     # -----------------------------
+#     # Call LLM
+#     # -----------------------------
+#     raw = llm.predict(f"[SYSTEM]\n{system_msg}\n\n[USER]\n{user_prompt}").strip()
+#     raw = _strip_code_fences(raw)
+
+#     try:
+#         payload = json.loads(raw)
+#     except Exception:
+#         payload = {"intent": "other"}
+
+#     # -----------------------------
+#     # Normalize fields
+#     # -----------------------------
+#     if payload.get("duration_min") is None:
+#         payload["duration_min"] = 30
+#     for k in ("doctor", "date", "start", "window_start", "window_end"):
+#         payload.setdefault(k, None)
+#     if payload.get("intent") not in ("book", "other"):
+#         payload["intent"] = "other"
+
+#     # -----------------------------
+#     # Cross-user booking check
+#     # -----------------------------
+#     doctor_name = payload.get("doctor")
+#     if doctor_name and doctor_name in booked_doctors:
+#         payload["intent"] = "other"
+#         payload["doctor"] = None
+#         payload["start"] = None
+#         payload["window_start"] = None
+#         payload["window_end"] = None
+#         payload["duration_min"] = None
+#         response_text = f"❌ Sorry, {doctor_name} is already booked by another user."
+#     else:
+#         response_text = f"Detected intent: {payload['intent']}"  # or you can craft any short response
+
+#     # -----------------------------
+#     # Save LLM response in Redis
+#     # -----------------------------
+#     r_emb = _safe_embed(response_text)
+#     update_history_response(user_id, pending_index, response_text, r_emb)
+
+#     return payload
+
+
+
+from app.prompts.qa_prompt import qa_prompt
+from app.core.config import llm
+
+def handle_user_query(retrieved_context: str, query: str) -> str:
     """
-    Detect booking intent, extract fields, and store query/response in Redis chat history.
-    Returns dict matching the JSON schema for booking intent extraction.
+    Generate a concise response using only the provided retriever context.
+
+    Args:
+        retrieved_context (str): The context retrieved from a vector DB or knowledge source.
+        query (str): The user’s question.
+
+    Returns:
+        str: LLM-generated response.
     """
-    retrieved_context = retrieved_context or "No relevant context available."
-    query = query or ""
-
-    # -----------------------------
-    # Push pending query to Redis
-    # -----------------------------
-    q_emb = _safe_embed(query)
-    pending_index = push_pending_query(user_id, query, q_emb)
-
-    # -----------------------------
-    # Gather user history and bookings
-    # -----------------------------
-    user_history = get_user_history(user_id, include_embeddings=False)
-    user_history_text = "\n".join(
-        [f"User: {h['query']}\nBot: {h.get('response','')}" for h in user_history[-10:]]
-    ) or "No prior conversation."
-
-    user_bookings = get_user_bookings(user_id)
-    user_booking_info = f"Your confirmed bookings: {', '.join(user_bookings)}" if user_bookings else "You have no confirmed bookings."
-
-    # -----------------------------
-    # Cross-user booked doctors
-    # -----------------------------
-    all_doctor_keys = redis_client.keys("doctor_slots:*")
-    booked_doctors = [key.split(":")[1] for key in all_doctor_keys if redis_client.scard(key) > 0]
-    booked_info = f"Doctors already booked by other users: {', '.join(booked_doctors)}" if booked_doctors else "No doctors are currently fully booked."
-
-    # -----------------------------
-    # LLM system + user prompt
-    # -----------------------------
-    system_msg = (
-        "You are a strict JSON extractor for doctor appointment bookings.\n"
-        "Decide if the user is trying to BOOK an appointment. If yes, extract normalized fields.\n"
-        "Return STRICT JSON only. No prose, no markdown."
+    # Ensure inputs are valid strings
+    retrieved_context = retrieved_context
+    query = query
+    # Format the prompt
+    formatted_prompt = qa_prompt.format(
+        context=retrieved_context,
+        query=query
     )
 
-    schema_block = (
-        '{\n'
-        '  "intent": "book" | "other",\n'
-        '  "doctor": string | null,\n'
-        '  "date": "YYYY-MM-DD" | null,\n'
-        '  "start": "HH:MM" | null,\n'
-        '  "duration_min": number | null,\n'
-        '  "window_start": "HH:MM" | null,\n'
-        '  "window_end": "HH:MM" | null\n'
-        '}'
-    )
-
-    rules = (
-        "- If it is clearly a booking request, set intent to 'book'; otherwise 'other'.\n"
-        "- Use CONTEXT to determine doctor's availability window; convert AM/PM to 24h HH:MM.\n"
-        "- Convert any user-provided time to 24h HH:MM.\n"
-        "- Do NOT attempt booking if the doctor is already booked by another user.\n"
-        "- Include user's previous bookings in context.\n"
-        "- If a field is unknown, set it to null. Do NOT invent data.\n"
-        "- Output ONLY JSON matching the schema keys."
-    )
-
-    user_prompt = (
-        f"CONTEXT:\n{retrieved_context}\n{user_booking_info}\n{booked_info}\n\n"
-        f"Conversation History:\n{user_history_text}\n\n"
-        f"USER_MESSAGE:\n{query}\n\n"
-        f"Output JSON matching this schema:\n{schema_block}\n\nRules:\n{rules}"
-    )
-
-    # -----------------------------
-    # Call LLM
-    # -----------------------------
-    raw = llm.predict(f"[SYSTEM]\n{system_msg}\n\n[USER]\n{user_prompt}").strip()
-    raw = _strip_code_fences(raw)
-
-    try:
-        payload = json.loads(raw)
-    except Exception:
-        payload = {"intent": "other"}
-
-    # -----------------------------
-    # Normalize fields
-    # -----------------------------
-    if payload.get("duration_min") is None:
-        payload["duration_min"] = 30
-    for k in ("doctor", "date", "start", "window_start", "window_end"):
-        payload.setdefault(k, None)
-    if payload.get("intent") not in ("book", "other"):
-        payload["intent"] = "other"
-
-    # -----------------------------
-    # Cross-user booking check
-    # -----------------------------
-    doctor_name = payload.get("doctor")
-    if doctor_name and doctor_name in booked_doctors:
-        payload["intent"] = "other"
-        payload["doctor"] = None
-        payload["start"] = None
-        payload["window_start"] = None
-        payload["window_end"] = None
-        payload["duration_min"] = None
-        response_text = f"❌ Sorry, {doctor_name} is already booked by another user."
-    else:
-        response_text = f"Detected intent: {payload['intent']}"  # or you can craft any short response
-
-    # -----------------------------
-    # Save LLM response in Redis
-    # -----------------------------
-    r_emb = _safe_embed(response_text)
-    update_history_response(user_id, pending_index, response_text, r_emb)
-
-    return payload
-
+    # Generate response
+    response = llm.predict(formatted_prompt).strip()
+    return response

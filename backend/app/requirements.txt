@@ -13,6 +13,8 @@ langchain==0.3.27
 langchain-community==0.3.31
 langchain_openai==0.3.35
 scikit-learn==1.7.2
+langchain-core==0.3.79
+langgraph==0.6.10
 
 # Database & vector storage
 psycopg2-binary==2.9.11

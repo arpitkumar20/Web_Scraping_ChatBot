@@ -1,90 +1,90 @@
-import logging
-import threading
-from flask import jsonify
+# import logging
+# import threading
+# from flask import jsonify
 
-from app.services.genai_response import handle_user_query
-from app.services.vectordb_retrive import query_pinecone_index
-from app.services.wati_api_service import send_whatsapp_message_v2
-from app.services.select_namespace import run_namespace_selector
+# from app.services.genai_response import handle_user_query
+# from app.services.vectordb_retrive import query_pinecone_index
+# from app.services.wati_api_service import send_whatsapp_message_v2
+# from app.services.select_namespace import run_namespace_selector
 
-from app.models.postgresql_db import PostgreSQL
-# from app.models.mysql_db import MySQL
+# from app.models.postgresql_db import PostgreSQL
+# # from app.models.mysql_db import MySQL
 
-# ✅ Call insert_message_data after successful processing
-DB = PostgreSQL()
-# DB = MySQL()
-# Keep track of processed message IDs to prevent duplicate processing
-processed_message_ids = set()
+# # ✅ Call insert_message_data after successful processing
+# DB = PostgreSQL()
+# # DB = MySQL()
+# # Keep track of processed message IDs to prevent duplicate processing
+# processed_message_ids = set()
 
-def handle_wati_webhook(data: dict) -> dict:
-    try:
-        message_id = data.get('id')
-        phone_number = data.get('waId')
-        message_text = data.get('text')
+# def handle_wati_webhook(data: dict) -> dict:
+#     try:
+#         message_id = data.get('id')
+#         phone_number = data.get('waId')
+#         message_text = data.get('text')
 
-        # Immediate 200 OK response
-        response = {"status": "received"}
+#         # Immediate 200 OK response
+#         response = {"status": "received"}
 
-        if not message_id or not phone_number or not message_text:
-            return {"error": "Invalid payload structure"}
+#         if not message_id or not phone_number or not message_text:
+#             return {"error": "Invalid payload structure"}
 
-        if message_id in processed_message_ids:
-            print(f"[INFO] Duplicate message detected: {message_id}. Skipping processing.")
-            return response
+#         if message_id in processed_message_ids:
+#             print(f"[INFO] Duplicate message detected: {message_id}. Skipping processing.")
+#             return response
 
-        processed_message_ids.add(message_id)
+#         processed_message_ids.add(message_id)
 
-        if len(processed_message_ids) > 10000:
-            processed_message_ids.clear()
+#         if len(processed_message_ids) > 10000:
+#             processed_message_ids.clear()
 
-        def process_message():
-            try:
-                logging.info(f"Processing new message: {message_id}")
+#         def process_message():
+#             try:
+#                 logging.info(f"Processing new message: {message_id}")
 
-                # ------------------------------
-                # Select namespace dynamically
-                # ------------------------------
-                namespace = run_namespace_selector(namespaces_file='web_info/web_info.json')
-                logging.info(f"Selected namespace: {namespace}")
+#                 # ------------------------------
+#                 # Select namespace dynamically
+#                 # ------------------------------
+#                 namespace = run_namespace_selector(namespaces_file='web_info/web_info.json')
+#                 logging.info(f"Selected namespace: {namespace}")
 
-                query_response = query_pinecone_index(query_text=message_text, namespace=namespace)
-                logging.info("Pinecone query completed.")
+#                 query_response = query_pinecone_index(query_text=message_text, namespace=namespace)
+#                 logging.info("Pinecone query completed.")
 
-                genai_response = handle_user_query(retrieved_context=query_response, query=message_text)
-                logging.info("GenAI response generated.")
+#                 genai_response = handle_user_query(user_id=str(message_id), retrieved_context=query_response, query=message_text)
+#                 logging.info("GenAI response generated.")
 
-                send_result = send_whatsapp_message_v2(phone_number=phone_number, message=genai_response)
-                logging.info(f"WhatsApp message send result")
+#                 send_result = send_whatsapp_message_v2(phone_number=phone_number, message=genai_response)
+#                 logging.info(f"WhatsApp message send result")
 
-                filtered_message = {k: v for k, v in send_result['message'].items() if v is not None}
+#                 filtered_message = {k: v for k, v in send_result['message'].items() if v is not None}
 
-                # Add filtered 'message' dict into response
-                response['result'] = send_result['result']
-                response['message'] = filtered_message
-                response['airesponse'] = genai_response
-                logging.info("whatsapp message log is going to save into postgressql")
-                data_to_insert = {
-                    'status': response.get('status', 'received'),  # Or whatever default you want
-                    'message': response['message'],
-                    'airesponse': response['airesponse'],
-                    'text': message_text
-                }
+#                 # Add filtered 'message' dict into response
+#                 response['result'] = send_result['result']
+#                 response['message'] = filtered_message
+#                 response['airesponse'] = genai_response
+#                 logging.info("whatsapp message log is going to save into postgressql")
+#                 data_to_insert = {
+#                     'status': response.get('status', 'received'),  # Or whatever default you want
+#                     'message': response['message'],
+#                     'airesponse': response['airesponse'],
+#                     'text': message_text
+#                 }
 
 
-                # insert_result = DB.insert_message_data(data_to_insert)
-                insert_result = DB.insert_rds_message_data(data_to_insert)
-                logging.info(f"Insert result: {insert_result}")
+#                 # insert_result = DB.insert_message_data(data_to_insert)
+#                 insert_result = DB.insert_rds_message_data(data_to_insert)
+#                 logging.info(f"Insert result: {insert_result}")
 
-            except Exception as e:
-                logging.error(f"Error processing message {message_id}: {str(e)}")
+#             except Exception as e:
+#                 logging.error(f"Error processing message {message_id}: {str(e)}")
 
-        threading.Thread(target=process_message).start()
+#         threading.Thread(target=process_message).start()
 
-        return response
+#         return response
 
-    except Exception as e:
-        logging.error(f"Webhook error: {str(e)}")
-        return {"error": str(e)}
+#     except Exception as e:
+#         logging.error(f"Webhook error: {str(e)}")
+#         return {"error": str(e)}
     
 '''
 
@@ -293,3 +293,113 @@ def handle_wati_webhook(data: dict) -> dict:
 #     except Exception as e:
 #         logging.error(f"Webhook error: {str(e)}")
 #         return {"error": str(e)}
+
+
+
+import logging
+import threading
+from typing import Dict
+
+from app.services.genai_response import (
+    handle_user_query
+)
+from app.services.vectordb_retrive import query_pinecone_index
+from app.services.wati_api_service import send_whatsapp_message_v2
+from app.services.select_namespace import run_namespace_selector
+from app.models.postgresql_db import PostgreSQL
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+DB = PostgreSQL()
+processed_messages = set()
+MAX_PROCESSED_CACHE = 10000
+
+def handle_wati_webhook(data: dict) -> dict:
+    """
+    Optimized webhook handler with memory-aware processing.
+    
+    Flow:
+    1. Validate and deduplicate
+    2. Detect booking intent with memory context
+    3. Handle booking OR general query
+    4. Save to database
+    """
+    try:
+        message_id = data.get('id')
+        phone = data.get('waId')
+        text = data.get('text')
+        
+        # Immediate acknowledgment
+        response = {"status": "received"}
+        
+        # Validation
+        if not all([message_id, phone, text]):
+            return {"error": "Invalid payload"}
+        
+        # Deduplication
+        if message_id in processed_messages:
+            logger.info(f"Duplicate: {message_id}")
+            return response
+        
+        processed_messages.add(message_id)
+        
+        # Cache cleanup
+        if len(processed_messages) > MAX_PROCESSED_CACHE:
+            processed_messages.clear()
+        
+        # Async processing
+        threading.Thread(target=_process_message, args=(message_id, phone, text, response)).start()
+        
+        return response
+        
+    except Exception as e:
+        logger.error(f"Webhook error: {e}")
+        return {"error": str(e)}
+
+def _process_message(msg_id: str, phone: str, text: str, response: dict):
+    """Process message with memory context"""
+    try:
+        logger.info(f"Processing: {msg_id}")
+        
+        # Select namespace
+        namespace = run_namespace_selector(namespaces_file='web_info/web_info.json')
+        logger.info(f"Namespace: {namespace}")
+        
+        # Get context for intent detection
+        context = query_pinecone_index(query_text=text, namespace=namespace)
+       
+        # Handle user query with context
+        ai_response = handle_user_query(
+            user_id=phone,
+            retrieved_context=context,
+            query=text
+        )
+        
+        # Send response
+        send_result = send_whatsapp_message_v2(phone, ai_response)
+        logger.info("WhatsApp sent")
+        
+        # Prepare response data
+        filtered_msg = {
+            k: v for k, v in send_result.get('message', {}).items() 
+            if v is not None
+        }
+        
+        response['result'] = send_result.get('result')
+        response['message'] = filtered_msg
+        response['airesponse'] = ai_response
+        
+        # Save to database
+        db_data = {
+            'status': response.get('status', 'received'),
+            'message': response['message'],
+            'airesponse': response['airesponse'],
+            'text': text
+        }
+        
+        DB.insert_rds_message_data(db_data)
+        logger.info("Saved to DB")
+        
+    except Exception as e:
+        logger.error(f"Processing error {msg_id}: {e}")

@@ -1,4 +1,5 @@
 import os
+import tempfile
 import uuid
 from dotenv import load_dotenv
 from threading import Thread, Lock
@@ -46,6 +47,11 @@ def file_content():
 
         job_id = str(uuid.uuid4())
         if file.filename.lower().endswith('.csv'):
+            # Save uploaded CSV to a temporary file before thread starts
+            temp_dir = tempfile.mkdtemp()
+            temp_path = os.path.join(temp_dir, file.filename)
+            file.save(temp_path)
+
             with lock:
                 job_status[job_id] = {
                     "job_id": job_id,
@@ -55,8 +61,14 @@ def file_content():
                     "error": None,
                     "filename": file.filename
                 }
-                # CSV file: preserve rows and columns
-            Thread(target=process_csv_to_embedding_with_job, args=(company_name, file, job_id), daemon=True).start()
+
+            # Pass the safe file path, not the stream
+            Thread(
+                target=process_csv_to_embedding_with_job,
+                args=(company_name, temp_path, job_id),
+                daemon=True
+            ).start()
+
             return jsonify({
                 "status": "embedding_started",
                 "job_id": job_id,

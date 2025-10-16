@@ -1,42 +1,68 @@
-# import os
-# import json
-# from langchain_google_genai import ChatGoogleGenerativeAI
-# from langchain.prompts import ChatPromptTemplate
-# import google.generativeai as genai
-# from dotenv import load_dotenv
+# # import os
+# # import json
+# # from langchain_google_genai import ChatGoogleGenerativeAI
+# # from langchain.prompts import ChatPromptTemplate
+# # import google.generativeai as genai
+# # from dotenv import load_dotenv
 
-# # Load environment variables
-# load_dotenv()
+# # # Load environment variables
+# # load_dotenv()
 
-# # === Configuration ===
-# GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
-# GEMINI_MODEL = os.getenv('GEMINI_MODEL')
-# LLM_TEMPERATURE = float(os.getenv('LLM_TEMPERATURE', 0.7))
+# # # === Configuration ===
+# # GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+# # GEMINI_MODEL = os.getenv('GEMINI_MODEL')
+# # LLM_TEMPERATURE = float(os.getenv('LLM_TEMPERATURE', 0.7))
 
-# # Configure GenAI
-# genai.configure(api_key=GOOGLE_API_KEY)
+# # # Configure GenAI
+# # genai.configure(api_key=GOOGLE_API_KEY)
 
-# # Initialize GenAI model
-# llm = ChatGoogleGenerativeAI(
-#     model=GEMINI_MODEL,
-#     temperature=LLM_TEMPERATURE,
-#     google_api_key=GOOGLE_API_KEY
-# )
+# # # Initialize GenAI model
+# # llm = ChatGoogleGenerativeAI(
+# #     model=GEMINI_MODEL,
+# #     temperature=LLM_TEMPERATURE,
+# #     google_api_key=GOOGLE_API_KEY
+# # )
 
-# '''
-# CORRECT
+# # '''
+# # CORRECT
 
-# '''
+# # '''
+
+
+# # # SYSTEM_PROMPT = """
+# # # You are a helpful retrieval-augmented chatbot.
+
+# # # 1. Use ONLY the provided "Retriever results" context. Do NOT use outside knowledge or invent facts.
+# # # 2. Provide a single, concise answer that directly addresses the user’s question.
+# # # 3. Do NOT include "Evidence:", "Need more info:", "Confidence:", or similar sections.
+# # # 4. If the context lacks sufficient information, reply politely asking the user to rephrase or provide more details.
+# # # 5. Keep your answers short, clear, and friendly (≤50 words).
+# # # """
+
+# # # qa_prompt = ChatPromptTemplate.from_messages([
+# # #     ("system", SYSTEM_PROMPT),
+# # #     ("human", """Retriever results (top K):
+# # # {context}
+
+# # # User question:
+# # # {query}
+
+# # # INSTRUCTIONS FOR YOU:
+# # # - Answer concisely using ONLY the Retriever results above.
+# # # - If the context is insufficient, reply with a polite request for clarification or more details.
+# # # - Output only the final answer.
+# # # """)
+# # # ])
 
 
 # # SYSTEM_PROMPT = """
-# # You are a helpful retrieval-augmented chatbot.
+# # You are a retrieval-augmented chatbot.
 
-# # 1. Use ONLY the provided "Retriever results" context. Do NOT use outside knowledge or invent facts.
-# # 2. Provide a single, concise answer that directly addresses the user’s question.
-# # 3. Do NOT include "Evidence:", "Need more info:", "Confidence:", or similar sections.
-# # 4. If the context lacks sufficient information, reply politely asking the user to rephrase or provide more details.
-# # 5. Keep your answers short, clear, and friendly (≤50 words).
+# # 1. Use ONLY the provided "Retriever results" and the conversation history. Do NOT use outside knowledge or invent facts.
+# # 2. Always give a clear, concise, and direct answer to the user’s query.
+# # 3. Prefer exact answers over generic explanations.
+# # 4. If the context and history lack sufficient information, politely ask the user for clarification.
+# # 5. Keep answers short, precise, and user-friendly (≤40 words).
 # # """
 
 # # qa_prompt = ChatPromptTemplate.from_messages([
@@ -48,371 +74,345 @@
 # # {query}
 
 # # INSTRUCTIONS FOR YOU:
-# # - Answer concisely using ONLY the Retriever results above.
-# # - If the context is insufficient, reply with a polite request for clarification or more details.
-# # - Output only the final answer.
+# # - Answer directly using ONLY the retriever results.
+# # - If information is missing, ask the user to clarify instead of guessing.
+# # - Output only the final, concise answer.
 # # """)
 # # ])
 
 
-# SYSTEM_PROMPT = """
-# You are a retrieval-augmented chatbot.
 
-# 1. Use ONLY the provided "Retriever results" and the conversation history. Do NOT use outside knowledge or invent facts.
-# 2. Always give a clear, concise, and direct answer to the user’s query.
-# 3. Prefer exact answers over generic explanations.
-# 4. If the context and history lack sufficient information, politely ask the user for clarification.
-# 5. Keep answers short, precise, and user-friendly (≤40 words).
-# """
+# # # Core function to handle the query
+# # def handle_user_query(retrieved_context: str, query: str) -> str:
+# #     # Ensure inputs are valid strings
+# #     retrieved_context = retrieved_context or "No relevant context available."
+# #     query = query or "No query provided."
 
-# qa_prompt = ChatPromptTemplate.from_messages([
-#     ("system", SYSTEM_PROMPT),
-#     ("human", """Retriever results (top K):
-# {context}
+# #     # Format the prompt
+# #     formatted_prompt = qa_prompt.format(
+# #         context=retrieved_context,
+# #         query=query
+# #     )
 
-# User question:
-# {query}
+# #     # Generate response
+# #     response = llm.predict(formatted_prompt).strip()
 
-# INSTRUCTIONS FOR YOU:
-# - Answer directly using ONLY the retriever results.
-# - If information is missing, ask the user to clarify instead of guessing.
-# - Output only the final, concise answer.
-# """)
-# ])
+# #     return response
 
 
+# # # === Example Usage ===
+# # # pinecone_context = "Previous queries show available appointment slots on Friday from 10 AM to 3 PM."
+# # # user_query = "Can I book an appointment on Friday afternoon?"
 
-# # Core function to handle the query
-# def handle_user_query(retrieved_context: str, query: str) -> str:
-#     # Ensure inputs are valid strings
-#     retrieved_context = retrieved_context or "No relevant context available."
-#     query = query or "No query provided."
+# # # response = handle_user_query(
+# # #     retrieved_context=pinecone_context,
+# # #     query=user_query
+# # # )
 
-#     # Format the prompt
-#     formatted_prompt = qa_prompt.format(
-#         context=retrieved_context,
-#         query=query
-#     )
-
-#     # Generate response
-#     response = llm.predict(formatted_prompt).strip()
-
-#     return response
+# # # print("\n🌟 GenAI Response:\n", response)
 
 
-# # === Example Usage ===
-# # pinecone_context = "Previous queries show available appointment slots on Friday from 10 AM to 3 PM."
-# # user_query = "Can I book an appointment on Friday afternoon?"
 
-# # response = handle_user_query(
-# #     retrieved_context=pinecone_context,
-# #     query=user_query
+# # from app.prompts.qa_prompt import qa_prompt
+# # from app.core.config import llm
+
+# # def handle_user_query(retrieved_context: str, query: str) -> str:
+# #     """
+# #     Generate a concise response using only the provided retriever context.
+
+# #     Args:
+# #         retrieved_context (str): The context retrieved from a vector DB or knowledge source.
+# #         query (str): The user’s question.
+
+# #     Returns:
+# #         str: LLM-generated response.
+# #     """
+# #     # Ensure inputs are valid strings
+# #     retrieved_context = retrieved_context or "No relevant context available."
+# #     query = query or "No query provided."
+
+# #     # Format the prompt
+# #     formatted_prompt = qa_prompt.format(
+# #         context=retrieved_context,
+# #         query=query
+# #     )
+
+# #     # Generate response
+# #     response = llm.predict(formatted_prompt).strip()
+# #     return response
+
+
+
+# # from app.prompts.qa_prompt import qa_prompt
+# # from app.core.config import llm
+
+# # # In-memory chat history: key=user_id, value=list of {"query":..., "response":...}
+# # chat_history = {}
+
+# # def handle_user_query(user_id: str, retrieved_context: str, query: str) -> str:
+# #     """
+# #     Generate a concise response using provided context and user's chat history.
+
+# #     Args:
+# #         user_id (str): Unique identifier for the user.
+# #         retrieved_context (str): Context from vector DB or knowledge source.
+# #         query (str): The user’s current question.
+
+# #     Returns:
+# #         str: LLM-generated response.
+# #     """
+# #     # Initialize user history if not present
+# #     if user_id not in chat_history:
+# #         chat_history[user_id] = []
+
+# #     history = chat_history[user_id]  # guaranteed to be a list
+
+# #     # Build history string for prompt (last 5 exchanges)
+# #     history_text = ""
+# #     if history:
+# #         history_text = "\nPrevious conversation:\n"
+# #         for i, turn in enumerate(history[-5:]):
+# #             history_text += f"Q{i+1}: {turn['query']}\nA{i+1}: {turn['response']}\n"
+
+# #     # Ensure retrieved context and query are valid strings
+# #     retrieved_context = str(retrieved_context or "No relevant context available.")
+# #     query = str(query or "No query provided.")
+
+# #     # Format the prompt including context and history
+# #     formatted_prompt = qa_prompt.format(
+# #         context=retrieved_context + history_text,
+# #         query=query
+# #     )
+# #     print("...............formatted_prompt.............",formatted_prompt)
+# #     # Generate response safely
+# #     response_raw = llm.predict(formatted_prompt)
+
+# #     # Handle cases where LLM returns list or string
+# #     if isinstance(response_raw, list):
+# #         response = " ".join([str(r) for r in response_raw]).strip()
+# #     else:
+# #         response = str(response_raw).strip()
+
+# #     # Append the current turn to user's history
+# #     history.append({"query": query, "response": response})
+
+# #     return response
+
+
+# # import re
+# # import hashlib
+# # import json
+# # from typing import List, Dict, Any, Optional
+# # import redis
+# # import logging
+
+# # from app.prompts.qa_prompt import qa_prompt
+# # from app.core.config import llm
+
+# # # -------------------------------
+# # # Logging configuration
+# # # -------------------------------
+# # logging.basicConfig(
+# #     level=logging.INFO,
+# #     format="%(asctime)s [%(levelname)s] %(message)s"
 # # )
+# # logger = logging.getLogger(__name__)
 
-# # print("\n🌟 GenAI Response:\n", response)
+# # # -------------------------------
+# # # Redis connection
+# # # -------------------------------
+# # redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
 
+# # # -------------------------------
+# # # Patterns
+# # # -------------------------------
+# # DOCTOR_PATTERN = r"Dr\.?\s+[A-Z][a-zA-Z]+"
+# # TIME_PATTERN = r"\b(?:[01]?\d|2[0-3]):[0-5]\d\b"
 
+# # # -------------------------------
+# # # Embedding adapter
+# # # -------------------------------
+# # class EmbeddingModel:
+# #     """Pseudo embedding; replace with real LLM embedding in production"""
+# #     def embed_text(self, text: str) -> List[float]:
+# #         h = hashlib.sha256(text.encode("utf-8")).hexdigest()
+# #         return [(int(h[i:i+2], 16)/255.0) for i in range(0, 16, 2)]
 
-# from app.prompts.qa_prompt import qa_prompt
-# from app.core.config import llm
+# # embedding_model = EmbeddingModel()
 
-# def handle_user_query(retrieved_context: str, query: str) -> str:
-#     """
-#     Generate a concise response using only the provided retriever context.
+# # def _safe_embed(text: str) -> List[float]:
+# #     try:
+# #         return embedding_model.embed_text(text or "")
+# #     except Exception:
+# #         logger.error(f"Embedding failed for text: {text}")
+# #         return embedding_model.embed_text(text or "")
 
-#     Args:
-#         retrieved_context (str): The context retrieved from a vector DB or knowledge source.
-#         query (str): The user’s question.
+# # # -------------------------------
+# # # Utilities
+# # # -------------------------------
+# # def _extract_doctor_and_time(text: str) -> (Optional[str]):
+# #     doctor_match = re.search(DOCTOR_PATTERN, text or "")
+# #     time_match = re.search(TIME_PATTERN, text or "")
+# #     doctor = doctor_match.group().strip() if doctor_match else None
+# #     time = time_match.group().strip() if time_match else None
+# #     return doctor, time
 
-#     Returns:
-#         str: LLM-generated response.
-#     """
-#     # Ensure inputs are valid strings
-#     retrieved_context = retrieved_context or "No relevant context available."
-#     query = query or "No query provided."
+# # def _parse_doctor_availability(retrieved_context: str) -> Dict[str, List[str]]:
+# #     availability: Dict[str, List[str]] = {}
+# #     if not retrieved_context:
+# #         return availability
+# #     sentences = re.split(r'[.\n]+', retrieved_context)
+# #     for s in sentences:
+# #         doc_match = re.search(DOCTOR_PATTERN, s)
+# #         if not doc_match:
+# #             continue
+# #         doc = doc_match.group().strip()
+# #         slots = re.findall(TIME_PATTERN, s)
+# #         if slots:
+# #             availability.setdefault(doc, []).extend(sorted(set(slots)))
+# #     return availability
 
-#     # Format the prompt
-#     formatted_prompt = qa_prompt.format(
-#         context=retrieved_context,
-#         query=query
-#     )
+# # # -------------------------------
+# # # Chat History with Redis
+# # # -------------------------------
+# # def save_chat_history(user_id: str, query: str, response: str, q_emb: List[float], r_emb: List[float]):
+# #     entry = {
+# #         "query": query,
+# #         "response": response,
+# #         "query_embedding": q_emb,
+# #         "response_embedding": r_emb
+# #     }
+# #     redis_client.rpush(f"chat:{user_id}", json.dumps(entry))
+# #     logger.info(f"Saved chat history for user {user_id}: query='{query}' response='{response}'")
 
-#     # Generate response
-#     response = llm.predict(formatted_prompt).strip()
-#     return response
+# # def get_chat_history(user_id: str, last_n: int = 5) -> List[Dict[str, Any]]:
+# #     entries = redis_client.lrange(f"chat:{user_id}", -last_n, -1)
+# #     return [json.loads(e) for e in entries]
 
+# # # -------------------------------
+# # # Booking System with Redis
+# # # -------------------------------
+# # def book_doctor(user_id: str, doctor: str, slot: str) -> str:
+# #     logger.info(f"Attempting booking: user={user_id}, doctor={doctor}, slot={slot}")
 
+# #     if redis_client.sismember(f"user_bookings:{user_id}", doctor):
+# #         logger.warning(f"User {user_id} already has a booking with {doctor}")
+# #         return f"❌ You already have a booking with {doctor}."
 
-# from app.prompts.qa_prompt import qa_prompt
-# from app.core.config import llm
+# #     if redis_client.sismember(f"doctor_slots:{doctor}", slot):
+# #         logger.warning(f"Slot {slot} for {doctor} already booked")
+# #         return f"❌ Sorry, {doctor} at {slot} is already booked."
 
-# # In-memory chat history: key=user_id, value=list of {"query":..., "response":...}
-# chat_history = {}
+# #     redis_client.sadd(f"doctor_slots:{doctor}", slot)
+# #     redis_client.sadd(f"user_bookings:{user_id}", doctor)
+# #     logger.info(f"Booking confirmed: user={user_id}, doctor={doctor}, slot={slot}")
+# #     return f"✅ Your booking with {doctor} at {slot} is confirmed."
 
-# def handle_user_query(user_id: str, retrieved_context: str, query: str) -> str:
-#     """
-#     Generate a concise response using provided context and user's chat history.
+# # def get_user_bookings(user_id: str) -> List[str]:
+# #     return list(redis_client.smembers(f"user_bookings:{user_id}"))
 
-#     Args:
-#         user_id (str): Unique identifier for the user.
-#         retrieved_context (str): Context from vector DB or knowledge source.
-#         query (str): The user’s current question.
+# # def get_doctor_booked_slots(doctor: str) -> List[str]:
+# #     return list(redis_client.smembers(f"doctor_slots:{doctor}"))
 
-#     Returns:
-#         str: LLM-generated response.
-#     """
-#     # Initialize user history if not present
-#     if user_id not in chat_history:
-#         chat_history[user_id] = []
+# # # -------------------------------
+# # # Booking Logic
+# # # -------------------------------
+# # def _process_dynamic_booking(user_id: str, query: str, response: str, retrieved_context: str) -> str:
+# #     doctor, slot = _extract_doctor_and_time(query)
+# #     if not doctor or not slot:
+# #         doc2, slot2 = _extract_doctor_and_time(response)
+# #         doctor = doctor or doc2
+# #         slot = slot or slot2
+# #     if not doctor or not slot:
+# #         return response
 
-#     history = chat_history[user_id]  # guaranteed to be a list
+# #     availability = _parse_doctor_availability(retrieved_context)
+# #     matched_doctor = next((d for d in availability if d.lower() == doctor.lower()), None)
+# #     if not matched_doctor:
+# #         logger.info(f"Doctor {doctor} not available in retrieved context")
+# #         return f"Sorry, {doctor} is not available."
 
-#     # Build history string for prompt (last 5 exchanges)
-#     history_text = ""
-#     if history:
-#         history_text = "\nPrevious conversation:\n"
-#         for i, turn in enumerate(history[-5:]):
-#             history_text += f"Q{i+1}: {turn['query']}\nA{i+1}: {turn['response']}\n"
+# #     if slot not in availability.get(matched_doctor, []):
+# #         possible_slots = availability.get(matched_doctor, [])
+# #         if possible_slots:
+# #             logger.info(f"Requested slot {slot} not available for {matched_doctor}")
+# #             return f"Sorry, {matched_doctor} is not available at {slot}. Available slots: {', '.join(possible_slots)}."
+# #         return f"Sorry, {matched_doctor} has no available slots."
 
-#     # Ensure retrieved context and query are valid strings
-#     retrieved_context = str(retrieved_context or "No relevant context available.")
-#     query = str(query or "No query provided.")
+# #     return book_doctor(user_id, matched_doctor, slot)
 
-#     # Format the prompt including context and history
-#     formatted_prompt = qa_prompt.format(
-#         context=retrieved_context + history_text,
-#         query=query
-#     )
-#     print("...............formatted_prompt.............",formatted_prompt)
-#     # Generate response safely
-#     response_raw = llm.predict(formatted_prompt)
-
-#     # Handle cases where LLM returns list or string
-#     if isinstance(response_raw, list):
-#         response = " ".join([str(r) for r in response_raw]).strip()
-#     else:
-#         response = str(response_raw).strip()
-
-#     # Append the current turn to user's history
-#     history.append({"query": query, "response": response})
-
-#     return response
-
-
-# import re
-# import hashlib
-# import json
-# from typing import List, Dict, Any, Optional
-# import redis
-# import logging
-
-# from app.prompts.qa_prompt import qa_prompt
-# from app.core.config import llm
-
-# # -------------------------------
-# # Logging configuration
-# # -------------------------------
-# logging.basicConfig(
-#     level=logging.INFO,
-#     format="%(asctime)s [%(levelname)s] %(message)s"
-# )
-# logger = logging.getLogger(__name__)
-
-# # -------------------------------
-# # Redis connection
-# # -------------------------------
-# redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
-
-# # -------------------------------
-# # Patterns
-# # -------------------------------
-# DOCTOR_PATTERN = r"Dr\.?\s+[A-Z][a-zA-Z]+"
-# TIME_PATTERN = r"\b(?:[01]?\d|2[0-3]):[0-5]\d\b"
-
-# # -------------------------------
-# # Embedding adapter
-# # -------------------------------
-# class EmbeddingModel:
-#     """Pseudo embedding; replace with real LLM embedding in production"""
-#     def embed_text(self, text: str) -> List[float]:
-#         h = hashlib.sha256(text.encode("utf-8")).hexdigest()
-#         return [(int(h[i:i+2], 16)/255.0) for i in range(0, 16, 2)]
-
-# embedding_model = EmbeddingModel()
-
-# def _safe_embed(text: str) -> List[float]:
-#     try:
-#         return embedding_model.embed_text(text or "")
-#     except Exception:
-#         logger.error(f"Embedding failed for text: {text}")
-#         return embedding_model.embed_text(text or "")
-
-# # -------------------------------
-# # Utilities
-# # -------------------------------
-# def _extract_doctor_and_time(text: str) -> (Optional[str]):
-#     doctor_match = re.search(DOCTOR_PATTERN, text or "")
-#     time_match = re.search(TIME_PATTERN, text or "")
-#     doctor = doctor_match.group().strip() if doctor_match else None
-#     time = time_match.group().strip() if time_match else None
-#     return doctor, time
-
-# def _parse_doctor_availability(retrieved_context: str) -> Dict[str, List[str]]:
-#     availability: Dict[str, List[str]] = {}
-#     if not retrieved_context:
-#         return availability
-#     sentences = re.split(r'[.\n]+', retrieved_context)
-#     for s in sentences:
-#         doc_match = re.search(DOCTOR_PATTERN, s)
-#         if not doc_match:
-#             continue
-#         doc = doc_match.group().strip()
-#         slots = re.findall(TIME_PATTERN, s)
-#         if slots:
-#             availability.setdefault(doc, []).extend(sorted(set(slots)))
-#     return availability
-
-# # -------------------------------
-# # Chat History with Redis
-# # -------------------------------
-# def save_chat_history(user_id: str, query: str, response: str, q_emb: List[float], r_emb: List[float]):
-#     entry = {
-#         "query": query,
-#         "response": response,
-#         "query_embedding": q_emb,
-#         "response_embedding": r_emb
-#     }
-#     redis_client.rpush(f"chat:{user_id}", json.dumps(entry))
-#     logger.info(f"Saved chat history for user {user_id}: query='{query}' response='{response}'")
-
-# def get_chat_history(user_id: str, last_n: int = 5) -> List[Dict[str, Any]]:
-#     entries = redis_client.lrange(f"chat:{user_id}", -last_n, -1)
-#     return [json.loads(e) for e in entries]
-
-# # -------------------------------
-# # Booking System with Redis
-# # -------------------------------
-# def book_doctor(user_id: str, doctor: str, slot: str) -> str:
-#     logger.info(f"Attempting booking: user={user_id}, doctor={doctor}, slot={slot}")
-
-#     if redis_client.sismember(f"user_bookings:{user_id}", doctor):
-#         logger.warning(f"User {user_id} already has a booking with {doctor}")
-#         return f"❌ You already have a booking with {doctor}."
-
-#     if redis_client.sismember(f"doctor_slots:{doctor}", slot):
-#         logger.warning(f"Slot {slot} for {doctor} already booked")
-#         return f"❌ Sorry, {doctor} at {slot} is already booked."
-
-#     redis_client.sadd(f"doctor_slots:{doctor}", slot)
-#     redis_client.sadd(f"user_bookings:{user_id}", doctor)
-#     logger.info(f"Booking confirmed: user={user_id}, doctor={doctor}, slot={slot}")
-#     return f"✅ Your booking with {doctor} at {slot} is confirmed."
-
-# def get_user_bookings(user_id: str) -> List[str]:
-#     return list(redis_client.smembers(f"user_bookings:{user_id}"))
-
-# def get_doctor_booked_slots(doctor: str) -> List[str]:
-#     return list(redis_client.smembers(f"doctor_slots:{doctor}"))
-
-# # -------------------------------
-# # Booking Logic
-# # -------------------------------
-# def _process_dynamic_booking(user_id: str, query: str, response: str, retrieved_context: str) -> str:
-#     doctor, slot = _extract_doctor_and_time(query)
-#     if not doctor or not slot:
-#         doc2, slot2 = _extract_doctor_and_time(response)
-#         doctor = doctor or doc2
-#         slot = slot or slot2
-#     if not doctor or not slot:
-#         return response
-
-#     availability = _parse_doctor_availability(retrieved_context)
-#     matched_doctor = next((d for d in availability if d.lower() == doctor.lower()), None)
-#     if not matched_doctor:
-#         logger.info(f"Doctor {doctor} not available in retrieved context")
-#         return f"Sorry, {doctor} is not available."
-
-#     if slot not in availability.get(matched_doctor, []):
-#         possible_slots = availability.get(matched_doctor, [])
-#         if possible_slots:
-#             logger.info(f"Requested slot {slot} not available for {matched_doctor}")
-#             return f"Sorry, {matched_doctor} is not available at {slot}. Available slots: {', '.join(possible_slots)}."
-#         return f"Sorry, {matched_doctor} has no available slots."
-
-#     return book_doctor(user_id, matched_doctor, slot)
-
-# # -------------------------------
-# # Main Query Handler
-# # -------------------------------
-# def handle_user_query(user_id: str, retrieved_context: str, query: str) -> str:
-#     if not user_id or not query:
-#         logger.warning("User ID or query missing")
-#         return "Please provide a valid user ID and query."
+# # # -------------------------------
+# # # Main Query Handler
+# # # -------------------------------
+# # def handle_user_query(user_id: str, retrieved_context: str, query: str) -> str:
+# #     if not user_id or not query:
+# #         logger.warning("User ID or query missing")
+# #         return "Please provide a valid user ID and query."
     
-#     if not isinstance(retrieved_context, str):
-#         import json
-#         retrieved_context = json.dumps(retrieved_context)
+# #     if not isinstance(retrieved_context, str):
+# #         import json
+# #         retrieved_context = json.dumps(retrieved_context)
 
-#     history = get_chat_history(user_id)
-#     history_text = ""
-#     if history:
-#         recent = history[-5:]
-#         history_text = "\nRecent conversation:\n" + "\n".join(
-#             f"User: {turn['query']}\nBot: {turn['response']}" for turn in recent
-#         )
-#         logger.info(f"Recent history for {user_id}: {history_text}")
+# #     history = get_chat_history(user_id)
+# #     history_text = ""
+# #     if history:
+# #         recent = history[-5:]
+# #         history_text = "\nRecent conversation:\n" + "\n".join(
+# #             f"User: {turn['query']}\nBot: {turn['response']}" for turn in recent
+# #         )
+# #         logger.info(f"Recent history for {user_id}: {history_text}")
 
-#     final_prompt = qa_prompt.format(
-#         context=f"Relevant medical context:\n{retrieved_context}\n{history_text}",
-#         query=query
-#     )
-#     logger.info(f"Final prompt for LLM: ============================ {final_prompt}")
+# #     final_prompt = qa_prompt.format(
+# #         context=f"Relevant medical context:\n{retrieved_context}\n{history_text}",
+# #         query=query
+# #     )
+# #     logger.info(f"Final prompt for LLM: ============================ {final_prompt}")
 
-#     raw_response = llm.predict(final_prompt)
-#     response_text = " ".join(raw_response) if isinstance(raw_response, (list, tuple)) else str(raw_response)
-#     response_text = response_text.strip()
-#     logger.info(f"LLM response: {response_text}")
+# #     raw_response = llm.predict(final_prompt)
+# #     response_text = " ".join(raw_response) if isinstance(raw_response, (list, tuple)) else str(raw_response)
+# #     response_text = response_text.strip()
+# #     logger.info(f"LLM response: {response_text}")
 
-#     updated_response = _process_dynamic_booking(user_id, query, response_text, retrieved_context)
+# #     updated_response = _process_dynamic_booking(user_id, query, response_text, retrieved_context)
 
-#     q_emb = _safe_embed(query)
-#     r_emb = _safe_embed(updated_response)
-#     save_chat_history(user_id, query, updated_response, q_emb, r_emb)
+# #     q_emb = _safe_embed(query)
+# #     r_emb = _safe_embed(updated_response)
+# #     save_chat_history(user_id, query, updated_response, q_emb, r_emb)
 
-#     return updated_response
+# #     return updated_response
+
+# # # -------------------------------
+# # # Helper functions
+# # # -------------------------------
+# # def list_available_slots_for_doctor(doctor_name: str, retrieved_context: str) -> List[str]:
+# #     availability = _parse_doctor_availability(retrieved_context)
+# #     return availability.get(doctor_name, [])
+
+# # def get_user_history(user_id: str, include_embeddings: bool = False) -> List[Dict[str, Any]]:
+# #     hist = get_chat_history(user_id, last_n=100)
+# #     if not include_embeddings:
+# #         return [{"query": e["query"], "response": e["response"]} for e in hist]
+# #     return hist
+
+# # def get_booking_summary() -> Dict[str, List[str]]:
+# #     keys = redis_client.keys("doctor_slots:*")
+# #     summary = {}
+# #     for key in keys:
+# #         doctor = key.split(":")[1]
+# #         summary[doctor] = list(redis_client.smembers(key))
+# #     return summary
 
 # # -------------------------------
-# # Helper functions
-# # -------------------------------
-# def list_available_slots_for_doctor(doctor_name: str, retrieved_context: str) -> List[str]:
-#     availability = _parse_doctor_availability(retrieved_context)
-#     return availability.get(doctor_name, [])
-
-# def get_user_history(user_id: str, include_embeddings: bool = False) -> List[Dict[str, Any]]:
-#     hist = get_chat_history(user_id, last_n=100)
-#     if not include_embeddings:
-#         return [{"query": e["query"], "response": e["response"]} for e in hist]
-#     return hist
-
-# def get_booking_summary() -> Dict[str, List[str]]:
-#     keys = redis_client.keys("doctor_slots:*")
-#     summary = {}
-#     for key in keys:
-#         doctor = key.split(":")[1]
-#         summary[doctor] = list(redis_client.smembers(key))
-#     return summary
-
-# -------------------------------
-# # Example Usage (for testing)
-# # -------------------------------
-# if __name__ == "__main__":
-#     sample_context = "Dr. Smith available at 09:00, 10:00, 11:00.\nDr. Priya available at 10:00, 11:00."
-#     print(handle_user_query("user1", sample_context, "I want to book with Dr. Smith at 10:00"))
-#     print(handle_user_query("user1", sample_context, "Book Dr. Smith at 11:00"))
-#     print(handle_user_query("user2", sample_context, "Book Dr. Smith at 10:00"))
-#     print(list_available_slots_for_doctor("Dr. Priya", sample_context))
-#     print(get_user_history("user1"))
-#     print(get_booking_summary())
+# # # Example Usage (for testing)
+# # # -------------------------------
+# # if __name__ == "__main__":
+# #     sample_context = "Dr. Smith available at 09:00, 10:00, 11:00.\nDr. Priya available at 10:00, 11:00."
+# #     print(handle_user_query("user1", sample_context, "I want to book with Dr. Smith at 10:00"))
+# #     print(handle_user_query("user1", sample_context, "Book Dr. Smith at 11:00"))
+# #     print(handle_user_query("user2", sample_context, "Book Dr. Smith at 10:00"))
+# #     print(list_available_slots_for_doctor("Dr. Priya", sample_context))
+# #     print(get_user_history("user1"))
+# #     print(get_booking_summary())
 
 
 
@@ -460,15 +460,17 @@
 # REDIS_USER = os.getenv("REDIS_USER")
 # REDIS_PASS = os.getenv("REDIS_PASS")
 
+# redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+
 # # Create Redis client
-# redis_client = redis.Redis(
-#     host=REDIS_HOST,
-#     port=REDIS_PORT,
-#     username=REDIS_USER,
-#     password=REDIS_PASS,
-#     db=0,
-#     decode_responses=True
-# )
+# # redis_client = redis.Redis(
+# #     host=REDIS_HOST,
+# #     port=REDIS_PORT,
+# #     username=REDIS_USER,
+# #     password=REDIS_PASS,
+# #     db=0,
+# #     decode_responses=True
+# # )
 
 # try:
 #     response = redis_client.ping()
@@ -598,8 +600,6 @@
 #     entry = {
 #         "query": query,
 #         "response": None,
-#         "query_embedding": q_emb,
-#         "response_embedding": None
 #     }
 #     # rpush then compute index
 #     pipe = redis_client.pipeline()
@@ -1035,29 +1035,634 @@
 
 
 
-from app.prompts.qa_prompt import qa_prompt
+# from app.prompts.qa_prompt import qa_prompt
+# from app.core.config import llm
+
+# def handle_user_query(retrieved_context: str, query: str) -> str:
+#     """
+#     Generate a concise response using only the provided retriever context.
+
+#     Args:
+#         retrieved_context (str): The context retrieved from a vector DB or knowledge source.
+#         query (str): The user’s question.
+
+#     Returns:
+#         str: LLM-generated response.
+#     """
+#     # Ensure inputs are valid strings
+#     retrieved_context = retrieved_context
+#     query = query
+#     # Format the prompt
+#     formatted_prompt = qa_prompt.format(
+#         context=retrieved_context,
+#         query=query
+#     )
+
+#     # Generate response
+#     response = llm.predict(formatted_prompt).strip()
+#     return response
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import os
+import json
+import logging
+from typing import Dict, Any, Optional, List, Union
+from datetime import datetime
+import redis
+from dotenv import load_dotenv
+
+from langchain.prompts import ChatPromptTemplate
+from langchain.schema import HumanMessage, AIMessage
+from langchain.memory import ConversationSummaryBufferMemory
+from langchain_core.chat_history import BaseChatMessageHistory
+from langchain_core.messages import BaseMessage
+
+from langgraph.graph import StateGraph, END
+from langgraph.checkpoint.memory import MemorySaver
+from typing_extensions import TypedDict
+
 from app.core.config import llm
 
-def handle_user_query(retrieved_context: str, query: str) -> str:
-    """
-    Generate a concise response using only the provided retriever context.
+load_dotenv()
 
-    Args:
-        retrieved_context (str): The context retrieved from a vector DB or knowledge source.
-        query (str): The user’s question.
+# ==============================
+# Configuration
+# ==============================
+MEMORY_WINDOW_SIZE = 10
+MAX_TOKEN_LIMIT = 4000
+REDIS_TTL = 86400  # 24 hours
 
-    Returns:
-        str: LLM-generated response.
-    """
-    # Ensure inputs are valid strings
-    retrieved_context = retrieved_context
-    query = query
-    # Format the prompt
-    formatted_prompt = qa_prompt.format(
-        context=retrieved_context,
-        query=query
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# ==============================
+# Debug Helper Function
+# ==============================
+def debug_print(section: str, data: Any, user_id: str = ""):
+    """Enhanced debug printing with clear formatting"""
+    separator = "=" * 80
+    logger.info(f"\n{separator}")
+    logger.info(f"🔍 DEBUG [{section}] - User: {user_id[:8] if user_id else 'N/A'}...")
+    logger.info(f"{separator}")
+    
+    if isinstance(data, dict):
+        for key, value in data.items():
+            if isinstance(value, str) and len(value) > 200:
+                logger.info(f"  {key}: {value[:200]}... (truncated)")
+            else:
+                logger.info(f"  {key}: {value}")
+    elif isinstance(data, list):
+        logger.info(f"  Items count: {len(data)}")
+        for idx, item in enumerate(data[:5]):  # Show first 5 items
+            logger.info(f"  [{idx}]: {item}")
+        if len(data) > 5:
+            logger.info(f"  ... and {len(data) - 5} more items")
+    else:
+        logger.info(f"  {data}")
+    
+    logger.info(f"{separator}\n")
+
+# ==============================
+# Redis Setup with Multiple Connection Methods
+# ==============================
+def get_redis_client():
+    """Create Redis client with proper error handling - supports URL and username/password"""
+    try:
+        # Method 1: Try REDIS_URL first (preferred for cloud services)
+        redis_url = os.getenv("REDIS_URL")
+        if redis_url:
+            logger.info(f"Connecting to Redis via URL...")
+            client = redis.StrictRedis.from_url(
+                redis_url,
+                decode_responses=True,
+                socket_connect_timeout=5,
+                socket_timeout=5
+            )
+            client.ping()
+            logger.info(f"✅ Redis connected via URL")
+            logger.info(f"   Host: {client.connection_pool.connection_kwargs.get('host')}")
+            logger.info(f"   Port: {client.connection_pool.connection_kwargs.get('port')}")
+            return client
+        
+        # Method 2: Try username/password authentication
+        redis_host = os.getenv("REDIS_HOST", "localhost")
+        redis_port = int(os.getenv("REDIS_PORT", 6379))
+        redis_db = int(os.getenv("REDIS_DB", 0))
+        redis_user = os.getenv("REDIS_USER",  None)
+        redis_password = os.getenv("REDIS_PASS", None)
+        
+        logger.info(f"Connecting to Redis at {redis_host}:{redis_port}")
+        
+        # Build connection parameters
+        conn_params = {
+            "host": redis_host,
+            "port": 6379,
+            "db": 0,
+            "decode_responses": True,
+            "socket_connect_timeout": 5,
+            "socket_timeout": 5
+        }
+        # Add authentication if provided
+        if redis_user:
+            conn_params["username"] = redis_user
+            logger.info(f"Using username: {redis_user}")
+        
+        if redis_password and redis_password.strip():
+            conn_params["password"] = redis_password
+            logger.info(f"Using password authentication")
+        
+        client = redis.Redis(**conn_params)
+        
+        # Test connection
+        client.ping()
+        logger.info(f"✅ Redis connected successfully")
+        logger.info(f"   Host: {redis_host}")
+        logger.info(f"   Port: {redis_port}")
+        logger.info(f"   DB: {redis_db}")
+        return client
+        
+    except redis.ConnectionError as e:
+        logger.error(f"❌ Redis connection failed: {e}")
+        logger.warning("⚠️ Using in-memory fallback")
+        return None
+    except redis.AuthenticationError as e:
+        logger.error(f"❌ Redis authentication failed: {e}")
+        logger.warning("⚠️ Check REDIS_USER and REDIS_PASSWORD in .env file")
+        logger.warning("⚠️ Using in-memory fallback")
+        return None
+    except Exception as e:
+        logger.error(f"❌ Redis error: {e}")
+        logger.warning("⚠️ Using in-memory fallback")
+        return None
+
+redis_client = get_redis_client()
+
+# In-memory fallback storage
+_memory_store = {}
+
+# ==============================
+# Custom Redis Chat History with Fallback
+# ==============================
+class OptimizedRedisChatHistory(BaseChatMessageHistory):
+    """Optimized Redis-backed chat history with in-memory fallback"""
+   
+    def __init__(self, session_id: str, window_size: int = MEMORY_WINDOW_SIZE):
+        self.session_id = session_id
+        self.key = f"chat:{session_id}"
+        self.window_size = window_size
+        self.use_redis = redis_client is not None
+   
+    @property
+    def messages(self):
+        """Get messages within window"""
+        if self.use_redis:
+            try:
+                raw = redis_client.lrange(self.key, -self.window_size * 2, -1)
+                messages = []
+                for msg_str in raw:
+                    msg = json.loads(msg_str)
+                    if msg["type"] == "human":
+                        messages.append(HumanMessage(content=msg["content"]))
+                    elif msg["type"] == "ai":
+                        messages.append(AIMessage(content=msg["content"]))
+                
+                debug_print("REDIS MESSAGES LOADED", {
+                    "session_id": self.session_id,
+                    "message_count": len(messages),
+                    "storage": "Redis"
+                }, self.session_id)
+                
+                return messages
+            except Exception as e:
+                logger.error(f"Redis read error: {e}, falling back to memory")
+                self.use_redis = False
+        
+        # In-memory fallback
+        if self.key not in _memory_store:
+            _memory_store[self.key] = []
+        
+        raw = _memory_store[self.key][-self.window_size * 2:]
+        messages = []
+        for msg in raw:
+            if msg["type"] == "human":
+                messages.append(HumanMessage(content=msg["content"]))
+            elif msg["type"] == "ai":
+                messages.append(AIMessage(content=msg["content"]))
+        
+        debug_print("MEMORY MESSAGES LOADED", {
+            "session_id": self.session_id,
+            "message_count": len(messages),
+            "storage": "In-Memory"
+        }, self.session_id)
+        
+        return messages
+   
+    def add_message(self, message: BaseMessage):
+        """Add message with automatic trimming"""
+        msg_dict = {
+            "type": "human" if isinstance(message, HumanMessage) else "ai",
+            "content": message.content,
+            "ts": datetime.utcnow().isoformat()
+        }
+       
+        if self.use_redis:
+            try:
+                pipe = redis_client.pipeline()
+                pipe.rpush(self.key, json.dumps(msg_dict))
+                pipe.ltrim(self.key, -self.window_size * 2, -1)
+                pipe.expire(self.key, REDIS_TTL)
+                pipe.execute()
+                
+                debug_print("MESSAGE SAVED TO REDIS", {
+                    "type": msg_dict["type"],
+                    "content_preview": msg_dict["content"][:100]
+                }, self.session_id)
+                return
+            except Exception as e:
+                logger.error(f"Redis write error: {e}, falling back to memory")
+                self.use_redis = False
+        
+        # In-memory fallback
+        if self.key not in _memory_store:
+            _memory_store[self.key] = []
+        
+        _memory_store[self.key].append(msg_dict)
+        
+        # Trim to window size
+        if len(_memory_store[self.key]) > self.window_size * 2:
+            _memory_store[self.key] = _memory_store[self.key][-self.window_size * 2:]
+        
+        debug_print("MESSAGE SAVED TO MEMORY", {
+            "type": msg_dict["type"],
+            "content_preview": msg_dict["content"][:100]
+        }, self.session_id)
+   
+    def clear(self):
+        """Clear history"""
+        if self.use_redis:
+            try:
+                redis_client.delete(self.key)
+                logger.info(f"Cleared Redis key: {self.key}")
+                return
+            except Exception as e:
+                logger.error(f"Redis delete error: {e}")
+        
+        # In-memory fallback
+        if self.key in _memory_store:
+            del _memory_store[self.key]
+            logger.info(f"Cleared memory key: {self.key}")
+
+# ==============================
+# Memory Management
+# ==============================
+def get_memory(user_id: str) -> ConversationSummaryBufferMemory:
+    """Get or create conversation memory with auto-summarization"""
+    chat_history = OptimizedRedisChatHistory(user_id)
+   
+    return ConversationSummaryBufferMemory(
+        llm=llm,
+        chat_memory=chat_history,
+        max_token_limit=MAX_TOKEN_LIMIT,
+        return_messages=True,
+        memory_key="history"
     )
 
-    # Generate response
-    response = llm.predict(formatted_prompt).strip()
-    return response
+def load_memory_context(user_id: str) -> Dict[str, str]:
+    """Load recent history and summary"""
+    try:
+        memory = get_memory(user_id)
+        vars = memory.load_memory_variables({})
+       
+        messages = vars.get("history", [])
+        recent = []
+        for msg in messages[-MEMORY_WINDOW_SIZE * 2:]:
+            prefix = "User" if isinstance(msg, HumanMessage) else "Bot"
+            recent.append(f"{prefix}: {msg.content}")
+        
+        result = {
+            "recent_history": "\n".join(recent) or "No recent conversation.",
+            "summary": getattr(memory, 'moving_summary_buffer', "")
+        }
+        
+        debug_print("MEMORY CONTEXT LOADED", {
+            "user_id": user_id,
+            "message_count": len(messages),
+            "recent_history_length": len(result["recent_history"]),
+            "has_summary": bool(result["summary"])
+        }, user_id)
+        
+        return result
+    except Exception as e:
+        logger.error(f"Error loading memory context: {e}")
+        return {
+            "recent_history": "No recent conversation.",
+            "summary": ""
+        }
+
+def save_to_memory(user_id: str, query: str, response: str):
+    """Save interaction to memory"""
+    try:
+        memory = get_memory(user_id)
+        memory.save_context({"input": query}, {"output": response})
+        
+        debug_print("SAVED TO MEMORY", {
+            "user_id": user_id,
+            "query_preview": query[:100],
+            "response_preview": response[:100]
+        }, user_id)
+    except Exception as e:
+        logger.error(f"Error saving to memory: {e}")
+
+# ==============================
+# Context Formatting
+# ==============================
+def format_context_for_llm(retrieved_context: Union[List, str]) -> str:
+    """Format retrieved context into readable text for LLM"""
+    if not retrieved_context:
+        return "No relevant information found."
+    
+    if isinstance(retrieved_context, str):
+        return retrieved_context
+    
+    formatted_parts = []
+    
+    for idx, item in enumerate(retrieved_context, 1):
+        if not isinstance(item, dict):
+            continue
+            
+        # Extract text content
+        source_text = item.get('source_text', '')
+        source = item.get('source', 'Unknown')
+        score = item.get('score', 0)
+        
+        # Handle page_content format (from raw_text_input)
+        if not source_text and 'source' in item:
+            raw_source = item.get('source', '')
+            if isinstance(raw_source, str) and 'page_content=' in raw_source:
+                # Extract the actual content after page_content=
+                try:
+                    source_text = raw_source.split("page_content='")[1].split("' metadata=")[0]
+                except:
+                    source_text = raw_source
+        
+        if source_text:
+            formatted_parts.append(f"[Source {idx}] (Relevance: {score:.2f})\n{source_text}\n")
+    
+    result = "\n".join(formatted_parts) if formatted_parts else "No detailed information available."
+    
+    debug_print("FORMATTED CONTEXT", {
+        "original_items": len(retrieved_context) if isinstance(retrieved_context, list) else "string",
+        "formatted_length": len(result),
+        "preview": result[:300]
+    })
+    
+    return result
+
+# ==============================
+# LangGraph State
+# ==============================
+class ConversationState(TypedDict):
+    user_id: str
+    query: str
+    context: str
+    recent_history: str
+    summary: str
+    response: str
+
+# ==============================
+# Prompt Templates
+# ==============================
+SYSTEM_PROMPT = """
+You are a retrieval-augmented medical assistant chatbot for Indo-US Multi-Specialty Hospital.
+
+Your responsibilities:
+1. **Extract and use information** from the retriever context, including structured data like doctor lists, schedules, and specialties.
+2. When asked for lists (e.g., "top 5 female doctors"), extract and present the information directly from the context.
+3. Use chat history to avoid repetition - if you must repeat necessary info, rephrase it.
+4. If a booking was already confirmed, acknowledge that instead of reconfirming.
+5. Be concise, clear, and human-like (≤50 words for simple queries, longer for lists/details).
+6. If doctor, time, or information is missing from context, ask for clarification.
+7. Never fabricate data. If unsure, politely say so.
+
+**Important**: When the context contains doctor information with names, specialties, contact details, or schedules, extract and present it directly in a clear, formatted way.
+"""
+
+qa_prompt = ChatPromptTemplate.from_messages([
+    ("system", SYSTEM_PROMPT),
+    ("human", """Retrieved Information:
+{context}
+
+Recent Conversation (last {window_size} exchanges):
+{recent_history}
+
+Memory Summary (older context):
+{summary}
+
+User query: {query}
+
+INSTRUCTIONS:
+- If the Retrieved Information contains structured data (like doctor lists, schedules), extract and format it clearly
+- For "list" or "top X" requests, provide the information directly if available in the context
+- Use Memory Summary for background context from earlier conversations
+- Use Recent Conversation for immediate context
+- Do NOT repeat earlier bot responses verbatim; rephrase or provide new clarifying info
+- If information is incomplete, ask specific clarifying questions
+- Format doctor information clearly with name, specialty, and relevant details
+""")
+])
+
+# ==============================
+# Workflow Nodes
+# ==============================
+def load_context_node(state: ConversationState) -> ConversationState:
+    """Load memory context"""
+    mem_ctx = load_memory_context(state["user_id"])
+    state["recent_history"] = mem_ctx["recent_history"]
+    state["summary"] = mem_ctx["summary"]
+    
+    debug_print("LOAD CONTEXT NODE", {
+        "user_id": state["user_id"],
+        "recent_history": state["recent_history"],
+        "summary": state["summary"] or "No summary"
+    }, state["user_id"])
+    
+    return state
+
+def generate_response_node(state: ConversationState) -> ConversationState:
+    """Generate LLM response using qa_prompt"""
+    formatted = qa_prompt.format(
+        context=state["context"],
+        window_size=MEMORY_WINDOW_SIZE,
+        recent_history=state["recent_history"],
+        summary=state["summary"] or "No previous context.",
+        query=state["query"]
+    )
+    
+    debug_print("PROMPT SENT TO LLM", {
+        "user_id": state["user_id"],
+        "formatted_prompt": formatted[:500] + "..." if len(formatted) > 500 else formatted
+    }, state["user_id"])
+   
+    raw = llm.predict(formatted)
+    state["response"] = str(raw).strip()
+    
+    debug_print("LLM RESPONSE GENERATED", {
+        "user_id": state["user_id"],
+        "response": state["response"]
+    }, state["user_id"])
+    
+    return state
+
+def save_memory_node(state: ConversationState) -> ConversationState:
+    """Save to memory"""
+    save_to_memory(state["user_id"], state["query"], state["response"])
+    return state
+
+# ==============================
+# Workflow Creation
+# ==============================
+def create_workflow() -> StateGraph:
+    """Create optimized conversation workflow"""
+    workflow = StateGraph(ConversationState)
+   
+    workflow.add_node("load_context", load_context_node)
+    workflow.add_node("generate", generate_response_node)
+    workflow.add_node("save", save_memory_node)
+   
+    workflow.set_entry_point("load_context")
+    workflow.add_edge("load_context", "generate")
+    workflow.add_edge("generate", "save")
+    workflow.add_edge("save", END)
+   
+    return workflow.compile()
+
+conversation_flow = create_workflow()
+
+# ==============================
+# Main Handler
+# ==============================
+def handle_user_query(user_id: str, retrieved_context: Union[str, List, Dict], query: str) -> str:
+    """
+    Main query handler with optimized memory.
+   
+    Args:
+        user_id: Unique user identifier
+        retrieved_context: Context from vector DB (can be list, dict, or string)
+        query: User's question
+   
+    Returns:
+        AI response string
+    """
+    debug_print("INCOMING REQUEST", {
+        "user_id": user_id,
+        "query": query,
+        "context_type": type(retrieved_context).__name__,
+        "context_preview": str(retrieved_context)[:200]
+    }, user_id)
+    
+    if not user_id or not query:
+        return "Invalid request."
+   
+    # Format context properly for LLM
+    if isinstance(retrieved_context, list):
+        formatted_context = format_context_for_llm(retrieved_context)
+    elif isinstance(retrieved_context, dict):
+        formatted_context = json.dumps(retrieved_context, indent=2)
+    elif isinstance(retrieved_context, str):
+        formatted_context = retrieved_context
+    else:
+        formatted_context = str(retrieved_context)
+   
+    state: ConversationState = {
+        "user_id": user_id,
+        "query": query,
+        "context": formatted_context,
+        "recent_history": "",
+        "summary": "",
+        "response": ""
+    }
+   
+    final = conversation_flow.invoke(state)
+    
+    debug_print("FINAL RESPONSE", {
+        "user_id": user_id,
+        "query": query,
+        "response": final["response"],
+        "context_used": formatted_context[:200]
+    }, user_id)
+    
+    return final["response"]
+
+# ==============================
+# Utility Functions
+# ==============================
+def clear_user_memory(user_id: str):
+    """Clear user's conversation history"""
+    OptimizedRedisChatHistory(user_id).clear()
+    logger.info(f"Cleared memory: {user_id}")
+
+def get_user_history(user_id: str) -> list:
+    """Get user's conversation history"""
+    try:
+        memory = get_memory(user_id)
+        messages = memory.chat_memory.messages
+       
+        history = []
+        for i in range(0, len(messages), 2):
+            if i + 1 < len(messages):
+                history.append({
+                    "query": messages[i].content,
+                    "response": messages[i + 1].content
+                })
+        
+        debug_print("USER HISTORY RETRIEVED", {
+            "user_id": user_id,
+            "conversation_count": len(history)
+        }, user_id)
+        
+        return history
+    except Exception as e:
+        logger.error(f"Error getting user history: {e}")
+        return []
+
+# ==============================
+# Debug Function
+# ==============================
+def debug_redis_connection():
+    """Debug function to test Redis connection"""
+    if redis_client is None:
+        logger.error("Redis client is None - connection failed")
+        return False
+    
+    try:
+        # Test basic operations
+        test_key = "test:connection"
+        redis_client.set(test_key, "test_value", ex=10)
+        value = redis_client.get(test_key)
+        redis_client.delete(test_key)
+        
+        logger.info(f"✅ Redis test successful: {value}")
+        
+        # List all keys (for debugging)
+        all_keys = redis_client.keys("chat:*")
+        logger.info(f"📋 Current chat keys in Redis: {len(all_keys)}")
+        
+        return True
+    except Exception as e:
+        logger.error(f"❌ Redis test failed: {e}")
+        return False

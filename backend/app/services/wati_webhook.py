@@ -306,6 +306,7 @@ from app.services.genai_response import (
 from app.services.vectordb_retrive import query_pinecone_index
 from app.services.wati_api_service import send_whatsapp_message_v2
 from app.services.select_namespace import run_namespace_selector
+from app.services.booking_service import prepare_booking_response  # your first code
 from app.models.postgresql_db import PostgreSQL
 
 logging.basicConfig(level=logging.INFO)
@@ -314,6 +315,23 @@ logger = logging.getLogger(__name__)
 DB = PostgreSQL()
 processed_messages = set()
 MAX_PROCESSED_CACHE = 10000
+BOOKING_KEYWORDS = (
+    "book",           # general booking
+    "appointment",    # standard term
+    "schedule",       # arranging time
+    "doctor",         # specifies doctor
+    "consultation",   # common term for visiting doctor
+    "slot",           # asking for free slot
+    "visit",          # general visit
+    "meeting",        # informal sometimes used
+    "reserve",        # reserve a slot
+    "timing",         # asking for available time
+    "availability",   # check if doctor free
+    "consult",        # shorthand for consultation
+    "see doctor",     # natural phrase
+    "checkup",        # routine checkup
+)
+
 
 def handle_wati_webhook(data: dict) -> dict:
     """
@@ -365,6 +383,32 @@ def _process_message(msg_id: str, phone: str, text: str, response: dict):
         # Select namespace
         namespace = run_namespace_selector(namespaces_file='web_info/web_info.json')
         logger.info(f"Namespace: {namespace}")
+
+
+         # 2. Try booking flow first
+        booking_resp = try_booking_flow(namespace, phone, text)
+        if booking_resp:
+            # Booking flow handled the message
+            reply_text = booking_resp.get("reply_text", "Booking processed.")
+            intent = booking_resp.get("intent", "booking")
+            logger.info(f"Booking intent handled: {intent}")
+            
+            send_result = send_whatsapp_message_v2(phone, reply_text)
+            
+            # Save to DB
+            db_data = {
+                'status': 'processed',
+                'message': send_result.get('message', {}),
+                'airesponse': reply_text,
+                'text': text
+            }
+            DB.insert_rds_message_data(db_data)
+            logger.info("Booking response saved to DB")
+            
+            response['result'] = send_result.get('result')
+            response['message'] = send_result.get('message')
+            response['airesponse'] = reply_text
+            return
         
         # Get context for intent detection
         context = query_pinecone_index(query_text=text, namespace=namespace)
@@ -403,3 +447,20 @@ def _process_message(msg_id: str, phone: str, text: str, response: dict):
         
     except Exception as e:
         logger.error(f"Processing error {msg_id}: {e}")
+
+def try_booking_flow(namespace: str, phone: str, message_text: str) -> dict:
+    """
+    Attempt to process message as a booking intent.
+    Returns None if not a booking message.
+    """
+    if not any(k in message_text.lower() for k in BOOKING_KEYWORDS):
+        return None  # Not a booking message
+    
+    # Call your existing booking code
+    booking_resp = prepare_booking_response(
+        namespace=namespace,
+        message_text=message_text,
+        booked_by=phone,
+        retriever_fn=lambda q: query_pinecone_index(q, namespace=namespace)
+    )
+    return booking_resp

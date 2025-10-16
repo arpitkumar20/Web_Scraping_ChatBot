@@ -5,7 +5,8 @@ from threading import Thread, Lock
 from app.core.logging import get_logger
 from flask import Blueprint, request, jsonify
 from app.services.file_content import process_file
-from app.services.embeddings_store_v2 import create_documents, split_documents, generate_embeddings, init_pinecone_index, upsert_vectors 
+from app.services.embeddings_store_v2 import create_documents, split_documents, generate_embeddings, init_pinecone_index, upsert_vectors
+from app.services.zoho_embeded_funtions import load_csv, csv_to_string, split_text_into_chunks_data
 from app.helper.utils import COMMON
 
 load_dotenv()
@@ -43,30 +44,48 @@ def file_content():
         if not company_name:
             return jsonify({'error': "'company_name' is required"}), 400
 
-        # --- Process file and extract text ---
-        result = process_file(file)
-        raw_text = result['extracted_text']
-        # return raw_text
-        # --- Create job_id for background embedding ---
         job_id = str(uuid.uuid4())
-        with lock:
-            job_status[job_id] = {
+        if file.filename.lower().endswith('.csv'):
+            with lock:
+                job_status[job_id] = {
+                    "job_id": job_id,
+                    "embedding_status": "queued",
+                    "step": "queued",
+                    "namespace": None,
+                    "error": None,
+                    "filename": file.filename
+                }
+                # CSV file: preserve rows and columns
+            Thread(target=process_csv_to_embedding_with_job, args=(company_name, file, job_id), daemon=True).start()
+            return jsonify({
+                "status": "embedding_started",
                 "job_id": job_id,
-                "embedding_status": "queued",
-                "step": "queued",
-                "namespace": None,
-                "error": None,
                 "filename": file.filename
-            }
+            })
+        else:
+            result = process_file(file)
+            raw_text = result['extracted_text']
+            # return raw_text
+            # --- Create job_id for background embedding ---
+            
+            with lock:
+                job_status[job_id] = {
+                    "job_id": job_id,
+                    "embedding_status": "queued",
+                    "step": "queued",
+                    "namespace": None,
+                    "error": None,
+                    "filename": file.filename
+                }
 
-        # --- Start embedding in background ---
-        Thread(target=store_embeddings_from_text, args=(company_name, raw_text, job_id), daemon=True).start()
+            # --- Start embedding in background ---
+            Thread(target=store_embeddings_from_text, args=(company_name, raw_text, job_id), daemon=True).start()
 
-        return jsonify({
-            "status": "embedding_started",
-            "job_id": job_id,
-            "filename": file.filename
-        })
+            return jsonify({
+                "status": "embedding_started",
+                "job_id": job_id,
+                "filename": file.filename
+            })
 
     except Exception as e:
         logger.exception(f"Error in /extract-content: {e}")
@@ -177,3 +196,92 @@ def store_embeddings_from_text(company_name: str, raw_text: str, job_id: str) ->
             if job_id in job_status:
                 job_status[job_id].update({"embedding_status": "failed", "step": "error", "error": str(e)})
         return None
+
+
+
+def process_csv_to_embedding_with_job(
+    namespace: str,
+    file_path: str,
+    job_id: str
+):
+    """
+    Process a CSV file: load, convert to string, chunk, embed, and upsert to Pinecone.
+    Updates job_status using job_id.
+    """
+    try:
+        # --- Update job status: started ---
+        with lock:
+            if job_id in job_status:
+                job_status[job_id].update({"embedding_status": "processing", "step": "loading_csv"})
+
+        # Step 1: Load CSV
+        df = load_csv(file_path)
+        logger.info(f"✅ CSV loaded with {len(df)} rows and {len(df.columns)} columns.")
+
+        # --- Update job status: converting CSV to text ---
+        with lock:
+            if job_id in job_status:
+                job_status[job_id].update({"step": "converting_csv_to_text"})
+
+        # Step 2: Convert CSV to string
+        csv_text = csv_to_string(df)
+
+        # --- Update job status: splitting text ---
+        with lock:
+            if job_id in job_status:
+                job_status[job_id].update({"step": "splitting_text"})
+
+        # Step 3: Split into chunks
+        chunks = split_text_into_chunks_data(csv_text)
+        logger.info(f"Split into {len(chunks)} safe chunks for embeddings.")
+
+        # --- Update job status: generating embeddings ---
+        with lock:
+            if job_id in job_status:
+                job_status[job_id].update({"step": "generating_embeddings"})
+
+        # Step 4: Generate embeddings
+        vectors = generate_embeddings(chunks, EMBEDDING_MODEL, OPENAI_API_KEY)
+        if not vectors:
+            raise RuntimeError("Embedding generation failed or returned empty results.")
+        logger.info(f"Generated {len(vectors)} embeddings.")
+
+        # --- Update job status: initializing Pinecone ---
+        with lock:
+            if job_id in job_status:
+                job_status[job_id].update({"step": "initializing_pinecone"})
+
+        # Step 5: Initialize Pinecone index
+        vector_dim = len(vectors[0])
+        index = init_pinecone_index(PINECONE_API_KEY, PINECONE_INDEX, vector_dim, CLOUD_STORAGE, PINECONE_ENV)
+
+        # --- Update job status: upserting vectors ---
+        with lock:
+            if job_id in job_status:
+                job_status[job_id].update({"step": "upserting_vectors"})
+
+        # Step 6: Prepare minimal metadata to avoid Pinecone limits
+        safe_metadata_list = []
+        for i, chunk in enumerate(chunks):
+            meta = {"source": str(chunk), "chunk_id": i}
+            safe_metadata_list.append(meta)
+
+        # Upsert vectors into Pinecone
+        upsert_vectors(index, chunks, vectors, namespace, safe_metadata_list)
+        logger.info(f"✅ All documents successfully added to namespace '{namespace}'.")
+
+        # --- Update job status: completed ---
+        with lock:
+            if job_id in job_status:
+                job_status[job_id].update({"embedding_status": "completed", "step": "done", "namespace": namespace})
+
+        COMMON.save_name(namespace=namespace, folder_path="web_info", filename="web_info.json")
+        return index, chunks, vectors
+
+    except Exception as e:
+        logger.exception(f"Error embedding CSV for namespace '{namespace}': {e}")
+        # --- Update job status: failed ---
+        with lock:
+            if job_id in job_status:
+                job_status[job_id].update({"embedding_status": "failed", "step": "error", "error": str(e)})
+        return None, None, None

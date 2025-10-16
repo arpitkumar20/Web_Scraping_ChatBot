@@ -362,19 +362,10 @@ from datetime import datetime
 from flask import Flask, Blueprint, request, jsonify
 from dotenv import load_dotenv
 from app.helper.utils import COMMON
+# from app.services.zoho_embed_runner import run_from_json_file
 
 # ------------------ Load .env ------------------
 load_dotenv()
-# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-# PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-# PINECONE_ENV = os.getenv("PINECONE_ENV")
-# PINECONE_INDEX = os.getenv("PINECONE_INDEX")
-# CLOUD_STORAGE = os.getenv("PINECONE_CLOUD", "aws")
-# EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
-# DEFAULT_CHUNK_SIZE = int(os.getenv("EMBED_CHUNK_SIZE", 1500))
-# DEFAULT_CHUNK_OVERLAP = int(os.getenv("EMBED_CHUNK_OVERLAP", 200))
-# BATCH_SIZE = int(os.getenv("EMBED_BATCH_SIZE", 50))
-
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
@@ -687,6 +678,7 @@ def _fetch_and_embed_zoho_data(data, company_name, job_id):
             final_result.append({"owner_name": owner, "app_link_name": link, "reports": report_details})
 
         payload = {"applications": final_result}
+
         namespace = _slug(company_name)
         prepared_docs = prepare_embedding_docs_from_zoho(payload, namespace)
         cleaned_docs = [
@@ -708,6 +700,7 @@ def _fetch_and_embed_zoho_data(data, company_name, job_id):
 
         # ✅ Run your background embedding after JSON ready
         store_embeddings_from_zoho_json(namespace, embedding_ready_path)
+        # run_from_json_file(company_name)
 
         with lock:
             job_status[job_id]["embedding_status"] = "completed"

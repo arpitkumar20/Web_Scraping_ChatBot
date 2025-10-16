@@ -102,45 +102,276 @@
 
 
 
-import logging
+
+# def query_pinecone_index(query_text: str, top_k: int = 5, namespace: str = None) -> list[dict]:
+#     """
+#     Query Pinecone index using embedding vector of user query.
+
+#     Args:
+#         query_text (str): User query text.
+#         top_k (int): Number of results to return.
+#         namespace (str): Pinecone namespace to query.
+
+#     Returns:
+#         list[dict]: List of matches with metadata and scores.
+#     """
+#     enriched_query = preprocess_text(query_text)
+#     query_vector = generate_embedding(enriched_query)
+
+#     logger.info(f"Querying Pinecone index based on (top_k={top_k})...")
+#     query_response = pinecone_index.query(
+#         vector=query_vector,
+#         top_k=top_k,
+#         namespace=namespace,
+#         include_values=False,
+#         include_metadata=True
+#     )
+#     print(">>>>>>>>>>>>>>>>query_response>>>>>>>>>>>>>>>>",query_response)
+
+#     results = []
+#     for match in query_response.get('matches', []):
+#         metadata = match.get('metadata', {})
+#         cleaned_metadata = {k: clean_text(str(v)) for k, v in metadata.items()}
+#         results.append({
+#             "id": clean_text(match['id']),
+#             "score": match['score'],
+#             **cleaned_metadata
+#         })
+
+#     logger.info(f"Retrieved {len(results)} results from Pinecone.")
+#     return results
+
+
+
+# def query_pinecone_index(
+#     query_text: str,
+#     top_k: int = 5,
+#     namespace: Optional[str] = None,
+#     similarity_threshold: float = 0.8
+# ) -> List[Dict]:
+#     """
+#     Query Pinecone index and return most relevant matches above a similarity threshold.
+
+#     Args:
+#         query_text (str): User query.
+#         top_k (int): Maximum number of results to return.
+#         namespace (str, optional): Pinecone namespace.
+#         similarity_threshold (float): Only return matches above this score.
+
+#     Returns:
+#         List[Dict]: List of matches with metadata and scores.
+#     """
+#     enriched_query = preprocess_text(query_text)
+#     query_vector = generate_embedding(enriched_query)
+
+#     logger.info(f"Querying Pinecone index with top_k={top_k}, namespace={namespace}...")
+#     query_response = pinecone_index.query(
+#         vector=query_vector,
+#         top_k=top_k,
+#         namespace=namespace,
+#         include_metadata=True,
+#         include_values=False
+#     )
+#     print("=============query_response=============",query_response)
+#     # Handle different Pinecone SDK versions
+#     matches = getattr(query_response, "matches", None) or query_response.get("matches", [])
+
+#     # Filter by similarity threshold and clean metadata
+#     results = []
+#     for match in matches:
+#         score = match.get("score", 0)
+#         if score < similarity_threshold:
+#             continue  # Skip low-similarity matches
+
+#         metadata = match.get("metadata", {})
+#         cleaned_metadata = {k: clean_text(str(v)) for k, v in metadata.items()}
+
+#         results.append({
+#             "id": clean_text(match.get("id", "")),
+#             "score": score,
+#             **cleaned_metadata
+#         })
+
+#     # Sort results by descending similarity
+#     results = sorted(results, key=lambda x: x["score"], reverse=True)
+
+#     logger.info(f"✅ Found {len(results)} relevant matches for the query.")
+#     return results
+
+
+import numpy as np
+from typing import List, Dict, Optional
+from sklearn.preprocessing import normalize
+from sklearn.metrics.pairwise import cosine_similarity
 from app.core.config import pinecone_index
 from app.core.embedding_utils import preprocess_text, generate_embedding, clean_text
+from app.core.logging import get_logger
+logger = get_logger(__name__)
 
-logger = logging.getLogger(__name__)
-
-def query_pinecone_index(query_text: str, top_k: int = 5, namespace: str = None) -> list[dict]:
+def query_pinecone_index(
+    query_text: str,
+    top_k: int = 5,
+    namespace: Optional[str] = None,
+    similarity_threshold: float = 0.8
+) -> List[Dict]:
     """
-    Query Pinecone index using embedding vector of user query.
-
-    Args:
-        query_text (str): User query text.
-        top_k (int): Number of results to return.
-        namespace (str): Pinecone namespace to query.
-
-    Returns:
-        list[dict]: List of matches with metadata and scores.
+    Query Pinecone index, calculate cosine similarity explicitly, 
+    and return most relevant matches above a similarity threshold.
     """
+    # Step 1: Preprocess and generate embedding
     enriched_query = preprocess_text(query_text)
     query_vector = generate_embedding(enriched_query)
+    logger.info(f"Query vector type: {type(query_vector)}, length: {len(query_vector)}")
 
-    logger.info(f"Querying Pinecone index based on (top_k={top_k})...")
+    # Step 2: Query Pinecone for top_k results (scores returned might not be exact cosine)
+    logger.info(f"Querying Pinecone index with top_k={top_k}, namespace={namespace}...")
     query_response = pinecone_index.query(
         vector=query_vector,
         top_k=top_k,
         namespace=namespace,
-        include_values=False,
-        include_metadata=True
+        include_metadata=True,
+        include_values=True  # include vector values for cosine similarity
     )
+    matches = getattr(query_response, "matches", None) or query_response.get("matches", [])
+    # Step 3: Compute cosine similarity manually for consistency
+    results = []
+    # --- Example query vector ---
+    query_vector_np = np.array(query_vector).reshape(1, -1)
+    query_vector_np = normalize(query_vector_np, axis=1)
 
     results = []
-    for match in query_response.get('matches', []):
-        metadata = match.get('metadata', {})
+
+    similarity_threshold = 0.3  # lower threshold to catch more matches
+
+    for match in matches:
+        match_values = match.get("values")
+        if not match_values:
+            continue  # skip empty vectors
+
+        # Convert to numpy array and normalize
+        match_vector_np = np.array(match_values, dtype=np.float32).reshape(1, -1)
+        match_vector_np = normalize(match_vector_np, axis=1)
+
+        # Compute cosine similarity
+        similarity = float(cosine_similarity(query_vector_np, match_vector_np)[0][0])
+
+        if similarity < similarity_threshold:
+            continue
+
+        # Clean metadata
+        metadata = match.get("metadata", {})
         cleaned_metadata = {k: clean_text(str(v)) for k, v in metadata.items()}
+
         results.append({
-            "id": clean_text(match['id']),
-            "score": match['score'],
+            "id": clean_text(match.get("id", "")),
+            "score": similarity,
             **cleaned_metadata
         })
 
-    logger.info(f"Retrieved {len(results)} results from Pinecone.")
+    # Sort results by similarity descending
+    results.sort(key=lambda x: x["score"], reverse=True)
+
+    logger.info(f"✅ Found {len(results)} relevant matches above threshold {similarity_threshold}")
     return results
+
+
+def normalize_vector(v: np.ndarray) -> np.ndarray:
+    norm = np.linalg.norm(v)
+    if norm == 0:
+        return v
+    return v / norm
+
+
+
+# import logging
+# import numpy as np
+# from typing import List, Dict, Optional
+# from sklearn.preprocessing import normalize
+# from sklearn.metrics.pairwise import cosine_similarity
+# from sentence_transformers import CrossEncoder
+
+# from app.core.config import pinecone_index
+# from app.core.embedding_utils import preprocess_text, generate_embedding
+
+# logging.basicConfig(level=logging.INFO)
+# logger = logging.getLogger(__name__)
+
+# # Initialize cross-encoder once
+# cross_encoder = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+
+
+# def query_pinecone_index(
+#     query_text: str,
+#     top_k: int = 5,
+#     namespace: Optional[str] = None,
+#     similarity_threshold: float = 0.3,
+#     rerank_method: str = "cross_encoder"
+# ) -> List[Dict]:
+
+#     # Step 1: generate query embedding
+#     enriched_query = preprocess_text(query_text)
+#     query_vector = generate_embedding(enriched_query)
+#     query_vector_np = normalize(np.array(query_vector).reshape(1, -1), axis=1)
+
+#     # Step 2: fetch candidates
+#     fetch_k = top_k * 3
+#     query_response = pinecone_index.query(
+#         vector=query_vector,
+#         top_k=fetch_k,
+#         namespace=namespace,
+#         include_metadata=True,
+#         include_values=True
+#     )
+
+#     matches = getattr(query_response, "matches", None) or query_response.get("matches", [])
+#     results = []
+
+#     # Step 3: compute cosine similarity
+#     for match in matches:
+#         vector = match.get("values")
+#         if vector is None:
+#             continue
+#         sim = float(cosine_similarity(query_vector_np, normalize(np.array(vector).reshape(1, -1)))[0][0])
+#         if sim < similarity_threshold:
+#             continue
+
+#         metadata = match.get("metadata", {})
+#         # Use `source_text` if `text` is empty
+#         text = metadata.get("text") or metadata.get("source_text", "")
+#         results.append({
+#             "id": match.get("id", ""),
+#             "score": sim,
+#             "text": text,
+#             **metadata
+#         })
+
+#     if not results:
+#         logger.warning("No matches found above similarity threshold.")
+#         return []
+
+#     # Print results before re-ranking
+#     logger.info("\n--- Before Re-ranking ---")
+#     # for r in results:
+#     #     logger.info(f"ID: {r['id']}, Cosine Score: {r['score']:.4f}, Text: {r['text'][:150]}")
+
+#     # Step 4: re-ranking using cross-encoder
+#     if rerank_method == "cross_encoder":
+#         pairs = [(query_text, r["text"]) for r in results if r["text"]]
+#         if pairs:
+#             rerank_scores = cross_encoder.predict(pairs)
+#             for i, s in enumerate(rerank_scores):
+#                 results[i]["rerank_score"] = float(s)
+#             results.sort(key=lambda x: x.get("rerank_score", x["score"]), reverse=True)
+#         else:
+#             logger.warning("No text for cross-encoder; fallback to cosine.")
+#             results.sort(key=lambda x: x["score"], reverse=True)
+#     else:
+#         results.sort(key=lambda x: x["score"], reverse=True)
+
+#     # Print results after re-ranking
+#     logger.info("\n--- After Re-ranking ---")
+#     # for r in results[:top_k]:
+#     #     score = r.get("rerank_score", r["score"])
+#     #     logger.info(f"ID: {r['id']}, Score: {score:.4f}, Text: {r['text'][:150]}")
+
+#     return results[:top_k]

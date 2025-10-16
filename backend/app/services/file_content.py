@@ -30,14 +30,6 @@ def process_file(file) -> dict:
                     text = f.read()
                 logger.info(f'[TXT] Extracted in {time.time() - start_time:.4f}s')
 
-            elif filename.lower().endswith('.csv'):
-                # CSV file: preserve rows and columns
-                df = pd.read_csv(file_path, dtype=str, keep_default_na=False)
-                df = df.map(lambda x: str(x).strip())
-                # Convert to a clean tabular string
-                text = df.to_string(index=False)
-                logger.info(f'[CSV] Extracted in {time.time() - start_time:.4f}s')
-
             elif filename.lower().endswith(('.xlsx', '.xls')):
                 # Excel file
                 df = pd.read_excel(file_path, dtype=str)

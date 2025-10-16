@@ -102,12 +102,6 @@
 
 
 
-import logging
-from typing import Dict, List, Optional
-from app.core.config import pinecone_index
-from app.core.embedding_utils import preprocess_text, generate_embedding, clean_text
-
-logger = logging.getLogger(__name__)
 
 # def query_pinecone_index(query_text: str, top_k: int = 5, namespace: str = None) -> list[dict]:
 #     """
@@ -205,10 +199,14 @@ logger = logging.getLogger(__name__)
 #     return results
 
 
-from typing import List, Dict, Optional
 import numpy as np
+from typing import List, Dict, Optional
 from sklearn.preprocessing import normalize
 from sklearn.metrics.pairwise import cosine_similarity
+from app.core.config import pinecone_index
+from app.core.embedding_utils import preprocess_text, generate_embedding, clean_text
+from app.core.logging import get_logger
+logger = get_logger(__name__)
 
 def query_pinecone_index(
     query_text: str,
@@ -282,3 +280,98 @@ def normalize_vector(v: np.ndarray) -> np.ndarray:
     if norm == 0:
         return v
     return v / norm
+
+
+
+# import logging
+# import numpy as np
+# from typing import List, Dict, Optional
+# from sklearn.preprocessing import normalize
+# from sklearn.metrics.pairwise import cosine_similarity
+# from sentence_transformers import CrossEncoder
+
+# from app.core.config import pinecone_index
+# from app.core.embedding_utils import preprocess_text, generate_embedding
+
+# logging.basicConfig(level=logging.INFO)
+# logger = logging.getLogger(__name__)
+
+# # Initialize cross-encoder once
+# cross_encoder = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+
+
+# def query_pinecone_index(
+#     query_text: str,
+#     top_k: int = 5,
+#     namespace: Optional[str] = None,
+#     similarity_threshold: float = 0.3,
+#     rerank_method: str = "cross_encoder"
+# ) -> List[Dict]:
+
+#     # Step 1: generate query embedding
+#     enriched_query = preprocess_text(query_text)
+#     query_vector = generate_embedding(enriched_query)
+#     query_vector_np = normalize(np.array(query_vector).reshape(1, -1), axis=1)
+
+#     # Step 2: fetch candidates
+#     fetch_k = top_k * 3
+#     query_response = pinecone_index.query(
+#         vector=query_vector,
+#         top_k=fetch_k,
+#         namespace=namespace,
+#         include_metadata=True,
+#         include_values=True
+#     )
+
+#     matches = getattr(query_response, "matches", None) or query_response.get("matches", [])
+#     results = []
+
+#     # Step 3: compute cosine similarity
+#     for match in matches:
+#         vector = match.get("values")
+#         if vector is None:
+#             continue
+#         sim = float(cosine_similarity(query_vector_np, normalize(np.array(vector).reshape(1, -1)))[0][0])
+#         if sim < similarity_threshold:
+#             continue
+
+#         metadata = match.get("metadata", {})
+#         # Use `source_text` if `text` is empty
+#         text = metadata.get("text") or metadata.get("source_text", "")
+#         results.append({
+#             "id": match.get("id", ""),
+#             "score": sim,
+#             "text": text,
+#             **metadata
+#         })
+
+#     if not results:
+#         logger.warning("No matches found above similarity threshold.")
+#         return []
+
+#     # Print results before re-ranking
+#     logger.info("\n--- Before Re-ranking ---")
+#     # for r in results:
+#     #     logger.info(f"ID: {r['id']}, Cosine Score: {r['score']:.4f}, Text: {r['text'][:150]}")
+
+#     # Step 4: re-ranking using cross-encoder
+#     if rerank_method == "cross_encoder":
+#         pairs = [(query_text, r["text"]) for r in results if r["text"]]
+#         if pairs:
+#             rerank_scores = cross_encoder.predict(pairs)
+#             for i, s in enumerate(rerank_scores):
+#                 results[i]["rerank_score"] = float(s)
+#             results.sort(key=lambda x: x.get("rerank_score", x["score"]), reverse=True)
+#         else:
+#             logger.warning("No text for cross-encoder; fallback to cosine.")
+#             results.sort(key=lambda x: x["score"], reverse=True)
+#     else:
+#         results.sort(key=lambda x: x["score"], reverse=True)
+
+#     # Print results after re-ranking
+#     logger.info("\n--- After Re-ranking ---")
+#     # for r in results[:top_k]:
+#     #     score = r.get("rerank_score", r["score"])
+#     #     logger.info(f"ID: {r['id']}, Score: {score:.4f}, Text: {r['text'][:150]}")
+
+#     return results[:top_k]

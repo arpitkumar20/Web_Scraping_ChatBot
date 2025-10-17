@@ -316,20 +316,14 @@ DB = PostgreSQL()
 processed_messages = set()
 MAX_PROCESSED_CACHE = 10000
 BOOKING_KEYWORDS = (
-    "book",           # general booking
+    "yes",
+    "book",
     "appointment",    # standard term
     "schedule",       # arranging time
-    "doctor",         # specifies doctor
-    "consultation",   # common term for visiting doctor
     "slot",           # asking for free slot
-    "visit",          # general visit
-    "meeting",        # informal sometimes used
     "reserve",        # reserve a slot
-    "timing",         # asking for available time
     "availability",   # check if doctor free
-    "consult",        # shorthand for consultation
-    "see doctor",     # natural phrase
-    "checkup",        # routine checkup
+    "checkup",  
 )
 
 

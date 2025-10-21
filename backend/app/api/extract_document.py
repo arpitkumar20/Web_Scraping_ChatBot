@@ -26,78 +26,77 @@ logger = get_logger(__name__)
 lock = Lock()
 job_status = {}
 
-# ----------------- API Routes -----------------
+# # ----------------- API Routes -----------------
 @extract_documents.route('/extract-content', methods=['POST'])
 def file_content():
     """
-    Extract text from uploaded file and start background embedding.
-    Returns a job_id for status tracking.
+    Extract text from uploaded files and start background embedding.
+    Returns a list of job_ids for status tracking.
     """
     try:
         if 'file' not in request.files:
-            return jsonify({'error': 'No file part'}), 400
+            return jsonify({'error': 'No files part'}), 400
 
-        file = request.files['file']
-        if not file.filename:
-            return jsonify({'error': 'No selected file'}), 400
+        files = request.files.getlist('file')
+        if not files or any(f.filename == '' for f in files):
+            return jsonify({'error': 'No selected files'}), 400
 
         company_name = request.form.get("company_name")
         if not company_name:
             return jsonify({'error': "'company_name' is required"}), 400
 
-        job_id = str(uuid.uuid4())
-        if file.filename.lower().endswith('.csv'):
-            # Save uploaded CSV to a temporary file before thread starts
-            temp_dir = tempfile.mkdtemp()
-            temp_path = os.path.join(temp_dir, file.filename)
-            file.save(temp_path)
+        jobs_info = []
 
-            with lock:
-                job_status[job_id] = {
-                    "job_id": job_id,
-                    "embedding_status": "queued",
-                    "step": "queued",
-                    "namespace": None,
-                    "error": None,
-                    "filename": file.filename
-                }
+        for file in files:
+            job_id = str(uuid.uuid4())
 
-            # Pass the safe file path, not the stream
-            Thread(
-                target=process_csv_to_embedding_with_job,
-                args=(company_name, temp_path, job_id),
-                daemon=True
-            ).start()
+            if file.filename.lower().endswith('.csv'):
+                temp_dir = tempfile.mkdtemp()
+                temp_path = os.path.join(temp_dir, file.filename)
+                file.save(temp_path)
 
-            return jsonify({
-                "status": "embedding_started",
-                "job_id": job_id,
-                "filename": file.filename
-            })
-        else:
-            result = process_file(file)
-            raw_text = result['extracted_text']
-            # return raw_text
-            # --- Create job_id for background embedding ---
-            
-            with lock:
-                job_status[job_id] = {
-                    "job_id": job_id,
-                    "embedding_status": "queued",
-                    "step": "queued",
-                    "namespace": None,
-                    "error": None,
-                    "filename": file.filename
-                }
+                with lock:
+                    job_status[job_id] = {
+                        "job_id": job_id,
+                        "embedding_status": "queued",
+                        "step": "queued",
+                        "namespace": None,
+                        "error": None,
+                        "filename": file.filename
+                    }
 
-            # --- Start embedding in background ---
-            Thread(target=store_embeddings_from_text, args=(company_name, raw_text, job_id), daemon=True).start()
+                Thread(
+                    target=process_csv_to_embedding_with_job,
+                    args=(company_name, temp_path, job_id),
+                    daemon=True
+                ).start()
 
-            return jsonify({
-                "status": "embedding_started",
-                "job_id": job_id,
-                "filename": file.filename
-            })
+            else:
+                result = process_file(file)
+                raw_text = result['extracted_text']
+
+                with lock:
+                    job_status[job_id] = {
+                        "job_id": job_id,
+                        "embedding_status": "queued",
+                        "step": "queued",
+                        "namespace": None,
+                        "error": None,
+                        "filename": file.filename
+                    }
+
+                Thread(
+                    target=store_embeddings_from_text,
+                    args=(company_name, raw_text, job_id),
+                    daemon=True
+                ).start()
+
+            jobs_info.append({"filename": file.filename, "job_id": job_id})
+
+        return jsonify({
+            "status": "embedding_started",
+            "jobs": jobs_info
+        })
 
     except Exception as e:
         logger.exception(f"Error in /extract-content: {e}")

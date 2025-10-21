@@ -322,7 +322,6 @@ BOOKING_KEYWORDS = (
     "schedule",       # arranging time
     "slot",           # asking for free slot
     "reserve",        # reserve a slot
-    "availability",   # check if doctor free
     "checkup",  
 )
 

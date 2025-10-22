@@ -298,8 +298,8 @@
 
 import logging
 import threading
-from typing import Dict
 
+from app.core.logging import get_logger
 from app.services.genai_response import (
     handle_user_query
 )
@@ -309,8 +309,7 @@ from app.services.select_namespace import run_namespace_selector
 from app.services.booking_service import prepare_booking_response  # your first code
 from app.models.postgresql_db import PostgreSQL
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 DB = PostgreSQL()
 processed_messages = set()
@@ -321,8 +320,6 @@ BOOKING_KEYWORDS = (
     "appointment",    # standard term
     "schedule",       # arranging time
     "slot",           # asking for free slot
-    "reserve",        # reserve a slot
-    "checkup",  
 )
 
 
@@ -405,7 +402,7 @@ def _process_message(msg_id: str, phone: str, text: str, response: dict):
         
         # Get context for intent detection
         context = query_pinecone_index(query_text=text, namespace=namespace)
-       
+
         # Handle user query with context
         ai_response = handle_user_query(
             user_id=phone,

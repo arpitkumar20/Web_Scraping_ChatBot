@@ -746,8 +746,8 @@ BOOKING_CONFIRMATION_RE = re.compile(
 )
 
 AVAIL_KEYWORDS = (
-    "available slot", "availability", "available", "book",
-    "schedule", "timing", "timings", "appointment","time"
+    "slot", "availability", "available", "book",
+    "schedule", "timing", "time", "appointment"
 )
 
 DOCTOR_NAME_RE = re.compile(r"(Dr\.?\s+[A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+)*)")

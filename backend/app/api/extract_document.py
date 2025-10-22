@@ -1,14 +1,15 @@
 import os
-import tempfile
+import re
 import uuid
 from dotenv import load_dotenv
 from threading import Thread, Lock
-from app.core.logging import get_logger
+from langchain.schema import Document
 from flask import Blueprint, request, jsonify
-from app.services.file_content import process_file
-from app.services.embeddings_store_v2 import create_documents, split_documents, generate_embeddings, init_pinecone_index, upsert_vectors
-from app.services.zoho_embeded_funtions import load_csv, csv_to_string, split_text_into_chunks_data
+
 from app.helper.utils import COMMON
+from app.core.logging import get_logger
+from app.services.file_content import process_file
+from app.services.embeddings_store_v2 import generate_embeddings, init_pinecone_index, upsert_vectors
 
 load_dotenv()
 
@@ -49,47 +50,24 @@ def file_content():
 
         for file in files:
             job_id = str(uuid.uuid4())
+            result = process_file(file)
+            raw_text = result['extracted_text']
 
-            if file.filename.lower().endswith('.csv'):
-                temp_dir = tempfile.mkdtemp()
-                temp_path = os.path.join(temp_dir, file.filename)
-                file.save(temp_path)
+            with lock:
+                job_status[job_id] = {
+                    "job_id": job_id,
+                    "embedding_status": "queued",
+                    "step": "queued",
+                    "namespace": None,
+                    "error": None,
+                    "filename": file.filename
+                }
 
-                with lock:
-                    job_status[job_id] = {
-                        "job_id": job_id,
-                        "embedding_status": "queued",
-                        "step": "queued",
-                        "namespace": None,
-                        "error": None,
-                        "filename": file.filename
-                    }
-
-                Thread(
-                    target=process_csv_to_embedding_with_job,
-                    args=(company_name, temp_path, job_id),
-                    daemon=True
-                ).start()
-
-            else:
-                result = process_file(file)
-                raw_text = result['extracted_text']
-
-                with lock:
-                    job_status[job_id] = {
-                        "job_id": job_id,
-                        "embedding_status": "queued",
-                        "step": "queued",
-                        "namespace": None,
-                        "error": None,
-                        "filename": file.filename
-                    }
-
-                Thread(
-                    target=store_embeddings_from_text,
-                    args=(company_name, raw_text, job_id),
-                    daemon=True
-                ).start()
+            Thread(
+                target=store_embeddings_from_text,
+                args=(company_name, raw_text, job_id),
+                daemon=True
+            ).start()
 
             jobs_info.append({"filename": file.filename, "job_id": job_id})
 
@@ -112,6 +90,59 @@ def embedding_status(job_id):
             return jsonify({"error": "Invalid job_id"}), 404
         return jsonify(job_status[job_id])
 
+def split_documents(documents: list, chunk_size=1000, chunk_overlap=150) -> list:
+    from langchain.text_splitter import CharacterTextSplitter
+    try:
+        from langchain.schema import Document
+    except Exception:
+        from langchain.docstore.document import Document  # older LC
+
+    def to_doc(d):
+        return d if isinstance(d, Document) else Document(
+            page_content=d.get("page_content", d.get("text", "")),
+            metadata=d.get("metadata", {}) if isinstance(d.get("metadata", {}), dict) else {}
+        )
+
+    def detect_pk_field(docs):
+        common = {"pk", "id", "doc_id", "unique_id", "primary_key"}
+        for d in docs:
+            md = getattr(d, "metadata", None) or (d.get("metadata", {}) if isinstance(d, dict) else {})
+            if isinstance(md, dict):
+                for k in md:
+                    if k.lower() in common:
+                        return k
+        return None
+
+    splitter = CharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+    pk_field = detect_pk_field(documents)
+
+    if not pk_field:
+        # original behavior
+        return splitter.split_documents([to_doc(d) for d in documents])
+
+    # group by pk, but DO NOT concatenate; split rowwise within each group
+    groups = {}
+    for d in documents:
+        doc = to_doc(d)
+        pk_val = doc.metadata.get(pk_field)
+        groups.setdefault(pk_val, []).append(doc)
+
+    chunks = []
+    for _, group in groups.items():
+        # split each doc in the group individually to keep it rowwise
+        pieces = splitter.split_documents(group)
+        chunks.extend(pieces)
+
+    return chunks
+
+def _row_docs_from_text(raw_text: str):
+    # split on blank lines OR long separators (---, ***, ===), fallback to single lines
+    parts = [p.strip() for p in re.split(r'(?:\n{2,}|^[\-=*]{3,}$)', raw_text, flags=re.MULTILINE) if p and p.strip()]
+    if len(parts) <= 1:
+        # fallback: split per non-empty line
+        parts = [ln.strip() for ln in raw_text.splitlines() if ln.strip()]
+
+    return [Document(page_content=part, metadata={"pk": str(i)}) for i, part in enumerate(parts)]
 
 # ----------------- Main Function -----------------
 def store_embeddings_from_text(company_name: str, raw_text: str, job_id: str) -> str:
@@ -133,8 +164,8 @@ def store_embeddings_from_text(company_name: str, raw_text: str, job_id: str) ->
                 job_status[job_id].update({"embedding_status": "processing", "step": "creating_documents"})
 
         # Step 1: Create a single Document with basic metadata
-        metadata = {"source": "raw_text_input"}
-        documents = create_documents([raw_text], [metadata])
+        documents = _row_docs_from_text(raw_text)
+
         logger.info(f"Created {len(documents)} Document object(s).")
 
         # --- Update job status: splitting documents ---
@@ -207,92 +238,3 @@ def store_embeddings_from_text(company_name: str, raw_text: str, job_id: str) ->
             if job_id in job_status:
                 job_status[job_id].update({"embedding_status": "failed", "step": "error", "error": str(e)})
         return None
-
-
-
-def process_csv_to_embedding_with_job(
-    namespace: str,
-    file_path: str,
-    job_id: str
-):
-    """
-    Process a CSV file: load, convert to string, chunk, embed, and upsert to Pinecone.
-    Updates job_status using job_id.
-    """
-    try:
-        # --- Update job status: started ---
-        with lock:
-            if job_id in job_status:
-                job_status[job_id].update({"embedding_status": "processing", "step": "loading_csv"})
-
-        # Step 1: Load CSV
-        df = load_csv(file_path)
-        logger.info(f"✅ CSV loaded with {len(df)} rows and {len(df.columns)} columns.")
-
-        # --- Update job status: converting CSV to text ---
-        with lock:
-            if job_id in job_status:
-                job_status[job_id].update({"step": "converting_csv_to_text"})
-
-        # Step 2: Convert CSV to string
-        csv_text = csv_to_string(df)
-
-        # --- Update job status: splitting text ---
-        with lock:
-            if job_id in job_status:
-                job_status[job_id].update({"step": "splitting_text"})
-
-        # Step 3: Split into chunks
-        chunks = split_text_into_chunks_data(csv_text)
-        logger.info(f"Split into {len(chunks)} safe chunks for embeddings.")
-
-        # --- Update job status: generating embeddings ---
-        with lock:
-            if job_id in job_status:
-                job_status[job_id].update({"step": "generating_embeddings"})
-
-        # Step 4: Generate embeddings
-        vectors = generate_embeddings(chunks, EMBEDDING_MODEL, OPENAI_API_KEY)
-        if not vectors:
-            raise RuntimeError("Embedding generation failed or returned empty results.")
-        logger.info(f"Generated {len(vectors)} embeddings.")
-
-        # --- Update job status: initializing Pinecone ---
-        with lock:
-            if job_id in job_status:
-                job_status[job_id].update({"step": "initializing_pinecone"})
-
-        # Step 5: Initialize Pinecone index
-        vector_dim = len(vectors[0])
-        index = init_pinecone_index(PINECONE_API_KEY, PINECONE_INDEX, vector_dim, CLOUD_STORAGE, PINECONE_ENV)
-
-        # --- Update job status: upserting vectors ---
-        with lock:
-            if job_id in job_status:
-                job_status[job_id].update({"step": "upserting_vectors"})
-
-        # Step 6: Prepare minimal metadata to avoid Pinecone limits
-        safe_metadata_list = []
-        for i, chunk in enumerate(chunks):
-            meta = {"source": str(chunk), "chunk_id": i}
-            safe_metadata_list.append(meta)
-
-        # Upsert vectors into Pinecone
-        upsert_vectors(index, chunks, vectors, namespace, safe_metadata_list)
-        logger.info(f"✅ All documents successfully added to namespace '{namespace}'.")
-
-        # --- Update job status: completed ---
-        with lock:
-            if job_id in job_status:
-                job_status[job_id].update({"embedding_status": "completed", "step": "done", "namespace": namespace})
-
-        COMMON.save_name(namespace=namespace, folder_path="web_info", filename="web_info.json")
-        return index, chunks, vectors
-
-    except Exception as e:
-        logger.exception(f"Error embedding CSV for namespace '{namespace}': {e}")
-        # --- Update job status: failed ---
-        with lock:
-            if job_id in job_status:
-                job_status[job_id].update({"embedding_status": "failed", "step": "error", "error": str(e)})
-        return None, None, None
